@@ -4,7 +4,8 @@
   </a>
 </p>
 
-[![Github page](https://github.com/CAREamics/careamics.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/CAREamics/careamics.github.io/actions/workflows/deploy-pages.yml)
+[![Build](https://github.com/CAREamics/careamics.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/CAREamics/careamics.github.io/actions/workflows/deploy-pages.yml)
+[![Deployment](https://github.com/CAREamics/careamics.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/CAREamics/careamics.github.io/actions/workflows/pages/pages-build-deployment)
 
 # Welcome to CAREamics docs
 
@@ -44,6 +45,8 @@ In order to build the pages locally, follow these steps:
     ```
 4. Open the local link in your browser.
 
+**Note**: This will not show you the version mechanism. For this, check out the 
+**Version release** section.
 
 ## How to add a new project to the documentation
 
@@ -102,3 +105,9 @@ We apply the following procedure:
   git tag MAJOR.(MINOR+1)
   git push --tags
   ```
+
+To visualize the pages with the versions, you can use:
+
+```bash
+mike serve
+```
