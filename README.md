@@ -89,16 +89,16 @@ In principle, when a new release of CAREamics is made, the state of the document
 is saved into the corresponding version, and the documentation is tagged with the
 next (ongoing) version.
 
-For instance, the documentation is showing version `0.4.8`, upon release of verson 
-`0.4.8`, the state of the documentation is saved. The latest documentation is then 
-tagged with version `0.4.9` (the next version) until this one is released.
+For instance, the documentation is showing version `0.4`, upon release of verson 
+`0.4`, the state of the documentation is saved. The latest documentation is then 
+tagged with version `0.5` (the next version) until this one is released.
 
 In order to keep track of versions, we use [mike](https://github.com/jimporter/mike). 
 We apply the following procedure:
 
-1. Release version MAJOR.MINOR.PATCH of CAREamics
-2. Tag the latest documentation with version MAJOR.MINOR.(PATCH+1)
+1. Release version MAJOR.MINOR of CAREamics
+2. Tag the latest documentation with version MAJOR.(MINOR+1)
   ```bash
-  git tag MAJOR.MINOR.(PATCH+1)
+  git tag MAJOR.(MINOR+1)
   git push --tags
   ```
