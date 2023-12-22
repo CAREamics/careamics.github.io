@@ -83,3 +83,22 @@ This can be useful when one of the project has changed and we need to update the
 doc. In such a case, click on the `Deploy to GitHub Pages` in the `Actions` tab, and
 run the workflow.
 
+## Version release
+
+In principle, when a new release of CAREamics is made, the state of the documentation
+is saved into the corresponding version, and the documentation is tagged with the
+next (ongoing) version.
+
+For instance, the documentation is showing version `0.4.8`, upon release of verson 
+`0.4.8`, the state of the documentation is saved. The latest documentation is then 
+tagged with version `0.4.9` (the next version) until this one is released.
+
+In order to keep track of versions, we use [mike](https://github.com/jimporter/mike). 
+We apply the following procedure:
+
+1. Release version MAJOR.MINOR.PATCH of CAREamics
+2. Tag the latest documentation with version MAJOR.MINOR.(PATCH+1)
+  ```bash
+  git tag MAJOR.MINOR.(PATCH+1)
+  git push --tags
+  ```

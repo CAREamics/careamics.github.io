@@ -1,4 +1,5 @@
 site_name: ""
+site_url: https://careamics.github.io/
 repo_url: https://github.com/CAREamics/careamics
 repo_name: CAREamics
 #edit_uri: https://github.com/CAREamics/careamics.github.io/blob/main/docs/
@@ -151,6 +152,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/CAREamics/careamics
+  version:
+    provider: mike
 
 extra_css:
   - stylesheets/extra.css

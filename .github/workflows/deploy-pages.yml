@@ -1,64 +1,135 @@
-name: Deploy to GitHub Pages
+# This workflow will deploy a new version of the docs to the `latest` version
+# of the docs in the gh-pages branch. The repository settings must set the 
+# gh-pages branch as the source for the GitHub Pages site, sot hat it automatically
+# update them.
+name: Deploy to latest
 
 on:
   push:
     branches: [main]
+    tags:
+      - '*.*.*'
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# use concurrency to avoid jobs modifying the gh-pages branch concurrently
+concurrency:
+  group: staging_environment
+  cancel-in-progress: false
 
 jobs:
-  build:
+  build_and_deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
-    steps:
+    steps:            
       - name: ✅ Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0 # needed for git committers
 
+      - name: 💁 Git committer set-up
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
       - name: 🐍 Install Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
+
+      - name: 📝 Set up Python environment
+        run: |
+          pip install -U pip
+          pip install -r requirements.txt 
 
       - name: 🔗 Check Links
         run: |
           npm install markdown-link-check@"<3.11.1"
           npx markdown-link-check docs/**/*.md --progress -q
 
-      - name: Set-up repositories
+      - name: 📁 Set up repositories
         run: sh scripts/check_out_repos.sh
       
-      - name: Set-up notebooks
+      - name: 📓 Set up notebooks
         run: sh scripts/check_out_notebooks.sh
 
+      # store `latest` version number into a variable
+      - name: 🔬 Get latest version number
+        id: extract-version
+        run: |
+          version=$(mike list | grep '\[latest\]' | awk '{print $1}')
+          echo "Latest version is $version"
+          echo "latest_version=$version" >> "$GITHUB_ENV"
+
+      # deploy to `latest` using mike
       - name: 📚 Build Docs
-        # removed mkdocs build --strict for now
         run: |
           pip install -U pip
           pip install -r requirements.txt
-          mkdocs build
+          mike deploy --push --update-aliases "$latest_version" latest
+  
+  update_version:
+      name: Update Version
+      runs-on: ubuntu-latest
+      needs: build_and_deploy
+      if: success() && startsWith(github.ref, 'refs/tags/') && github.event_name != 'schedule'
+      steps:
+        - name: ✅ Checkout
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 0 # needed for git committers
+        
+        - name: 💁 Git committer set-up
+          run: |
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+        
+        # check that tag matches `/v[0-9]+(\.[0-9]+)*/`
+        - name: 🏷️ Check tag
+          id: check-tag
+          run: echo "tag_version=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
-        env:
-          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
-          GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
+        - name: 🐍 Install Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: "3.x"
+    
+        - name: 📝 Set up Python environment
+          run: |
+            pip install -U pip
+            pip install -r requirements.txt 
 
-      - name: ⬆️ Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: "site/"
+        - name: 🔗 Check Links
+          run: |
+            npm install markdown-link-check@"<3.11.1"
+            npx markdown-link-check docs/**/*.md --progress -q
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: 🚀 Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+        - name: 📁 Set up repositories
+          run: sh scripts/check_out_repos.sh
+        
+        - name: 📓 Set up notebooks
+          run: sh scripts/check_out_notebooks.sh
+
+        # store `latest` version number into a variable
+        - name: 🔬 Get latest version number
+          id: extract-version
+          run: |
+            version=$(mike list | grep '\[latest\]' | awk '{print $1}')
+            echo "Latest version is $version"
+            echo "latest_version=$version" >> "$GITHUB_ENV"
+
+        # check that tag version is different from `latest` version
+        - name: 🧮 Compare version
+          run: |
+            if [[ "$tag_version" == "$latest_version" ]]; then
+              echo "Error: Tag version is the same as latest version"
+              exit 1
+            else
+              echo "Tag version is different from latest version"
+            fi
+
+        # update latest version to the tag with mike
+        - name: 📚 Build Docs
+          run: |
+            pip install -U pip
+            pip install -r requirements.txt
+            mike deploy --push --update-aliases "$tag_version" latest
