@@ -9,7 +9,7 @@
 
 # Welcome to CAREamics docs
 
-This repository contains the source code for the CAREamics documentation website. The 
+This repository contains the source code for the [CAREamics](https://github.com/CAREamics/careamics) documentation website. The 
 website is built using [MkDocs](https://www.mkdocs.org/) and the 
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme, with a few
 modifications to the theme inherited from 
