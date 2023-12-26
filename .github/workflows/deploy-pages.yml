@@ -127,9 +127,11 @@ jobs:
               echo "Tag version is different from latest version"
             fi
 
-        # update latest version to the tag with mike
+        # update latest version to the tag with mike, retitle the versions
         - name: 📚 Build Docs
           run: |
             pip install -U pip
             pip install -r requirements.txt
+            mike retitle "$latest_version" "$latest_version"
             mike deploy --push --update-aliases "$tag_version" latest
+            mike retitle "$tag_version" latest
