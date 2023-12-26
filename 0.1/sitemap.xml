@@ -2,282 +2,282 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://careamics.github.io/0.1/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/current_state/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/installation/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/algorithms/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/algorithms/n2v/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/applications/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/applications/SUMMARY/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/applications/N2V/2D_SEM/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/guides/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/guides/bmz/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/guides/configuration/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/guides/configuration/config_description/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/guides/engine/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/guides/engine/prediction/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/guides/engine/training/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/SUMMARY/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/engine/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/bioimage/io/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/bioimage/rdf/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/algorithm/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/config/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/config_filter/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/data/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/torch_optim/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/training/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/dataset/dataset_utils/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/dataset/extraction_strategy/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/dataset/in_memory_dataset/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/dataset/patching/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/dataset/prepare_dataset/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/dataset/tiff_dataset/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/losses/loss_factory/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/losses/losses/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/manipulation/pixel_manipulation/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/models/layers/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/models/model_factory/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/models/unet/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/prediction/prediction_utils/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/utils/augment/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/utils/context/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/utils/logging/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/utils/metrics/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/utils/normalization/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/utils/torch_utils/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/utils/validators/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/utils/wandb/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/denoiseg_datasets/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/denoising_datasets/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/portfolio/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/portfolio_entry/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/utils/download_utils/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/utils/pale_blue_dot/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/utils/pale_blue_dot_zip/</loc>
-         <lastmod>2023-12-24</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
