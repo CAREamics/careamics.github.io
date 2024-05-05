@@ -68,7 +68,7 @@ rotations).
 
 However in certain cases, users might want to disable augmentations. For instance if you
 have structures that are always oriented in the same direction. To do so there is a single
-`use_agumentation` parameter:
+`use_agumentations` parameter:
 
 ```python title="Configuration without augmentations"
 config = create_care_configuration(
@@ -78,11 +78,11 @@ config = create_care_configuration(
     patch_size=[64, 64],
     batch_size=8, 
     num_epochs=20,
-    use_augmentation=False # (1)!
+    use_augmentations=False # (1)!
 )
 ```
 
-1. Augmentation is disabled.
+1. Augmentations are disabled (but normalization is still there!).
 
 
 ### Choosing a logger
@@ -126,14 +126,14 @@ config = create_care_configuration(
     model_kwargs={
         "depth": 3, # (1)!
         "num_channels_init": 64, # (2)!
-        ... # (3)!
+        # (3)!
     }
 )
 ```
 
 1. The depth of the UNet.
 2. The number of channels in the first layer.
-3. Any other parameter specific to the model!
+3. Add any other parameter specific to the model!
 
 !!! note "Model parameters overwriting"
 
@@ -201,7 +201,7 @@ config = create_n2v_configuration(
 
 ### N2V2
 
-To use N2V2, the `n2v2` parameter should simply be set to `True`.
+To use N2V2, the `use_n2v2` parameter should simply be set to `True`.
 
 ```python title="Configuration with N2V2"
 config = create_n2v_configuration(
@@ -211,7 +211,7 @@ config = create_n2v_configuration(
     patch_size=[16, 64, 64],
     batch_size=8, 
     num_epochs=20,
-    n2v2=True # (1)!
+    use_n2v2=True # (1)!
 )
 ```
 
