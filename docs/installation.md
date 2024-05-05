@@ -9,112 +9,99 @@ CAREamics is a deep-learning library and we therefore recommend having GPU suppo
 training the algorithms on the CPU can be very slow. MacOS users can also benefit from
 GPU-acceleration if they have the new chip generations (M1, M2, etc.).
 
+Support is provided directly from PyTorch, and is still experimental for macOS.
+
 ## Step-by-step
 
-We recommend using [conda 
-(miniconda)](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html) or 
-[mamba (miniforge)](https://github.com/conda-forge/miniforge#download) to install 
-all packages in a virtual environment. 
+We recommend using [mamba (miniforge)](https://github.com/conda-forge/miniforge#download) 
+to install all packages in a virtual environment. As an alternative, you can use
+[conda 
+(miniconda)](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html). 
 
 
-=== "mamba"
-
-    === "Linux"
-        1. Open the terminal and type `mamba` to verify that mamba is available.
-        2. Create a new environment:
-            
-            ``` bash
-            mamba create -n careamics python=3.10
-            mamba activate careamics
-            ```
-
-        3. Install PyTorch (you can find the official instructions 
-        [here](https://pytorch.org/get-started/locally/)):
-
-            ``` bash
-            mamba install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
-            ```
+=== "Linux and Windows"
+    1. Open the terminal and type `mamba` to verify that mamba is available.
+    2. Create a new environment:
         
-        4. Verify that the GPU is available:
-            
-            ``` bash
-            python -c "import torch; print([torch.cuda.get_device_properties(i) for i in range(torch.cuda.device_count())])"
-            ```
+        ``` bash
+        mamba create -n careamics python=3.10
+        mamba activate careamics
+        ```
 
-            This should show a list of available GPUs. If the list is empty, then you
-            will need to change the `pytorch` and `pytorch-cuda` versions to match your
-            hardware.
+    3. Install PyTorch following the [official 
+        instructions](https://pytorch.org/get-started/locally/)
+
+        As an example, our test machine requires:
+
+        ``` bash
+        mamba install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
+        ```
+    
+    4. Verify that the GPU is available:
         
-        5. Install CAREamics:
+        ``` bash
+        python -c "import torch; print([torch.cuda.get_device_properties(i) for i in range(torch.cuda.device_count())])"
+        ```
 
-            ``` bash
-            pip install --pre "careamics[all]"
-            ```
+        This should show a list of available GPUs. If the list is empty, then you
+        will need to change the `pytorch` and `pytorch-cuda` versions to match your
+        hardware (linux and windows).
+    
+    5. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+        and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
+        we recommend the following:
 
-        These instructions were tested on a linux virtual machine (RedHat 8.6) with a 
-        NVIDIA A40-8Q GPU.
+        ``` bash
+        pip install --pre "careamics[examples]"
+        ```
 
-    === "macOS"
+    These instructions were tested on a linux virtual machine (RedHat 8.6) with a 
+    NVIDIA A40-8Q GPU.
+
+=== "macOS"
+    1. Open the terminal and type `mamba` to verify that mamba is available.
+    2. Create a new environment:
         
-        (Instructions to come)
+        ``` bash
+        mamba create -n careamics python=3.10
+        mamba activate careamics
+        ```
 
-    === "Windows"
-        In Windows systems, we will use unix-style commands. To do so, we recommend
-        installing [Git for Windows](https://gitforwindows.org/) and using it as your
-        terminal.
+    3. Install PyTorch following the [official 
+        instructions](https://pytorch.org/get-started/locally/)
 
-        (Instructions to come)
+        As an example, our test machine requires:
 
-=== "conda"
+        ``` bash
+        mamba install pytorch::pytorch torchvision torchaudio -c pytorch
+        ```
 
-    === "Linux"
+        :warning: Note that accelerated-training is only available on macOS silicon.
+    
+    4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+        and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
+        we recommend the following:
 
-        1. Open the terminal and type `mamba` to verify that mamba is available.
-        2. Create a new environment:
-            
-            ``` bash
-            conda create -n careamics python=3.10
-            conda activate careamics
-            ```
+        ``` bash
+        pip install --pre "careamics[examples]"
+        ```
 
-        3. Install PyTorch (you can find the official instructions 
-        [here](https://pytorch.org/get-started/locally/)):
+### Extra dependencies
 
-            ``` bash
-            conda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
-            ```
-        
-        4. Verify that the GPU is available:
-            
-            ``` bash
-            python -c "import torch; print([torch.cuda.get_device_properties(i) for i in range(torch.cuda.device_count())])"
-            ```
+CAREamics extra dependencies can be installed by specifying them in brackets. In the previous
+section we installed `careamics[examples]`. You can add other extra dependencies, for instance
+`wandb` by doing:
 
-            This should show a list of available GPUs. If the list is empty, then you
-            will need to change the `pytorch` and `pytorch-cuda` versions to match your
-            hardware.
-        
-        5. Install CAREamics:
+``` bash
+pip install --pre "careamics[examples, wandb]"
+```
 
-            ``` bash
-            pip install --pre "careamics[all]"
-            ```
+Here is a list of the extra dependencies:
 
-        These instructions were tested on a linux virtual machine (RedHat 8.6) with a 
-        NVIDIA A40-8Q GPU.
-
-    === "macOS"
-        
-        (Instructions to come)
-
-    === "Windows"
-        In Windows systems, we will use unix-style commands. To do so, we recommend
-        installing [Git for Windows](https://gitforwindows.org/) and using it as your
-        terminal.
-
-        (Instructions to come)
-
-
+- `examples`: Dependencies required to run the example notebooks.
+- `wandb`: Dependencies to use [WandB](https://wandb.ai/site) as a logger.
+- `tensorboard`: Dependencies to use [TensorBoard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html) as a logger.
+- `dev`: Dependencies required to run all the tooling necessary to develop with CAREamics.
         
 ## Quickstart
 

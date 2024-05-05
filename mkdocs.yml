@@ -13,13 +13,7 @@ nav:
       - Guides: guides/index.md
       - Configuration:
           - guides/configuration/index.md
-          - guides/configuration/config_description.md
-      - Engine:
-          - guides/engine/index.md
-          - guides/engine/training.md
-          - guides/engine/prediction.md
-      - BioImage.io:
-          - guides/bmz/index.md
+          - guides/configuration/convenience_functions.md
   - Applications: applications/
   - Algorithms:
       - algorithms/index.md
