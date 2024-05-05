@@ -47,8 +47,10 @@ offers.
 In the next sections, you can dive deeper on how to use CAREamics 
 configuration with different levels of expertise.
 
-- Beginner: use convenience functions
-- Intermediate: build the configuration with Pydantic
-- Advanced: custom model
-- Full specification
-- Understanding the errors
+- (beginner) [Convenience functions](convenience_functions)
+- (beginner) [Save and load configurations](save_load)
+- (intermediate) [Build the configuration from scratch](build_configuration)
+- (intermediate) [Full specification](full_spec)
+- (intermediate) [Algorithm requirements](algorithm_requirements)
+- (advanced) [Custom models](advanced_configuration)
+- (all) [Understanding the errors](cunderstanding_errors)

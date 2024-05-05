@@ -161,7 +161,9 @@ config = Configuration( # (8)!
 4. You can instantiate the nested models directly in the parent model or outside (outside
     is better to track down the errors!).
 5. The `transforms` parameter is a list, you can mix and match the different transformations,
-    but also use dictionnaries or the Pydantic model classes directly.
+    but also use dictionnaries or the Pydantic model classes directly. Make sure to pass
+    the `name` as it is used to identify the correct Pydantic model to instantiate for the
+    transformation.
 6. Here for instance, we use the Pydantic model directly.
 7. The `dataloader_params` is a dictionnary, you can pass any parameter that is accepted by
     the `torch.utils.data.DataLoader` class.

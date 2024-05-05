@@ -14,7 +14,12 @@ nav:
       - Configuration:
           - guides/configuration/index.md
           - guides/configuration/convenience_functions.md
+          - guides/configuration/save_load.md
           - guides/configuration/build_configuration.md
+          - guides/configuration/full_spec.md
+          - guides/configuration/algorithm_requirements.md
+          - guides/configuration/advanced_configuration.md
+          - guides/configuration/understanding_errors.md
   - Applications: applications/
   - Algorithms:
       - algorithms/index.md
