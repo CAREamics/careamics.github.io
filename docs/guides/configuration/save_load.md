@@ -91,6 +91,3 @@ from careamics import load_configuration
 
 config = load_configuration("config.yml")
 ```
-
-
-This allows seeing all the 

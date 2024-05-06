@@ -20,7 +20,13 @@ nav:
           - guides/configuration/algorithm_requirements.md
           - guides/configuration/advanced_configuration.md
           - guides/configuration/understanding_errors.md
-  - Applications: applications/
+      - Training:
+          - guides/careamist/index.md
+          - guides/careamist/instantiating_careamist.md
+          - guides/careamist/training.md
+          - guides/careamist/prediction.md
+          - guides/careamist/model_export.md
+  #- Applications: applications/
   - Algorithms:
       - algorithms/index.md
       - Noise2Void: algorithms/n2v/index.md

@@ -87,7 +87,7 @@ users, which we call the Lightning API.
                                 </span>
                             </div>
                             <div class="card-content">
-                                <h5>CAREamist</h5>
+                                <h5>Training CAREAmics</h5>
                                 <p>
                                     The CAREamist is the core element allowing training
                                     and prediction using the model defined in the configuration.
