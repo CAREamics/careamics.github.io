@@ -56,17 +56,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/&#34;latest&#34;/applications/N2V/2D_SEM/</loc>
-         <lastmod>2024-05-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://careamics.github.io/&#34;latest&#34;/guides/</loc>
          <lastmod>2024-05-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/&#34;latest&#34;/guides/careamist/</loc>
+         <lastmod>2024-05-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/&#34;latest&#34;/guides/careamist/datasets/</loc>
          <lastmod>2024-05-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
