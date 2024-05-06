@@ -24,6 +24,7 @@ nav:
           - guides/careamist/index.md
           - guides/careamist/instantiating_careamist.md
           - guides/careamist/training.md
+          - guides/careamist/datasets.md
           - guides/careamist/prediction.md
           - guides/careamist/model_export.md
       - Lightning API:

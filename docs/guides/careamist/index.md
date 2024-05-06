@@ -42,12 +42,6 @@ careamist.export_to_bmz(
 
 
 
-
-
-- Instantiating
-    - configuration
-    - path to configuration
-    - path to model
 - Training
     - source
     - Callbacks
