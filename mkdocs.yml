@@ -13,18 +13,22 @@ nav:
       - Guides: guides/index.md
       - Configuration:
           - guides/configuration/index.md
-          - guides/configuration/config_description.md
-      - Engine:
-          - guides/engine/index.md
-          - guides/engine/training.md
-          - guides/engine/prediction.md
-      - BioImage.io:
-          - guides/bmz/index.md
+          - guides/configuration/convenience_functions.md
+          - guides/configuration/save_load.md
+          - guides/configuration/build_configuration.md
+          - guides/configuration/full_spec.md
+          - guides/configuration/algorithm_requirements.md
+          - guides/configuration/advanced_configuration.md
+          - guides/configuration/understanding_errors.md
   - Applications: applications/
   - Algorithms:
       - algorithms/index.md
-      - Noise2Void:
-          - algorithms/n2v/index.md
+      - Noise2Void: algorithms/n2v/index.md
+      - N2V2: algorithms/n2v2/index.md
+      - structN2V: algorithms/structn2v/index.md
+      - CARE: algorithms/care/index.md
+      - Noise2Noise: algorithms/n2n/index.md
+
   - Code Reference: reference/
 
 theme:

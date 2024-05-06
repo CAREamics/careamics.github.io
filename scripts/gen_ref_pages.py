@@ -73,71 +73,72 @@ src = Path(__file__).parent.parent / "src"
 
 # iterate over packages (directories in src/)
 module_list = []
-for path in sorted(src.iterdir()):
+if src.exists():
+    for path in sorted(src.iterdir()):
 
-    # if it is a python module
-    if Path(path, "__init__.py").exists():
-        # add to list
-        module_list.append(path.name)
+        # if it is a python module
+        if Path(path, "__init__.py").exists():
+            # add to list
+            module_list.append(path.name)
 
-        # set up relative path to its own module index
-        # e.g. careamics/index.md
-        module_path = Path(path.name, "index.md")
+            # set up relative path to its own module index
+            # e.g. careamics/index.md
+            module_path = Path(path.name, "index.md")
 
-        # add to navigation
-        # e.g. ["careamic"]= careamics/index.md
-        nav[tuple(module_path.parts)] = module_path.as_posix()
+            # add to navigation
+            # e.g. ["careamic"]= careamics/index.md
+            nav[tuple(module_path.parts)] = module_path.as_posix()
 
-        # create module index
-        # e.g. careamics/index.md
-        with mkdocs_gen_files.open(Path("reference", module_path), "w") as md_file:
-            md_file.write(project_index_text(path.name))
+            # create module index
+            # e.g. careamics/index.md
+            with mkdocs_gen_files.open(Path("reference", module_path), "w") as md_file:
+                md_file.write(project_index_text(path.name))
 
-# write a card for each package in the main reference index
-with mkdocs_gen_files.open(Path("reference", "index.md"), "w") as index_md:
-    index_md.write(main_index_text())
+    # write a card for each package in the main reference index
+    with mkdocs_gen_files.open(Path("reference", "index.md"), "w") as index_md:
+        index_md.write(main_index_text())
 
-    index_md.write(open_card_block())
-    for i, name in enumerate(module_list):
-        if i%2 == 0:
-            index_md.write(open_row())
-            index_md.write(new_card(name))
-        else:
-            index_md.write(new_card(name))
-            index_md.write(close_row())
-        
-    index_md.write(close_card_block())
+        index_md.write(open_card_block())
+        for i, name in enumerate(module_list):
+            if i%2 == 0:
+                index_md.write(open_row())
+                index_md.write(new_card(name))
+            else:
+                index_md.write(new_card(name))
+                index_md.write(close_row())
+            
+        index_md.write(close_card_block())
 
-# build docstring references
-for path in sorted(Path("src").rglob("*.py")):
-    if path.name != "__init__.py":
-        # set up paths
-        module_path = path.relative_to("src").with_suffix("")
-        doc_path = path.relative_to("src").with_suffix(".md")
-        full_doc_path = Path("reference", doc_path)
+    # build docstring references
+    for path in sorted(Path("src").rglob("*.py")):
+        if path.name != "__init__.py":
+            # set up paths
+            module_path = path.relative_to("src").with_suffix("")
+            doc_path = path.relative_to("src").with_suffix(".md")
+            full_doc_path = Path("reference", doc_path)
 
-        # folder structure of the python module
-        parts = tuple(module_path.parts)
+            # folder structure of the python module
+            parts = tuple(module_path.parts)
 
-        # remove __init__.py
-        if parts[-1] == "__init__":
-            parts = parts[:-1]
-            doc_path = doc_path.with_name("index.md")
-            full_doc_path = full_doc_path.with_name("index.md")
-        elif parts[-1] == "__main__":
-            continue
+            # remove __init__.py
+            if parts[-1] == "__init__":
+                parts = parts[:-1]
+                doc_path = doc_path.with_name("index.md")
+                full_doc_path = full_doc_path.with_name("index.md")
+            elif parts[-1] == "__main__":
+                continue
 
-        # progressively build the navigation index
-        nav[parts] = doc_path.as_posix()
+            # progressively build the navigation index
+            nav[parts] = doc_path.as_posix()
 
-        # add doc to mkdocs
-        with mkdocs_gen_files.open(full_doc_path, "w") as fd:
-            ident = ".".join(parts)
-            fd.write(f"::: {ident}")
+            # add doc to mkdocs
+            with mkdocs_gen_files.open(full_doc_path, "w") as fd:
+                ident = ".".join(parts)
+                fd.write(f"::: {ident}")
 
-        # set the edit_uri on the pages
-        mkdocs_gen_files.set_edit_path(full_doc_path, path)
+            # set the edit_uri on the pages
+            mkdocs_gen_files.set_edit_path(full_doc_path, path)
 
-# Write the navigation as a Markdown list in the literate navigation file
-with mkdocs_gen_files.open("reference/SUMMARY.md", "w") as nav_file:
-    nav_file.writelines(nav.build_literate_nav())
+    # Write the navigation as a Markdown list in the literate navigation file
+    with mkdocs_gen_files.open("reference/SUMMARY.md", "w") as nav_file:
+        nav_file.writelines(nav.build_literate_nav())

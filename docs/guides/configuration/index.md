@@ -1,40 +1,56 @@
-# Configuration
+---
+description: Configuration guide
+---
 
-CAREamics relies on a configuration, either a Python object or a `.yml` file. The
-configuration holds all the information necessary to train a CAREamics model.
 
-## Minimum configuration
+The configuration summarizes all the parameters used internally by CAREamics. It is 
+used to create a `CAREamist` instance and is saved together with the checkpoints and 
+saved models.
 
-??? note "Minimum `.yml` file example"
+It is composed of four members:
 
-    ```yaml
-    working_directory: .
-    experiment_name: ConfigTest
+```python title="Anatomy of the configuration"
+from careamics import Configuration
 
-    algorithm:
-        is_3D: false
-        loss: n2v
-        model: UNet
+config_as_dict = {
+    "experiment_name": "my_experiment", # (1)!
+    "algorithm_config": { # (2)!
+        "algorithm": "n2v",
+        "loss": "n2v",
+        "model": {
+            "architecture": "UNet",
+        }
+    },
+    "data_config": { # (3)!
+        "data_type": "array",
+        "patch_size": [128, 128],
+        "axes": "YX",
+    },
+    "training_config": { # (4)!
+        "num_epochs": 1,
+    }
+}
+config = Configuration(**config_as_dict) # (5)!
+```
 
-    data:
-        axes: SYX
-        data_format: tif
-        in_memory: true
+1. The name of the experiment, used to differentiate trained models.
+2. Configuration specific to the model.
+3. Configuration related to the data.
+4. Training parameters.
+5. The configuration is an object! :bomb:
 
-    training:
-        augmentation: true
-        batch_size: 16
-        lr_scheduler:
-            name: ReduceLROnPlateau
-        num_epochs: 100
-        optimizer:
-            name: Adam
-        patch_size: [64,64]
-    ```
+If the number of parameters looks too limited, it is because the configuration is
+hiding a lot of default values! But don't be afraid, we have designed convenience
+functions to help you create a configuration for each of the algorithm CAREamics
+offers.
 
-## In-depth
+In the next sections, you can dive deeper on how to use CAREamics 
+configuration with different levels of expertise.
 
-- [Full description](config_description.md)
-- Instantiate a configuration
-- Modify a configuration
-- Import/export a configuration
+- (beginner) [Convenience functions](convenience_functions)
+- (beginner) [Save and load configurations](save_load)
+- (intermediate) [Build the configuration from scratch](build_configuration)
+- (intermediate) [Full specification](full_spec)
+- (intermediate) [Algorithm requirements](algorithm_requirements)
+- (advanced) [Custom models](advanced_configuration)
+- (all) [Understanding the errors](cunderstanding_errors)

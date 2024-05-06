@@ -1,5 +1,7 @@
 # Noise2Void
 
+## Overview 
+
 Noise2Void (N2V) is a self-supervised denoising method. It trains by randomly masking
 pixels in the input image and predicting their masked value from the surrounding pixels.
 
@@ -17,7 +19,20 @@ the sum of the true signal value and a certain amount of noise, then:
 Therefore, in cases where the hypotheses hold, N2V can be use to estimate the true
 signal and thereby removing the noise.
 
-## Reference
+## Masking scheme
+
+
+## Interpreting the loss
+
+
+## Artefacts
+
+(todo)
+
+- checkboard
+- structured noise
+
+## References
 
 Alexander Krull, Tim-Oliver Buchholz, and Florian Jug. "Noise2Void - learning denoising
 from single noisy images." Proceedings of the IEEE/CVF conference on Computer Vision
