@@ -7,8 +7,8 @@ edit_uri: "" # disable the edit button
 
 nav:
   - Home: index.md
-  - Current State: current_state.md
   - Installation: installation.md
+  - Current State: current_state.md
   - Guides:
       - Guides: guides/index.md
       - Configuration:
@@ -20,12 +20,16 @@ nav:
           - guides/configuration/algorithm_requirements.md
           - guides/configuration/advanced_configuration.md
           - guides/configuration/understanding_errors.md
-      - Training:
+      - Usage:
           - guides/careamist/index.md
           - guides/careamist/instantiating_careamist.md
           - guides/careamist/training.md
           - guides/careamist/prediction.md
           - guides/careamist/model_export.md
+      - Lightning API:
+          - guides/lightning_api/index.md
+      - Developer resources:
+          - guides/dev_resources/index.md
   #- Applications: applications/
   - Algorithms:
       - algorithms/index.md

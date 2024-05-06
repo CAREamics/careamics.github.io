@@ -26,7 +26,7 @@ them usable by the community.
 
 The aim of CAREamics is to provide a PyTorch library reuniting all the latest methods
 in one package, while providing a simple and consistent API. The library relies on 
-PyTorch Lightning as a back-end. In addition, we provide extensive documentation and 
+PyTorch Lightning as a back-end. In addition, we will provide extensive documentation and 
 tutorials on how to best apply these methods in a scientific context.
 
 !!! warning "Work in progress"

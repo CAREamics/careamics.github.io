@@ -47,7 +47,7 @@ create it entirely manually. Head to the configuration section to know more!
 CAREamist section to learn more about it. There is also an alternative for more advance
 users, which we call the Lightning API.
 
-3. Models can be exported to the [BioImage Model Zoo](bioimage.io) format.
+3. Models can be exported to the [BioImage Model Zoo](https://bioimage.io/) format.
 
 
 !!! warning "Work in progress"
@@ -87,7 +87,7 @@ users, which we call the Lightning API.
                                 </span>
                             </div>
                             <div class="card-content">
-                                <h5>Training CAREAmics</h5>
+                                <h5>Using CAREAmics</h5>
                                 <p>
                                     The CAREamist is the core element allowing training
                                     and prediction using the model defined in the configuration.
@@ -99,7 +99,7 @@ users, which we call the Lightning API.
                   <!-- New row -->
                 <div class="responsive-grid">
                     <!-- Installation -->
-                    <a class="card-wrapper" href="lightning">
+                    <a class="card-wrapper" href="lightning_api">
                         <div class="card"> 
                             <div class="logo">
                                 <span class="twemoji">
@@ -117,7 +117,7 @@ users, which we call the Lightning API.
                         </div>
                     </a>
                     <!-- Installation -->
-                    <a class="card-wrapper" href="dev_guide">
+                    <a class="card-wrapper" href="dev_resource">
                         <div class="card"> 
                             <div class="logo">
                                 <span class="twemoji">
@@ -125,7 +125,7 @@ users, which we call the Lightning API.
                                 </span>
                             </div>
                             <div class="card-content">
-                                <h5>Developer's guide</h5>
+                                <h5>Developer resources</h5>
                                 <p>
                                     More insights on how CAREamics is organized and how
                                     to tweak it to your needs.
