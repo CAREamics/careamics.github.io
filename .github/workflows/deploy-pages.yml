@@ -46,11 +46,11 @@ jobs:
           npm install markdown-link-check@"<3.11.1"
           npx markdown-link-check docs/**/*.md --progress -q
 
-      - name: 📁 Set up repositories
-        run: sh scripts/check_out_repos.sh
+      # - name: 📁 Set up repositories
+      #   run: sh scripts/check_out_repos.sh
       
-      - name: 📓 Set up notebooks
-        run: sh scripts/check_out_notebooks.sh
+      # - name: 📓 Set up notebooks
+      #   run: sh scripts/check_out_notebooks.sh
 
       # store `latest` version number into a variable
       - name: 🔬 Get latest version number
