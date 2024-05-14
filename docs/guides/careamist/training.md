@@ -112,12 +112,24 @@ careamist.train(
 
 ## Callbacks
 
-!!! warning "In construction"
-    This section is still under construction.
+CAREamics currently allows two different callbacks from PyTorch Lightning:
+
+- [`ModelCheckpoint`](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.ModelCheckpoint.html#lightning.pytorch.callbacks.ModelCheckpoint): to save the model at different points during the training.
+- [`EarlyStopping`](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.EarlyStopping.html#lightning.pytorch.callbacks.EarlyStopping): to stop the training based on a few parameters.
+
+The parameters for the callbacks are the same as the ones from PyTorch Lightning, and
+can be set in the configuration.
 
 
 ## Logging the training
 
-!!! warning "In construction"
-    This section is still under construction.
+By default, CAREamics simply log the training progress in the console. However, it is 
+possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html).
 
+To decide on the logger, check out the [Configuration section](../configuration/convenience_functions.md).
+
+
+!!! note "Loggers installation"
+
+    Using WandB or TensorBoard require the installation of `extra` dependencies. Check
+    out the [installation section](/../../installation/#extra-dependencies) to know more about it.

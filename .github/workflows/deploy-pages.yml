@@ -1,6 +1,6 @@
 # This workflow will deploy a new version of the docs to the `latest` version
 # of the docs in the gh-pages branch. The repository settings must set the 
-# gh-pages branch as the source for the GitHub Pages site, sot hat it automatically
+# gh-pages branch as the source for the GitHub Pages site, so that it automatically
 # update them.
 name: Deploy to latest
 
@@ -11,7 +11,7 @@ on:
       - '*.*.*'
   workflow_dispatch:
 
-# use concurrency to avoid jobs modifying the gh-pages branch concurrently
+# avoid jobs modifying the gh-pages branch concurrently
 concurrency:
   group: staging_environment
   cancel-in-progress: false
