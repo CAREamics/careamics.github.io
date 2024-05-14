@@ -56,6 +56,8 @@ jobs:
       - name: 🔬 Get latest version number
         id: extract-version
         run: |
+          echo "$(mike list | grep '\"latest\"')"
+          echo "$(mike list | grep '\"latest\"') | sed 's/.*(\([^)]*\)).*/\1/'"
           version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'
           echo "Latest version is $version"
           echo "latest_version=$version" >> "$GITHUB_ENV"
