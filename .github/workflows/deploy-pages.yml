@@ -56,7 +56,7 @@ jobs:
       - name: 🔬 Get latest version number
         id: extract-version
         run: |
-          version=$(mike list | grep '\[latest\]' | awk '{print $1}')
+          version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'
           echo "Latest version is $version"
           echo "latest_version=$version" >> "$GITHUB_ENV"
 
@@ -65,7 +65,7 @@ jobs:
         run: |
           pip install -U pip
           pip install -r requirements.txt
-          mike deploy --push --update-aliases "$latest_version" latest
+          mike deploy '$latest_version'
   
   update_version:
       name: Update Version
@@ -113,7 +113,7 @@ jobs:
         - name: 🔬 Get latest version number
           id: extract-version
           run: |
-            version=$(mike list | grep '\[latest\]' | awk '{print $1}')
+            version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'
             echo "Latest version is $version"
             echo "latest_version=$version" >> "$GITHUB_ENV"
 
