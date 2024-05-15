@@ -56,10 +56,10 @@ jobs:
       - name: 🔬 Get latest version number
         id: extract-version
         run: |
-          echo "$(mike list | grep '\"latest\"')"
-          echo "$(mike list | grep '\"latest\"') | sed 's/.*(\([^)]*\)).*/\1/'"
+          echo "Latest version is $(mike list | grep '\"latest\"')"
+          echo "Extracting version number: $(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'"
+
           version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'
-          echo "Latest version is $version"
           echo "latest_version=$version" >> "$GITHUB_ENV"
 
       # deploy to `latest` using mike
@@ -105,18 +105,20 @@ jobs:
             npm install markdown-link-check@"<3.11.1"
             npx markdown-link-check docs/**/*.md --progress -q
 
-        - name: 📁 Set up repositories
-          run: sh scripts/check_out_repos.sh
+        # - name: 📁 Set up repositories
+        #   run: sh scripts/check_out_repos.sh
         
-        - name: 📓 Set up notebooks
-          run: sh scripts/check_out_notebooks.sh
+        # - name: 📓 Set up notebooks
+        #   run: sh scripts/check_out_notebooks.sh
 
         # store `latest` version number into a variable
         - name: 🔬 Get latest version number
           id: extract-version
           run: |
+            echo "Latest version is $(mike list | grep '\"latest\"')"
+            echo "Extracting version number: $(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'"
+
             version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'
-            echo "Latest version is $version"
             echo "latest_version=$version" >> "$GITHUB_ENV"
 
         # check that tag version is different from `latest` version
@@ -126,7 +128,7 @@ jobs:
               echo "Error: Tag version is the same as latest version"
               exit 1
             else
-              echo "Tag version is different from latest version"
+              echo "Tag version ($tag_version) is different from latest version ($latest_version)"
             fi
 
         # update latest version to the tag with mike, retitle the versions
@@ -134,6 +136,5 @@ jobs:
           run: |
             pip install -U pip
             pip install -r requirements.txt
-            mike retitle "$latest_version" "$latest_version"
-            mike deploy --push --update-aliases "$tag_version" latest
-            mike retitle "$tag_version" latest
+            mike retitle '$latest_version' '$latest_version'
+            mike deploy --push '$tag_version' latest
