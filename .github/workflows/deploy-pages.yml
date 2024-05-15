@@ -57,7 +57,7 @@ jobs:
         id: extract-version
         run: |
           echo "Latest version is $(mike list | grep '\"latest\"')"
-          echo "Extracting version number: $(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'"
+          echo "Extracted version number: $(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/')"
 
           version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'
           echo "latest_version=$version" >> "$GITHUB_ENV"
@@ -116,7 +116,7 @@ jobs:
           id: extract-version
           run: |
             echo "Latest version is $(mike list | grep '\"latest\"')"
-            echo "Extracting version number: $(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'"
+            echo "Extracted version number: $(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/')"
 
             version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'
             echo "latest_version=$version" >> "$GITHUB_ENV"
