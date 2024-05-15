@@ -59,7 +59,7 @@ jobs:
           echo "Latest version is $(mike list | grep '\"latest\"')"
           echo "Extracted version number: $(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/')"
 
-          version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'
+          version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/)'
           echo "latest_version=$version" >> "$GITHUB_ENV"
 
       # deploy to `latest` using mike
@@ -118,7 +118,7 @@ jobs:
             echo "Latest version is $(mike list | grep '\"latest\"')"
             echo "Extracted version number: $(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/')"
 
-            version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/'
+            version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/)'
             echo "latest_version=$version" >> "$GITHUB_ENV"
 
         # check that tag version is different from `latest` version
