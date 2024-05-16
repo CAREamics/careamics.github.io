@@ -70,7 +70,7 @@ jobs:
 
       # deploy to `latest` using mike
       - name: 🚀 Deploy with mike
-        run: mike deploy '$latest_version'
+        run: mike deploy --push '$latest_version'
   
   update_version:
       name: Update Version
