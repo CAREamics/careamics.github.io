@@ -46,11 +46,11 @@ jobs:
           npm install markdown-link-check@"<3.11.1"
           npx markdown-link-check docs/**/*.md --progress -q
 
-      # - name: 📁 Set up repositories
-      #   run: sh scripts/check_out_repos.sh
+      - name: 📁 Set up repositories
+        run: sh scripts/check_out_repos.sh
       
-      # - name: 📓 Set up notebooks
-      #   run: sh scripts/check_out_notebooks.sh
+      - name: 📓 Set up notebooks
+        run: sh scripts/check_out_notebooks.sh
 
       # store `latest` version number into a variable
       - name: 🔬 Get latest version number
@@ -62,12 +62,15 @@ jobs:
           version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/')
           echo "latest_version=$version" >> "$GITHUB_ENV"
 
-      # deploy to `latest` using mike
+      # build dock
       - name: 📚 Build Docs
         run: |
           pip install -U pip
           pip install -r requirements.txt
-          mike deploy '$latest_version'
+
+      # deploy to `latest` using mike
+      - name: 🚀 Deploy with mike
+        run: mike deploy '$latest_version'
   
   update_version:
       name: Update Version
@@ -105,11 +108,11 @@ jobs:
             npm install markdown-link-check@"<3.11.1"
             npx markdown-link-check docs/**/*.md --progress -q
 
-        # - name: 📁 Set up repositories
-        #   run: sh scripts/check_out_repos.sh
+        - name: 📁 Set up repositories
+          run: sh scripts/check_out_repos.sh
         
-        # - name: 📓 Set up notebooks
-        #   run: sh scripts/check_out_notebooks.sh
+        - name: 📓 Set up notebooks
+          run: sh scripts/check_out_notebooks.sh
 
         # store `latest` version number into a variable
         - name: 🔬 Get latest version number
@@ -131,10 +134,16 @@ jobs:
               echo "Tag version ($tag_version) is different from latest version ($latest_version)"
             fi
 
-        # update latest version to the tag with mike, retitle the versions
+        # Build docs
         - name: 📚 Build Docs
           run: |
             pip install -U pip
             pip install -r requirements.txt
+            mike retitle '$latest_version' '$latest_version'
+            mike deploy --push '$tag_version' latest
+
+        # update latest version to the tag with mike, retitle the versions
+        - name: 🚀 Deploy with mike
+          run: |
             mike retitle '$latest_version' '$latest_version'
             mike deploy --push '$tag_version' latest
