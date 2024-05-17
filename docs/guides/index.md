@@ -20,14 +20,14 @@ config = create_n2v_configuration( # (1)!
     axes="YX",
     patch_size=[64, 64],
     batch_size=1,
-    num_epochs=1,
+    num_epochs=1, # (2)!
 )
 
 # instantiate a careamist
-careamist = CAREamist(config) # (2)!
+careamist = CAREamist(config) # (3)!
 
 # train the model
-train_data = np.random.randint(0, 255, (256, 256))
+train_data = np.random.randint(0, 255, (256, 256)) # (4)!
 careamist.train(train_source=train_data)
 
 # once trained, predict
@@ -35,7 +35,7 @@ pred_data = np.random.randint(0, 255, (128, 128))
 predction = careamist.predict(source=pred_data)
 
 # export to BMZ format
-careamist.export_to_bmz( # (3)!
+careamist.export_to_bmz( # (5)!
     path="my_model.bmz", name="N2V 2D", authors=[{"name": "CAREamics authors"}]
 )
 ```
@@ -43,11 +43,15 @@ careamist.export_to_bmz( # (3)!
 1. There are several convenience functions to create a configuration, but you can also
 create it entirely manually. Head to the configuration section to know more!
 
-2. The CAREamist allows training, predicting and exporting the model. Refer to the 
+2. Obviously, one should choose a more reasonable number of epochs for training.
+
+3. The CAREamist allows training, predicting and exporting the model. Refer to the 
 CAREamist section to learn more about it. There is also an alternative for more advance
 users, which we call the Lightning API.
 
-3. Models can be exported to the [BioImage Model Zoo](https://bioimage.io/) format.
+4. One should use real data for training!
+
+5. Models can be exported to the [BioImage Model Zoo](https://bioimage.io/) format.
 
 
 !!! warning "Work in progress"
@@ -79,7 +83,7 @@ users, which we call the Lightning API.
                         </div>
                     </a>
                     <!-- Installation -->
-                    <a class="card-wrapper" href="careamist">
+                    <a class="card-wrapper" href="usage">
                         <div class="card"> 
                             <div class="logo">
                                 <span class="twemoji">

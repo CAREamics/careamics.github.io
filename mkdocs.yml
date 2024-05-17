@@ -20,13 +20,13 @@ nav:
           - guides/configuration/algorithm_requirements.md
           - guides/configuration/advanced_configuration.md
           - guides/configuration/understanding_errors.md
-      - Usage:
-          - guides/careamist/index.md
-          - guides/careamist/instantiating_careamist.md
-          - guides/careamist/training.md
-          - guides/careamist/datasets.md
-          - guides/careamist/prediction.md
-          - guides/careamist/model_export.md
+      - Using CAREamics:
+          - guides/usage/index.md
+          - guides/usage/careamist.md
+          - guides/usage/training.md
+          - guides/usage/datasets.md
+          - guides/usage/prediction.md
+          - guides/usage/model_export.md
       - Lightning API:
           - guides/lightning_api/index.md
       - Developer resources:

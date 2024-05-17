@@ -1,3 +1,7 @@
+---
+description: CAREamics training
+---
+
 # Training
 
 You can provide data in various way to train your model: as a `numpy` array, using a
@@ -81,7 +85,7 @@ careamist.train(
 2. If the number of images is less than 5, CAREamics will use 5 images for validation.
 
 
-!!! warning "Patches vs images"
+!!! warning "Arrays vs files"
     The behaviour of `val_percentage` and `val_minimum_split` is based different depending
     on whether the source data is an array or a path. If the source is an array, the
     split is done on the patches (`N` patches are used for validation). If the source is a
@@ -91,7 +95,8 @@ careamist.train(
 ## Training by passing a CAREamicsTrainData object
 
 CAREamics provides a class to handle the data loading of custom data type. We will dive 
-in more details in the next section into what this class can be used for.
+in more details in the next section into what this class can be used for. Here is a 
+brief overview of how it passed to the `train` method.
 
 ```python title="Training by passing a CAREamicsTrainData object"
 from careamics import CAREamicsTrainData

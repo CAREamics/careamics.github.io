@@ -1,7 +1,8 @@
-# Instantiating CAREamist
+# CAREamist
 
-There are three ways to create a `CAREamist` object: with a configuration, with a path
-to a configuration, or with a path to a model.
+The `CAREamist` is the central class in CAREamics, it provides the API to train, predict
+and save models. There are three ways to create a `CAREamist` object: with a configuration, 
+with a path to a configuration, or with a path to a trained model.
 
 
 ## Instantiating with a configuration
