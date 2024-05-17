@@ -43,14 +43,3 @@ careamist.export_to_bmz(
 
 2. One should use real data for training!
 
-
-- Training
-    - source
-    - Callbacks
-    - datasets
-        - read source
-- Prediction
-    - tiling
-        - tta
-        - read source
-- Model export

@@ -31,7 +31,7 @@ config = create_n2v_configuration(
 
 data_module = CAREamicsTrainData( # (1)!
     data_config=config.data_config,
-    train_source=train_array
+    train_data=train_array
 )
 ```
 
@@ -43,9 +43,9 @@ It has the following parameters:
 - `(optional) train_data_target`: target data for training (if applicable)
 - `(optional) val_data_target`: target data for validation (if applicable)
 - `(optional) read_source_func`: function to read custom data types 
-    (see [custom data types](advanced-custom-data-types))
+    (see [custom data types](#advanced-custom-data-types))
 - `(optional) extension_filter`: filter to select custom types
-    (see [custom data types](advanced-custom-data-types))
+    (see [custom data types](#advanced-custom-data-types))
 - `(optional) val_percentage`: percentage of validation data to extract from the training
     (see [splitting validation](../training/#splitting-validation-from-training-data))
 - `(optional) val_minimum_split`: minimum validation split 
@@ -182,18 +182,119 @@ It performs the following steps:
 
 Transforms are augmentations and any operation applied to the patches before feeding them
 into the network. CAREamics supports the following transforms (see 
-[configuration full spec](../../configuration/full_spec) for how to configure them):
+[configuration full spec](../../configuration/full_spec) for an example on how to configure them):
 
 
-| Transform         | Description  |
-| ----------------- | ------------ |
-| `Normalize`       | Normalize the data using the mean and std. |
-| `NDFlip`       |  |
-| `XYRandomRotate90Model`       |  |
-| `N2VManipulateModel`       |  |
+| Transform               | Description                                  | Notes                                 |
+| ----------------------- | -------------------------------------------- | ------------------------------------- |
+| `Normalize`             | Normalize (zero mean, unit variance)         | Necessary                             |
+| `NDFlip`                | Flip the image along one of the spatial axis | X, Y and Z (not by default), optional |
+| `XYRandomRotate90Model` | Rotate by 90 degrees the XY axes             | Optional                              |
+| `N2VManipulateModel`    | N2V pixel manipulation                       | Only for N2V, necessary               |
+
+
+The `Normalize` transform is always applied, and the rest are optional. The exception is
+`N2VManipulateModel`, which is only applied when training with N2V (see [Noise2Void](../../algorithms/n2v)).
+
+!!! note "When to turn off transforms?"
+
+    The configuration allows turning off transforms. In this case, only normalization
+    (and potentially the `N2VManipulateModel` for N2V) is applied. This is useful when
+    the structures in your sample are always in the same orientation, and flipping and
+    rotation do not make sense.
+
 
 ## (Advanced) Custom data types
 
+To read custom data types, you can set `data_type` to `custom` in `data_config`
+and provide a function that returns a numpy array from a path as
+`read_source_func` parameter. The function will receive a Path object and
+an axies string as arguments, the axes being derived from the `data_config`.
+
+You should also provide a `fnmatch` and `Path.rglob` compatible expression (e.g.
+"*.npy") to filter the files extension using `extension_filter`.
+
+
+```python title="Read custom data types"
+from pathlib import Path
+from typing import Any
+
+import numpy as np
+from careamics import CAREamicsTrainData
+from careamics.config import create_n2v_configuration
+
+def read_npy( # (1)!
+        path: Path, # (2)!
+        *args: Any,
+        **kwargs: Any, # (3)!
+    ) -> np.ndarray:
+    return np.load(path) # (4)! 
+
+# example data
+train_array = np.random.rand(128, 128)
+np.save("train_array.npy", train_array)
+
+# configuration
+config = create_n2v_configuration(
+    experiment_name="n2v_2D",
+    data_type="custom", # (5)!
+    axes="YX",
+    patch_size=[32, 32],
+    batch_size=1,
+    num_epochs=1,
+)
+
+data_module = CAREamicsTrainData(
+    data_config=config.data_config, 
+    train_data="train_array.npy", # (6)!
+    read_source_func=read_npy, # (7)!
+    extension_filter="*.npy", # (8)!
+)
+data_module.prepare_data()
+data_module.setup() # (9)!
+
+# check dataset output
+dataloader = data_module.train_dataloader()
+print(dataloader.dataset[0][0].shape) # (10)!
+```
+
+1. We define a function that reads the custom data type.
+
+2. It takes a path as argument!
+
+3. But it also need to receive `*args` and `**kwargs` to be compatible with the `read_source_func` signature.
+
+4. It simply returns a `numpy` array.
+
+5. The data type must be `custom`!
+
+6. And we pass a `Path | str`.
+
+7. Simply pass the method by name.
+
+8. We also need to provide an extension filter that is compatible with `fnmatch` and `Path.rglob`.
+
+9. These two lines are necessary to instantiate the training dataset that we call at the end. They are
+    called automatically by PyTorch Lightning during training.
+
+10. The dataloader gives access to the dataset, we choose the first element, and since
+    we configured CAREamics to use N2V, the output is a tuple whose first element is our
+    first patch!
 
 
 ## Prediction datasets
+
+The prediction data module, `CAREamicsPredictData` works similarly to `CAREamicsTrainData`, albeit
+with fewer parameters:
+
+
+- `pred_config`: data configuration
+- `pred_data`: prediction data (array or path)
+- `(optional) read_source_func`: function to read custom data types 
+    (see [custom data types](#advanced-custom-data-types))
+- `(optional) extension_filter`: filter to select custom types
+    (see [custom data types](#advanced-custom-data-types))
+
+It uses `InMemoryPredictionDataset` for arrays and `IterablePredictionDataset` for paths. These
+are similar to their training counterparts, but they have simpler transforms and offer the possibility
+to run test-time augmentation. For more details, refer to the [prediction section](../prediction).
