@@ -1,2 +1,2 @@
 repository url, path in repository, destination in docs, title
-https://github.com/CAREamics/careamics.git,examples/2D/example_SEM.ipynb,N2V,2D_SEM
+https://github.com/CAREamics/careamics-examples.git,applications/n2v/2D/SEM_Noise2Void.ipynb,Noise2Void,2D_SEM
