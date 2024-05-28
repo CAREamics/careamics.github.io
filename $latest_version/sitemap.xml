@@ -56,6 +56,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://careamics.github.io/$latest_version/applications/Noise2Void/2D_SEM/</loc>
+         <lastmod>2024-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://careamics.github.io/$latest_version/guides/</loc>
          <lastmod>2024-05-28</lastmod>
          <changefreq>daily</changefreq>
