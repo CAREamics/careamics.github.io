@@ -36,6 +36,6 @@ We are currently reaching **Milestone 1**. Here is a list of the current feature
 - [x] Checkpoint saving/loading
 - [x] Save/load [bioimage.io](https://www.bioimage.io) format
 - [ ] Zarr dataset
-- [ ] AMP
+- [ ] Automated Mixed-Precision
 - [ ] torch.compile
 - [ ] napari plugin

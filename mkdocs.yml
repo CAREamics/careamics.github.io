@@ -31,7 +31,7 @@ nav:
           - guides/lightning_api/index.md
       - Developer resources:
           - guides/dev_resources/index.md
-  #- Applications: applications/
+  - Applications: applications/
   - Algorithms:
       - algorithms/index.md
       - Noise2Void: algorithms/n2v/index.md
