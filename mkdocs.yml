@@ -30,7 +30,8 @@ nav:
       - Lightning API:
           - guides/lightning_api/index.md
       - Developer resources:
-          - guides/dev_resources/index.md
+          - Developer resources: guides/dev_resources/index.md
+          - guides/dev_resources/website.md
   - Applications: applications/
   - Algorithms:
       - algorithms/index.md
@@ -121,7 +122,10 @@ plugins:
   # jupyter notebooks: https://pypi.org/project/mkdocs-jupyter/
   - mkdocs-jupyter:
       no_input: False
-      #ignore: ["gen_jupyter_nav.py", "gen_ref_pages.py"]
+      remove_tag_config:
+        # https://nbconvert.readthedocs.io/en/latest/removing_cells.html
+        remove_all_outputs_tags:
+          - remove_output
 
   # Generate code documentation from other modules
   # generate .md for a python modules

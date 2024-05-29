@@ -28,7 +28,8 @@ def index_text():
             "description: Applications\n" \
             "---\n" \
             "# Applications\n" \
-            "This section contains a list of example applications.\n\n"
+            "This section contains a list of example applications. These pages were " \
+            "automatically generated from the notebooks in [careamics-example](https://github.com/CAREamics/careamics-examples/tree/main/applications)\n\n"
 
 # source folder
 APP = Path("docs", "applications")
