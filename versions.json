@@ -1,10 +1,5 @@
 [
   {
-    "version": "$latest_version",
-    "title": "$latest_version",
-    "aliases": []
-  },
-  {
     "version": "0.1",
     "title": "latest",
     "aliases": []
