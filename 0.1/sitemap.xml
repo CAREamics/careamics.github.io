@@ -241,11 +241,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/reference/careamics/config/noise_models/</loc>
-         <lastmod>2024-05-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/optimizer_models/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
@@ -316,11 +311,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/reference/careamics/config/support/supported_extraction_strategies/</loc>
-         <lastmod>2024-05-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/support/supported_loggers/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
@@ -356,17 +346,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/reference/careamics/config/transformations/nd_flip_model/</loc>
-         <lastmod>2024-05-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/transformations/normalize_model/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/config/transformations/transform_model/</loc>
+         <lastmod>2024-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics/config/transformations/xy_flip_model/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -456,16 +446,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/reference/careamics/losses/noise_model_factory/</loc>
-         <lastmod>2024-05-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://careamics.github.io/0.1/reference/careamics/losses/noise_models/</loc>
-         <lastmod>2024-05-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/model_io/bmz_io/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
@@ -526,11 +506,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/reference/careamics/transforms/nd_flip/</loc>
-         <lastmod>2024-05-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/transforms/normalize/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
@@ -552,6 +527,11 @@
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/transforms/tta/</loc>
+         <lastmod>2024-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics/transforms/xy_flip/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
