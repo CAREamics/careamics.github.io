@@ -12,7 +12,6 @@ some of its parameters that are passed to the [train methods](training).
 The `CAREamicsTrainData` receives both data configuration and data itself. The data
 can be passed a path to a folder, to a file or as `numpy` array. 
 
-
 ```python title="Simplest way to instantiate CAREamicsTrainData"
 from careamics.config import create_n2v_configuration
 from careamics import CAREamicsTrainData
