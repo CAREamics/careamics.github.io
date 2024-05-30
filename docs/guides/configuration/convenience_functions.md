@@ -389,7 +389,7 @@ config = create_n2n_configuration(
     they will be ignored and replaced by the explicit parameters passed to the convenience function.
 
 
-## Noise2Noise specific parameters
+### Noise2Noise with another loss
 
 As opposed to Noise2Void, [CARE]() and [Noise2Noise]() can be trained with different loss
 functions. This can be set using the `loss` parameter (surprise, surprise!).
@@ -553,7 +553,7 @@ config = create_care_configuration(
     they will be ignored and replaced by the explicit parameters passed to the convenience function.
 
 
-## CARE specific parameters
+### Noise2Noise with another loss
 
 [CARE]() can be trained with different loss
 functions. This can be set using the `loss` parameter (surprise, surprise!).
