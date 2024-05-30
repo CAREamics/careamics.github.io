@@ -121,7 +121,7 @@ users, which we call the Lightning API.
                         </div>
                     </a>
                     <!-- Installation -->
-                    <a class="card-wrapper" href="dev_resource">
+                    <a class="card-wrapper" href="dev_resources">
                         <div class="card"> 
                             <div class="logo">
                                 <span class="twemoji">
