@@ -34,6 +34,13 @@ In order to build the pages locally, follow these steps:
 **Note**: This will not show you the version mechanism. For this, check out the 
 **Version release** section.
 
+
+## Code snippets
+
+Code snippets are all automatically tested in [careamics-example](https://github.com/CAREamics/careamics-examples/tree/main/applications)
+and are currently manually added to the markdown pages in the guides.
+
+
 ## Jupyter notebooks applications
 
 The pages in the application section are automatically generated from the Jupyter

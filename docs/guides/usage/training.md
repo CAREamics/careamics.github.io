@@ -24,8 +24,8 @@ CAREamics can be trained by simply passing numpy arrays.
 ```python title="Training by passing an array"
 import numpy as np
 
-train_array = np.random.rand(128, 128)
-val_array = np.random.rand(128, 128)
+train_array = np.random.rand(256, 256)
+val_array = np.random.rand(256, 256)
 
 careamist.train(
     train_source=train_array, # (1)!
@@ -56,12 +56,18 @@ The same thing can be done by passing a path to a folder or files.
 
 ```python title="Training by passing a path"
 careamist.train(
-    train_source="path/to/my/train_data.tiff", # (1)!
-    val_source="path/to/my/val_data.tiff",
+    train_source=path_to_train_data,  # (1)!
+    val_source=path_to_val_data,
 )
 ```
 
 1. The path can point to a single file, or contain multiple files.
+
+
+!!! info "Training from path"
+    To train from a path, the data type must be set to `tiff` or `custom` in the 
+    configuration.
+
 
 ## Splitting validation from training data
 
@@ -101,14 +107,12 @@ brief overview of how it passed to the `train` method.
 ```python title="Training by passing a CAREamicsTrainData object"
 from careamics import CAREamicsTrainData
 
-data_module = CAREamicsTrainData( # (1)!
-    data_config=config.data_config,
-    train_source=train_array
+data_module = CAREamicsTrainData(  # (1)!
+    data_config=config.data_config, 
+    train_data=train_array
 )
 
-careamist.train(
-    datamodule=data_module
-)
+careamist.train(datamodule=data_module)
 ```
 
 1. Here this does the same thing as passing the `train_source` directly into the `train` method.
