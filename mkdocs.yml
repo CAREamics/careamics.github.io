@@ -31,6 +31,7 @@ nav:
           - guides/lightning_api/index.md
       - Developer resources:
           - Developer resources: guides/dev_resources/index.md
+          - guides/dev_resources/contribute.md
           - guides/dev_resources/website.md
   - Applications: applications/
   - Algorithms:
