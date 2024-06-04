@@ -59,13 +59,12 @@ from you.
     - name: Normalize
         mean: 0.485
         std: 0.229
-    - name: NDFlip
+    - name: XYFlip
+        flip_x: true
+        flip_y: true
         p: 0.5
-        is_3D: true
-        flip_z: true
     - name: XYRandomRotate90
         p: 0.5
-        is_3D: true
     - name: N2VManipulate
         roi_size: 11
         masked_pixel_percentage: 0.2
