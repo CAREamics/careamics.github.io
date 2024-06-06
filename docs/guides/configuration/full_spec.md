@@ -30,7 +30,7 @@ from careamics.config.support import (
 )
 from careamics.config.transformations import (
     N2VManipulateModel,
-    NDFlipModel,
+    XYFlipModel,
     NormalizeModel,
     XYRandomRotate90Model,
 )
@@ -66,8 +66,8 @@ algorithm_model = AlgorithmConfig(
 
 # Data
 norm = NormalizeModel()
-ndflip = NDFlipModel(is_3D=False)
-rotate = XYRandomRotate90Model(is_3D=False)
+xyflip = XYFlipModel()
+rotate = XYRandomRotate90Model()
 n2vmanipulate = N2VManipulateModel(
     roi_size=11,
     masked_pixel_percentage=0.2,
@@ -81,7 +81,7 @@ data_model = DataConfig(
     patch_size=(256, 256),
     batch_size=8,
     axes="YX",
-    transforms=[norm, ndflip, rotate, n2vmanipulate],
+    transforms=[norm, xyflip, rotate, n2vmanipulate],
     dataloader_params={
         "num_workers": 4,
         # (2)!

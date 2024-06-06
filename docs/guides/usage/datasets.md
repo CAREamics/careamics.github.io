@@ -187,9 +187,9 @@ into the network. CAREamics supports the following transforms (see
 | Transform               | Description                                  | Notes                                 |
 | ----------------------- | -------------------------------------------- | ------------------------------------- |
 | `Normalize`             | Normalize (zero mean, unit variance)         | Necessary                             |
-| `NDFlip`                | Flip the image along one of the spatial axis | X, Y and Z (not by default), optional |
-| `XYRandomRotate90Model` | Rotate by 90 degrees the XY axes             | Optional                              |
-| `N2VManipulateModel`    | N2V pixel manipulation                       | Only for N2V, necessary               |
+| `XYFlip`                | Flip the image along X and Y, one at a time  | Can flip a single axis, optional |
+| `XYRandomRotate90Model` | Rotate by 90 degrees the XY axes             | Optional                                   |
+| `N2VManipulateModel`    | N2V pixel manipulation                       | Only for N2V, in which case it is necessary|
 
 
 The `Normalize` transform is always applied, and the rest are optional. The exception is
