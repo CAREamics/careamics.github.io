@@ -10,27 +10,7 @@ saved models.
 It is composed of four members:
 
 ```python title="Anatomy of the configuration"
-from careamics import Configuration
-
-config_as_dict = {
-    "experiment_name": "my_experiment", # (1)!
-    "algorithm_config": { # (2)!
-        "algorithm": "n2v",
-        "loss": "n2v",
-        "model": {
-            "architecture": "UNet",
-        }
-    },
-    "data_config": { # (3)!
-        "data_type": "array",
-        "patch_size": [128, 128],
-        "axes": "YX",
-    },
-    "training_config": { # (4)!
-        "num_epochs": 1,
-    }
-}
-config = Configuration(**config_as_dict) # (5)!
+--8<-- "careamics-examples/guides/configuration/build_configuration.py:as_dict"
 ```
 
 1. The name of the experiment, used to differentiate trained models.
@@ -52,5 +32,5 @@ configuration with different levels of expertise.
 - (intermediate) [Build the configuration from scratch](build_configuration)
 - (intermediate) [Full specification](full_spec)
 - (intermediate) [Algorithm requirements](algorithm_requirements)
-- (advanced) [Custom models](advanced_configuration)
+- (advanced) [Advanced configuration](advanced_configuration)
 - (all) [Understanding the errors](cunderstanding_errors)

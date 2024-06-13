@@ -6,7 +6,7 @@ the theme were greatly inspired from [pydev-guide](https://github.com/pydev-guid
 
 In this page, we describe some of the technical details on how to maintain this website.
 
-## Environement
+## Environment
 
 The `requirements.txt` file contains all the packages used to generate this website.
 
@@ -91,7 +91,7 @@ In principle, when a new release of CAREamics is made, the state of the document
 is saved into the corresponding version, and the documentation is tagged with the
 next (ongoing) version.
 
-For instance, the documentation is showing version `0.4`, upon release of verson 
+For instance, the documentation is showing version `0.4`, upon release of version 
 `0.4`, the state of the documentation is saved. The latest documentation is then 
 tagged with version `0.5` (the next version) until this one is released.
 

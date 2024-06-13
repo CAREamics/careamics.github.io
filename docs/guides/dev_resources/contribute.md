@@ -62,7 +62,7 @@ pre-commit install
 ```
 
 The PR need to pass the tests and the pre-commit checks! Make sure to also fill in the 
-PR tempalte and make a PR to the documentation website.
+PR template and make a PR to the documentation website.
 
 ## Contribute to the documentation
 

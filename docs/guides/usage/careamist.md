@@ -12,19 +12,7 @@ with random weights and prediction will not be possible until the model is train
 
 
 ```python title="Instantiating CAREamist with a configuration"
-from careamics import CAREamist
-from careamics.config import create_n2v_configuration
-
-config = create_n2v_configuration(
-    experiment_name="n2v_2D",
-    data_type="array",
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=1,
-    num_epochs=1,
-) # (1)!
-
-careamist = CAREamist(config)
+--8<-- "careamics-examples/guides/usage/careamist.py:config"
 ```
 
 1. Any valid configuration will do!
@@ -36,23 +24,7 @@ This is similar to the previous section, except that the configuration is loaded
 a file on disk.
 
 ```python title="Instantiating CAREamist with a path to a configuration"
-from careamics import CAREamist
-from careamics.config import create_n2v_configuration, save_configuration
-
-config = create_n2v_configuration(
-    experiment_name="n2v_2D",
-    data_type="array",
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=1,
-    num_epochs=1,
-)
-
-# save a configuration to disk
-save_configuration(config, "configuration_example.yml")
-
-# load it from within CAREamist
-careamist = CAREamist("configuration_example.yml")
+--8<-- "careamics-examples/guides/usage/careamist.py:config_path"
 ```
 
 ## Instantiating with a path to a model
@@ -69,23 +41,21 @@ images!
 
 
 ```python title="Instantiating CAREamist with a path to a model"
-from careamics import CAREamist
-
-path_to_model = "model.zip" # (1)!
-
-careamist = CAREamist(path_to_model)
+--8<-- "careamics-examples/guides/usage/careamist.py:load_model"
 ```
 
 1. Any valid path to a model, as a string or a `Path.path` object, will work.
+
+
+## Experiment name
 
 When loading a pre-trained model, the experiment name, used in the loggers (e.g. WandB),
 or to name the checkpoints, is automatically set to `CAREamics`. But you can change that
 by passing it to the `CAREamist` constructor.
 
 ```python title="Changing the experiment name"
-careamist = CAREamist(path_to_model, experiment_name="a_new_experiment")
+--8<-- "careamics-examples/guides/usage/careamist.py:exp_name"
 ```
-
 
 ## Setting the working directory
 
@@ -94,5 +64,5 @@ creating a new CAREamist, you can indicate a different working directory in whic
 save the logs and checkpoints during training.
 
 ```python title="Changing the working directory"
-careamist = CAREamist(config, work_dir="work_dir")
+--8<-- "careamics-examples/guides/usage/careamist.py:work_dir"
 ```

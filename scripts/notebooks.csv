@@ -1,5 +1,5 @@
-repository url, path in repository, destination in docs, title
-https://github.com/CAREamics/careamics-examples.git,applications/n2v/2D/SEM_Noise2Void.ipynb,Noise2Void,2D_SEM
-https://github.com/CAREamics/careamics-examples.git,applications/n2v/2D/BSD68_Noise2Void.ipynb,Noise2Void,2D_BSD68
-https://github.com/CAREamics/careamics-examples.git,applications/n2n/2D/SEM_Noise2Noise.ipynb,Noise2Noise,2D_SEM
-https://github.com/CAREamics/careamics-examples.git,applications/care/denoising/2D/U2OS_CARE.ipynb,CARE,2D_denoising_U2OS
+path in repository, destination in docs, title
+applications/n2v/2D/SEM_Noise2Void.ipynb,Noise2Void,2D_SEM
+applications/n2v/2D/BSD68_Noise2Void.ipynb,Noise2Void,2D_BSD68
+applications/n2n/2D/SEM_Noise2Noise.ipynb,Noise2Noise,2D_SEM
+applications/care/denoising/2D/U2OS_CARE.ipynb,CARE,2D_denoising_U2OS

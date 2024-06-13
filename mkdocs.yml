@@ -98,7 +98,8 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.snippets:
       base_path:
-        - docs/overrides/.icons/octicons
+        - docs/overrides/.icons/octicons # to use emojis in the cards
+        - temp/ # for the code snippets in the guides
   # - pymdownx.progressbar:
   - pymdownx.tasklist:
       custom_checkbox: true

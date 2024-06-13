@@ -22,15 +22,7 @@ The details of how CAREamics deals with the loading and patching is detailed in 
 CAREamics can be trained by simply passing numpy arrays.
 
 ```python title="Training by passing an array"
-import numpy as np
-
-train_array = np.random.rand(256, 256)
-val_array = np.random.rand(256, 256)
-
-careamist.train(
-    train_source=train_array, # (1)!
-    val_source=val_array, # (2)!
-)
+--8<-- "careamics-examples/guides/usage/training.py:array"
 ```
 
 1. All parameters to the `train` method must be specified by keyword.
@@ -42,12 +34,7 @@ careamist.train(
     If you are training a supervised model, you must provide the target data as well.
 
     ```python
-    careamist.train(
-        train_source=train_array,
-        train_target=target_array,
-        val_source=val_array,
-        val_target=val_target_array,
-    )
+    --8<-- "careamics-examples/guides/usage/training.py:supervised"
     ```
 
 ## Training by passing a path
@@ -55,10 +42,7 @@ careamist.train(
 The same thing can be done by passing a path to a folder or files.
 
 ```python title="Training by passing a path"
-careamist.train(
-    train_source=path_to_train_data,  # (1)!
-    val_source=path_to_val_data,
-)
+--8<-- "careamics-examples/guides/usage/training.py:path"
 ```
 
 1. The path can point to a single file, or contain multiple files.
@@ -80,11 +64,7 @@ and `val_minimum_split`.
 number of patches smaller than `val_minimum_split`, CAREamics will use `val_minimum_split`.
 
 ```python title="Splitting validation from training data"
-careamist.train(
-    train_source=train_array,
-    val_percentage=0.1, # (1)!
-    val_minimum_split=5, # (2)!
-)
+--8<-- "careamics-examples/guides/usage/training.py:split"
 ```
 
 1. 10% of the training data will be used for validation.
@@ -105,14 +85,7 @@ in more details in the next section into what this class can be used for. Here i
 brief overview of how it passed to the `train` method.
 
 ```python title="Training by passing a CAREamicsTrainData object"
-from careamics import CAREamicsTrainData
-
-data_module = CAREamicsTrainData(  # (1)!
-    data_config=config.data_config, 
-    train_data=train_array
-)
-
-careamist.train(datamodule=data_module)
+--8<-- "careamics-examples/guides/usage/training.py:datamodule"
 ```
 
 1. Here this does the same thing as passing the `train_source` directly into the `train` method.

@@ -13,25 +13,7 @@ The `CAREamicsTrainData` receives both data configuration and data itself. The d
 can be passed a path to a folder, to a file or as `numpy` array. 
 
 ```python title="Simplest way to instantiate CAREamicsTrainData"
-from careamics.config import create_n2v_configuration
-from careamics import CAREamicsTrainData
-import numpy as np
-
-train_array = np.random.rand(128, 128)
-
-config = create_n2v_configuration(
-    experiment_name="n2v_2D",
-    data_type="array",
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=1,
-    num_epochs=1,
-)
-
-data_module = CAREamicsTrainData( # (1)!
-    data_config=config.data_config,
-    train_data=train_array
-)
+--8<-- "careamics-examples/guides/usage/datasets.py:train_data"
 ```
 
 It has the following parameters:
@@ -115,7 +97,7 @@ It performs the following steps:
     1. For each file in the path, the corresponding image is loaded.
     2. The `mean` and `std` are computed for the loaded image.
     3. The image is reshaped so that the axes are ordered following the convention `SC(Z)YX`.
-    4. Extract patches sequentially so that they cover the whole image and keept them
+    4. Extract patches sequentially so that they cover the whole image and kept them
         in memory.
     5. Once all files have been processed, the average `mean` and `std` are computed.
     6. Update the `mean` and `std` in the configuration if they were not provided. This step
@@ -215,46 +197,7 @@ You should also provide a `fnmatch` and `Path.rglob` compatible expression (e.g.
 
 
 ```python title="Read custom data types"
-from pathlib import Path
-from typing import Any
-
-import numpy as np
-from careamics import CAREamicsTrainData
-from careamics.config import create_n2v_configuration
-
-def read_npy( # (1)!
-        path: Path, # (2)!
-        *args: Any,
-        **kwargs: Any, # (3)!
-    ) -> np.ndarray:
-    return np.load(path) # (4)! 
-
-# example data
-train_array = np.random.rand(128, 128)
-np.save("train_array.npy", train_array)
-
-# configuration
-config = create_n2v_configuration(
-    experiment_name="n2v_2D",
-    data_type="custom", # (5)!
-    axes="YX",
-    patch_size=[32, 32],
-    batch_size=1,
-    num_epochs=1,
-)
-
-data_module = CAREamicsTrainData(
-    data_config=config.data_config, 
-    train_data="train_array.npy", # (6)!
-    read_source_func=read_npy, # (7)!
-    extension_filter="*.npy", # (8)!
-)
-data_module.prepare_data()
-data_module.setup() # (9)!
-
-# check dataset output
-dataloader = data_module.train_dataloader()
-print(dataloader.dataset[0][0].shape) # (10)!
+--8<-- "careamics-examples/guides/usage/datasets.py:custom"
 ```
 
 1. We define a function that reads the custom data type.

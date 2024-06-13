@@ -111,7 +111,7 @@ description: Descriptions of the algorithms.
                             <div class="card-content">
                                 <h5>Noise2Noise</h5>
                                 <p>
-                                    A supervised methods that cna denoise images without
+                                    A supervised methods that can denoise images without
                                     corresponding clean data.
                                 </p>
                             </div>

@@ -13,11 +13,7 @@ All convenience methods can be found in the `careamics.config` modules. CAREamic
 currently supports [Noise2Void]() and its variants, [CARE]() and [Noise2Noise](). 
 
 ``` python title="Import convenience functions"
-from careamics.config import (
-    create_n2v_configuration, # Noise2Void, N2V2, structN2V
-    create_care_configuration, # CARE
-    create_n2n_configuration, # Noise2Noise
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:imports"
 ```
 
 Each method does all the heavy lifting to make the configuration coherent. They share
@@ -46,15 +42,7 @@ Likewise if `n_channels` is specified but `C` is not in `axes`.
 The correct way is to specify them both at the same time.
 
 ```python title="Configuration with multiple channels"
-config = create_n2v_configuration(
-    experiment_name='n2v_2D_channels', 
-    data_type="tiff", 
-    axes="YXC", # (1)!
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    n_channels=3 # (2)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_channels"
 ```
 
 1. The axes contain the letter `C`.
@@ -75,16 +63,7 @@ To control whether the channels are trained independently, you can use the
 `independent_channels` parameter:
 
 ```python title="Training channels together"
-config = create_n2v_configuration(
-    experiment_name="n2v_2D_mix_channels",
-    data_type="tiff",
-    axes="YXC",  # (1)!
-    patch_size=[64, 64],
-    batch_size=8,
-    num_epochs=20,
-    n_channels=3,
-    independent_channels=False,  # (2)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_mix_channels"
 ```
 
 1. As previously, we specify the channels in `axes` and `n_channels`.
@@ -102,15 +81,7 @@ have structures that are always oriented in the same direction. To do so there i
 `use_agumentations` parameter:
 
 ```python title="Configuration without augmentations"
-config = create_n2v_configuration(
-    experiment_name='n2v_2D_no_aug', 
-    data_type="tiff", 
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    use_augmentations=False # (1)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_no_aug"
 ```
 
 1. Augmentations are disabled (but normalization and N2V pixel manipulation are still there!).
@@ -128,15 +99,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 
 
 ```python title="Configuration with WandB"
-config = create_n2v_configuration(
-    experiment_name='n2v_2D_wandb', 
-    data_type="tiff", 
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    logger="wandb" # (1)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_wandb"
 ```
 
 1. `wandb` or `tensorboard`
@@ -147,19 +110,7 @@ By default, the convenience functions use the default [UNet model parameters]().
 you are feeling brave, you can pass model specific parameters in the `model_kwargs` dictionary. 
 
 ```python title="Configuration with model specific parameters"
-config = create_n2v_configuration(
-    experiment_name='n2v_3D', 
-    data_type="tiff", 
-    axes="ZYX",
-    patch_size=[16, 64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    model_kwargs={
-        "depth": 3, # (1)!
-        "num_channels_init": 64, # (2)!
-        # (3)!
-    }
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_model_kwargs"
 ```
 
 1. The depth of the UNet.
@@ -197,16 +148,7 @@ While the default values are usually fine, they can be tweaked to improve the tr
 in certain cases.
 
 ```python title="Configuration with N2V parameters"
-config = create_n2v_configuration(
-    experiment_name='n2v_2D', 
-    data_type="tiff", 
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    roi_size=7,
-    masked_pixel_percentage=0.5
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_parameters"
 ```
 
 ### N2V2
@@ -214,15 +156,7 @@ config = create_n2v_configuration(
 To use N2V2, the `use_n2v2` parameter should simply be set to `True`.
 
 ```python title="Configuration with N2V2"
-config = create_n2v_configuration(
-    experiment_name='n2v2_3D', 
-    data_type="tiff", 
-    axes="ZYX",
-    patch_size=[16, 64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    use_n2v2=True # (1)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v2"
 ```
 
 1. What it does is modifying the architecture of the UNet model and the way the masked
@@ -238,16 +172,7 @@ StructN2V has two parameters that can be set:
 - `struct_n2v_span`: The size of the structN2V mask.
 
 ```python title="Configuration with structN2V"
-config = create_n2v_configuration(
-    experiment_name='structn2v_3D', 
-    data_type="tiff", 
-    axes="ZYX",
-    patch_size=[16, 64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    struct_n2v_axis="horizontal",
-    struct_n2v_span=5
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:structn2v"
 ```
 
 ## Noise2Noise
@@ -261,15 +186,7 @@ Likewise if `n_channels` is specified but `C` is not in `axes`.
 The correct way is to specify them both at the same time.
 
 ```python title="Configuration with multiple channels"
-config = create_n2n_configuration(
-    experiment_name='n2n_2D_channels', 
-    data_type="tiff", 
-    axes="YXC", # (1)!
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    n_channels=3 # (2)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_channels"
 ```
 
 1. The axes contain the letter `C`.
@@ -290,16 +207,7 @@ To control whether the channels are trained independently, you can use the
 `independent_channels` parameter:
 
 ```python title="Training channels together"
-config = create_n2n_configuration(
-    experiment_name="n2n_2D_mix_channels",
-    data_type="tiff",
-    axes="YXC",  # (1)!
-    patch_size=[64, 64],
-    batch_size=8,
-    num_epochs=20,
-    n_channels=3,
-    independent_channels=False,  # (2)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_mix_channels"
 ```
 
 1. As previously, we specify the channels in `axes` and `n_channels`.
@@ -317,15 +225,7 @@ have structures that are always oriented in the same direction. To do so there i
 `use_agumentations` parameter:
 
 ```python title="Configuration without augmentations"
-config = create_n2n_configuration(
-    experiment_name='n2n_2D_no_aug', 
-    data_type="tiff", 
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    use_augmentations=False # (1)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_no_aug"
 ```
 
 1. Augmentations are disabled (but normalization and N2V pixel manipulation are still there!).
@@ -343,15 +243,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 
 
 ```python title="Configuration with WandB"
-config = create_n2n_configuration(
-    experiment_name='n2n_2D_wandb', 
-    data_type="tiff", 
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    logger="wandb" # (1)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_wandb"
 ```
 
 1. `wandb` or `tensorboard`
@@ -362,19 +254,7 @@ By default, the convenience functions use the default [UNet model parameters]().
 you are feeling brave, you can pass model specific parameters in the `model_kwargs` dictionary. 
 
 ```python title="Configuration with model specific parameters"
-config = create_n2n_configuration(
-    experiment_name='n2n_3D', 
-    data_type="tiff", 
-    axes="ZYX",
-    patch_size=[16, 64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    model_kwargs={
-        "depth": 3, # (1)!
-        "num_channels_init": 64, # (2)!
-        # (3)!
-    }
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_model_kwargs"
 ```
 
 1. The depth of the UNet.
@@ -395,15 +275,7 @@ As opposed to Noise2Void, [CARE]() and [Noise2Noise]() can be trained with diffe
 functions. This can be set using the `loss` parameter (surprise, surprise!).
 
 ```python title="Configuration with different loss"
-config = create_n2n_configuration(
-    experiment_name='n2n_3D', 
-    data_type="tiff", 
-    axes="ZYX",
-    patch_size=[16, 64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    loss="mae" # (1)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_loss"
 ```
 
 1. `mae` or `mse`
@@ -422,16 +294,7 @@ Likewise if `n_channels_in` is specified but `C` is not in `axes`.
 The correct way is to specify them both at the same time.
 
 ```python title="Configuration with multiple channels"
-config = create_care_configuration(
-    experiment_name='care_2D_channels', 
-    data_type="tiff", 
-    axes="YXC", # (1)!
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    n_channels_in=3, # (2)!
-    n_channels_out=2 # (3)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_channels"
 ```
 
 1. The axes contain the letter `C`.
@@ -453,17 +316,7 @@ To control whether the channels are trained independently, you can use the
 `independent_channels` parameter:
 
 ```python title="Training channels together"
-config = create_care_configuration(
-    experiment_name="care_2D_mix_channels",
-    data_type="tiff",
-    axes="YXC",  # (1)!
-    patch_size=[64, 64],
-    batch_size=8,
-    num_epochs=20,
-    n_channels_in=3,
-    n_channels_out=2,
-    independent_channels=False,  # (2)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_mix_channels"
 ```
 
 1. As previously, we specify the channels in `axes` and `n_channels`.
@@ -481,15 +334,7 @@ have structures that are always oriented in the same direction. To do so there i
 `use_agumentations` parameter:
 
 ```python title="Configuration without augmentations"
-config = create_care_configuration(
-    experiment_name='care_2D_no_aug', 
-    data_type="tiff", 
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    use_augmentations=False # (1)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_no_aug"
 ```
 
 1. Augmentations are disabled (but normalization and N2V pixel manipulation are still there!).
@@ -507,15 +352,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 
 
 ```python title="Configuration with WandB"
-config = create_care_configuration(
-    experiment_name='care_2D_wandb', 
-    data_type="tiff", 
-    axes="YX",
-    patch_size=[64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    logger="wandb" # (1)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_wandb"
 ```
 
 1. `wandb` or `tensorboard`
@@ -526,19 +363,7 @@ By default, the convenience functions use the default [UNet model parameters]().
 you are feeling brave, you can pass model specific parameters in the `model_kwargs` dictionary. 
 
 ```python title="Configuration with model specific parameters"
-config = create_care_configuration(
-    experiment_name='care_3D', 
-    data_type="tiff", 
-    axes="ZYX",
-    patch_size=[16, 64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    model_kwargs={
-        "depth": 3, # (1)!
-        "num_channels_init": 64, # (2)!
-        # (3)!
-    }
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_model_kwargs"
 ```
 
 1. The depth of the UNet.
@@ -559,15 +384,7 @@ config = create_care_configuration(
 functions. This can be set using the `loss` parameter (surprise, surprise!).
 
 ```python title="Configuration with different loss"
-config = create_care_configuration(
-    experiment_name='care_3D', 
-    data_type="tiff", 
-    axes="ZYX",
-    patch_size=[16, 64, 64],
-    batch_size=8, 
-    num_epochs=20,
-    loss="mae" # (1)!
-)
+--8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_loss"
 ```
 
 1. `mae` or `mse`

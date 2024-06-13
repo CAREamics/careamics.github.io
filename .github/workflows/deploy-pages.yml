@@ -47,9 +47,9 @@ jobs:
           npx markdown-link-check docs/**/*.md --progress -q
 
       - name: 📁 Set up repositories
-        run: sh scripts/check_out_repos.sh
+        run: sh scripts/check_out_examples.sh
       
-      - name: 📓 Set up notebooks
+      - name: 📓 Set up notebooks and examples
         run: sh scripts/check_out_notebooks.sh
 
       # store `latest` version number into a variable
@@ -62,7 +62,7 @@ jobs:
           version=$(mike list | grep '\"latest\"' | sed 's/.*(\([^)]*\)).*/\1/')
           echo "latest_version=$version" >> "$GITHUB_ENV"
 
-      # build dock
+      # build docs
       - name: 📚 Build Docs
         run: |
           pip install -U pip
