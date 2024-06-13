@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://careamics.github.io/0.1/guides/dev_resources/docstring/</loc>
+         <lastmod>2024-06-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://careamics.github.io/0.1/guides/dev_resources/website/</loc>
          <lastmod>2024-06-13</lastmod>
          <changefreq>daily</changefreq>
