@@ -95,15 +95,13 @@ in the navigation file of mkdocs.
 2. You can test the notebook by running `sh scripts/notebooks.sh` then `mkdocs serve`.
 
 
-!!! info title="Cell tags"
-
+!!! info "Cell tags"
     By default, all cell outputs are shown. To hide the output of a particular cell,
     add the tag `remove_output` to the cell. The `mkdocs.ynml` specifies that this 
     tag is used to hide cell outputs.
 
 
-!!! info title="CSV ending on a new line"
-
+!!! info "CSV ending on a new line"
     In is important to end the `.csv` file with a new line, otherwise the last line might
     be ignored.
 
