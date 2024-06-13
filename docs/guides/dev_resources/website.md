@@ -1,6 +1,6 @@
-# Website
+# Github pages
 
-The website is built using [mkdocs](https://www.mkdocs.org/), more specifically the 
+The Github pages are built using [mkdocs](https://www.mkdocs.org/), more specifically the 
 [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) theme. Modifications to
 the theme were greatly inspired from [pydev-guide](https://github.com/pydev-guide/pydev-guide.github.io).
 
@@ -38,7 +38,42 @@ In order to build the pages locally, follow these steps:
 ## Code snippets
 
 Code snippets are all automatically tested in [careamics-example](https://github.com/CAREamics/careamics-examples/tree/main/applications)
-and are currently manually added to the markdown pages in the guides.
+and added automaticallt to the Github pages in the [guides section](../index.md).
+
+The script `scripts/check_out_examples.sh` clone the examples repository locally and upon
+building the pages, the code snippets are automatically added to the markdown by the
+[PyMdown Snippets extension](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/).
+
+It works as follows, first create a code snippet in a python file on 
+[careamics-example](https://github.com/CAREamics/careamics-examples/tree/main/applications):
+
+```python title="careamics-example/some_example/some_file.py"
+# code necessary for running successfully the snippet
+# but not shown on the Github pages
+import numpy as np
+
+array = np.ones((32, 32))
+
+# we add a snippet section:
+# --8<-- [start:my_snippet]
+sum_array = np.sum(array) # snippets appearing on the website (can be multi-lines)
+# --8<-- [end:my_snippet]
+
+# then more code or snippets sections
+...
+```
+
+Then, in the [CAREamics Github pages source](https://github.com/CAREamics/careamics.github.io),
+the corresponding markdown file has the following content telling `PyMdown.Snippets` to 
+include the snippet section:
+
+```markdown title="careamics.github.io/guides/some_example/some_file.py"
+    To sum the array, simply do:
+    
+    ```python
+    ;--8<-- "careamics-example/some_example/some_file.py:my_snippet"
+    ```
+```
 
 
 ## Jupyter notebooks applications
@@ -46,7 +81,7 @@ and are currently manually added to the markdown pages in the guides.
 The pages in the application section are automatically generated from the Jupyter
 notebooks in [careamics-example](https://github.com/CAREamics/careamics-examples/tree/main/applications) 
 using [mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter).
-A bash script (`scripts/check_out_notebooks.sh`) checks out the repository and copies 
+A bash script (`scripts/check_out_examples.sh`) checks out the repository and copies 
 all the notebooks referenced in a text files into the correct path in the application 
 folder. Finally, the script `scripts/gen_jupyter_nav.py` creates entries for each notebook 
 in the navigation file of mkdocs.
@@ -54,7 +89,7 @@ in the navigation file of mkdocs.
 
 ### Adding a new notebook
 
-1. Add the notebook to `scripts/notebooks.csv`, without using spaces. The third column
+1. Add the notebook to `scripts/notebooks.csv`, without using spaces. The second column
   specifies the path to the page in the application section, while the last column is used 
   as title.
 2. You can test the notebook by running `sh scripts/notebooks.sh` then `mkdocs serve`.
