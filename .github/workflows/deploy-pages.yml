@@ -47,10 +47,10 @@ jobs:
           npx markdown-link-check docs/**/*.md --progress -q
 
       - name: 📁 Set up repositories
-        run: sh scripts/check_out_examples.sh
+        run: sh scripts/check_out_repos.sh
       
       - name: 📓 Set up notebooks and examples
-        run: sh scripts/check_out_notebooks.sh
+        run: sh scripts/check_out_examples.sh
 
       # store `latest` version number into a variable
       - name: 🔬 Get latest version number
