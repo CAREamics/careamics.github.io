@@ -10,7 +10,8 @@ to create configurations with a only few parameters related to the algorithm use
 want to train.
 
 All convenience methods can be found in the `careamics.config` modules. CAREamics 
-currently supports [Noise2Void]() and its variants, [CARE]() and [Noise2Noise](). 
+currently supports [Noise2Void](../../algorithms/n2v/index.md) and its variants, 
+[CARE](../../algorithms/care/index.md) and [Noise2Noise](../../algorithms/n2n/index.md). 
 
 ``` python title="Import convenience functions"
 --8<-- "careamics-examples/guides/configuration/convenience_functions.py:imports"
@@ -20,7 +21,7 @@ Each method does all the heavy lifting to make the configuration coherent. They 
 a certain numbers of mandatory parameters:
 
 - `experiment_name`: The name of the experiment, used to differentiate trained models.
-- `data_type`: One of the types supported by CAREamics (`array`, `tiff` or [`custom`]()).
+- `data_type`: One of the types supported by CAREamics (`array`, `tiff` or [`custom`](advanced_configuration.md#custom-data-type)).
 - `axes`: Axes of the data (e.g. SYX), can only the following letters: `STCZYX`.
 - `patch_size`: Size of the patches along the spatial dimensions (e.g. [64, 64]).
 - `batch_size`: Batch size to use during training (e.g. 8). This parameter affects the
@@ -95,7 +96,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 !!! note "Loggers installation"
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](/../../installation/#extra-dependencies) to know more about it.
+    out the [installation section](../../installation.md#extra-dependencies) to know more about it.
 
 
 ```python title="Configuration with WandB"
@@ -133,7 +134,7 @@ variants [N2V2]() and [structN2V]().
 !!! note "Understanding Noise2Void and its variants"
 
     Before deciding which variant to use, and how to modify the parameters, we recommend
-    to die a little a bit on [how each algorithm works](/../../algorithms)!
+    to die a little a bit on [how each algorithm works](../../algorithms/index.md)!
 
 
 ### Noise2Void parameters
@@ -239,7 +240,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 !!! note "Loggers installation"
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](/../../installation/#extra-dependencies) to know more about it.
+    out the [installation section](../../installation.md#extra-dependencies) to know more about it.
 
 
 ```python title="Configuration with WandB"
@@ -348,7 +349,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 !!! note "Loggers installation"
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](/../../installation/#extra-dependencies) to know more about it.
+    out the [installation section](../../installation.md#extra-dependencies) to know more about it.
 
 
 ```python title="Configuration with WandB"

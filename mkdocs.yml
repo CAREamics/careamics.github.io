@@ -33,6 +33,7 @@ nav:
           - Developer resources: guides/dev_resources/index.md
           - guides/dev_resources/contribute.md
           - guides/dev_resources/website.md
+          - guides/dev_resources/docstring.md
   - Applications: applications/
   - Algorithms:
       - algorithms/index.md
@@ -120,6 +121,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - tags
 
   # jupyter notebooks: https://pypi.org/project/mkdocs-jupyter/
   - mkdocs-jupyter:

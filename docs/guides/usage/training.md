@@ -9,7 +9,7 @@ path to a folder or files, or by using CAREamics data module class for more cont
 (advanced).
 
 The details of how CAREamics deals with the loading and patching is detailed in the
-[dataset section](datasets).
+[dataset section](datasets.md).
 
 
 !!! warning "Data type"
@@ -114,4 +114,4 @@ To decide on the logger, check out the [Configuration section](../configuration/
 !!! note "Loggers installation"
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](/../../installation/#extra-dependencies) to know more about it.
+    out the [installation section](../../installation.md#extra-dependencies) to know more about it.

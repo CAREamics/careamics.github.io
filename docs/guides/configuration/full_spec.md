@@ -11,7 +11,7 @@ You can also explore all the Pydantic models using the [reference documentation]
 ```
 
 1. Currently, we only support the UNet architecture and custom models (see [advanced
-    configuration](advanced_configuration)). But in the future, there will be more
+    configuration](advanced_configuration.md#custom-ai-model)). But in the future, there will be more
     models to use here.
 2. Here the parameters are those from Pytorch DataLoaders.
 3. Normalization is also a transformation, but it is always applied before these 

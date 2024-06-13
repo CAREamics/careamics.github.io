@@ -3,7 +3,7 @@
 !!! info "Beginner vs Intermediate"
 
     This is an intermediate level way to create CAREamics configuration. Do check the
-    [convenience functions](convenience_functions) if you are looking for a simpler
+    [convenience functions](convenience_functions.md) if you are looking for a simpler
     way to create CAREanics configurations!
 
 

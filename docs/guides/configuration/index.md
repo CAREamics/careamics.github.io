@@ -27,10 +27,10 @@ offers.
 In the next sections, you can dive deeper on how to use CAREamics 
 configuration with different levels of expertise.
 
-- (beginner) [Convenience functions](convenience_functions)
-- (beginner) [Save and load configurations](save_load)
-- (intermediate) [Build the configuration from scratch](build_configuration)
-- (intermediate) [Full specification](full_spec)
-- (intermediate) [Algorithm requirements](algorithm_requirements)
-- (advanced) [Advanced configuration](advanced_configuration)
-- (all) [Understanding the errors](cunderstanding_errors)
+- (beginner) [Convenience functions](convenience_functions.md)
+- (beginner) [Save and load configurations](save_load.md)
+- (intermediate) [Build the configuration from scratch](build_configuration.md)
+- (intermediate) [Full specification](full_spec.md)
+- (intermediate) [Algorithm requirements](algorithm_requirements.md)
+- (advanced) [Advanced configuration](advanced_configuration.md)
+- (all) [Understanding the errors](understanding_errors.md)

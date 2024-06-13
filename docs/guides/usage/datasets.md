@@ -5,7 +5,7 @@ validation and prediction. In CAREamics, we provide a `CAREamicsTrainData` class
 creates the datasets for training and validation (there is a class for prediction
 as well, which is simpler and shares some parameters with the training one). In most cases,
 it is created internally. In this section, we describe what it does and shed light on
-some of its parameters that are passed to the [train methods](training).
+some of its parameters that are passed to the [train methods](training.md).
 
 ## Overview
 
@@ -28,9 +28,9 @@ It has the following parameters:
 - `(optional) extension_filter`: filter to select custom types
     (see [custom data types](#advanced-custom-data-types))
 - `(optional) val_percentage`: percentage of validation data to extract from the training
-    (see [splitting validation](../training/#splitting-validation-from-training-data))
+    (see [splitting validation](training.md#splitting-validation-from-training-data))
 - `(optional) val_minimum_split`: minimum validation split 
-    (see [splitting validation](../training/#splitting-validation-from-training-data))
+    (see [splitting validation](training.md#splitting-validation-from-training-data))
 - `(optional) use_in_memory`: whether to use in-memory dataset if possible (Default is `True`), 
     not applicable to mnumpy arrays.
 
@@ -39,7 +39,7 @@ is compared to the type of `train_data`, the `CAREamicsTrainData` will create th
 dataset for both training and validation data.
 
 In the absence of validation, validation data is extracted from training data
-(see [splitting validation](../training/#splitting-validation-from-training-data)).
+(see [splitting validation](training.md#splitting-validation-from-training-data)).
 
 
 ## Available datasets
@@ -163,7 +163,7 @@ It performs the following steps:
 
 Transforms are augmentations and any operation applied to the patches before feeding them
 into the network. CAREamics supports the following transforms (see 
-[configuration full spec](../../configuration/full_spec) for an example on how to configure them):
+[configuration full spec](../configuration/full_spec.md) for an example on how to configure them):
 
 
 | Transform               | Description                                  | Notes                                 |
@@ -175,7 +175,7 @@ into the network. CAREamics supports the following transforms (see
 
 
 The `Normalize` transform is always applied, and the rest are optional. The exception is
-`N2VManipulateModel`, which is only applied when training with N2V (see [Noise2Void](../../algorithms/n2v)).
+`N2VManipulateModel`, which is only applied when training with N2V (see [Noise2Void](../../algorithms/n2v/index.md)).
 
 !!! note "When to turn off transforms?"
 
@@ -239,4 +239,4 @@ with fewer parameters:
 
 It uses `InMemoryPredictionDataset` for arrays and `IterablePredictionDataset` for paths. These
 are similar to their training counterparts, but they have simpler transforms and offer the possibility
-to run test-time augmentation. For more details, refer to the [prediction section](../prediction).
+to run test-time augmentation. For more details, refer to the [prediction section](prediction.md).

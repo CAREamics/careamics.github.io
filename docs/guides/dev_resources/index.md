@@ -7,3 +7,4 @@
 
 - [How to contribute to the project?](contribute.md)
 - [How does the website work?](website.md)
+- [CAREamics docstring conventions](docstring.md)
