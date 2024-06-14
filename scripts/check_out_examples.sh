@@ -4,7 +4,7 @@
 # the docs. The rest is kept for snippets.
 
 LIST="scripts/notebooks.csv"
-DEST="docs/applications/"
+DEST="docs/"
 TEMP="temp/"
 REPO="https://github.com/CAREamics/careamics-examples.git"
 

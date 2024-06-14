@@ -37,11 +37,7 @@ nav:
   - Applications: applications/
   - Algorithms:
       - algorithms/index.md
-      - Noise2Void: algorithms/n2v/index.md
-      - N2V2: algorithms/n2v2/index.md
-      - structN2V: algorithms/structn2v/index.md
-      - CARE: algorithms/care/index.md
-      - Noise2Noise: algorithms/n2n/index.md
+      - Noise2Void: algorithms/n2v/
 
   - Code Reference: reference/
 
@@ -116,6 +112,8 @@ markdown_extensions:
           - overrides/.icons
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
   - toc:
       permalink: "#"
 
@@ -130,6 +128,8 @@ plugins:
         # https://nbconvert.readthedocs.io/en/latest/removing_cells.html
         remove_all_outputs_tags:
           - remove_output
+        remove_input_tags:
+          - hide_code
 
   # Generate code documentation from other modules
   # generate .md for a python modules
@@ -178,6 +178,12 @@ extra:
   version:
     provider: mike
 
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
 extra_css:
   - stylesheets/extra.css
   - stylesheets/grid_menu.css
+  - https://unpkg.com/katex@0/dist/katex.min.css

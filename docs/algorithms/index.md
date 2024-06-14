@@ -17,7 +17,7 @@ description: Descriptions of the algorithms.
             <div class="component-wrapper" style="display: block;">
                 <div class="responsive-grid">
                     <!-- N2V -->
-                    <a class="card-wrapper" href="n2v">
+                    <a class="card-wrapper" href="n2v/Noise2Void">
                         <div class="card"> 
                             <div class="logo">
                                 <span class="twemoji">
