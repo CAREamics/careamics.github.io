@@ -10,7 +10,9 @@ description: Descriptions of the algorithms.
     descriptions of each algorithm in the near future.
 
 ## Self-supervised restoration
-
+<!-- The following links are pointing to non existing pages (pre-build) -->
+<!-- Disable markdown link check to allow bulding the pages -->
+<!-- markdown-link-check-disable -->
 <div class="md-container secondary-section">
     <div class="g">
         <div class="section">
