@@ -161,6 +161,10 @@ plugins:
         remove_comments: true
       css_files:
         - stylesheets/extra.css
+        - stylesheets/termynal.css
+      js_files:
+        - javascripts/extra.js
+        - javascripts/termynal.js
 
   # check spelling in all files, including code documentation
   - spellcheck:
@@ -179,11 +183,14 @@ extra:
     provider: mike
 
 extra_javascript:
+  - javascripts/extra.js
   - javascripts/katex.js
+  - javascripts/termynal.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 extra_css:
   - stylesheets/extra.css
   - stylesheets/grid_menu.css
+  - stylesheets/termynal.css
   - https://unpkg.com/katex@0/dist/katex.min.css
