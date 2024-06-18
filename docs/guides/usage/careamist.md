@@ -66,3 +66,28 @@ save the logs and checkpoints during training.
 ```python title="Changing the working directory"
 --8<-- "careamics-examples/guides/usage/careamist.py:work_dir"
 ```
+
+## Custom callbacks
+
+CAREamics uses two different callbacks from PyTorch Lightning:
+
+- [`ModelCheckpoint`](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.ModelCheckpoint.html#lightning.pytorch.callbacks.ModelCheckpoint): to save the model at different points during the training.
+- [`EarlyStopping`](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.EarlyStopping.html#lightning.pytorch.callbacks.EarlyStopping): to stop the training based on a few parameters.
+
+The parameters for the callbacks are the same as the ones from PyTorch Lightning, and
+can be set in the configuration.
+
+Custom callbacks can be passed to the `CAREamist` constructor. The callbacks must inherit
+from the PyTorch Lightning `Callback` class.
+
+```python title="Custom callbacks"
+--8<-- "careamics-examples/guides/usage/careamist.py:callbacks"
+```
+
+1. The callbacks must inherit from the PyTorch Lightning `Callback` class.
+
+2. This is just an example to test that the callback was called!
+
+3. Create your callback.
+
+4. Pass the callback to the CAREamist constructor as a list.

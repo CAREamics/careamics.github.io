@@ -92,17 +92,6 @@ brief overview of how it passed to the `train` method.
     In the next section, we will see a more useful example.
 
 
-## Callbacks
-
-CAREamics currently allows two different callbacks from PyTorch Lightning:
-
-- [`ModelCheckpoint`](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.ModelCheckpoint.html#lightning.pytorch.callbacks.ModelCheckpoint): to save the model at different points during the training.
-- [`EarlyStopping`](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.EarlyStopping.html#lightning.pytorch.callbacks.EarlyStopping): to stop the training based on a few parameters.
-
-The parameters for the callbacks are the same as the ones from PyTorch Lightning, and
-can be set in the configuration.
-
-
 ## Logging the training
 
 By default, CAREamics simply log the training progress in the console. However, it is 
