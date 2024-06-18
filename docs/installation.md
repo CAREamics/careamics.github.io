@@ -12,12 +12,6 @@ GPU-acceleration if they have the new chip generations (M1, M2, etc.).
 Support is provided directly from PyTorch, and is still experimental for macOS.
 
 
-<div class="termy">
-    ``` bash
-        $ echo
-    ```
-</div>
-
 
 ## Step-by-step
 
