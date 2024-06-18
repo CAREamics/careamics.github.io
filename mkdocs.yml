@@ -34,6 +34,8 @@ nav:
           - guides/dev_resources/contribute.md
           - guides/dev_resources/website.md
           - guides/dev_resources/docstring.md
+      - Command-line interface:
+          - guides/cli/index.md
   - Applications: applications/
   - Algorithms:
       - algorithms/index.md
@@ -185,12 +187,12 @@ extra:
 extra_javascript:
   - javascripts/termynal.js
   - javascripts/extra.js
-  # - javascripts/katex.js
-  # - https://unpkg.com/katex@0/dist/katex.min.js
-  # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 extra_css:
   - stylesheets/extra.css
   - stylesheets/grid_menu.css
   - stylesheets/termynal.css
-  # - https://unpkg.com/katex@0/dist/katex.min.css
+  - https://unpkg.com/katex@0/dist/katex.min.css

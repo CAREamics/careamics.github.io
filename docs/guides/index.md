@@ -71,7 +71,7 @@ users, which we call the Lightning API.
                         </div>
                     </a>
                 </div>
-                  <!-- New row -->
+                <!-- New row -->
                 <div class="responsive-grid">
                     <!-- Installation -->
                     <a class="card-wrapper" href="lightning_api">
@@ -104,6 +104,26 @@ users, which we call the Lightning API.
                                 <p>
                                     More insights on how CAREamics is organized and how
                                     to tweak it to your needs.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                 <!-- New row -->
+                <div class="responsive-grid">
+                    <!-- Installation -->
+                    <a class="card-wrapper" href="cli">
+                        <div class="card"> 
+                            <div class="logo">
+                                <span class="twemoji">
+                                    --8<--  "terminal.svg"
+                                </span>
+                            </div>
+                            <div class="card-content">
+                                <h5>Command-line interface</h5>
+                                <p>
+                                    Want to run CAREamics from the command line, on your
+                                    machine, remotely or on a cluster? Head this way!
                                 </p>
                             </div>
                         </div>
