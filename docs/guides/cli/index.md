@@ -1,6 +1,9 @@
 # Command-line interface
 
 
+!!! warning "Work in progress"
+    These pages are still under construction.
+
 
 <div class="termy">
 

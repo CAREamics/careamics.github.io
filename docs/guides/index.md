@@ -5,29 +5,12 @@ description: Guides
 
 # Guides
 
-The basic usage of CAREamics follows this pattern:
+CAREamics can be used in two ways, the recommended way is to use the CAREamist API, as
+it made to be simple, intuitive and minimize potential errors. Advanced users might want
+to only use parts of CAREamics in their own pipeline, for this they should refer to the
+Lightning API.
 
-```python title="CAREamics workflow"
---8<-- "careamics-examples/guides/basic_usage.py:basic_usage"
-```
-
-1. There are several convenience functions to create a configuration, but you can also
-create it entirely manually. Head to the configuration section to know more!
-
-2. Obviously, one should choose a more reasonable number of epochs for training.
-
-3. The CAREamist allows training, predicting and exporting the model. Refer to the 
-CAREamist section to learn more about it. There is also an alternative for more advance
-users, which we call the Lightning API.
-
-4. One should use real data for training!
-
-5. Models can be exported to the [BioImage Model Zoo](https://bioimage.io/) format.
-
-
-!!! warning "Work in progress"
-    These pages are still under construction.
-    
+We also provide a command-line interface and developer resources!
 
 <div class="md-container secondary-section">
     <div class="g">
@@ -36,80 +19,43 @@ users, which we call the Lightning API.
                 <!-- New row -->
                 <div class="responsive-grid">
                     <!-- Installation -->
-                    <a class="card-wrapper" href="configuration">
+                    <a class="card-wrapper" href="careamist_api">
                         <div class="card"> 
                             <div class="logo">
                                 <span class="twemoji">
-                                    --8<--  "desktop-download.svg"
+                                    --8<--  "code.svg"
                                 </span>
                             </div>
                             <div class="card-content">
-                                <h5>Configuration</h5>
+                                <h5>CAREamist API</h5>
                                 <p>
-                                    The configuration is at the heart of CAREamics, it 
-                                    allow users to define how and which algorithm will be
-                                    trained.
+                                    The recommended way to use CAREamics in a few lines
+                                    of code to apply various methods in the most 
+                                    comfortable way possible.
                                 </p>
                             </div>
                         </div>
                     </a>
-                    <!-- Installation -->
-                    <a class="card-wrapper" href="usage">
-                        <div class="card"> 
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<--  "desktop-download.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Using CAREAmics</h5>
-                                <p>
-                                    The CAREamist is the core element allowing training
-                                    and prediction using the model defined in the configuration.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- New row -->
-                <div class="responsive-grid">
                     <!-- Installation -->
                     <a class="card-wrapper" href="lightning_api">
                         <div class="card"> 
                             <div class="logo">
                                 <span class="twemoji">
-                                    --8<--  "desktop-download.svg"
+                                    --8<--  "zap.svg"
                                 </span>
                             </div>
                             <div class="card-content">
                                 <h5>Lightning API</h5>
                                 <p>
-                                    Advanced users can re-use part of CAREamics in their
+                                    Advanced users can re-use parts of CAREamics in their
                                     Lightning pipeline, with more customization potential
                                     available.
                                 </p>
                             </div>
                         </div>
-                    </a>
-                    <!-- Installation -->
-                    <a class="card-wrapper" href="dev_resources">
-                        <div class="card"> 
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<--  "desktop-download.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Developer resources</h5>
-                                <p>
-                                    More insights on how CAREamics is organized and how
-                                    to tweak it to your needs.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
+                    </a>    
                 </div>
-                 <!-- New row -->
+                <!-- New row -->
                 <div class="responsive-grid">
                     <!-- Installation -->
                     <a class="card-wrapper" href="cli">
@@ -124,6 +70,23 @@ users, which we call the Lightning API.
                                 <p>
                                     Want to run CAREamics from the command line, on your
                                     machine, remotely or on a cluster? Head this way!
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Installation -->
+                    <a class="card-wrapper" href="dev_resources">
+                        <div class="card"> 
+                            <div class="logo">
+                                <span class="twemoji">
+                                    --8<--  "repo.svg"
+                                </span>
+                            </div>
+                            <div class="card-content">
+                                <h5>Developer resources</h5>
+                                <p>
+                                    More insights on how CAREamics is organized and how
+                                    to tweak it to your needs.
                                 </p>
                             </div>
                         </div>

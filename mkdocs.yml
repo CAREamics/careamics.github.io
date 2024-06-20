@@ -11,31 +11,33 @@ nav:
   - Current State: current_state.md
   - Guides:
       - Guides: guides/index.md
-      - Configuration:
-          - guides/configuration/index.md
-          - guides/configuration/convenience_functions.md
-          - guides/configuration/save_load.md
-          - guides/configuration/build_configuration.md
-          - guides/configuration/full_spec.md
-          - guides/configuration/algorithm_requirements.md
-          - guides/configuration/advanced_configuration.md
-          - guides/configuration/understanding_errors.md
-      - Using CAREamics:
-          - guides/usage/index.md
-          - guides/usage/careamist.md
-          - guides/usage/training.md
-          - guides/usage/datasets.md
-          - guides/usage/prediction.md
-          - guides/usage/model_export.md
+      - CAREamist API:
+          - guides/careamist_api/index.md
+          - Configuration:
+              - guides/careamist_api/configuration/index.md
+              - guides/careamist_api/configuration/convenience_functions.md
+              - guides/careamist_api/configuration/save_load.md
+              - guides/careamist_api/configuration/build_configuration.md
+              - guides/careamist_api/configuration/full_spec.md
+              - guides/careamist_api/configuration/algorithm_requirements.md
+              - guides/careamist_api/configuration/advanced_configuration.md
+              - guides/careamist_api/configuration/understanding_errors.md
+          - Using CAREamics:
+              - guides/careamist_api/usage/index.md
+              - guides/careamist_api/usage/careamist.md
+              - guides/careamist_api/usage/training.md
+              - guides/careamist_api/usage/datasets.md
+              - guides/careamist_api/usage/prediction.md
+              - guides/careamist_api/usage/model_export.md
       - Lightning API:
           - guides/lightning_api/index.md
+      - Command-line interface:
+          - guides/cli/index.md
       - Developer resources:
           - Developer resources: guides/dev_resources/index.md
           - guides/dev_resources/contribute.md
           - guides/dev_resources/website.md
           - guides/dev_resources/docstring.md
-      - Command-line interface:
-          - guides/cli/index.md
   - Applications: applications/
   - Algorithms:
       - algorithms/index.md
