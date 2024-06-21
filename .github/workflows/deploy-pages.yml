@@ -9,7 +9,11 @@ on:
     branches: [main]
     tags:
       - '*.*.*'
+  pull_request:
   workflow_dispatch:
+  schedule:
+    # run every week
+    - cron: "0 0 * * 0"
 
 # avoid jobs modifying the gh-pages branch concurrently
 concurrency:
@@ -68,8 +72,9 @@ jobs:
           pip install -U pip
           pip install -r requirements.txt
 
-      # deploy to `latest` using mike
+      # deploy to `latest` using mike only if on main, and if a push or scheduled
       - name: 🚀 Deploy with mike
+        if: ${{ (github.event_name == 'push' || github.event_name == 'schedule') && github.ref == 'refs/heads/main' }}
         run: mike deploy --push $latest_version
   
   update_version:
