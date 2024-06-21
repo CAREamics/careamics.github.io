@@ -38,7 +38,6 @@ This is valid for `Noise2Void`, `N2V2` and `structN2V`.
 
 - `algorithm="care"`
 - `loss`: any but `n2v`
-- `model`: `in_channels` and `num_classes` must be equal
 
 #### Data configuration
 

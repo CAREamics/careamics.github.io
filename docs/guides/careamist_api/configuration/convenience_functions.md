@@ -181,8 +181,8 @@ StructN2V has two parameters that can be set:
 ### Training with channels
 
 When training with multiple channels, the `axes` parameter should contain `C` (e.g. `YXC`).
-An error will be then thrown if the optional parameter `n_channels` is not specified! 
-Likewise if `n_channels` is specified but `C` is not in `axes`.
+An error will be then thrown if the optional parameter `n_channels_in` is not specified! 
+Likewise if `n_channels_in` is specified but `C` is not in `axes`.
 
 The correct way is to specify them both at the same time.
 
@@ -192,6 +192,7 @@ The correct way is to specify them both at the same time.
 
 1. The axes contain the letter `C`.
 2. The number of channels is specified.
+3. Depending on the CARE task, you also see to set `n_channels_out` (optional).
 
 
 !!! warning "Independent channels"
@@ -300,7 +301,7 @@ The correct way is to specify them both at the same time.
 
 1. The axes contain the letter `C`.
 2. The number of channels is specified.
-3. Depending on the CARE task, you also see to set `n_channels_out`
+3. Depending on the CARE task, you also see to set `n_channels_out` (optional).
 
 
 !!! warning "Independent channels"
@@ -320,7 +321,7 @@ To control whether the channels are trained independently, you can use the
 --8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_mix_channels"
 ```
 
-1. As previously, we specify the channels in `axes` and `n_channels`.
+1. As previously, we specify the channels in `axes` and `n_channels_in`.
 2. This ensures that the channels are trained together!
 
 
