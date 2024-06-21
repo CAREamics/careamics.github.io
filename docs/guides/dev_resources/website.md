@@ -22,8 +22,8 @@ In order to build the pages locally, follow these steps:
     ```
 4. Run the following scripts (which are normally run by the CI):
     ```bash
-    python scripts/check_out_repos.sh
-    python scripts/check_out_notebooks.sh
+    sh scripts/check_out_repos.sh
+    sh scripts/check_out_examples.sh
     ```
 3. Build the pages:
     ```bash
@@ -75,6 +75,9 @@ include the snippet section:
     ```
 ```
 
+The examples in the guide are automatically tested in the CI. To make sure it runs on
+the correct branches in the pull request, use the same branch name for the PR to the
+CAREamics source code and to the examples repository.
 
 ## Jupyter notebooks applications
 
