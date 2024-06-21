@@ -3,6 +3,13 @@
 # This python script clone the example repository, and copy some notebooks into
 # the docs. The rest is kept for snippets.
 
+# optional argument to specify a branch
+if [ -z "$1" ]; then
+    BRANCH="main"
+else
+    BRANCH="$1"
+fi
+
 LIST="scripts/notebooks.csv"
 DEST="docs/"
 TEMP="temp/"
@@ -16,7 +23,7 @@ fi
 
 # clone the repo in temp
 repository_name=$(echo $REPO | sed 's/.*\///' | sed 's/.git//')
-git clone $REPO "$TEMP""$repository_name"
+git clone -b $BRANCH $REPO "$TEMP""$repository_name"
 
 # loop over the list starting from lin 2, clone the repository and copy the notebook
 tail -n +2 "$LIST" | while IFS=, read -r path_in_repo destination_in_docs title; do
