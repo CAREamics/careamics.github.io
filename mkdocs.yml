@@ -29,8 +29,13 @@ nav:
               - guides/careamist_api/usage/datasets.md
               - guides/careamist_api/usage/prediction.md
               - guides/careamist_api/usage/model_export.md
+          - FAQ: guides/careamist_api/faq.md
       - Lightning API:
           - guides/lightning_api/index.md
+          - guides/lightning_api/lightning_module.md
+          - guides/lightning_api/data_modules.md
+          - guides/lightning_api/training.md
+          - guides/lightning_api/prediction.md
       - Command-line interface:
           - guides/cli/index.md
       - Developer resources:

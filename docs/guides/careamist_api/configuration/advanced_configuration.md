@@ -43,5 +43,5 @@ and use it in CAREamics. First, the model needs to be registered with the
 
 !!! info "Full example in other sections"
 
-    A full example of the use of a custom data type is available in the [CAREamist]()
-     and [Applications]() sections.
+    A full example of the use of a custom data type is available in the 
+    [Applications]() sections.
