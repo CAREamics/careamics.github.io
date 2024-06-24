@@ -12,7 +12,7 @@ with random weights and prediction will not be possible until the model is train
 
 
 ```python title="Instantiating CAREamist with a configuration"
---8<-- "careamics-examples/guides/usage/careamist.py:config"
+--8<-- "careamics-examples/guides/careamist_api/usage/careamist.py:config"
 ```
 
 1. Any valid configuration will do!
@@ -24,7 +24,7 @@ This is similar to the previous section, except that the configuration is loaded
 a file on disk.
 
 ```python title="Instantiating CAREamist with a path to a configuration"
---8<-- "careamics-examples/guides/usage/careamist.py:config_path"
+--8<-- "careamics-examples/guides/careamist_api/usage/careamist.py:config_path"
 ```
 
 ## Instantiating with a path to a model
@@ -41,7 +41,7 @@ images!
 
 
 ```python title="Instantiating CAREamist with a path to a model"
---8<-- "careamics-examples/guides/usage/careamist.py:load_model"
+--8<-- "careamics-examples/guides/careamist_api/usage/careamist.py:load_model"
 ```
 
 1. Any valid path to a model, as a string or a `Path.path` object, will work.
@@ -54,7 +54,7 @@ or to name the checkpoints, is automatically set to `CAREamics`. But you can cha
 by passing it to the `CAREamist` constructor.
 
 ```python title="Changing the experiment name"
---8<-- "careamics-examples/guides/usage/careamist.py:exp_name"
+--8<-- "careamics-examples/guides/careamist_api/usage/careamist.py:exp_name"
 ```
 
 ## Setting the working directory
@@ -64,7 +64,7 @@ creating a new CAREamist, you can indicate a different working directory in whic
 save the logs and checkpoints during training.
 
 ```python title="Changing the working directory"
---8<-- "careamics-examples/guides/usage/careamist.py:work_dir"
+--8<-- "careamics-examples/guides/careamist_api/usage/careamist.py:work_dir"
 ```
 
 ## Custom callbacks
@@ -81,7 +81,7 @@ Custom callbacks can be passed to the `CAREamist` constructor. The callbacks mus
 from the PyTorch Lightning `Callback` class.
 
 ```python title="Custom callbacks"
---8<-- "careamics-examples/guides/usage/careamist.py:callbacks"
+--8<-- "careamics-examples/guides/careamist_api/usage/careamist.py:callbacks"
 ```
 
 1. The callbacks must inherit from the PyTorch Lightning `Callback` class.

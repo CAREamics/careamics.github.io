@@ -13,7 +13,7 @@ The `CAREamicsTrainData` receives both data configuration and data itself. The d
 can be passed a path to a folder, to a file or as `numpy` array. 
 
 ```python title="Simplest way to instantiate CAREamicsTrainData"
---8<-- "careamics-examples/guides/usage/datasets.py:train_data"
+--8<-- "careamics-examples/guides/careamist_api/usage/datasets.py:train_data"
 ```
 
 It has the following parameters:
@@ -197,7 +197,7 @@ You should also provide a `fnmatch` and `Path.rglob` compatible expression (e.g.
 
 
 ```python title="Read custom data types"
---8<-- "careamics-examples/guides/usage/datasets.py:custom"
+--8<-- "careamics-examples/guides/careamist_api/usage/datasets.py:custom"
 ```
 
 1. We define a function that reads the custom data type.

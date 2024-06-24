@@ -7,7 +7,7 @@ have full control over the training process.
 You can also explore all the Pydantic models using the [reference documentation](../../reference/careamics).
 
 ```python title="Full specification"
---8<-- "careamics-examples/guides/configuration/full_spec.py:specs"
+--8<-- "careamics-examples/guides/careamist_api/configuration/full_spec.py:specs"
 ```
 
 1. Currently, we only support the UNet architecture and custom models (see [advanced

@@ -8,7 +8,7 @@ The workflow in CAREamics has five steps: creating a configuration, instantiatin
 
 
 ```python title="Basic CAREamics usage"
---8<-- "careamics-examples/guides/usage/careamics_usage.py:basic_usage"
+--8<-- "careamics-examples/guides/careamist_api/usage/careamics_usage.py:basic_usage"
 ```
 
 1. Obviously, one should choose a more realistic number of epochs for training.

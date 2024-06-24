@@ -14,7 +14,7 @@ currently supports [Noise2Void](../../algorithms/n2v/index.md) and its variants,
 [CARE](../../algorithms/care/index.md) and [Noise2Noise](../../algorithms/n2n/index.md). 
 
 ``` python title="Import convenience functions"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:imports"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:imports"
 ```
 
 Each method does all the heavy lifting to make the configuration coherent. They share
@@ -43,7 +43,7 @@ Likewise if `n_channels` is specified but `C` is not in `axes`.
 The correct way is to specify them both at the same time.
 
 ```python title="Configuration with multiple channels"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_channels"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_channels"
 ```
 
 1. The axes contain the letter `C`.
@@ -64,7 +64,7 @@ To control whether the channels are trained independently, you can use the
 `independent_channels` parameter:
 
 ```python title="Training channels together"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_mix_channels"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_mix_channels"
 ```
 
 1. As previously, we specify the channels in `axes` and `n_channels`.
@@ -82,7 +82,7 @@ have structures that are always oriented in the same direction. To do so there i
 `use_agumentations` parameter:
 
 ```python title="Configuration without augmentations"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_no_aug"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_no_aug"
 ```
 
 1. Augmentations are disabled (but normalization and N2V pixel manipulation are still there!).
@@ -100,7 +100,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 
 
 ```python title="Configuration with WandB"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_wandb"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_wandb"
 ```
 
 1. `wandb` or `tensorboard`
@@ -111,7 +111,7 @@ By default, the convenience functions use the default [UNet model parameters]().
 you are feeling brave, you can pass model specific parameters in the `model_kwargs` dictionary. 
 
 ```python title="Configuration with model specific parameters"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_model_kwargs"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_model_kwargs"
 ```
 
 1. The depth of the UNet.
@@ -149,7 +149,7 @@ While the default values are usually fine, they can be tweaked to improve the tr
 in certain cases.
 
 ```python title="Configuration with N2V parameters"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v_parameters"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_parameters"
 ```
 
 ### N2V2
@@ -157,7 +157,7 @@ in certain cases.
 To use N2V2, the `use_n2v2` parameter should simply be set to `True`.
 
 ```python title="Configuration with N2V2"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2v2"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v2"
 ```
 
 1. What it does is modifying the architecture of the UNet model and the way the masked
@@ -173,7 +173,7 @@ StructN2V has two parameters that can be set:
 - `struct_n2v_span`: The size of the structN2V mask.
 
 ```python title="Configuration with structN2V"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:structn2v"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:structn2v"
 ```
 
 ## Noise2Noise
@@ -187,7 +187,7 @@ Likewise if `n_channels_in` is specified but `C` is not in `axes`.
 The correct way is to specify them both at the same time.
 
 ```python title="Configuration with multiple channels"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_channels"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_channels"
 ```
 
 1. The axes contain the letter `C`.
@@ -209,7 +209,7 @@ To control whether the channels are trained independently, you can use the
 `independent_channels` parameter:
 
 ```python title="Training channels together"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_mix_channels"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_mix_channels"
 ```
 
 1. As previously, we specify the channels in `axes` and `n_channels`.
@@ -227,7 +227,7 @@ have structures that are always oriented in the same direction. To do so there i
 `use_agumentations` parameter:
 
 ```python title="Configuration without augmentations"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_no_aug"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_no_aug"
 ```
 
 1. Augmentations are disabled (but normalization and N2V pixel manipulation are still there!).
@@ -245,7 +245,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 
 
 ```python title="Configuration with WandB"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_wandb"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_wandb"
 ```
 
 1. `wandb` or `tensorboard`
@@ -256,7 +256,7 @@ By default, the convenience functions use the default [UNet model parameters]().
 you are feeling brave, you can pass model specific parameters in the `model_kwargs` dictionary. 
 
 ```python title="Configuration with model specific parameters"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_model_kwargs"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_model_kwargs"
 ```
 
 1. The depth of the UNet.
@@ -277,7 +277,7 @@ As opposed to Noise2Void, [CARE]() and [Noise2Noise]() can be trained with diffe
 functions. This can be set using the `loss` parameter (surprise, surprise!).
 
 ```python title="Configuration with different loss"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:n2n_loss"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_loss"
 ```
 
 1. `mae` or `mse`
@@ -296,7 +296,7 @@ Likewise if `n_channels_in` is specified but `C` is not in `axes`.
 The correct way is to specify them both at the same time.
 
 ```python title="Configuration with multiple channels"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_channels"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_channels"
 ```
 
 1. The axes contain the letter `C`.
@@ -318,7 +318,7 @@ To control whether the channels are trained independently, you can use the
 `independent_channels` parameter:
 
 ```python title="Training channels together"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_mix_channels"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_mix_channels"
 ```
 
 1. As previously, we specify the channels in `axes` and `n_channels_in`.
@@ -336,7 +336,7 @@ have structures that are always oriented in the same direction. To do so there i
 `use_agumentations` parameter:
 
 ```python title="Configuration without augmentations"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_no_aug"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_no_aug"
 ```
 
 1. Augmentations are disabled (but normalization and N2V pixel manipulation are still there!).
@@ -354,7 +354,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 
 
 ```python title="Configuration with WandB"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_wandb"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_wandb"
 ```
 
 1. `wandb` or `tensorboard`
@@ -365,7 +365,7 @@ By default, the convenience functions use the default [UNet model parameters]().
 you are feeling brave, you can pass model specific parameters in the `model_kwargs` dictionary. 
 
 ```python title="Configuration with model specific parameters"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_model_kwargs"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_model_kwargs"
 ```
 
 1. The depth of the UNet.
@@ -386,7 +386,7 @@ you are feeling brave, you can pass model specific parameters in the `model_kwar
 functions. This can be set using the `loss` parameter (surprise, surprise!).
 
 ```python title="Configuration with different loss"
---8<-- "careamics-examples/guides/configuration/convenience_functions.py:care_loss"
+--8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_loss"
 ```
 
 1. `mae` or `mse`

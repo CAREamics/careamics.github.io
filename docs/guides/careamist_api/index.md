@@ -6,7 +6,18 @@ description: CAREamist API main page.
 
 The CAREamist API is the recommended way to use CAREamics, it is a two stage process, in
 which users first define a configuration and then use a the `CAREamist` to run their 
-training and prediction.
+training and prediction. The [applications](../../applications/index.md) section provides
+examples.
+
+```python title="Basic CAREamics usage"
+--8<-- "careamics-examples/guides/careamist_api/careamist_api.py:careamist_api"
+```
+
+1. Obviously, one should choose a more realistic number of epochs for training.
+
+2. One should use real data for training!
+
+
 
 <div class="md-container secondary-section">
     <div class="g">
