@@ -16,7 +16,7 @@ You can also explore all the Pydantic models using the [reference documentation]
 2. Here the parameters are those from Pytorch DataLoaders.
 3. Normalization is also a transformation, but it is always applied before these 
     augmentations.
-4. The `EarlyStoppingModel` has a lot of parameters not reproduced here.
+4. The [`EarlyStoppingModel`](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.EarlyStopping.html#lightning.pytorch.callbacks.EarlyStopping) has a lot of parameters not reproduced here.
 
 
 However, not all algorithms are compatible with all parameters. The configuration does

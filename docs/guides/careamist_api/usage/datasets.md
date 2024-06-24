@@ -7,6 +7,12 @@ as well, which is simpler and shares some parameters with the training one). In 
 it is created internally. In this section, we describe what it does and shed light on
 some of its parameters that are passed to the [train methods](training.md).
 
+!!! info "Datasets in practice"
+    This section contains descriptions of the internal working of CAREamics. In practice,
+    most users will never have to instantiate the datasets themselves, as they are created
+    from within the `careamist.train` or `careamist.predict` methods.
+
+
 ## Overview
 
 The `CAREamicsTrainData` receives both data configuration and data itself. The data
@@ -73,45 +79,6 @@ the data on the disk seems to fit in memory, or when the data is already in memo
 passed as a numpy array. The advantage of the dataset is that is allows faster access
 to the patches, and therefore faster training time.
 
-It performs the following steps:
-
-=== ":material-application-array-outline: On numpy arrays"
-
-    1. Compute the `mean` and `std` of the dataset over all images.
-    2. Reshape the array so that the axes are ordered following the convention `SC(Z)YX`.
-    3. Extract patches sequentially so that they cover all images and keep them
-        in memory.
-    4. Update the `mean` and `std` in the configuration if they were not provided. This step
-        also updates the `mean` and `std` of the normalization transform.
-    5. Get the transforms from the configuration.
-    6. Each time a patch is requested:
-        1. A patch is extracted from the in-memory patches, it has dimensions `(1, C, (Z), Y, X)`, 
-            where `C` is the number of channels, `Z` is present only if the data is 3D, and
-            `Z, Y, X` are the patch sizes in each dimension.
-        2. The transformations are applied to the patch (see [transforms](#intermediate-transforms)).
-        3. The result of the transformation is returned.
-
-
-=== ":octicons-rel-file-path-16: On Paths"
-
-    1. For each file in the path, the corresponding image is loaded.
-    2. The `mean` and `std` are computed for the loaded image.
-    3. The image is reshaped so that the axes are ordered following the convention `SC(Z)YX`.
-    4. Extract patches sequentially so that they cover the whole image and kept them
-        in memory.
-    5. Once all files have been processed, the average `mean` and `std` are computed.
-    6. Update the `mean` and `std` in the configuration if they were not provided. This step
-        also updates the `mean` and `std` of the normalization transform.
-    7. All patches are concatenated together.
-    8. Get the transforms from the configuration.
-    9. Each time a patch is requested:
-        1. A patch is extracted from the in-memory patches, it has dimensions `(1, C, (Z), Y, X)`, 
-            where `C` is the number of channels, `Z` is present only if the data is 3D, and
-            `Z, Y, X` are the patch sizes in each dimension.
-        2. The transformations are applied to the patch (see [transforms](#intermediate-transforms)).
-        3. The result of the transformation is returned.
-
-
 !!! note "What about supervised training?"
 
     For supervised training, the steps are the same and are performed for the targets
@@ -130,21 +97,9 @@ The iterable dataset is used to load patches from a single file at a time, one f
 another. This allows training on datasets that are too large to fit in memory. This dataset
 is exclusively used with files input (data passed as paths).
 
-It performs the following steps:
-
-1. The dataset does a first pass of all the data to compute the average `mean` and `std`,
-    if these have not been specified in the configuration.
-2. Update the configuration and the transforms with the computed `mean` and `std`.
-3. Get the list of transforms from the configuration.
-4. Each time a patch is requested:
-    1. If there is no more patches (see point 6), the next image is loaded.
-    2. The image is reshaped so that the axes are ordered following the convention `SC(Z)YX`.
-    4. Random patches are extracted from the image, they have dimensions `(N, C, (Z), Y, X)`, 
-        where `C` is the number of channels, `Z` is present only if the data is 3D,
-        `Z, Y, X` are the patch sizes in each dimension, and `N` is the number of patches.
-    5. The transformations are applied to the patches (see [transforms](#intermediate-transforms)).
-    6. The next patch is yielded. The patches are yielded one at a time until there are no more patches
-        in the image, at which point the next image is loaded when the next patch is requested (see point 1).
+!!! warning "Iterable dataset and splitting validation"
+    The iterable dataset does not split patches from the training data, but files! 
+    (see [splitting validation](./training.md#splitting-validation-from-training-data)).
 
 
 !!! note "What about supervised training?"
@@ -223,20 +178,30 @@ You should also provide a `fnmatch` and `Path.rglob` compatible expression (e.g.
     we configured CAREamics to use N2V, the output is a tuple whose first element is our
     first patch!
 
+In practice, you should not access the dataloader directly (except for testing). Using 
+custom types for training should be done as follows:
+
+```python
+--8<-- "careamics-examples/guides/careamist_api/usage/datasets.py:train_custom"
+```
 
 ## Prediction datasets
 
 The prediction data module, `CAREamicsPredictData` works similarly to `CAREamicsTrainData`, albeit
-with fewer parameters:
+with different parameters:
 
 
-- `pred_config`: data configuration
+- `pred_config`: inference configuration
 - `pred_data`: prediction data (array or path)
 - `(optional) read_source_func`: function to read custom data types 
     (see [custom data types](#advanced-custom-data-types))
 - `(optional) extension_filter`: filter to select custom types
     (see [custom data types](#advanced-custom-data-types))
 
-It uses `InMemoryPredictionDataset` for arrays and `IterablePredictionDataset` for paths. These
-are similar to their training counterparts, but they have simpler transforms and offer the possibility
-to run test-time augmentation. For more details, refer to the [prediction section](prediction.md).
+
+## (Advanced) Subclass CAREamicsTrainData
+
+The data module used in CAREamics have only a limited number of parameters, and they 
+make use of the CAREamics datasets. If you need to have a different dataset, then you
+can subclass `CAREamicsTrainData` and override the `setup` method to use your own
+datasets.

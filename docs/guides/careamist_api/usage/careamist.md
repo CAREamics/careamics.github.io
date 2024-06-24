@@ -17,6 +17,10 @@ with random weights and prediction will not be possible until the model is train
 
 1. Any valid configuration will do!
 
+!!! info "Creating configurations"
+    Check out the [configuration guide](../configuration/index.md) to learn how to create
+    configurations.
+
 
 ## Instantiating with a path to a configuration
 

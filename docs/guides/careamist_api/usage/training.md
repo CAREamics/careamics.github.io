@@ -82,7 +82,7 @@ number of patches smaller than `val_minimum_split`, CAREamics will use `val_mini
 
 CAREamics provides a class to handle the data loading of custom data type. We will dive 
 in more details in the next section into what this class can be used for. Here is a 
-brief overview of how it passed to the `train` method.
+brief overview of how it is passed to the `train` method.
 
 ```python title="Training by passing a CAREamicsTrainData object"
 --8<-- "careamics-examples/guides/careamist_api/usage/training.py:datamodule"
