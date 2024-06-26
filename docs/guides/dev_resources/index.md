@@ -1,4 +1,4 @@
-# Developer's guide
+# Developer resources
 
 
 !!! warning "Work in progress"

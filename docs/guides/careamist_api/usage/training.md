@@ -22,7 +22,7 @@ The details of how CAREamics deals with the loading and patching is detailed in 
 CAREamics can be trained by simply passing numpy arrays.
 
 ```python title="Training by passing an array"
---8<-- "careamics-examples/guides/usage/training.py:array"
+--8<-- "careamics-examples/guides/careamist_api/usage/training.py:array"
 ```
 
 1. All parameters to the `train` method must be specified by keyword.
@@ -34,7 +34,7 @@ CAREamics can be trained by simply passing numpy arrays.
     If you are training a supervised model, you must provide the target data as well.
 
     ```python
-    --8<-- "careamics-examples/guides/usage/training.py:supervised"
+    --8<-- "careamics-examples/guides/careamist_api/usage/training.py:supervised"
     ```
 
 ## Training by passing a path
@@ -42,7 +42,7 @@ CAREamics can be trained by simply passing numpy arrays.
 The same thing can be done by passing a path to a folder or files.
 
 ```python title="Training by passing a path"
---8<-- "careamics-examples/guides/usage/training.py:path"
+--8<-- "careamics-examples/guides/careamist_api/usage/training.py:path"
 ```
 
 1. The path can point to a single file, or contain multiple files.
@@ -64,7 +64,7 @@ and `val_minimum_split`.
 number of patches smaller than `val_minimum_split`, CAREamics will use `val_minimum_split`.
 
 ```python title="Splitting validation from training data"
---8<-- "careamics-examples/guides/usage/training.py:split"
+--8<-- "careamics-examples/guides/careamist_api/usage/training.py:split"
 ```
 
 1. 10% of the training data will be used for validation.
@@ -78,14 +78,14 @@ number of patches smaller than `val_minimum_split`, CAREamics will use `val_mini
     path, the split is done on the files (`N` files are used for validation).
 
 
-## Training by passing a CAREamicsTrainData object
+## Training by passing a `TrainDataModule` object
 
 CAREamics provides a class to handle the data loading of custom data type. We will dive 
 in more details in the next section into what this class can be used for. Here is a 
-brief overview of how it passed to the `train` method.
+brief overview of how it is passed to the `train` method.
 
-```python title="Training by passing a CAREamicsTrainData object"
---8<-- "careamics-examples/guides/usage/training.py:datamodule"
+```python title="Training by passing a TrainDataModule object"
+--8<-- "careamics-examples/guides/careamist_api/usage/training.py:datamodule"
 ```
 
 1. Here this does the same thing as passing the `train_source` directly into the `train` method.
@@ -103,4 +103,4 @@ To decide on the logger, check out the [Configuration section](../configuration/
 !!! note "Loggers installation"
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](../../installation.md#extra-dependencies) to know more about it.
+    out the [installation section](../../../installation.md#extra-dependencies) to know more about it.

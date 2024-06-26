@@ -1,0 +1,54 @@
+# This workflow will test whether a PR builds correctly.
+name: Test build PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_pr:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:            
+      - name: ✅ Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # needed for git committers
+
+      - name: 💁 Git committer set-up
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
+          
+      - name: 🐍 Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: 📝 Set up Python environment
+        run: |
+          pip install -U pip
+          pip install -r requirements.txt 
+
+      - name: 🔗 Check Links
+        run: |
+          npm install markdown-link-check@"<3.11.1"
+          npx markdown-link-check docs/**/*.md --progress -q
+
+      - name: 📁 Set up repositories
+        run: sh scripts/check_out_repos.sh
+      
+      - name: 📓 Set up notebooks and examples
+        run: sh scripts/check_out_examples.sh ${{ steps.extract_branch.outputs.branch }}
+
+      # build docs
+      - name: 📚 Build Docs
+        run: |
+          pip install -U pip
+          pip install -r requirements.txt

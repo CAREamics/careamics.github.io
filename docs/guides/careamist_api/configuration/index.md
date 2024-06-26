@@ -10,7 +10,7 @@ saved models.
 It is composed of four members:
 
 ```python title="Anatomy of the configuration"
---8<-- "careamics-examples/guides/configuration/build_configuration.py:as_dict"
+--8<-- "careamics-examples/guides/careamist_api/configuration/build_configuration.py:as_dict"
 ```
 
 1. The name of the experiment, used to differentiate trained models.
