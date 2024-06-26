@@ -103,4 +103,4 @@ To decide on the logger, check out the [Configuration section](../configuration/
 !!! note "Loggers installation"
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](../../installation.md#extra-dependencies) to know more about it.
+    out the [installation section](../../../installation.md#extra-dependencies) to know more about it.

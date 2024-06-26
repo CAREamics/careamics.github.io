@@ -96,7 +96,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 !!! note "Loggers installation"
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](../../installation.md#extra-dependencies) to know more about it.
+    out the [installation section](../../../installation.md#extra-dependencies) to know more about it.
 
 
 ```python title="Configuration with WandB"
@@ -241,7 +241,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 !!! note "Loggers installation"
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](../../installation.md#extra-dependencies) to know more about it.
+    out the [installation section](../../../installation.md#extra-dependencies) to know more about it.
 
 
 ```python title="Configuration with WandB"
@@ -350,7 +350,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 !!! note "Loggers installation"
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](../../installation.md#extra-dependencies) to know more about it.
+    out the [installation section](../../../installation.md#extra-dependencies) to know more about it.
 
 
 ```python title="Configuration with WandB"

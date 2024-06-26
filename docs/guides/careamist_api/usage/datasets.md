@@ -130,7 +130,7 @@ into the network. CAREamics supports the following transforms (see
 
 
 The `Normalize` transform is always applied, and the rest are optional. The exception is
-`N2VManipulateModel`, which is only applied when training with N2V (see [Noise2Void](../../algorithms/n2v/index.md)).
+`N2VManipulateModel`, which is only applied when training with N2V (see [Noise2Void](../../../algorithms/n2v/index.md)).
 
 !!! note "When to turn off transforms?"
 

@@ -40,7 +40,7 @@ valuable for microscopy data denoising and restoration.
     data formats.
 
     For particular data formats, we advise to use the custom data loading, which is
-    described in the [training guide](../usage/training.md).
+    described in the [training guide](../careamist_api/usage/training.md).
 
 
 To contribute methods, [open an issue](https://github.com/CAREamics/careamics/issues)
