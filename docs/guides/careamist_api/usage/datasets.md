@@ -1,4 +1,4 @@
-# Datasets
+# (Intermediate) Datasets
 
 Datasets are the internal classes providing the individual patches for training, 
 validation and prediction. In CAREamics, we provide a `TrainDataModule` class that 
