@@ -67,6 +67,8 @@ you can set `tta` to `False`.
 --8<-- "careamics-examples/guides/careamist_api/usage/prediction.py:tta"
 ```
 
+1. By default, TTA is activated!
+
 !!! warning "Transforms and TTA"
     If you have turned off transforms, or used the non default ones, then you should 
     turn off TTA, as it would otherwise create images that do not correspond to your
@@ -80,6 +82,11 @@ To potentially predict faster, you can predict on batches of images.
 --8<-- "careamics-examples/guides/careamist_api/usage/prediction.py:batches"
 ```
 
+1. Each prediction step will be performed on 2 images or tiles.
+
+!!! info "Batch and TTA"
+    Having `batch_size>1` is compatible with the TTA.
+
 
 ## Changing the data type
 
@@ -90,6 +97,7 @@ by changing the `data_type` parameter.
 --8<-- "careamics-examples/guides/careamist_api/usage/prediction.py:diff_type"
 ```
 
+1. As in the rest of CAREamics, the supported value are `tiff`, `array` and `custom`. 
 
 ## Changing the axes
 
@@ -101,6 +109,7 @@ change the `axes` parameter.
 --8<-- "careamics-examples/guides/careamist_api/usage/prediction.py:diff_axes"
 ```
 
+1. Obviously, this need to match `source`.
 
 ## (Advanced) Predict on custom data type
 
