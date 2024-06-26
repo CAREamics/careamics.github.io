@@ -1,7 +1,7 @@
 # Datasets
 
 Datasets are the internal classes providing the individual patches for training, 
-validation and prediction. In CAREamics, we provide a `CAREamicsTrainData` class that 
+validation and prediction. In CAREamics, we provide a `TrainDataModule` class that 
 creates the datasets for training and validation (there is a class for prediction
 as well, which is simpler and shares some parameters with the training one). In most cases,
 it is created internally. In this section, we describe what it does and shed light on
@@ -15,10 +15,10 @@ some of its parameters that are passed to the [train methods](training.md).
 
 ## Overview
 
-The `CAREamicsTrainData` receives both data configuration and data itself. The data
+The `TrainDataModule` receives both data configuration and data itself. The data
 can be passed a path to a folder, to a file or as `numpy` array. 
 
-```python title="Simplest way to instantiate CAREamicsTrainData"
+```python title="Simplest way to instantiate TrainDataModule"
 --8<-- "careamics-examples/guides/careamist_api/usage/datasets.py:train_data"
 ```
 
@@ -41,7 +41,7 @@ It has the following parameters:
     not applicable to mnumpy arrays.
 
 Depending on the type of the data, which is specified in the `data_config` and
-is compared to the type of `train_data`, the `CAREamicsTrainData` will create the appropriate
+is compared to the type of `train_data`, the `TrainDataModule` will create the appropriate
 dataset for both training and validation data.
 
 In the absence of validation, validation data is extracted from training data
@@ -187,7 +187,7 @@ custom types for training should be done as follows:
 
 ## Prediction datasets
 
-The prediction data module, `CAREamicsPredictData` works similarly to `CAREamicsTrainData`, albeit
+The prediction data module, `PredictDataModule` works similarly to `TrainDataModule`, albeit
 with different parameters:
 
 
@@ -199,9 +199,9 @@ with different parameters:
     (see [custom data types](#advanced-custom-data-types))
 
 
-## (Advanced) Subclass CAREamicsTrainData
+## (Advanced) Subclass TrainDataModule
 
 The data module used in CAREamics have only a limited number of parameters, and they 
 make use of the CAREamics datasets. If you need to have a different dataset, then you
-can subclass `CAREamicsTrainData` and override the `setup` method to use your own
+can subclass `TrainDataModule` and override the `setup` method to use your own
 datasets.
