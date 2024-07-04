@@ -37,7 +37,7 @@ with a dictionary, reproduced here:
 
 
 ```python title="Building the configuration with a dictionary"
---8<-- "careamics-examples/guides/configuration/build_configuration.py:as_dict"
+--8<-- "careamics-examples/guides/careamist_api/configuration/build_configuration.py:as_dict"
 ```
 
 1. The first parameter is just a string!
@@ -64,7 +64,7 @@ allows you to explore the parameters via your IDE, but also to get the validatio
 closer to the source of the error.
 
 ```python title="Building the configuration using Pydantic models"
---8<-- "careamics-examples/guides/configuration/build_configuration.py:pydantic"
+--8<-- "careamics-examples/guides/careamist_api/configuration/build_configuration.py:pydantic"
 ```
 
 1. The main Pydantic models are imported from the `careamics` and `careamics.config` 
