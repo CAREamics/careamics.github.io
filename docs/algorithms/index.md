@@ -54,7 +54,7 @@ description: Descriptions of the algorithms.
                     </a>
                 </div>
                 <div class="responsive-grid">
-                    <!-- N2V -->
+                    <!-- structN2V -->
                     <a class="card-wrapper" href="structn2v">
                         <div class="card"> 
                             <div class="logo">
@@ -67,6 +67,23 @@ description: Descriptions of the algorithms.
                                 <p>
                                     A variant of Noise2Void that uses an enhanced mask
                                     to remove structured noise.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Noise2Noise -->
+                    <a class="card-wrapper" href="n2n">
+                        <div class="card"> 
+                            <div class="logo">
+                                <span class="twemoji">
+                                    --8<--  "cpu.svg"
+                                </span>
+                            </div>
+                            <div class="card-content">
+                                <h5>Noise2Noise</h5>
+                                <p>
+                                    A supervised methods that can denoise images without
+                                    corresponding clean data.
                                 </p>
                             </div>
                         </div>
@@ -98,23 +115,6 @@ description: Descriptions of the algorithms.
                                 <p>
                                     The original supervised method to restore microscopy
                                     images.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- N2V2 -->
-                    <a class="card-wrapper" href="n2n">
-                        <div class="card"> 
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<--  "cpu.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Noise2Noise</h5>
-                                <p>
-                                    A supervised methods that can denoise images without
-                                    corresponding clean data.
                                 </p>
                             </div>
                         </div>
