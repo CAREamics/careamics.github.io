@@ -33,8 +33,7 @@ nav:
       - Lightning API:
           - guides/lightning_api/index.md
           - guides/lightning_api/lightning_module.md
-          - guides/lightning_api/data_modules.md
-          - guides/lightning_api/training.md
+          - guides/lightning_api/train_data_module.md
           - guides/lightning_api/prediction.md
       - Command-line interface:
           - guides/cli/index.md
