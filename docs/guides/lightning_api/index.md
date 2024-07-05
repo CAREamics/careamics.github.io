@@ -10,7 +10,7 @@ CAREamics modules in your own PyTorch Lightning pipeline.
 
 
 ```python "Basic Usage"
---8<-- "examples/lightning_api/basic_usage.py"
+--8<-- "careamics-examples/guides/lightning_api/basic_usage.py"
 ```
 
 
