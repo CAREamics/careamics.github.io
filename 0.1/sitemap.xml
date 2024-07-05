@@ -61,6 +61,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://careamics.github.io/0.1/applications/Lightning_API/2D_BSD68/</loc>
+         <lastmod>2024-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/applications/N2V2/2D_BSD68/</loc>
+         <lastmod>2024-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/applications/N2V2/2D_SEM/</loc>
+         <lastmod>2024-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://careamics.github.io/0.1/applications/Noise2Noise/2D_SEM/</loc>
          <lastmod>2024-07-05</lastmod>
          <changefreq>daily</changefreq>
