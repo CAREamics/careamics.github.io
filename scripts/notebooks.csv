@@ -1,6 +1,9 @@
 path in repository, destination in docs, title
 applications/n2v/2D/SEM_Noise2Void.ipynb,applications/Noise2Void,2D_SEM
+applications/n2v/2D/SEM_N2V2.ipynb,applications/N2V2,2D_SEM
 applications/n2v/2D/BSD68_Noise2Void.ipynb,applications/Noise2Void,2D_BSD68
+applications/n2v/2D/BSD68_N2V2.ipynb,applications/N2V2,2D_BSD68
 applications/n2n/2D/SEM_Noise2Noise.ipynb,applications/Noise2Noise,2D_SEM
 applications/care/denoising/2D/U2OS_CARE.ipynb,applications/CARE,2D_denoising_U2OS
+applications/lightning_api/2D/BSD68_Noise2Void_lightning_api.ipynb,applications/Lightning_API,2D_BSD68
 algorithms/n2v/Noise2Void.ipynb,algorithms/n2v,Noise2Void
