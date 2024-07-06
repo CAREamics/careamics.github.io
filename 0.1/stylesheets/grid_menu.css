@@ -81,6 +81,7 @@
         transition: none;
         background: none;
         padding: 0;
+        flex-direction: column;
     }
 
     .secondary-section .g .section .component-wrapper .responsive-grid .card {
@@ -88,14 +89,26 @@
         background-color: #fff none repeat scroll 0% 0%;
         padding: 1.5rem;
         display: flex;
+        flex-direction: column;
+        -moz-box-align: center;
+        align-items: normal;
+        height: 100%;
+        -moz-box-pack: start;
+        justify-content: flex-start;
+        box-shadow: rgba(0, 0, 0, 0.09) 0.3125rem 0.3125rem 0px -0.0625rem, rgba(0, 0, 0, 0.15) 0px 0.25rem 0.5rem 0px;
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    }
+
+
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body {
+        position: relative;
+        display: flex;
         flex-direction: row;
         -moz-box-align: center;
         align-items: center;
         height: 100%;
         -moz-box-pack: start;
         justify-content: flex-start;
-        box-shadow: rgba(0, 0, 0, 0.09) 0.3125rem 0.3125rem 0px -0.0625rem, rgba(0, 0, 0, 0.15) 0px 0.25rem 0.5rem 0px;
-        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
     }
 
     .secondary-section .g .section .component-wrapper .responsive-grid .card:hover {
@@ -114,30 +127,46 @@
         }
     }
 
-    .secondary-section .g .section .component-wrapper .responsive-grid .card .logo {
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0.3rem;
+    }
+
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-tags .tag {
+        background-color: #f6f6f6;
+        color: #333;
+        font-size: 0.55rem;
+        font-weight: bold;
+        margin-right: 0.5rem;
+        padding: 0rem 0.55rem;
+        border-radius: 4px;
+    }
+
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .logo {
         margin-right: 0.75rem;
         width: 1.2rem;
         min-width: 1.2rem;
     }
 
-    .secondary-section .g .section .component-wrapper .responsive-grid .card .cover {
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .cover {
         margin-right: 0.5rem;
         width: 4rem;
         min-width: 4rem;
     }
 
-    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-content {
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .card-content {
         display: flex;
         flex: 1 1 0%;
         flex-direction: column;
         width: 100%;
     }
 
-    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-content h5 {
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .card-content h5 {
         margin: 0;
     }
 
-    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-content p {
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .card-content p {
         margin-top: 0.25em;
         margin-bottom: 0;
         font-size: 0.65rem;
@@ -145,7 +174,7 @@
         line-height: normal;
     }
 
-    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-content code {
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .card-content code {
         background: rgba(0, 0, 0, 0.05) none repeat scroll 0% 0%;
         padding: 2px 6px;
         border-radius: 4px;
@@ -178,22 +207,28 @@
         color: rgb(61, 61, 61);
     }
 
-    [data-md-color-scheme="slate"] .secondary-section .g .section .component-wrapper .responsive-grid .card .card-content h5 {
+    [data-md-color-scheme="slate"] .secondary-section .g .section .component-wrapper .responsive-grid .card .card-tags .tag {
+        /* color of the card title dark theme */
+        color: rgb(18, 23, 44);
+        background-color: #b2b2b2;
+    }
+
+    [data-md-color-scheme="slate"] .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .card-content h5 {
         /* color of the card title dark theme */
         color: rgb(228, 228, 228);
     }
 
-    [data-md-color-scheme="default"] .secondary-section .g .section .component-wrapper .responsive-grid .card .card-content h5 {
+    [data-md-color-scheme="default"] .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .card-content h5 {
         /* color of the card title light theme */
         color: rgb(61, 61, 61);
     }
 
-    [data-md-color-scheme="slate"] .secondary-section .g .section .component-wrapper .responsive-grid .card .card-content p {
+    [data-md-color-scheme="slate"] .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .card-content p {
         /* color of the subtext in the cards dark theme */
         color: rgb(228, 228, 228);
     }
 
-    [data-md-color-scheme="default"] .secondary-section .g .section .component-wrapper .responsive-grid .card .card-content p {
+    [data-md-color-scheme="default"] .secondary-section .g .section .component-wrapper .responsive-grid .card .card-body .card-content p {
         /* color of the subtext in the cards light theme */
         color: rgb(92, 92, 92);
     }
