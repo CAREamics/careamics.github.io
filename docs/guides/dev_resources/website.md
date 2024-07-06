@@ -102,9 +102,10 @@ in the navigation file of mkdocs.
                 "description": "Some description of the notebook.", // (2)!
                 "cover": "File_name.jpeg", // (3)!
                 "source": "path/in/careamics-examples/repo/File_Name.ipynb", // (4)!
-                "destination": "Category_in_Applications" // (5)!
+                "destination": "Category_in_Applications", // (5)!
+                "tags": "3D, channels, fluorescence" // (6)!
             },
-            // (6)!
+            // (7)!
         ]
         ...
     }
@@ -116,7 +117,8 @@ in the navigation file of mkdocs.
     notebook card, the actual image should be placed in `docs/assets/notebook_covers`.
     4. `source` is the path to the notebook in the `careamics-examples` repository.
     5. `destination` is the category in the `applications` folder where the notebook will be copied to (e.g. all notebooks using `Noise2Void` are in the `Noise2Void` category).
-    6. You can add multiple notebooks!
+    6. `tags` are shown on the notebook card and inform on the characteristic of the data. These are comma separated values.
+    7. You can add multiple notebooks!
 2. You can test that the notebook was correctly added by running `sh scripts/notebooks.sh` then `mkdocs serve`.
 
 

@@ -5,49 +5,56 @@
             "description": "Denoising of 2D scanning electron microscopy with Noise2Void.",
             "cover": "SEM_Noise2Void.jpeg",
             "source": "applications/n2v/2D/SEM_Noise2Void.ipynb",
-            "destination": "Noise2Void"
+            "destination": "Noise2Void",
+            "tags": "2D, electron microscopy"
         },
         {
             "name": "2D_SEM_N2V2",
             "description": "Denoising of 2D scanning electron microscopy with N2V2.",
             "cover": "SEM_N2V2.jpeg",
             "source": "applications/n2v/2D/SEM_Noise2Void.ipynb",
-            "destination": "Noise2Void"
+            "destination": "Noise2Void",
+            "tags": "2D, electron microscopy"
         },
         {
             "name": "2D_BSD68",
             "description": "Benchmark Noise2Void in 2D using natural images and synthetic noise.",
             "cover": "BSD68_Noise2Void.jpeg",
             "source": "applications/n2v/2D/BSD68_Noise2Void.ipynb",
-            "destination": "Noise2Void"
+            "destination": "Noise2Void",
+            "tags": "benchmark"
         },
         {
             "name": "2D_BSD68_N2V2",
             "description": "Benchmark N2V2 in 2D using natural images and synthetic noise.",
             "cover": "BSD68_N2V2.jpeg",
             "source": "applications/n2v/2D/BSD68_N2V2.ipynb",
-            "destination": "Noise2Void"
+            "destination": "Noise2Void",
+            "tags": "benchmark"
         },
         {
-            "name": "2D_BSD68_N2V2",
+            "name": "2D_BSD68_N2V",
             "description": "Example of Noise2Void using the Lightning API with 2D natural images and synthetic noise.",
             "cover": "BSD68_Noise2Void_lightning_api.jpeg",
             "source": "applications/lightning_api/2D/BSD68_Noise2Void_lightning_api.ipynb",
-            "destination": "Lightning_API"
+            "destination": "Lightning_API",
+            "tags": "benchmark, N2V"
         },
         {
             "name": "2D_SEM",
             "description": "Denoising of 2D scanning electron microscopy with Noise2Noise.",
             "cover": "SEM_Noise2Noise.jpeg",
             "source": "applications/n2n/2D/SEM_Noise2Noise.ipynb",
-            "destination": "Noise2Noise"
+            "destination": "Noise2Noise",
+            "tags": "2D, electron microscopy"
         },
         {
             "name": "2D_denoising_U2OS",
             "description": "Supervised denoising of nuclei imaged in 2D fluorescence with CARE.",
             "cover": "U2OS_CARE.jpeg",
             "source": "applications/care/denoising/2D/U2OS_CARE.ipynb",
-            "destination": "CARE"
+            "destination": "CARE",
+            "tags": "2D, fluorescence, nuclei"
         }
     ],
     "algorithms": [

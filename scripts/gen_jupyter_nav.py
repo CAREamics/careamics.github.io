@@ -81,7 +81,7 @@ def close_row() -> str:
         "               </div>\n"
     )
 
-def add_card(title: str, description: str, link: str, cover: str) -> str:
+def add_card(title: str, description: str, link: str, cover: str, tags: list[str]) -> str:
     """Return the html code for a card.
     
     Parameters
@@ -95,17 +95,33 @@ def add_card(title: str, description: str, link: str, cover: str) -> str:
     cover : str
         Cover name.
     """
+    tags_list = []
+    for tag in tags.split(","):
+        # remove whitespace at start or end
+        tag = tag.strip()
+
+        # add to list
+        tags_list.append(
+            f"                          <span class=\"tag\">{tag}</span>\n"
+        )
+    tags_str = "".join(tags_list)
+
     return (
         f"              <a class=\"card-wrapper\" href=\"{link}\">\n"
         f"                  <div class=\"card\">\n"
-        f"                      <div class=\"cover\">\n"
-        f"                          <img src=\"{cover}\">\n"
+        f"                      <div class=\"card-body\">\n"
+        f"                          <div class=\"cover\">\n"
+        f"                              <img src=\"{cover}\">\n"
+        f"                          </div>\n"
+        f"                          <div class=\"card-content\">\n"
+        f"                              <h5>{title}</h5>\n"
+        f"                              <p>\n"
+        f"                                  {description}\n"
+        f"                              </p>\n"
+        f"                          </div>\n"
         f"                      </div>\n"
-        f"                      <div class=\"card-content\">\n"
-        f"                          <h5>{title}</h5>\n"
-        f"                          <p>\n"
-        f"                              {description}\n"
-        f"                          </p>\n"
+        f"                      <div class=\"card-tags\">\n"
+        f"{tags_str}"
         f"                      </div>\n"
         f"                  </div>\n"
         f"              </a>\n"
@@ -173,6 +189,7 @@ for notebook in notebooks["applications"]:
     name = notebook["name"]
     title = notebook["destination"]
     description = notebook["description"]
+    tags = notebook["tags"]
     cover = "../assets/notebook_covers/" + notebook["cover"]
 
     friendly_title = title.replace("_", " ")
@@ -186,7 +203,7 @@ for notebook in notebooks["applications"]:
     applications[title].append(
         Card(
             page_title=friendly_title,
-            card=add_card(friendly_name, description, link, cover)
+            card=add_card(friendly_name, description, link, cover, tags)
         )
     )
 

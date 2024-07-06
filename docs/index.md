@@ -41,33 +41,37 @@ tutorials on how to best apply these methods in a scientific context.
                 <div class="responsive-grid">
                     <!-- Installation -->
                     <a class="card-wrapper" href="installation">
-                        <div class="card"> 
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<--  "desktop-download.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Installation</h5>
-                                <p>
-                                    Get started with CAREamics installation.
-                                </p>
+                        <div class="card">
+                            <div class="card-body"> 
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<--  "desktop-download.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Installation</h5>
+                                    <p>
+                                        Get started with CAREamics installation.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
                     <!-- Current state -->
                     <a class="card-wrapper" href="current_state">
                         <div class="card">
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<-- "milestone.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Current State</h5>
-                                <p>
-                                    Check out where we stand and where we want to go.
-                                </p>
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<-- "milestone.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Current State</h5>
+                                    <p>
+                                        Check out where we stand and where we want to go.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -77,32 +81,36 @@ tutorials on how to best apply these methods in a scientific context.
                     <!-- Guides -->
                     <a class="card-wrapper" href="guides">
                         <div class="card">
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<-- "repo.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Guides</h5>
-                                <p>
-                                    In-depth guides on CAREamics usage and features.
-                                </p>
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<-- "repo.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Guides</h5>
+                                    <p>
+                                        In-depth guides on CAREamics usage and features.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
                     <!-- Application -->
                     <a class="card-wrapper" href="applications">
                         <div class="card">
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<-- "file-media.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Applications</h5>
-                                <p>
-                                    Examples of CAREamics in action on various datasets.
-                                </p>
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<-- "file-media.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Applications</h5>
+                                    <p>
+                                        Examples of CAREamics in action on various datasets.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -112,32 +120,36 @@ tutorials on how to best apply these methods in a scientific context.
                     <!-- Algorithms -->
                     <a class="card-wrapper" href="algorithms">
                         <div class="card">
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<-- "cpu.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Algorithms</h5>
-                                <p>
-                                    Dive into the various CAREamics algorithms.
-                                </p>
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<-- "cpu.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Algorithms</h5>
+                                    <p>
+                                        Dive into the various CAREamics algorithms.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
                     <!-- Code reference -->
                     <a class="card-wrapper" href="reference">
                         <div class="card">
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<-- "code.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Code Reference</h5>
-                                <p>
-                                    Code documentation for all CAREamics libraries.
-                                </p>
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<-- "code.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Code Reference</h5>
+                                    <p>
+                                        Code documentation for all CAREamics libraries.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
