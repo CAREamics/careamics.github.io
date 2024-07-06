@@ -79,7 +79,7 @@ The examples in the guide are automatically tested in the CI. To make sure it ru
 the correct branches in the pull request, use the same branch name for the PR to the
 CAREamics source code and to the examples repository.
 
-## Jupyter notebooks applications
+## Jupyter notebook applications
 
 The pages in the application section are automatically generated from the Jupyter
 notebooks in [careamics-example](https://github.com/CAREamics/careamics-examples/tree/main/applications) 

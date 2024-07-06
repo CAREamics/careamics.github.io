@@ -120,6 +120,12 @@
         min-width: 1.2rem;
     }
 
+    .secondary-section .g .section .component-wrapper .responsive-grid .card .cover {
+        margin-right: 0.5rem;
+        width: 4rem;
+        min-width: 4rem;
+    }
+
     .secondary-section .g .section .component-wrapper .responsive-grid .card .card-content {
         display: flex;
         flex: 1 1 0%;

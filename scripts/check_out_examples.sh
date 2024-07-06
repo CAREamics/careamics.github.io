@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This python script clone the example repository, and copy some notebooks into
+# This script clone the example repository, and copy some notebooks into
 # the docs. The rest is kept for snippets.
 
 # optional argument to specify a branch
@@ -10,12 +10,14 @@ else
     BRANCH="$1"
 fi
 
-LIST="scripts/notebooks.csv"
+JSON="scripts/notebooks.json"
 DEST="docs/"
 TEMP="temp/"
 REPO="https://github.com/CAREamics/careamics-examples.git"
+ALGO="algorithms"
+APP="applications"
 
-# create repos folder
+# create temporary repo folder
 if [ ! -d "$TEMP" ]; then
     # If it doesn't exist, create it and its parent directories if needed
     mkdir -p "$TEMP"
@@ -31,45 +33,82 @@ else
     git clone $REPO "$TEMP$repository_name"
 fi
 
-# loop over the list starting from lin 2, clone the repository and copy the notebook
-tail -n +2 "$LIST" | while IFS=, read -r path_in_repo destination_in_docs title; do
+
+# Process all algorithms
+count=$(jq ".${ALGO} | length" "$JSON")
+for i in $(seq 0 $(($count - 1))); do
+    path_in_repo=$(jq -r ".${ALGO}[$i].source" "$JSON")
+    destination=$(jq -r ".${ALGO}[$i].destination" "$JSON")
+    title=$(jq -r ".${ALGO}[$i].name" "$JSON")
+
     # extract notebook file name (including extension)
     notebook_name=$(echo $path_in_repo | sed 's/.*\///')
 
-    # replace spaces in the title with underscores, and add ".ipynb" extension
-    title=$(echo $title | sed 's/ /_/g')
+    # add ".ipynb" extension to the title
     title_ext="$title.ipynb"
 
     # create the destination folder if it doesn't exist
-    directory="$DEST$destination_in_docs"
+    directory="$DEST$ALGO/$destination"
     if [ ! -d "$directory" ]; then
         # If it doesn't exist, create it and its parent directories if needed
         mkdir -p "$directory"
     fi
 
     # source of the notebook
-    source="$TEMP""$repository_name"/"$path_in_repo"
+    source="$TEMP$repository_name/$path_in_repo"
 
     # copy the notebook to DEST
-    NB_DEST="$DEST$destination_in_docs/$title_ext"
+    NB_DEST="$DEST$ALGO/$destination/$title_ext"
     cp $source $NB_DEST
+    echo "Copying from $source to $NB_DEST"
 
-    # if the copy was successful, print new path and update notebook with header
+    if [ -f $NB_DEST ]; then
+        echo "Copied $repository_name/$path_in_repo to $NB_DEST"
+    else
+        echo "Copying $repository_name/$path_in_repo/$notebook_name failed"
+    fi
+done
+
+# Process all applications
+count=$(jq ".${APP} | length" "$JSON")
+for i in $(seq 0 $(($count - 1))); do
+    path_in_repo=$(jq -r ".${APP}[$i].source" "$JSON")
+    destination=$(jq -r ".${APP}[$i].destination" "$JSON")
+    title=$(jq -r ".${APP}[$i].name" "$JSON")
+
+    # extract notebook file name (including extension)
+    notebook_name=$(echo $path_in_repo | sed 's/.*\///')
+
+    # add ".ipynb" extension to the title
+    title_ext="$title.ipynb"
+
+    # create the destination folder if it doesn't exist
+    directory="$DEST$APP/$destination"
+    if [ ! -d "$directory" ]; then
+        # If it doesn't exist, create it and its parent directories if needed
+        mkdir -p "$directory"
+    fi
+
+    # source of the notebook
+    source="$TEMP$repository_name/$path_in_repo"
+
+    # copy the notebook to DEST
+    NB_DEST="$DEST$APP/$destination/$title_ext"
+    cp $source $NB_DEST
+    echo "Copying from $source to $NB_DEST"
+
     if [ -f $NB_DEST ]; then
         echo "Copied $repository_name/$path_in_repo to $NB_DEST"
 
-        # if it was copied in the applications folder, update notebook
-        if [ "${destination_in_docs#applications}" != "$destination_in_docs" ]; then
-            # remove ".git" from the repository name
-            REPO_STEM="${REPO%.git}"
+        # remove ".git" from the repository name
+        REPO_STEM="${REPO%.git}"
 
-            # link to notebook
-            NB_LINK="$REPO_STEM/blob/main/$path_in_repo"
+        # link to notebook
+        NB_LINK="$REPO_STEM/blob/main/$path_in_repo"
 
-            # add header to the notebook
-            echo $NB_LINK
-            python "scripts/add_notebook_header.py" --source $NB_LINK --dest $NB_DEST
-        fi
+        # add header to the notebook
+        echo $NB_LINK
+        python "scripts/add_notebook_header.py" --source $NB_LINK --dest $NB_DEST
     else
         echo "Copying $repository_name/$path_in_repo/$notebook_name failed"
     fi

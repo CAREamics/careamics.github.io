@@ -26,7 +26,7 @@ text = (
     f"       style=\"display: inline-flex; align-items: center;\">\n"
     f"       <img src='https://raw.githubusercontent.com/CAREamics/careamics.github.io/3bca810be17b0693503615673418d264d1962dac/docs/overrides/.icons/octicons/mark-github.svg'\n"
     f"           style=\"margin-right: 8px;\">\n"
-    f"       <b><big>Find me on Github</big></b>\n"
+    f"       <b>Find me on Github</b>\n"
     f"   </a>\n"
     f"</p>"
 )
