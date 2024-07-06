@@ -21,34 +21,38 @@ description: Descriptions of the algorithms.
                     <!-- N2V -->
                     <a class="card-wrapper" href="n2v/Noise2Void">
                         <div class="card"> 
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<--  "cpu.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Noise2Void</h5>
-                                <p>
-                                    A self-supervised denoising algorithm based on a 
-                                    pixel masking scheme.
-                                </p>
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<--  "cpu.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Noise2Void</h5>
+                                    <p>
+                                        A self-supervised denoising algorithm based on a 
+                                        pixel masking scheme.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
                     <!-- N2V2 -->
                     <a class="card-wrapper" href="n2v2">
                         <div class="card"> 
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<--  "cpu.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>N2V2</h5>
-                                <p>
-                                    A variant of Noise2Void capable of removing 
-                                    checkboard artefacts.
-                                </p>
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<--  "cpu.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>N2V2</h5>
+                                    <p>
+                                        A variant of Noise2Void capable of removing 
+                                        checkboard artefacts.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -57,34 +61,38 @@ description: Descriptions of the algorithms.
                     <!-- structN2V -->
                     <a class="card-wrapper" href="structn2v">
                         <div class="card"> 
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<--  "cpu.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>StructN2V</h5>
-                                <p>
-                                    A variant of Noise2Void that uses an enhanced mask
-                                    to remove structured noise.
-                                </p>
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<--  "cpu.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>StructN2V</h5>
+                                    <p>
+                                        A variant of Noise2Void that uses an enhanced mask
+                                        to remove structured noise.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
                     <!-- Noise2Noise -->
                     <a class="card-wrapper" href="n2n">
                         <div class="card"> 
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<--  "cpu.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>Noise2Noise</h5>
-                                <p>
-                                    A supervised methods that can denoise images without
-                                    corresponding clean data.
-                                </p>
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<--  "cpu.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Noise2Noise</h5>
+                                    <p>
+                                        A supervised methods that can denoise images without
+                                        corresponding clean data.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
