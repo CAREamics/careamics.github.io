@@ -113,17 +113,19 @@ description: Descriptions of the algorithms.
                     <!-- N2V -->
                     <a class="card-wrapper" href="care">
                         <div class="card"> 
-                            <div class="logo">
-                                <span class="twemoji">
-                                    --8<--  "cpu.svg"
-                                </span>
-                            </div>
-                            <div class="card-content">
-                                <h5>CARE</h5>
-                                <p>
-                                    The original supervised method to restore microscopy
-                                    images.
-                                </p>
+                            <div class="card-body"> 
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<--  "cpu.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>CARE</h5>
+                                    <p>
+                                        The original supervised method to restore microscopy
+                                        images.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </a>
