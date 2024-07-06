@@ -61,7 +61,7 @@
         {
             "name": "Noise2Void",
             "source": "algorithms/n2v/Noise2Void.ipynb",
-            "destination": "algorithms/n2v"
+            "destination": "n2v"
         }
     ]
 }
