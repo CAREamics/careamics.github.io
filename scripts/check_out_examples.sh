@@ -59,7 +59,7 @@ tail -n +2 "$LIST" | while IFS=, read -r path_in_repo destination_in_docs title;
         echo "Copied $repository_name/$path_in_repo to $NB_DEST"
 
         # if it was copied in the applications folder, update notebook
-        if [[ $destination_in_docs == "applications"* ]]; then
+        if [ "${destination_in_docs#applications}" != "$destination_in_docs" ]; then
             # remove ".git" from the repository name
             REPO_STEM="${REPO%.git}"
 
