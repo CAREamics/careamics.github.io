@@ -98,30 +98,34 @@ in the navigation file of mkdocs.
         "applications": [
             ...,
             {
-                "name": "Name_of_the_Notebook",
-                "description": "Some description of the notebook.",
-                "cover": "File_name.jpeg",
-                "source": "path/in/careamics-examples/repo/File_Name.ipynb",
-                "destination": "Category_in_Applications"
+                "name": "Name_of_the_Notebook", // (1)!
+                "description": "Some description of the notebook.", // (2)!
+                "cover": "File_name.jpeg", // (3)!
+                "source": "path/in/careamics-examples/repo/File_Name.ipynb", // (4)!
+                "destination": "Category_in_Applications" // (5)!
             },
+            // (6)!
         ]
         ...
     }
     ```
-    `name` will be used as the name of the notebook, without the `_` when used as title
+    1. `name` will be used as the name of the notebook, without the `_` when used as title
     and with `Name_of_the_Notebook.ipynb` as the file name after copy.
-    `description` will be shown in the cards corresponding to the notebook on the website.
-    `cover` is the name of the image file that will be used as the cover in the
+    2. `description` will be shown in the cards corresponding to the notebook on the website.
+    3. `cover` is the name of the image file that will be used as the cover in the
     notebook card, the actual image should be placed in `docs/assets/notebook_covers`.
-    `source` is the path to the notebook in the `careamics-examples` repository.
-    `destination` is the category in the `applications` folder where the notebook will be copied to (e.g. all notebooks using `Noise2Void` are in the `Noise2Void` category).
+    4. `source` is the path to the notebook in the `careamics-examples` repository.
+    5. `destination` is the category in the `applications` folder where the notebook will be copied to (e.g. all notebooks using `Noise2Void` are in the `Noise2Void` category).
+    6. You can add multiple notebooks!
 2. You can test that the notebook was correctly added by running `sh scripts/notebooks.sh` then `mkdocs serve`.
 
 
 !!! info "Cell tags"
-    By default, all cell outputs are shown. To hide the output of a particular cell,
+    By default, all notebook cell outputs are shown. To hide the output of a particular cell,
     add the tag `remove_output` to the cell. The `mkdocs.ynml` specifies that this 
     tag is used to hide cell outputs.
+
+    For instance, this is useful for the training cell, which output hundreds of lines.
 
 
 ## Code reference
