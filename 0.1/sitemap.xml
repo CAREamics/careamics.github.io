@@ -66,16 +66,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/applications/N2V2/2D_BSD68/</loc>
-         <lastmod>2024-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://careamics.github.io/0.1/applications/N2V2/2D_SEM/</loc>
-         <lastmod>2024-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://careamics.github.io/0.1/applications/Noise2Noise/2D_SEM/</loc>
          <lastmod>2024-07-06</lastmod>
          <changefreq>daily</changefreq>
@@ -86,7 +76,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_BSD68_N2V2/</loc>
+         <lastmod>2024-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_SEM/</loc>
+         <lastmod>2024-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_SEM_N2V2/</loc>
          <lastmod>2024-07-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
