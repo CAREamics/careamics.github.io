@@ -85,17 +85,37 @@ The pages in the application section are automatically generated from the Jupyte
 notebooks in [careamics-example](https://github.com/CAREamics/careamics-examples/tree/main/applications) 
 using [mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter).
 A bash script (`scripts/check_out_examples.sh`) checks out the repository and copies 
-all the notebooks referenced in a text files into the correct path in the application 
+all the notebooks referenced into the correct path in the application 
 folder. Finally, the script `scripts/gen_jupyter_nav.py` creates entries for each notebook 
 in the navigation file of mkdocs.
 
 
 ### Adding a new notebook
 
-1. Add the notebook to `scripts/notebooks.csv`, without using spaces. The second column
-  specifies the path to the page in the application section, while the last column is used 
-  as title.
-2. You can test the notebook by running `sh scripts/notebooks.sh` then `mkdocs serve`.
+1. Add the notebook to `scripts/notebooks.json`. The structure is as follows:
+    ```json
+    {
+        "applications": [
+            ...,
+            {
+                "name": "Name_of_the_Notebook",
+                "description": "Some description of the notebook.",
+                "cover": "File_name.jpeg",
+                "source": "path/in/careamics-examples/repo/File_Name.ipynb",
+                "destination": "Category_in_Applications"
+            },
+        ]
+        ...
+    }
+    ```
+    `name` will be used as the name of the notebook, without the `_` when used as title
+    and with `Name_of_the_Notebook.ipynb` as the file name after copy.
+    `description` will be shown in the cards corresponding to the notebook on the website.
+    `cover` is the name of the image file that will be used as the cover in the
+    notebook card, the actual image should be placed in `docs/assets/notebook_covers`.
+    `source` is the path to the notebook in the `careamics-examples` repository.
+    `destination` is the category in the `applications` folder where the notebook will be copied to (e.g. all notebooks using `Noise2Void` are in the `Noise2Void` category).
+2. You can test that the notebook was correctly added by running `sh scripts/notebooks.sh` then `mkdocs serve`.
 
 
 !!! info "Cell tags"
@@ -103,10 +123,6 @@ in the navigation file of mkdocs.
     add the tag `remove_output` to the cell. The `mkdocs.ynml` specifies that this 
     tag is used to hide cell outputs.
 
-
-!!! info "CSV ending on a new line"
-    In is important to end the `.csv` file with a new line, otherwise the last line might
-    be ignored.
 
 ## Code reference
 
