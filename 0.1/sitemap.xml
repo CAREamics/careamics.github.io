@@ -21,17 +21,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://careamics.github.io/0.1/algorithms/algorithms/n2v/Noise2Void/</loc>
+         <lastmod>2024-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://careamics.github.io/0.1/algorithms/care/</loc>
          <lastmod>2024-07-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/algorithms/n2n/</loc>
-         <lastmod>2024-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://careamics.github.io/0.1/algorithms/n2v/Noise2Void/</loc>
          <lastmod>2024-07-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -61,7 +61,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/applications/Lightning_API/2D_BSD68/</loc>
+         <loc>https://careamics.github.io/0.1/applications/Lightning_API/2D_BSD68_N2V2/</loc>
          <lastmod>2024-07-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
