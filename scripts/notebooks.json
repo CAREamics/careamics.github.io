@@ -22,7 +22,7 @@
             "cover": "BSD68_Noise2Void.jpeg",
             "source": "applications/n2v/2D/BSD68_Noise2Void.ipynb",
             "destination": "Noise2Void",
-            "tags": "benchmark"
+            "tags": "2D, benchmark"
         },
         {
             "name": "2D_BSD68_N2V2",
@@ -30,7 +30,7 @@
             "cover": "BSD68_N2V2.jpeg",
             "source": "applications/n2v/2D/BSD68_N2V2.ipynb",
             "destination": "Noise2Void",
-            "tags": "benchmark"
+            "tags": "2D, benchmark"
         },
         {
             "name": "2D_BSD68_N2V",
@@ -38,7 +38,7 @@
             "cover": "BSD68_Noise2Void_lightning_api.jpeg",
             "source": "applications/lightning_api/2D/BSD68_Noise2Void_lightning_api.ipynb",
             "destination": "Lightning_API",
-            "tags": "benchmark, N2V"
+            "tags": "2D, benchmark, N2V"
         },
         {
             "name": "2D_SEM",
