@@ -33,14 +33,6 @@
             "tags": "2D, benchmark"
         },
         {
-            "name": "2D_BSD68_N2V",
-            "description": "Example of Noise2Void using the Lightning API with 2D natural images and synthetic noise.",
-            "cover": "BSD68_Noise2Void_lightning_api.jpeg",
-            "source": "applications/lightning_api/2D/BSD68_Noise2Void_lightning_api.ipynb",
-            "destination": "Lightning_API",
-            "tags": "2D, benchmark, N2V"
-        },
-        {
             "name": "2D_SEM",
             "description": "Denoising of 2D scanning electron microscopy with Noise2Noise.",
             "cover": "SEM_Noise2Noise.jpeg",
@@ -55,6 +47,14 @@
             "source": "applications/care/denoising/2D/U2OS_CARE.ipynb",
             "destination": "CARE",
             "tags": "2D, fluorescence, nuclei"
+        },
+        {
+            "name": "2D_BSD68_N2V",
+            "description": "Example of Noise2Void using the Lightning API with 2D natural images and synthetic noise.",
+            "cover": "BSD68_Noise2Void_lightning_api.jpeg",
+            "source": "applications/lightning_api/2D/BSD68_Noise2Void_lightning_api.ipynb",
+            "destination": "Lightning_API",
+            "tags": "2D, benchmark, N2V"
         }
     ],
     "algorithms": [
