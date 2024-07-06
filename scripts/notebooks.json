@@ -31,7 +31,7 @@
         {
             "name": "2D_BSD68_N2V2",
             "description": "Example of Noise2Void using the Lightning API with 2D natural images and synthetic noise.",
-            "cover": "BSD68_N2V2.jpeg",
+            "cover": "BSD68_Noise2Void_lightning_api.jpeg",
             "source": "applications/lightning_api/2D/BSD68_Noise2Void_lightning_api.ipynb",
             "destination": "Lightning_API"
         },
