@@ -17,6 +17,14 @@
             "tags": "2D, electron microscopy"
         },
         {
+            "name": "3D_Flywing",
+            "description": "Benchmark N2V2 in 2D using natural images and synthetic noise.",
+            "cover": "Flywing_N2V.jpeg",
+            "source": "applications/n2v/3D/Flywing_Noise2Void.ipynb",
+            "destination": "Noise2Void",
+            "tags": "3D, fluorescence, tissue"
+        },
+        {
             "name": "2D_BSD68",
             "description": "Benchmark Noise2Void in 2D using natural images and synthetic noise.",
             "cover": "BSD68_Noise2Void.jpeg",
