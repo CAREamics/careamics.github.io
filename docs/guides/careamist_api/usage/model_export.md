@@ -13,7 +13,8 @@ To export a trained model, you can simply call `careamist.export_to_bmz`:
 
 1. The model export should be a `.zip` file, if not CAREamics will add the extension.
 
-2. Give the model a name that is informative!
+2. Give the model a name that is informative! It should consist of letters, numbers,
+hyphens and underscores.
 
 3. We need an input array to verify the export, the input and the prediction will be 
 packaged in the BMZ model. They will also be used to create the cover of the model if
