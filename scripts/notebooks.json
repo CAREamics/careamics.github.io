@@ -46,7 +46,7 @@
             "cover": "JUMP_N2V.jpeg",
             "source": "applications/n2v/channels/JUMP_N2V.ipynb",
             "destination": "Noise2Void",
-            "tags": "channel, fluorescence"
+            "tags": "channels, fluorescence"
         },
         {
             "name": "W2S",
@@ -54,7 +54,7 @@
             "cover": "W2S_N2V.jpeg",
             "source": "applications/n2v/channels/W2S_N2V.ipynb",
             "destination": "Noise2Void",
-            "tags": "channel, fluorescence"
+            "tags": "channels, fluorescence"
         },
         {
             "name": "2D_BSD68",
