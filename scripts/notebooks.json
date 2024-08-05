@@ -17,12 +17,44 @@
             "tags": "2D, electron microscopy"
         },
         {
+            "name": "Hagen",
+            "description": "N2V on the AI4Life Denoising Challenge with structured noise.",
+            "cover": "Hagen_N2V.jpeg",
+            "source": "applications/n2v/2D/Hagen_N2V.ipynb",
+            "destination": "Noise2Void",
+            "tags": "2D, fluorescence, structured"
+        },
+        {
             "name": "3D_Flywing",
             "description": "Benchmark N2V2 in 2D using natural images and synthetic noise.",
             "cover": "Flywing_N2V.jpeg",
             "source": "applications/n2v/3D/Flywing_Noise2Void.ipynb",
             "destination": "Noise2Void",
             "tags": "3D, fluorescence, tissue"
+        },
+        {
+            "name": "SUPPORT",
+            "description": "N2V on the AI4Life Denoising Challenge with structured noise.",
+            "cover": "SUPPORT_N2V.jpeg",
+            "source": "applications/n2v/3D/SUPPORT_N2V.ipynb",
+            "destination": "Noise2Void",
+            "tags": "3D, fluorescence, structured"
+        },
+        {
+            "name": "JUMP",
+            "description": "N2V on the AI4Life Denoising Challenge with unstructured noise.",
+            "cover": "JUMP_N2V.jpeg",
+            "source": "applications/n2v/channels/JUMP_N2V.ipynb",
+            "destination": "Noise2Void",
+            "tags": "channel, fluorescence"
+        },
+        {
+            "name": "W2S",
+            "description": "N2V on the AI4Life Denoising Challenge with unstructured noise.",
+            "cover": "W2S_N2V.jpeg",
+            "source": "applications/n2v/channels/W2S_N2V.ipynb",
+            "destination": "Noise2Void",
+            "tags": "channel, fluorescence"
         },
         {
             "name": "2D_BSD68",
