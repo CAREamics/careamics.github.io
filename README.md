@@ -36,8 +36,8 @@ In order to build the pages locally, follow these steps:
     ```
 4. Run the following scripts (which are normally run by the CI):
     ```bash
-    python scripts/check_out_repos.sh
-    python scripts/check_out_notebooks.sh
+    sh scripts/check_out_repos.sh
+    sh scripts/check_out_examples.sh
     ```
 3. Build the pages:
     ```bash

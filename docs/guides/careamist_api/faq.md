@@ -27,7 +27,7 @@ compatible with dimensions that are power of 2!).
 ### `pydantic_core._pydantic_core.ValidationError`
 
 The BMZ format is also validated by the [pydantic](https://pydantic-docs.helpmanual.io/)
-library. If some of the metadat given to the `export_to_bmz` function is not correct, 
+library. If some of the metadata given to the `export_to_bmz` function is not correct, 
 you might get such errors:
 
 ```python title="Code"

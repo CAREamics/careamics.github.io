@@ -60,7 +60,7 @@ from the training set. There are two parameters controlling that behaviour: `val
 and `val_minimum_split`.
 
 `val_percentage` is the fraction of the training data that will be used for validation, and
-`val_minimum_split` is the minimum number of iamges used. If the percentage leads to a 
+`val_minimum_split` is the minimum number of images used. If the percentage leads to a 
 number of patches smaller than `val_minimum_split`, CAREamics will use `val_minimum_split`.
 
 ```python title="Splitting validation from training data"
