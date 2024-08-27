@@ -73,6 +73,14 @@
             "tags": "2D, benchmark"
         },
         {
+            "name": "2D_Convallaria_structN2V",
+            "description": "An example of using structN2V on the convallaria dataset.",
+            "cover": "Convallaria_structN2V.jpeg",
+            "source": "applications/n2v/2D/Convallaria_structN2V.ipynb",
+            "destination": "Noise2Void",
+            "tags": "2D, structN2V"
+        },
+        {
             "name": "2D_SEM",
             "description": "Denoising of 2D scanning electron microscopy with Noise2Noise.",
             "cover": "SEM_Noise2Noise.jpeg",
