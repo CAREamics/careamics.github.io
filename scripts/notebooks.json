@@ -12,7 +12,7 @@
             "name": "2D_SEM_N2V2",
             "description": "Denoising of 2D scanning electron microscopy with N2V2.",
             "cover": "SEM_N2V2.jpeg",
-            "source": "applications/n2v/2D/SEM_Noise2Void.ipynb",
+            "source": "applications/n2v/2D/SEM_N2V2.ipynb",
             "destination": "Noise2Void",
             "tags": "2D, electron microscopy"
         },
