@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_Convallaria_structN2V/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_SEM/</loc>
          <lastmod>2024-08-27</lastmod>
          <changefreq>daily</changefreq>
@@ -847,6 +852,46 @@
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/reference/careamics/utils/torch_utils/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/denoiseg_datasets/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/denoising_datasets/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/portfolio/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/portfolio_entry/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/utils/download_utils/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/utils/pale_blue_dot/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/reference/careamics_portfolio/utils/pale_blue_dot_zip/</loc>
          <lastmod>2024-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
