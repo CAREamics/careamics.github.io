@@ -38,7 +38,7 @@ description: Descriptions of the algorithms.
                         </div>
                     </a>
                     <!-- N2V2 -->
-                    <a class="card-wrapper" href="n2v2">
+                    <a class="card-wrapper" href="n2v2/N2V2">
                         <div class="card"> 
                             <div class="card-body">
                                 <div class="logo">
