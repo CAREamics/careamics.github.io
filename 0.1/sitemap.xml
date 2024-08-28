@@ -46,47 +46,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/applications/CARE/2D_denoising_U2OS/</loc>
+         <loc>https://careamics.github.io/0.1/applications/CARE/denoising_U2OS/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/applications/Lightning_API/2D_BSD68_N2V/</loc>
+         <loc>https://careamics.github.io/0.1/applications/Lightning_API/BSD68_N2V/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/applications/Noise2Noise/2D_SEM/</loc>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Noise/SEM/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_BSD68/</loc>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/BSD68/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_BSD68_N2V2/</loc>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/BSD68_N2V2/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_Conval._structN2V/</loc>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/Convallaria_structN2V/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_SEM/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://careamics.github.io/0.1/applications/Noise2Void/2D_SEM_N2V2/</loc>
-         <lastmod>2024-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://careamics.github.io/0.1/applications/Noise2Void/3D_Flywing/</loc>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/Flywing/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -97,6 +87,21 @@
     </url>
     <url>
          <loc>https://careamics.github.io/0.1/applications/Noise2Void/JUMP/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/Mouse_Nuclei/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/SEM/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://careamics.github.io/0.1/applications/Noise2Void/SEM_N2V2/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
