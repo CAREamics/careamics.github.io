@@ -17,11 +17,11 @@
             "tags": "2D, electron microscopy"
         },
         {
-            "name": "SEM_N2V2",
+            "name": "SEM",
             "description": "Denoising of 2D scanning electron microscopy with N2V2.",
             "cover": "SEM_N2V2.jpeg",
             "source": "applications/n2v/2D/SEM_N2V2.ipynb",
-            "destination": "Noise2Void",
+            "destination": "N2V2",
             "tags": "2D, electron microscopy"
         },
         {
@@ -34,7 +34,7 @@
         },
         {
             "name": "Flywing",
-            "description": "Benchmark N2V2 in 2D using natural images and synthetic noise.",
+            "description": "Denoising of 3D tissue using Noise2Void.",
             "cover": "Flywing_N2V.jpeg",
             "source": "applications/n2v/3D/Flywing_Noise2Void.ipynb",
             "destination": "Noise2Void",
@@ -54,7 +54,7 @@
             "cover": "JUMP_N2V.jpeg",
             "source": "applications/n2v/channels/JUMP_N2V.ipynb",
             "destination": "Noise2Void",
-            "tags": "channels, fluorescence"
+            "tags": "2D, channels, fluorescence"
         },
         {
             "name": "W2S",
@@ -62,7 +62,7 @@
             "cover": "W2S_N2V.jpeg",
             "source": "applications/n2v/channels/W2S_N2V.ipynb",
             "destination": "Noise2Void",
-            "tags": "channels, fluorescence"
+            "tags": "2D, channels, fluorescence"
         },
         {
             "name": "BSD68",
@@ -73,19 +73,19 @@
             "tags": "2D, benchmark"
         },
         {
-            "name": "BSD68_N2V2",
+            "name": "BSD68",
             "description": "Benchmark N2V2 in 2D using natural images and synthetic noise.",
             "cover": "BSD68_N2V2.jpeg",
             "source": "applications/n2v/2D/BSD68_N2V2.ipynb",
-            "destination": "Noise2Void",
+            "destination": "N2V2",
             "tags": "2D, benchmark"
         },
         {
-            "name": "Convallaria_structN2V",
+            "name": "Convallaria",
             "description": "An example of using structN2V on the convallaria dataset.",
             "cover": "Convallaria_structN2V.jpeg",
             "source": "applications/n2v/2D/Convallaria_structN2V.ipynb",
-            "destination": "Noise2Void",
+            "destination": "structN2V",
             "tags": "2D, fluorescence, structN2V"
         },
         {
