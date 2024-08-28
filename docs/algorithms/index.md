@@ -9,6 +9,19 @@ description: Descriptions of the algorithms.
     These pages are still under construction and we expect a lot more details 
     descriptions of each algorithm in the near future.
 
+In these pages, you will find explanations and illustrations of how the various
+algorithms used in CAREamics work. These algorithms are divided into different 
+sections and a few keywords help you to understand the main characteristics of
+each algorithm. 
+
+## Keywords
+
+- **no ground-truth**: The algorithm trains without clean images.
+- **single image**: The algorithm can train on a single image.
+- **pairs of noisy images**: The algorithm requires pairs of noisy images.
+- **ground-truth**: The algorithm requires pairs of clean and noisy images.
+
+
 ## Self-supervised restoration
 <!-- The following links are pointing to non existing pages (pre-build) -->
 <!-- Disable markdown link check to allow bulding the pages -->
@@ -35,6 +48,10 @@ description: Descriptions of the algorithms.
                                     </p>
                                 </div>
                             </div>
+                            <div class="card-tags">
+                                <span class=tag>no ground-truth</span>
+                                <span class=tag>single image</span>
+                            </div>
                         </div>
                     </a>
                     <!-- N2V2 -->
@@ -53,6 +70,10 @@ description: Descriptions of the algorithms.
                                         checkboard artefacts.
                                     </p>
                                 </div>
+                            </div>
+                            <div class="card-tags">
+                                <span class=tag>no ground-truth</span>
+                                <span class=tag>single image</span>
                             </div>
                         </div>
                     </a>
@@ -75,6 +96,10 @@ description: Descriptions of the algorithms.
                                     </p>
                                 </div>
                             </div>
+                            <div class="card-tags">
+                                <span class=tag>no ground-truth</span>
+                                <span class=tag>single image</span>
+                            </div>
                         </div>
                     </a>
                     <!-- Noise2Noise -->
@@ -93,6 +118,10 @@ description: Descriptions of the algorithms.
                                         corresponding clean data.
                                     </p>
                                 </div>
+                            </div>
+                            <div class="card-tags">
+                                <span class=tag>no ground-truth</span>
+                                <span class=tag>pairs of noisy images</span>
                             </div>
                         </div>
                     </a>
@@ -126,6 +155,9 @@ description: Descriptions of the algorithms.
                                         images.
                                     </p>
                                 </div>
+                            </div>
+                            <div class="card-tags">
+                                <span class=tag>ground-truth</span>
                             </div>
                         </div>
                     </a>

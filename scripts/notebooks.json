@@ -1,7 +1,15 @@
 {
     "applications": [
         {
-            "name": "2D_SEM",
+            "name": "Mouse_Nuclei",
+            "description": "Denoising of 2D fluorescence images of nuclei with Noise2Void.",
+            "cover": "MouseNuclei_Noise2Void.jpeg",
+            "source": "applications/n2v/2D/MouseNuclei_Noise2Void.ipynb",
+            "destination": "Noise2Void",
+            "tags": "2D, fluorescence"
+        },
+        {
+            "name": "SEM",
             "description": "Denoising of 2D scanning electron microscopy with Noise2Void.",
             "cover": "SEM_Noise2Void.jpeg",
             "source": "applications/n2v/2D/SEM_Noise2Void.ipynb",
@@ -9,7 +17,7 @@
             "tags": "2D, electron microscopy"
         },
         {
-            "name": "2D_SEM_N2V2",
+            "name": "SEM_N2V2",
             "description": "Denoising of 2D scanning electron microscopy with N2V2.",
             "cover": "SEM_N2V2.jpeg",
             "source": "applications/n2v/2D/SEM_N2V2.ipynb",
@@ -25,7 +33,7 @@
             "tags": "2D, fluorescence, structured"
         },
         {
-            "name": "3D_Flywing",
+            "name": "Flywing",
             "description": "Benchmark N2V2 in 2D using natural images and synthetic noise.",
             "cover": "Flywing_N2V.jpeg",
             "source": "applications/n2v/3D/Flywing_Noise2Void.ipynb",
@@ -57,7 +65,7 @@
             "tags": "channels, fluorescence"
         },
         {
-            "name": "2D_BSD68",
+            "name": "BSD68",
             "description": "Benchmark Noise2Void in 2D using natural images and synthetic noise.",
             "cover": "BSD68_Noise2Void.jpeg",
             "source": "applications/n2v/2D/BSD68_Noise2Void.ipynb",
@@ -65,7 +73,7 @@
             "tags": "2D, benchmark"
         },
         {
-            "name": "2D_BSD68_N2V2",
+            "name": "BSD68_N2V2",
             "description": "Benchmark N2V2 in 2D using natural images and synthetic noise.",
             "cover": "BSD68_N2V2.jpeg",
             "source": "applications/n2v/2D/BSD68_N2V2.ipynb",
@@ -73,7 +81,7 @@
             "tags": "2D, benchmark"
         },
         {
-            "name": "2D_Conval._structN2V",
+            "name": "Convallaria_structN2V",
             "description": "An example of using structN2V on the convallaria dataset.",
             "cover": "Convallaria_structN2V.jpeg",
             "source": "applications/n2v/2D/Convallaria_structN2V.ipynb",
@@ -81,7 +89,7 @@
             "tags": "2D, fluorescence, structN2V"
         },
         {
-            "name": "2D_SEM",
+            "name": "SEM",
             "description": "Denoising of 2D scanning electron microscopy with Noise2Noise.",
             "cover": "SEM_Noise2Noise.jpeg",
             "source": "applications/n2n/2D/SEM_Noise2Noise.ipynb",
@@ -89,7 +97,7 @@
             "tags": "2D, electron microscopy"
         },
         {
-            "name": "2D_denoising_U2OS",
+            "name": "denoising_U2OS",
             "description": "Supervised denoising of nuclei imaged in 2D fluorescence with CARE.",
             "cover": "U2OS_CARE.jpeg",
             "source": "applications/care/denoising/2D/U2OS_CARE.ipynb",
@@ -97,7 +105,7 @@
             "tags": "2D, fluorescence, nuclei"
         },
         {
-            "name": "2D_BSD68_N2V",
+            "name": "BSD68_N2V",
             "description": "Example of Noise2Void using the Lightning API with 2D natural images and synthetic noise.",
             "cover": "BSD68_Noise2Void_lightning_api.jpeg",
             "source": "applications/lightning_api/2D/BSD68_Noise2Void_lightning_api.ipynb",
