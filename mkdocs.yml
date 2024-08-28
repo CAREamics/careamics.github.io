@@ -42,7 +42,14 @@ nav:
           - guides/dev_resources/contribute.md
           - guides/dev_resources/website.md
           - guides/dev_resources/docstring.md
-  - Applications: applications/
+  - Applications:
+      - applications/index.md
+      - Noise2Void: applications/n2v/
+      - N2V2: applications/n2v2/
+      - structN2V: applications/structn2v/
+      - Noise2Noise: applications/n2n/
+      - CARE: applications/care/
+      - Lightning API: applications/lightning_api/
   - Algorithms:
       - algorithms/index.md
       - Noise2Void: algorithms/n2v/
