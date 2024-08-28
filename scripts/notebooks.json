@@ -73,12 +73,12 @@
             "tags": "2D, benchmark"
         },
         {
-            "name": "2D_Convallaria_structN2V",
+            "name": "2D_Conval._structN2V",
             "description": "An example of using structN2V on the convallaria dataset.",
             "cover": "Convallaria_structN2V.jpeg",
             "source": "applications/n2v/2D/Convallaria_structN2V.ipynb",
             "destination": "Noise2Void",
-            "tags": "2D, structN2V"
+            "tags": "2D, fluorescence, structN2V"
         },
         {
             "name": "2D_SEM",
@@ -115,6 +115,11 @@
             "name": "N2V2",
             "source": "algorithms/n2v2/N2V2.ipynb",
             "destination": "n2v2"
+        },
+        {
+            "name": "structN2V",
+            "source": "algorithms/structn2v/structN2V.ipynb",
+            "destination": "structn2v"
         }
     ]
 }

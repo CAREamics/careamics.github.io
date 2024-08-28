@@ -47,6 +47,7 @@ nav:
       - algorithms/index.md
       - Noise2Void: algorithms/n2v/
       - N2V2: algorithms/n2v2/
+      - structN2V: algorithms/structN2V/
 
   - Code Reference: reference/
 

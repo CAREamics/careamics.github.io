@@ -59,7 +59,7 @@ description: Descriptions of the algorithms.
                 </div>
                 <div class="responsive-grid">
                     <!-- structN2V -->
-                    <a class="card-wrapper" href="structn2v">
+                    <a class="card-wrapper" href="structn2v/structN2V">
                         <div class="card"> 
                             <div class="card-body">
                                 <div class="logo">
