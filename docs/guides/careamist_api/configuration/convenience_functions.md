@@ -79,13 +79,14 @@ rotations).
 
 However in certain cases, users might want to disable augmentations. For instance if you
 have structures that are always oriented in the same direction. To do so there is a single
-`use_agumentations` parameter:
+`augmentations` parameter:
 
 ```python title="Configuration without augmentations"
 --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_no_aug"
 ```
 
-1. Augmentations are disabled (but normalization and N2V pixel manipulation are still there!).
+1. Augmentations are disabled (but normalization and N2V pixel manipulation will still be added
+by CAREamics!).
 
 
 ### Choosing a logger
@@ -224,13 +225,13 @@ rotations).
 
 However in certain cases, users might want to disable augmentations. For instance if you
 have structures that are always oriented in the same direction. To do so there is a single
-`use_agumentations` parameter:
+`augmentations` parameter:
 
 ```python title="Configuration without augmentations"
 --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_no_aug"
 ```
 
-1. Augmentations are disabled (but normalization and N2V pixel manipulation are still there!).
+1. Augmentations are disabled (but normalization will be added later!).
 
 
 ### Choosing a logger
@@ -333,13 +334,13 @@ rotations).
 
 However in certain cases, users might want to disable augmentations. For instance if you
 have structures that are always oriented in the same direction. To do so there is a single
-`use_agumentations` parameter:
+`augmentations` parameter:
 
 ```python title="Configuration without augmentations"
 --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_no_aug"
 ```
 
-1. Augmentations are disabled (but normalization and N2V pixel manipulation are still there!).
+1. Augmentations are disabled (but normalization will still be added!).
 
 
 ### Choosing a logger
