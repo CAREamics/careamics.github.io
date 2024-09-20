@@ -2,6 +2,8 @@
 description: Convenience functions
 ---
 
+
+
 # Convenience functions
 
 As building a full CAREamics configuration requires a complete understanding of the 
@@ -32,22 +34,43 @@ a certain numbers of mandatory parameters:
 Additional optional parameters can be passed to tweak the configuration. 
 
 
-## Noise2Void
-
-### Training with channels
+## Training with channels
 
 When training with multiple channels, the `axes` parameter should contain `C` (e.g. `YXC`).
-An error will be then thrown if the optional parameter `n_channels` is not specified! 
-Likewise if `n_channels` is specified but `C` is not in `axes`.
+An error will be then thrown if the optional parameter `n_channels` (or `n_channel_in` for 
+CARE and Noise2Noise) is not specified! Likewise if `n_channels` is specified but `C` is not in `axes`.
 
 The correct way is to specify them both at the same time.
 
-```python title="Configuration with multiple channels"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_channels"
-```
 
-1. The axes contain the letter `C`.
-2. The number of channels is specified.
+=== "Noise2Void"
+    
+    ```python title="Configuration with multiple channels"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_channels"
+    ```
+
+    1. The axes contain the letter `C`.
+    2. The number of channels is specified.
+
+=== "CARE"
+
+    ```python title="Configuration with multiple channels"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_channels"
+    ```
+
+    1. The axes contain the letter `C`.
+    2. The number of channels is specified.
+    3. Depending on the CARE task, you also see to set `n_channels_out` (optional).
+
+=== "Noise2Noise"
+
+    ```python title="Configuration with multiple channels"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_channels"
+    ```
+
+    1. The axes contain the letter `C`.
+    2. The number of channels is specified.
+    3. Depending on the CARE task, you also see to set `n_channels_out` (optional).
 
 
 !!! warning "Independent channels"
@@ -63,33 +86,112 @@ The correct way is to specify them both at the same time.
 To control whether the channels are trained independently, you can use the 
 `independent_channels` parameter:
 
-```python title="Training channels together"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_mix_channels"
-```
 
-1. As previously, we specify the channels in `axes` and `n_channels`.
-2. This ensures that the channels are trained together!
+=== "Noise2Void"
+    
+    ```python title="Training channels together"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_mix_channels"
+    ```
+
+    1. As previously, we specify the channels in `axes` and `n_channels`.
+    2. This ensures that the channels are trained together!
+
+=== "CARE"
 
 
-### Using augmentations
+    ```python title="Training channels together"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_mix_channels"
+    ```
+
+    1. As previously, we specify the channels in `axes` and `n_channels_in`.
+    2. This ensures that the channels are trained together!
+
+
+=== "Noise2Noise"
+
+    ```python title="Training channels together"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_mix_channels"
+    ```
+
+    1. As previously, we specify the channels in `axes` and `n_channels`.
+    2. This ensures that the channels are trained together!
+
+
+##  Augmentations
 
 By default CAREamics configuration uses augmentations that are specific to the algorithm
 (e.g. Noise2Void) and that are compatible with microscopy images (e.g. flip and 90 degrees
 rotations).
 
+### Disable augmentations
+
 However in certain cases, users might want to disable augmentations. For instance if you
 have structures that are always oriented in the same direction. To do so there is a single
 `augmentations` parameter:
 
-```python title="Configuration without augmentations"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_no_aug"
-```
+=== "Noise2Void"
+    
+    ```python title="Configuration without augmentations"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_no_aug"
+    ```
 
-1. Augmentations are disabled (but normalization and N2V pixel manipulation will still be added
-by CAREamics!).
+    1. Augmentations are disabled (but normalization and N2V pixel manipulation will still be added
+    by CAREamics!).
+
+=== "CARE"
+
+    ```python title="Configuration without augmentations"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_no_aug"
+    ```
+
+    1. Augmentations are disabled (but normalization will still be added!).
+
+=== "Noise2Noise"
+
+    ```python title="Configuration without augmentations"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_no_aug"
+    ```
+
+    1. Augmentations are disabled (but normalization will still be added!).
 
 
-### Choosing a logger
+### Non-default augmentations
+
+Default augmentations apply a random flip along X or Y and a 90 degrees rotation (note that
+there is always for each patch and for each augmentation a 0.5 probability that no augmentation
+is applied). For samples that contain objects that are never flipped or rotated (e.g.
+objects with always the same orientation, or with patterns along a certain direction), it
+will be beneficial to apply non-default augmentations.
+
+For instance, in a case where the objects can only be flipped horizontally, we would
+only apply flipping along the `X` axis and not apply any rotation.
+
+=== "Noise2Void"
+    
+    ```python title="Configuration with non-default augmentations"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_aug"
+    ```
+
+    1. Only flipping along the `X` axis is applied.
+
+=== "CARE"
+
+    ```python title="Configuration with non-default augmentations"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_aug"
+    ```
+
+    1. Only flipping along the `X` axis is applied.
+
+=== "Noise2Noise"
+
+    ```python title="Configuration with non-default augmentations"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_aug"
+    ```
+
+    1. Only flipping along the `X` axis is applied.
+
+
+## Choosing a logger
 
 By default, CAREamics simply log the training progress in the console. However, it is 
 possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html).
@@ -100,24 +202,65 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
     out the [installation section](../../../installation.md#extra-dependencies) to know more about it.
 
 
-```python title="Configuration with WandB"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_wandb"
-```
+=== "Noise2Void"
+    
+    ```python title="Configuration with WandB"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_wandb"
+    ```
 
-1. `wandb` or `tensorboard`
+    1. `wandb` or `tensorboard`
 
-### (Advanced) Passing model specific parameters
+=== "CARE"
+
+    ```python title="Configuration with WandB"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_wandb"
+    ```
+
+    1. `wandb` or `tensorboard`
+
+=== "Noise2Noise"
+
+    ```python title="Configuration with WandB"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_wandb"
+    ```
+
+    1. `wandb` or `tensorboard`
+
+## (Advanced) Passing model specific parameters
 
 By default, the convenience functions use the default [UNet model parameters](). But if 
-you are feeling brave, you can pass model specific parameters in the `model_kwargs` dictionary. 
+you are feeling brave, you can pass model specific parameters in the `model_params` dictionary. 
 
-```python title="Configuration with model specific parameters"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_model_kwargs"
-```
+=== "Noise2Void"
+    
+    ```python title="Configuration with model specific parameters"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_model_kwargs"
+    ```
 
-1. The depth of the UNet.
-2. The number of channels in the first layer.
-3. Add any other parameter specific to the model!
+    1. The depth of the UNet.
+    2. The number of channels in the first layer.
+    3. Add any other parameter specific to the model!
+
+=== "CARE"
+
+    ```python title="Configuration with model specific parameters"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_model_kwargs"
+    ```
+
+    1. The depth of the UNet.
+    2. The number of channels in the first layer.
+    3. Add any other parameter specific to the model!
+
+=== "Noise2Noise"
+
+    ```python title="Configuration with model specific parameters"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_model_kwargs"
+    ```
+
+    1. The depth of the UNet.
+    2. The number of channels in the first layer.
+    3. Add any other parameter specific to the model!
+
 
 !!! note "Model parameters overwriting"
 
@@ -129,8 +272,8 @@ you are feeling brave, you can pass model specific parameters in the `model_kwar
 
 ## Noise2Void specific parameters
 
-[Noise2Void]() has a few additional parameters that can be set, including for using its 
-variants [N2V2]() and [structN2V]().
+[Noise2Void](../../../algorithms/n2v/) has a few additional parameters that can be set, including for using its 
+variants [N2V2](../../../algorithms/n2v2/) and [structN2V](../../../algorithms/structn2v/).
 
 !!! note "Understanding Noise2Void and its variants"
 
@@ -177,220 +320,28 @@ StructN2V has two parameters that can be set:
 --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:structn2v"
 ```
 
-## Noise2Noise
 
-### Training with channels
+## CARE and Noise2Noise parameters
 
-When training with multiple channels, the `axes` parameter should contain `C` (e.g. `YXC`).
-An error will be then thrown if the optional parameter `n_channels_in` is not specified! 
-Likewise if `n_channels_in` is specified but `C` is not in `axes`.
+### Using another loss function
 
-The correct way is to specify them both at the same time.
+As opposed to Noise2Void, [CARE](../../../algorithms/care/) and [Noise2Noise](../../../algorithms/n2n) 
+can be trained with different loss functions. This can be set using the `loss` parameter 
+(surprise, surprise!).
 
-```python title="Configuration with multiple channels"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_channels"
-```
-
-1. The axes contain the letter `C`.
-2. The number of channels is specified.
-3. Depending on the CARE task, you also see to set `n_channels_out` (optional).
-
-
-!!! warning "Independent channels"
+=== "CARE"
     
-    By default, the channels are trained independently: that means that they have
-    no influence on each other. As they might have completely different noise
-    models, this can lead to better results.
+    ```python title="Configuration with different loss"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_loss"
+    ```
 
-    However, in some cases, you might want to train the channels together to get
-    more structural information.
+    1. `mae` or `mse`
 
+=== "Noise2Noise"
 
-To control whether the channels are trained independently, you can use the 
-`independent_channels` parameter:
+    ```python title="Configuration with different loss"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_loss"
+    ```
 
-```python title="Training channels together"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_mix_channels"
-```
-
-1. As previously, we specify the channels in `axes` and `n_channels`.
-2. This ensures that the channels are trained together!
-
-
-### Using augmentations
-
-By default CAREamics configuration uses augmentations that are specific to the algorithm
-(e.g. Noise2Void) and that are compatible with microscopy images (e.g. flip and 90 degrees
-rotations).
-
-However in certain cases, users might want to disable augmentations. For instance if you
-have structures that are always oriented in the same direction. To do so there is a single
-`augmentations` parameter:
-
-```python title="Configuration without augmentations"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_no_aug"
-```
-
-1. Augmentations are disabled (but normalization will be added later!).
-
-
-### Choosing a logger
-
-By default, CAREamics simply log the training progress in the console. However, it is 
-possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html).
-
-!!! note "Loggers installation"
-
-    Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](../../../installation.md#extra-dependencies) to know more about it.
-
-
-```python title="Configuration with WandB"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_wandb"
-```
-
-1. `wandb` or `tensorboard`
-
-### (Advanced) Passing model specific parameters
-
-By default, the convenience functions use the default [UNet model parameters](). But if 
-you are feeling brave, you can pass model specific parameters in the `model_kwargs` dictionary. 
-
-```python title="Configuration with model specific parameters"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_model_kwargs"
-```
-
-1. The depth of the UNet.
-2. The number of channels in the first layer.
-3. Add any other parameter specific to the model!
-
-!!! note "Model parameters overwriting"
-
-    Some values of the model parameters are not compatible with certain algorithms. 
-    Therefore, these are overwritten by the convenience functions. For instance,
-    if you pass `in_channels` or `independent_channels` in the `model_kwargs` dictionary, 
-    they will be ignored and replaced by the explicit parameters passed to the convenience function.
-
-
-### Noise2Noise with another loss
-
-As opposed to Noise2Void, [CARE]() and [Noise2Noise]() can be trained with different loss
-functions. This can be set using the `loss` parameter (surprise, surprise!).
-
-```python title="Configuration with different loss"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_loss"
-```
-
-1. `mae` or `mse`
-
-
-
-## CARE
-
-
-### Training with channels
-
-When training with multiple channels, the `axes` parameter should contain `C` (e.g. `YXC`).
-An error will be then thrown if the optional parameter `n_channels_in` is not specified! 
-Likewise if `n_channels_in` is specified but `C` is not in `axes`.
-
-The correct way is to specify them both at the same time.
-
-```python title="Configuration with multiple channels"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_channels"
-```
-
-1. The axes contain the letter `C`.
-2. The number of channels is specified.
-3. Depending on the CARE task, you also see to set `n_channels_out` (optional).
-
-
-!!! warning "Independent channels"
-    
-    By default, the channels are trained independently: that means that they have
-    no influence on each other. As they might have completely different noise
-    models, this can lead to better results.
-
-    However, in some cases, you might want to train the channels together to get
-    more structural information.
-
-
-To control whether the channels are trained independently, you can use the 
-`independent_channels` parameter:
-
-```python title="Training channels together"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_mix_channels"
-```
-
-1. As previously, we specify the channels in `axes` and `n_channels_in`.
-2. This ensures that the channels are trained together!
-
-
-### Using augmentations
-
-By default CAREamics configuration uses augmentations that are specific to the algorithm
-(e.g. Noise2Void) and that are compatible with microscopy images (e.g. flip and 90 degrees
-rotations).
-
-However in certain cases, users might want to disable augmentations. For instance if you
-have structures that are always oriented in the same direction. To do so there is a single
-`augmentations` parameter:
-
-```python title="Configuration without augmentations"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_no_aug"
-```
-
-1. Augmentations are disabled (but normalization will still be added!).
-
-
-### Choosing a logger
-
-By default, CAREamics simply log the training progress in the console. However, it is 
-possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html).
-
-!!! note "Loggers installation"
-
-    Using WandB or TensorBoard require the installation of `extra` dependencies. Check
-    out the [installation section](../../../installation.md#extra-dependencies) to know more about it.
-
-
-```python title="Configuration with WandB"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_wandb"
-```
-
-1. `wandb` or `tensorboard`
-
-### (Advanced) Passing model specific parameters
-
-By default, the convenience functions use the default [UNet model parameters](). But if 
-you are feeling brave, you can pass model specific parameters in the `model_kwargs` dictionary. 
-
-```python title="Configuration with model specific parameters"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_model_kwargs"
-```
-
-1. The depth of the UNet.
-2. The number of channels in the first layer.
-3. Add any other parameter specific to the model!
-
-!!! note "Model parameters overwriting"
-
-    Some values of the model parameters are not compatible with certain algorithms. 
-    Therefore, these are overwritten by the convenience functions. For instance,
-    if you pass `in_channels` or `independent_channels` in the `model_kwargs` dictionary, 
-    they will be ignored and replaced by the explicit parameters passed to the convenience function.
-
-
-### Noise2Noise with another loss
-
-[CARE]() can be trained with different loss
-functions. This can be set using the `loss` parameter (surprise, surprise!).
-
-```python title="Configuration with different loss"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_loss"
-```
-
-1. `mae` or `mse`
-
-
+    1. `mae` or `mse`
 

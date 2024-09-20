@@ -99,6 +99,7 @@ theme:
     - search.share
     - search.suggest
     - navigation.icons
+    - content.tabs.link
 
 markdown_extensions:
   #- pymdownx.extra # markdown in html (includes commented extensions below)
