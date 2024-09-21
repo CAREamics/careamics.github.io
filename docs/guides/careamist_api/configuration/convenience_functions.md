@@ -110,7 +110,7 @@ To control whether the channels are trained independently, you can use the
 === "Noise2Noise"
 
     ```python title="Training channels together"
-    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_mix_channels"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_mix_channels"
     ```
 
     1. As previously, we specify the channels in `axes` and `n_channels`.
