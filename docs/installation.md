@@ -54,7 +54,7 @@ to install all packages in a virtual environment. As an alternative, you can use
         we recommend the following:
 
         ``` bash
-        pip install --pre "careamics[examples]"
+        pip install "careamics[examples]"
         ```
 
     These instructions were tested on a linux virtual machine (RedHat 8.6) with a 
@@ -85,7 +85,7 @@ to install all packages in a virtual environment. As an alternative, you can use
         we recommend the following:
 
         ``` bash
-        pip install --pre "careamics[examples]"
+        pip install "careamics[examples]"
         ```
 
 ### Extra dependencies
@@ -95,7 +95,7 @@ section we installed `careamics[examples]`. You can add other extra dependencies
 `wandb` by doing:
 
 ``` bash
-pip install --pre "careamics[examples, wandb]"
+pip install "careamics[examples, wandb]"
 ```
 
 Here is a list of the extra dependencies:
