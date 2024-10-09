@@ -51,16 +51,6 @@ images!
 1. Any valid path to a model, as a string or a `Path.path` object, will work.
 
 
-## Experiment name
-
-When loading a pre-trained model, the experiment name, used in the loggers (e.g. WandB),
-or to name the checkpoints, is automatically set to `CAREamics`. But you can change that
-by passing it to the `CAREamist` constructor.
-
-```python title="Changing the experiment name"
---8<-- "careamics-examples/guides/careamist_api/usage/careamist.py:exp_name"
-```
-
 ## Setting the working directory
 
 By default, CAREamics will save the checkpoints in the current working directory. When
