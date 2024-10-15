@@ -11,6 +11,8 @@ description: Guide and documentation.
 [![CAREamics CI](https://github.com/CAREamics/careamics/actions/workflows/ci.yml/badge.svg)](https://github.com/CAREamics/careamics/actions/workflows/ci.yml)
 [![Example CI](https://github.com/CAREamics/careamics-examples/actions/workflows/test_guides.yaml/badge.svg)](https://github.com/CAREamics/careamics-examples/actions/workflows/test_guides.yaml)
 [![codecov](https://codecov.io/gh/CAREamics/careamics/branch/main/graph/badge.svg)](https://codecov.io/gh/CAREamics/careamics)
+[![Image.sc](https://img.shields.io/badge/Got%20a%20question%3F-Image.sc-blue)](https://forum.image.sc/)
+
 
 # Documentation
 
@@ -162,6 +164,11 @@ tutorials on how to best apply these methods in a scientific context.
 
 
 ## Feedback
+[![Image.sc](https://img.shields.io/badge/Got%20a%20question%3F-Image.sc-blue)](https://forum.image.sc/)
+
+If you are having trouble using the library or the napari plugin, contact us via the 
+[Image.sc forum](https://forum.image.sc/).
+
 
 We are always welcoming feedback on what to improve of what features could be useful,
 therefore do not hesitate to open an issue on the
