@@ -79,7 +79,9 @@ or as scripts. For the napari plugin, refer to the next section.
         mamba install pytorch::pytorch torchvision -c pytorch
         ```
 
-        :warning: Note that this will not install silicon GPU acceleration.
+        :warning: Note that this will probably not install silicon GPU acceleration. If
+        you want GPU acceleration, please refer to the relevant section to ensure that
+        you install packages for the correct platform.
     
     4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
@@ -128,8 +130,6 @@ Here is a list of the extra dependencies:
         ``` bash
         mamba install pytorch::pytorch torchvision -c pytorch --platform osx-64 python
         ```
-
-        :warning: Note that this will not install silicon GPU acceleration.
     
     4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
@@ -157,8 +157,6 @@ Here is a list of the extra dependencies:
         ``` bash
         conda install pytorch::pytorch torchvision -c pytorch
         ```
-
-        :warning: Note that this will not install silicon GPU acceleration.
     
     4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
@@ -233,7 +231,9 @@ is to look at the [applications](applications/index.md) for full examples and th
         mamba install pytorch::pytorch torchvision -c pytorch
         ```
 
-        :warning: Note that this will not install silicon GPU acceleration.
+        :warning: Note that this will probably not install silicon GPU acceleration. If
+        you want GPU acceleration, please refer to the relevant section to ensure that
+        you install packages for the correct platform.
     
     4. Install CAREamics napari plugin and napari:
 
