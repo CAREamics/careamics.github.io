@@ -62,6 +62,51 @@ We also provide a command-line interface and developer resources!
                 <!-- New row -->
                 <div class="responsive-grid">
                     <!-- Installation -->
+                    <a class="card-wrapper" href="napari_plugin">
+                        <div class="card"> 
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<--  "device-desktop.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>napari plugin</h5>
+                                    <p>
+                                        A UI interface for CAREamics in the popular
+                                        napari image viewer, allowing training, 
+                                        predicting and saving models on your 
+                                        own data.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Installation -->
+                    <a class="card-wrapper" href="tutorials">
+                        <div class="card"> 
+                            <div class="card-body">
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<--  "repo.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Tutorials</h5>
+                                    <p>
+                                        Thematic tutorials on various ways to use
+                                        and apply CAREamics algorithms, from data
+                                        inspection to using CAREamics in other
+                                        tools.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>    
+                </div>
+                <!-- New row -->
+                <div class="responsive-grid">
+                    <!-- Installation -->
                     <a class="card-wrapper" href="cli">
                         <div class="card"> 
                             <div class="card-body">
@@ -86,14 +131,15 @@ We also provide a command-line interface and developer resources!
                             <div class="card-body">
                                 <div class="logo">
                                     <span class="twemoji">
-                                        --8<--  "repo.svg"
+                                        --8<--  "law.svg"
                                     </span>
                                 </div>
                                 <div class="card-content">
                                     <h5>Developer resources</h5>
                                     <p>
-                                        More insights on how CAREamics is organized and how
-                                        to tweak it to your needs.
+                                        More details on how the documentation is set up,
+                                        and guidelines for modifying and contributing to
+                                        CAREamics.
                                     </p>
                                 </div>
                             </div>
