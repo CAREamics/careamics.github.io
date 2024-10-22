@@ -6,12 +6,7 @@ description: Installation instructions
 # Installation
 
 CAREamics is a deep-learning library and we therefore recommend having GPU support as
-training the algorithms on the CPU can be very slow. 
-
-We currently do not provide support for macOS silicon (M1, M2, etc.) for accelerated 
-training, but we will in the near future investigate how to install and train 
-CAREamics on silicon-arm.
-
+training the algorithms on the CPU can be very slow.
 
 We recommend using [mamba (miniforge)](https://github.com/conda-forge/miniforge#download) 
 to install all packages in a virtual environment. As an alternative, you can use
@@ -82,7 +77,35 @@ or as scripts. For the napari plugin, refer to the next section.
         mamba install pytorch::pytorch torchvision -c pytorch
         ```
 
-        :warning: Note that we currently do not support silicon arm accelerated training.
+        :warning: Note that this will not install silicon GPU acceleration.
+    
+    4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+        and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
+        we recommend the following:
+
+        ``` bash
+        pip install "careamics[examples]"
+        ```
+
+=== "macOS (silicon)"
+    1. Open the terminal and type `mamba` to verify that mamba is available.
+    2. Create a new environment:
+        
+        ``` bash
+        CONDA_SUBDIR=osx-arm64 mamba create -n careamics python=3.10
+        mamba activate careamics
+        ```
+
+    3. Install PyTorch following the [official 
+        instructions](https://pytorch.org/get-started/locally/)
+
+        As an example, our test machine requires:
+
+        ``` bash
+        mamba install pytorch::pytorch torchvision -c pytorch
+        ```
+
+        :warning: Note that this will not install silicon GPU acceleration.
     
     4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
@@ -162,6 +185,32 @@ For the napari plugin, refer to the next section.
         
         ``` bash
         mamba create -n careamics python=3.10
+        mamba activate careamics
+        ```
+
+    3. Install PyTorch following the [official 
+        instructions](https://pytorch.org/get-started/locally/)
+
+        As an example, our test machine requires:
+
+        ``` bash
+        mamba install pytorch::pytorch torchvision -c pytorch
+        ```
+
+        :warning: Note that we currently do not support silicon arm accelerated training.
+    
+    4. Install CAREamics napari plugin and napari:
+
+        ``` bash
+        pip install careamics-napari "napari[all]"
+        ```
+
+=== "macOS (silicon)"
+    1. Open the terminal and type `mamba` to verify that mamba is available.
+    2. Create a new environment:
+        
+        ``` bash
+        CONDA_SUBDIR=osx-arm64 mamba create -n careamics python=3.10
         mamba activate careamics
         ```
 
