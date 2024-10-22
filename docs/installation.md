@@ -89,6 +89,25 @@ or as scripts. For the napari plugin, refer to the next section.
         pip install "careamics[examples]"
         ```
 
+
+### Extra dependencies
+
+CAREamics extra dependencies can be installed by specifying them in brackets. In the previous
+section we installed `careamics[examples]`. You can add other extra dependencies, for instance
+`wandb` by doing:
+
+``` bash
+pip install "careamics[examples, wandb]"
+```
+
+Here is a list of the extra dependencies:
+
+- `examples`: Dependencies required to run the example notebooks.
+- `wandb`: Dependencies to use [WandB](https://wandb.ai/site) as a logger.
+- `tensorboard`: Dependencies to use [TensorBoard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html) as a logger.
+- `dev`: Dependencies required to run all the tooling necessary to develop with CAREamics.
+        
+
 ### MacOS silicon GPU
 
 
@@ -149,25 +168,6 @@ or as scripts. For the napari plugin, refer to the next section.
         pip install "careamics[examples]"
         ```
 
-
-
-### Extra dependencies
-
-CAREamics extra dependencies can be installed by specifying them in brackets. In the previous
-section we installed `careamics[examples]`. You can add other extra dependencies, for instance
-`wandb` by doing:
-
-``` bash
-pip install "careamics[examples, wandb]"
-```
-
-Here is a list of the extra dependencies:
-
-- `examples`: Dependencies required to run the example notebooks.
-- `wandb`: Dependencies to use [WandB](https://wandb.ai/site) as a logger.
-- `tensorboard`: Dependencies to use [TensorBoard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html) as a logger.
-- `dev`: Dependencies required to run all the tooling necessary to develop with CAREamics.
-        
 ### Quickstart
 
 Once you have [installed CAREamics](installation.md), the easiest way to get started
@@ -176,7 +176,7 @@ is to look at the [applications](applications/index.md) for full examples and th
 
 
 ## CAREamics napari plugin
-For the napari plugin, refer to the next section.
+
 
 === "Linux and Windows"
     1. Open the terminal and type `mamba` to verify that mamba is available.
@@ -233,13 +233,14 @@ For the napari plugin, refer to the next section.
         mamba install pytorch::pytorch torchvision -c pytorch
         ```
 
-        :warning: Note that we currently do not support silicon arm accelerated training.
+        :warning: Note that this will not install silicon GPU acceleration.
     
     4. Install CAREamics napari plugin and napari:
 
         ``` bash
         pip install careamics-napari "napari[all]"
         ```
+
 
 ### MacOS silicon GPU
 
@@ -282,8 +283,6 @@ For the napari plugin, refer to the next section.
         ``` bash
         conda install pytorch::pytorch torchvision -c pytorch
         ```
-
-        :warning: Note that this will not install silicon GPU acceleration.
     
     4. Install CAREamics napari plugin and napari:
 
