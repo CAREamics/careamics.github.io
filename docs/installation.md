@@ -128,7 +128,7 @@ Here is a list of the extra dependencies:
         As an example, our test machine requires:
 
         ``` bash
-        mamba install pytorch::pytorch torchvision -c pytorch --platform osx-64 python
+        mamba install pytorch::pytorch torchvision -c pytorch --platform osx-64
         ```
     
     4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
@@ -258,7 +258,7 @@ is to look at the [applications](applications/index.md) for full examples and th
         while specifying the platform. As an example, our test machine requires:
 
         ``` bash
-        mamba install pytorch::pytorch torchvision -c pytorch --platform osx-64 python
+        mamba install pytorch::pytorch torchvision -c pytorch --platform osx-64
         ```
 
     4. Install CAREamics napari plugin and napari:
