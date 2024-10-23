@@ -113,6 +113,32 @@ Here is a list of the extra dependencies:
 ### MacOS silicon GPU
 
 
+=== "conda"
+    1. Open the terminal and type `conda` to verify that conda is available.
+    2. Create a new environment:
+        
+        ``` bash
+        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
+        conda activate careamics
+        conda config --env --set subdir osx-64
+        ```
+
+    3. Install PyTorch following the [official 
+        instructions](https://pytorch.org/get-started/locally/)
+
+        As an example, our test machine requires:
+
+        ``` bash
+        conda install pytorch::pytorch torchvision -c pytorch
+        ```
+    
+    4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+        and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
+        we recommend the following:
+
+        ``` bash
+        pip install "careamics[examples]"
+        ```
 === "mamba"
     1. Open the terminal and type `mamba` to verify that mamba is available.
     2. Create a new environment:
@@ -129,33 +155,6 @@ Here is a list of the extra dependencies:
 
         ``` bash
         mamba install pytorch::pytorch torchvision -c pytorch --platform osx-64
-        ```
-    
-    4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
-        and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
-        we recommend the following:
-
-        ``` bash
-        pip install "careamics[examples]"
-        ```
-
-=== "conda"
-    1. Open the terminal and type `mamba` to verify that mamba is available.
-    2. Create a new environment:
-        
-        ``` bash
-        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
-        conda activate careamics
-        conda config --env --set subdir osx-64
-        ```
-
-    3. Install PyTorch following the [official 
-        instructions](https://pytorch.org/get-started/locally/)
-
-        As an example, our test machine requires:
-
-        ``` bash
-        conda install pytorch::pytorch torchvision -c pytorch
         ```
     
     4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
@@ -244,6 +243,28 @@ is to look at the [applications](applications/index.md) for full examples and th
 
 ### MacOS silicon GPU
 
+=== "conda"
+    1. Open the terminal and type `conda` to verify that conda is available.
+    2. Create a new environment:
+        
+        ``` bash
+        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
+        conda activate careamics
+        conda config --env --set subdir osx-64
+        ```
+
+    3. Install PyTorch following the [official 
+        instructions](https://pytorch.org/get-started/locally/)
+
+        ``` bash
+        conda install pytorch::pytorch torchvision -c pytorch
+        ```
+    
+    4. Install CAREamics napari plugin and napari:
+
+        ``` bash
+        pip install careamics-napari "napari[all]"
+        ```
 
 === "mamba"
     1. Open the terminal and type `mamba` to verify that mamba is available.
@@ -261,29 +282,6 @@ is to look at the [applications](applications/index.md) for full examples and th
         mamba install pytorch::pytorch torchvision -c pytorch --platform osx-64
         ```
 
-    4. Install CAREamics napari plugin and napari:
-
-        ``` bash
-        pip install careamics-napari "napari[all]"
-        ```
-
-=== "conda"
-    1. Open the terminal and type `mamba` to verify that mamba is available.
-    2. Create a new environment:
-        
-        ``` bash
-        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
-        conda activate careamics
-        conda config --env --set subdir osx-64
-        ```
-
-    3. Install PyTorch following the [official 
-        instructions](https://pytorch.org/get-started/locally/)
-
-        ``` bash
-        conda install pytorch::pytorch torchvision -c pytorch
-        ```
-    
     4. Install CAREamics napari plugin and napari:
 
         ``` bash
