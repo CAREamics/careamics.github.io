@@ -120,7 +120,7 @@ Here is a list of the extra dependencies:
         ``` bash
         CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
         conda activate careamics
-        conda config --env --set subdir osx-64
+        conda config --env --set-subdir osx-64
         ```
 
     3. Install PyTorch following the [official 
@@ -250,7 +250,7 @@ is to look at the [applications](applications/index.md) for full examples and th
         ``` bash
         CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
         conda activate careamics
-        conda config --env --set subdir osx-64
+        conda config --env --set-subdir osx-64
         ```
 
     3. Install PyTorch following the [official 
