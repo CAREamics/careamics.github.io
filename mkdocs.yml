@@ -33,7 +33,7 @@ nav:
       - napari plugins:
           - guides/napari_plugin/index.md
       - Tutorials:
-          - guides/turotials/index.md
+          - guides/tutorials/index.md
       - Lightning API:
           - guides/lightning_api/index.md
           - guides/lightning_api/lightning_module.md

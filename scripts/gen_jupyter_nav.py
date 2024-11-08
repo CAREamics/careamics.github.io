@@ -51,11 +51,18 @@ def bottom_text() -> str:
         "[the guide](../../guides/dev_resources/website.md#jupyter-notebook-applications)."
     )
 
-def open_section(title: str) -> str:
+def open_section(title: str, skip_algo: bool = False) -> str:
     """Open the tags of a new card grid section."""
+
+    if skip_algo:
+        algo = ""
+    else:
+        algo = f"For more details on the algorithm, check out its [description](../../algorithms/{title}).\n\n"
+
+
     return (
         f"# {title}\n\n"
-        f"For more details on the algorithm, check out its [description](../../algorithms/{title.lower()}).\n\n"
+        f"{algo}"
         f"<div class=\"md-container secondary-section\">\n"
         f"  <div class=\"g\">\n"
         f"      <div class=\"section\">\n"
@@ -217,7 +224,7 @@ for cat in applications.keys():
     with mkdocs_gen_files.open(index_file, "a") as index_md:
         
         # open section
-        index_md.write(open_section(cat))
+        index_md.write(open_section(cat, skip_algo = cat == "Lightning_API"))
 
         # write rows
         count = 0

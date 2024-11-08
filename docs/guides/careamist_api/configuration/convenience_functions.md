@@ -12,8 +12,8 @@ to create configurations with a only few parameters related to the algorithm use
 want to train.
 
 All convenience methods can be found in the `careamics.config` modules. CAREamics 
-currently supports [Noise2Void](../../algorithms/n2v/index.md) and its variants, 
-[CARE](../../algorithms/care/index.md) and [Noise2Noise](../../algorithms/n2n/index.md). 
+currently supports [Noise2Void](../../../algorithms/Noise2Void) and its variants, 
+[CARE](../../../algorithms/CARE) and [Noise2Noise](../../../algorithms/Noise2Noise). 
 
 ``` python title="Import convenience functions"
 --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:imports"
@@ -278,7 +278,7 @@ variants [N2V2](../../../algorithms/n2v2/) and [structN2V](../../../algorithms/s
 !!! note "Understanding Noise2Void and its variants"
 
     Before deciding which variant to use, and how to modify the parameters, we recommend
-    to die a little a bit on [how each algorithm works](../../algorithms/index.md)!
+    to die a little a bit on [how each algorithm works](../../../algorithms/index.md)!
 
 
 ### Noise2Void parameters
@@ -325,7 +325,7 @@ StructN2V has two parameters that can be set:
 
 ### Using another loss function
 
-As opposed to Noise2Void, [CARE](../../../algorithms/care/) and [Noise2Noise](../../../algorithms/n2n) 
+As opposed to Noise2Void, [CARE](../../../algorithms/CARE) and [Noise2Noise](../../../algorithms/Noise2Noise) 
 can be trained with different loss functions. This can be set using the `loss` parameter 
 (surprise, surprise!).
 
