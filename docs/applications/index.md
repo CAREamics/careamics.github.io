@@ -22,6 +22,9 @@ You have noisy images and no clean images? No problem! These algorithms can help
 they do not require any ground-truth data. You can also train on a single image of
 reasonable size.
 
+<!-- The following links are pointing to non existing pages (pre-build) -->
+<!-- Disable markdown link check to allow bulding the pages -->
+<!-- markdown-link-check-disable -->
 <div class="md-container secondary-section">
     <div class="g">
         <div class="section">
@@ -160,7 +163,7 @@ isotropic resolution restoration or projection.
         <div class="section">
             <div class="component-wrapper" style="display: block;">
                 <div class="responsive-grid">
-                    <!-- N2V -->
+                    <!-- CARE -->
                     <a class="card-wrapper" href="CARE">
                         <div class="card"> 
                             <div class="card-body"> 
