@@ -32,7 +32,7 @@ each algorithm.
             <div class="component-wrapper" style="display: block;">
                 <div class="responsive-grid">
                     <!-- N2V -->
-                    <a class="card-wrapper" href="n2v/Noise2Void">
+                    <a class="card-wrapper" href="Noise2Void">
                         <div class="card"> 
                             <div class="card-body">
                                 <div class="logo">
@@ -55,7 +55,7 @@ each algorithm.
                         </div>
                     </a>
                     <!-- N2V2 -->
-                    <a class="card-wrapper" href="n2v2/N2V2">
+                    <a class="card-wrapper" href="N2V2">
                         <div class="card"> 
                             <div class="card-body">
                                 <div class="logo">
@@ -80,7 +80,7 @@ each algorithm.
                 </div>
                 <div class="responsive-grid">
                     <!-- structN2V -->
-                    <a class="card-wrapper" href="structn2v/structN2V">
+                    <a class="card-wrapper" href="structN2V">
                         <div class="card"> 
                             <div class="card-body">
                                 <div class="logo">
@@ -102,8 +102,23 @@ each algorithm.
                             </div>
                         </div>
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+## Supervised restoration without ground-truth
+
+
+<div class="md-container secondary-section">
+    <div class="g">
+        <div class="section">
+            <div class="component-wrapper" style="display: block;">
+                <div class="responsive-grid">
                     <!-- Noise2Noise -->
-                    <a class="card-wrapper" href="n2n">
+                    <a class="card-wrapper" href="Noise2Noise">
                         <div class="card"> 
                             <div class="card-body">
                                 <div class="logo">
@@ -140,7 +155,7 @@ each algorithm.
             <div class="component-wrapper" style="display: block;">
                 <div class="responsive-grid">
                     <!-- N2V -->
-                    <a class="card-wrapper" href="care">
+                    <a class="card-wrapper" href="CARE">
                         <div class="card"> 
                             <div class="card-body"> 
                                 <div class="logo">

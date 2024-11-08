@@ -29,6 +29,7 @@ from dataclasses import dataclass
 
 import mkdocs_gen_files
 
+
 def index_text() -> str:
     """Return the introduction text to the index.md page"""
     return (
@@ -47,13 +48,14 @@ def bottom_text() -> str:
     """Return the bottom text of the index.md page"""
     return (
         "To add notebooks to this section, refer to "
-        "[the guide](../guides/dev_resources/website.md#jupyter-notebook-applications)."
+        "[the guide](../../guides/dev_resources/website.md#jupyter-notebook-applications)."
     )
 
 def open_section(title: str) -> str:
     """Open the tags of a new card grid section."""
     return (
-        f"## {title}\n"
+        f"# {title}\n\n"
+        f"For more details on the algorithm, check out its [description](../../algorithms/{title.lower()}).\n\n"
         f"<div class=\"md-container secondary-section\">\n"
         f"  <div class=\"g\">\n"
         f"      <div class=\"section\">\n"
@@ -144,9 +146,9 @@ APP = Path("docs", "applications")
 nav = mkdocs_gen_files.Nav()
 
 # create index file (relative to docs because we are calling mkdocs_gen_files)
-with mkdocs_gen_files.open(Path("applications", "index.md"), "w") as index_md:
-    index_md.write(index_text())
-nav[("Applications",)] = "index.md"
+# with mkdocs_gen_files.open(Path("applications", "index.md"), "w") as index_md:
+#     index_md.write(index_text())
+# nav[("Applications",)] = "index.md"
 
 # loop over all files, detect *.ipynb files and add them to the nav
 for path in APP.rglob("*.ipynb"):
@@ -187,43 +189,46 @@ for notebook in notebooks["applications"]:
     
     # get details
     name = notebook["name"]
-    title = notebook["destination"]
+    category = notebook["destination"]
     description = notebook["description"]
     tags = notebook["tags"]
-    cover = "../assets/notebook_covers/" + notebook["cover"]
+    cover = "../../assets/notebook_covers/" + notebook["cover"]
 
-    friendly_title = title.replace("_", " ")
+    friendly_title = category.replace("_", " ")
     friendly_name = name.replace("_", " ")
-    link = title + "/" + name
+    link = name
 
-    if title not in applications:
-        applications[title] = []
+    if category not in applications:
+        applications[category] = []
 
     # add card
-    applications[title].append(
+    applications[category].append(
         Card(
             page_title=friendly_title,
             card=add_card(friendly_name, description, link, cover, tags)
         )
     )
 
-# build index.md
-with mkdocs_gen_files.open("applications/index.md", "a") as index_md:
+# build index.md files
+for cat in applications.keys():
 
-    # loop over applications
-    for title, cards in applications.items():
+    index_file = Path("applications") / cat / "index.md"
+
+    with mkdocs_gen_files.open(index_file, "a") as index_md:
+        
         # open section
-        index_md.write(open_section(cards[0].page_title))
+        index_md.write(open_section(cat))
 
         # write rows
         count = 0
-        for card in cards:
+
+        for card_nb in applications[cat]:
 
             if count % 2 == 0:
                 index_md.write(open_row())
-                index_md.write(card.card)
+                index_md.write(card_nb.card)
             else:
-                index_md.write(card.card)
+                index_md.write(card_nb.card)
                 index_md.write(close_row())
 
             count += 1
@@ -232,6 +237,6 @@ with mkdocs_gen_files.open("applications/index.md", "a") as index_md:
             index_md.write(close_row())
 
         index_md.write(close_section())
-    
-    # add bottom text
-    index_md.write(bottom_text())
+        
+        # add bottom text
+        index_md.write(bottom_text())

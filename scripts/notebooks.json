@@ -116,18 +116,15 @@
     "algorithms": [
         {
             "name": "Noise2Void",
-            "source": "algorithms/n2v/Noise2Void.ipynb",
-            "destination": "n2v"
+            "source": "algorithms/n2v/Noise2Void.ipynb"
         },
         {
             "name": "N2V2",
-            "source": "algorithms/n2v2/N2V2.ipynb",
-            "destination": "n2v2"
+            "source": "algorithms/n2v2/N2V2.ipynb"
         },
         {
             "name": "structN2V",
-            "source": "algorithms/structn2v/structN2V.ipynb",
-            "destination": "structn2v"
+            "source": "algorithms/structn2v/structN2V.ipynb"
         }
     ]
 }

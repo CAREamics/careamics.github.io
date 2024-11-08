@@ -35,10 +35,10 @@ fi
 
 
 # Process all algorithms
+echo "Copy algorithms"
 count=$(jq ".${ALGO} | length" "$JSON")
 for i in $(seq 0 $(($count - 1))); do
     path_in_repo=$(jq -r ".${ALGO}[$i].source" "$JSON")
-    destination=$(jq -r ".${ALGO}[$i].destination" "$JSON")
     title=$(jq -r ".${ALGO}[$i].name" "$JSON")
 
     # extract notebook file name (including extension)
@@ -47,18 +47,11 @@ for i in $(seq 0 $(($count - 1))); do
     # add ".ipynb" extension to the title
     title_ext="$title.ipynb"
 
-    # create the destination folder if it doesn't exist
-    directory="$DEST$ALGO/$destination"
-    if [ ! -d "$directory" ]; then
-        # If it doesn't exist, create it and its parent directories if needed
-        mkdir -p "$directory"
-    fi
-
     # source of the notebook
     source="$TEMP$repository_name/$path_in_repo"
 
     # copy the notebook to DEST
-    NB_DEST="$DEST$ALGO/$destination/$title_ext"
+    NB_DEST="$DEST$ALGO/$title_ext"
     cp $source $NB_DEST
     echo "Copying from $source to $NB_DEST"
 
@@ -70,6 +63,7 @@ for i in $(seq 0 $(($count - 1))); do
 done
 
 # Process all applications
+echo "Copy applications"
 count=$(jq ".${APP} | length" "$JSON")
 for i in $(seq 0 $(($count - 1))); do
     path_in_repo=$(jq -r ".${APP}[$i].source" "$JSON")
