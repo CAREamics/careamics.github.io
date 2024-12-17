@@ -46,6 +46,7 @@ nav:
           - guides/dev_resources/contribute.md
           - guides/dev_resources/website.md
           - guides/dev_resources/docstring.md
+          - guides/dev_resources/conda.md
   - Applications:
       - applications/index.md
       - Noise2Void: applications/Noise2Void/
