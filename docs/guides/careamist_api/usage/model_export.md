@@ -27,9 +27,13 @@ it is uploaded to the [BioImage Model Zoo](https://bioimage.io/#/).
 the model was trained. The general description should be a short description of what
 the model is used for.
 
+6. The `data_description` should contain precise information on the type of data the 
+model was trained on, this can include the type of data (specimen, modality), the
+dimensions (physical, number of pixels) and the content (type of structures).
+
 ## Optional parameters
 
-The `export_to_bmz` function has a number of optional parameters:
+The `export_to_bmz` function has an optional parameter:
 
 ``` python
 --8<-- "careamics-examples/guides/careamist_api/usage/bmz.py:optional"
@@ -37,7 +41,6 @@ The `export_to_bmz` function has a number of optional parameters:
 
 1. If your data has channels, then you should add their name!
 
-2. The data description can be added to the README as well.
 
 ## Examples of CAREamics models
 
