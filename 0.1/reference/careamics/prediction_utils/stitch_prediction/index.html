@@ -39,9 +39,9 @@
 <span class=normal><a href=#__codelineno-0-51>51</a></span>
 <span class=normal><a href=#__codelineno-0-52>52</a></span>
 <span class=normal><a href=#__codelineno-0-53>53</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-13><a id=__codelineno-0-13 name=__codelineno-0-13></a><span class=k>def</span> <span class=nf>stitch_prediction</span><span class=p>(</span>
-</span><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a>    <span class=n>tiles</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>],</span>
-</span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a>    <span class=n>tile_infos</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=n>TileInformation</span><span class=p>],</span>
-</span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>List</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>]:</span>
+</span><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a>    <span class=n>tiles</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>],</span>
+</span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a>    <span class=n>tile_infos</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>TileInformation</span><span class=p>],</span>
+</span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>]:</span>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18></a><span class=sd>    Stitch tiles back together to form a full image(s).</span>
 </span><span id=__span-0-19><a id=__codelineno-0-19 name=__codelineno-0-19></a>
@@ -136,8 +136,8 @@
 <span class=normal><a href=#__codelineno-0-110>110</a></span>
 <span class=normal><a href=#__codelineno-0-111>111</a></span>
 <span class=normal><a href=#__codelineno-0-112>112</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a><span class=k>def</span> <span class=nf>stitch_prediction_single</span><span class=p>(</span>
-</span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a>    <span class=n>tiles</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=n>NDArray</span><span class=p>],</span>
-</span><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a>    <span class=n>tile_infos</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=n>TileInformation</span><span class=p>],</span>
+</span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a>    <span class=n>tiles</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>NDArray</span><span class=p>],</span>
+</span><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a>    <span class=n>tile_infos</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>TileInformation</span><span class=p>],</span>
 </span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a><span class=sd>    Stitch tiles back together to form a full image.</span>
