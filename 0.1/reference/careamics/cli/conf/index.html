@@ -6,7 +6,7 @@
 <span class=normal><a href=#__codelineno-0-51>51</a></span>
 <span class=normal><a href=#__codelineno-0-52>52</a></span>
 <span class=normal><a href=#__codelineno-0-53>53</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-46><a id=__codelineno-0-46 name=__codelineno-0-46></a><span class=nd>@dataclass</span>
-</span><span id=__span-0-47><a id=__codelineno-0-47 name=__codelineno-0-47></a><span class=k>class</span> <span class=nc>ConfOptions</span><span class=p>:</span>
+</span><span id=__span-0-47><a id=__codelineno-0-47 name=__codelineno-0-47></a><span class=k>class</span><span class=w> </span><span class=nc>ConfOptions</span><span class=p>:</span>
 </span><span id=__span-0-48><a id=__codelineno-0-48 name=__codelineno-0-48></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Data class for containing CLI `conf` command option values.&quot;&quot;&quot;</span>
 </span><span id=__span-0-49><a id=__codelineno-0-49 name=__codelineno-0-49></a>
 </span><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a>    <span class=nb>dir</span><span class=p>:</span> <span class=n>Path</span>
@@ -98,7 +98,7 @@
 <span class=normal><a href=#__codelineno-0-184>184</a></span>
 <span class=normal><a href=#__codelineno-0-185>185</a></span>
 <span class=normal><a href=#__codelineno-0-186>186</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-102><a id=__codelineno-0-102 name=__codelineno-0-102></a><span class=nd>@app</span><span class=o>.</span><span class=n>command</span><span class=p>()</span>
-</span><span id=__span-0-103><a id=__codelineno-0-103 name=__codelineno-0-103></a><span class=k>def</span> <span class=nf>care</span><span class=p>(</span>  <span class=c1># numpydoc ignore=PR01</span>
+</span><span id=__span-0-103><a id=__codelineno-0-103 name=__codelineno-0-103></a><span class=k>def</span><span class=w> </span><span class=nf>care</span><span class=p>(</span>  <span class=c1># numpydoc ignore=PR01</span>
 </span><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a>    <span class=n>ctx</span><span class=p>:</span> <span class=n>typer</span><span class=o>.</span><span class=n>Context</span><span class=p>,</span>
 </span><span id=__span-0-105><a id=__codelineno-0-105 name=__codelineno-0-105></a>    <span class=n>experiment_name</span><span class=p>:</span> <span class=n>Annotated</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>typer</span><span class=o>.</span><span class=n>Option</span><span class=p>(</span><span class=n>help</span><span class=o>=</span><span class=s2>&quot;Name of the experiment.&quot;</span><span class=p>)],</span>
 </span><span id=__span-0-106><a id=__codelineno-0-106 name=__codelineno-0-106></a>    <span class=n>axes</span><span class=p>:</span> <span class=n>Annotated</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>typer</span><span class=o>.</span><span class=n>Option</span><span class=p>(</span><span class=n>help</span><span class=o>=</span><span class=s2>&quot;Axes of the data (e.g. SYX).&quot;</span><span class=p>)],</span>
@@ -219,7 +219,7 @@
 <span class=normal><a href=#__codelineno-0-90>90</a></span>
 <span class=normal><a href=#__codelineno-0-91>91</a></span>
 <span class=normal><a href=#__codelineno-0-92>92</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a><span class=nd>@app</span><span class=o>.</span><span class=n>callback</span><span class=p>()</span>
-</span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a><span class=k>def</span> <span class=nf>conf_options</span><span class=p>(</span>  <span class=c1># numpydoc ignore=PR01</span>
+</span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a><span class=k>def</span><span class=w> </span><span class=nf>conf_options</span><span class=p>(</span>  <span class=c1># numpydoc ignore=PR01</span>
 </span><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a>    <span class=n>ctx</span><span class=p>:</span> <span class=n>typer</span><span class=o>.</span><span class=n>Context</span><span class=p>,</span>
 </span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59></a>    <span class=nb>dir</span><span class=p>:</span> <span class=n>Annotated</span><span class=p>[</span>
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a>        <span class=n>Path</span><span class=p>,</span>
@@ -337,7 +337,7 @@
 <span class=normal><a href=#__codelineno-0-268>268</a></span>
 <span class=normal><a href=#__codelineno-0-269>269</a></span>
 <span class=normal><a href=#__codelineno-0-270>270</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-189><a id=__codelineno-0-189 name=__codelineno-0-189></a><span class=nd>@app</span><span class=o>.</span><span class=n>command</span><span class=p>()</span>
-</span><span id=__span-0-190><a id=__codelineno-0-190 name=__codelineno-0-190></a><span class=k>def</span> <span class=nf>n2n</span><span class=p>(</span>  <span class=c1># numpydoc ignore=PR01</span>
+</span><span id=__span-0-190><a id=__codelineno-0-190 name=__codelineno-0-190></a><span class=k>def</span><span class=w> </span><span class=nf>n2n</span><span class=p>(</span>  <span class=c1># numpydoc ignore=PR01</span>
 </span><span id=__span-0-191><a id=__codelineno-0-191 name=__codelineno-0-191></a>    <span class=n>ctx</span><span class=p>:</span> <span class=n>typer</span><span class=o>.</span><span class=n>Context</span><span class=p>,</span>
 </span><span id=__span-0-192><a id=__codelineno-0-192 name=__codelineno-0-192></a>    <span class=n>experiment_name</span><span class=p>:</span> <span class=n>Annotated</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>typer</span><span class=o>.</span><span class=n>Option</span><span class=p>(</span><span class=n>help</span><span class=o>=</span><span class=s2>&quot;Name of the experiment.&quot;</span><span class=p>)],</span>
 </span><span id=__span-0-193><a id=__codelineno-0-193 name=__codelineno-0-193></a>    <span class=n>axes</span><span class=p>:</span> <span class=n>Annotated</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>typer</span><span class=o>.</span><span class=n>Option</span><span class=p>(</span><span class=n>help</span><span class=o>=</span><span class=s2>&quot;Axes of the data (e.g. SYX).&quot;</span><span class=p>)],</span>
@@ -525,7 +525,7 @@
 <span class=normal><a href=#__codelineno-0-377>377</a></span>
 <span class=normal><a href=#__codelineno-0-378>378</a></span>
 <span class=normal><a href=#__codelineno-0-379>379</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-273><a id=__codelineno-0-273 name=__codelineno-0-273></a><span class=nd>@app</span><span class=o>.</span><span class=n>command</span><span class=p>()</span>
-</span><span id=__span-0-274><a id=__codelineno-0-274 name=__codelineno-0-274></a><span class=k>def</span> <span class=nf>n2v</span><span class=p>(</span>  <span class=c1># numpydoc ignore=PR01</span>
+</span><span id=__span-0-274><a id=__codelineno-0-274 name=__codelineno-0-274></a><span class=k>def</span><span class=w> </span><span class=nf>n2v</span><span class=p>(</span>  <span class=c1># numpydoc ignore=PR01</span>
 </span><span id=__span-0-275><a id=__codelineno-0-275 name=__codelineno-0-275></a>    <span class=n>ctx</span><span class=p>:</span> <span class=n>typer</span><span class=o>.</span><span class=n>Context</span><span class=p>,</span>
 </span><span id=__span-0-276><a id=__codelineno-0-276 name=__codelineno-0-276></a>    <span class=n>experiment_name</span><span class=p>:</span> <span class=n>Annotated</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>typer</span><span class=o>.</span><span class=n>Option</span><span class=p>(</span><span class=n>help</span><span class=o>=</span><span class=s2>&quot;Name of the experiment.&quot;</span><span class=p>)],</span>
 </span><span id=__span-0-277><a id=__codelineno-0-277 name=__codelineno-0-277></a>    <span class=n>axes</span><span class=p>:</span> <span class=n>Annotated</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>typer</span><span class=o>.</span><span class=n>Option</span><span class=p>(</span><span class=n>help</span><span class=o>=</span><span class=s2>&quot;Axes of the data (e.g. SYX).&quot;</span><span class=p>)],</span>

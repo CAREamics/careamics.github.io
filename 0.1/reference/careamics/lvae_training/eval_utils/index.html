@@ -10,17 +10,17 @@
 <span class=normal><a href=#__codelineno-0-662>662</a></span>
 <span class=normal><a href=#__codelineno-0-663>663</a></span>
 <span class=normal><a href=#__codelineno-0-664>664</a></span>
-<span class=normal><a href=#__codelineno-0-665>665</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-653><a id=__codelineno-0-653 name=__codelineno-0-653></a><span class=k>class</span> <span class=nc>PatchLocation</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-665>665</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-653><a id=__codelineno-0-653 name=__codelineno-0-653></a><span class=k>class</span><span class=w> </span><span class=nc>PatchLocation</span><span class=p>:</span>
 </span><span id=__span-0-654><a id=__codelineno-0-654 name=__codelineno-0-654></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-655><a id=__codelineno-0-655 name=__codelineno-0-655></a><span class=sd>    Encapsulates t_idx and spatial location.</span>
 </span><span id=__span-0-656><a id=__codelineno-0-656 name=__codelineno-0-656></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-657><a id=__codelineno-0-657 name=__codelineno-0-657></a>
-</span><span id=__span-0-658><a id=__codelineno-0-658 name=__codelineno-0-658></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>h_idx_range</span><span class=p>,</span> <span class=n>w_idx_range</span><span class=p>,</span> <span class=n>t_idx</span><span class=p>):</span>
+</span><span id=__span-0-658><a id=__codelineno-0-658 name=__codelineno-0-658></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>h_idx_range</span><span class=p>,</span> <span class=n>w_idx_range</span><span class=p>,</span> <span class=n>t_idx</span><span class=p>):</span>
 </span><span id=__span-0-659><a id=__codelineno-0-659 name=__codelineno-0-659></a>        <span class=bp>self</span><span class=o>.</span><span class=n>t</span> <span class=o>=</span> <span class=n>t_idx</span>
 </span><span id=__span-0-660><a id=__codelineno-0-660 name=__codelineno-0-660></a>        <span class=bp>self</span><span class=o>.</span><span class=n>h_start</span><span class=p>,</span> <span class=bp>self</span><span class=o>.</span><span class=n>h_end</span> <span class=o>=</span> <span class=n>h_idx_range</span>
 </span><span id=__span-0-661><a id=__codelineno-0-661 name=__codelineno-0-661></a>        <span class=bp>self</span><span class=o>.</span><span class=n>w_start</span><span class=p>,</span> <span class=bp>self</span><span class=o>.</span><span class=n>w_end</span> <span class=o>=</span> <span class=n>w_idx_range</span>
 </span><span id=__span-0-662><a id=__codelineno-0-662 name=__codelineno-0-662></a>
-</span><span id=__span-0-663><a id=__codelineno-0-663 name=__codelineno-0-663></a>    <span class=k>def</span> <span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
+</span><span id=__span-0-663><a id=__codelineno-0-663 name=__codelineno-0-663></a>    <span class=k>def</span><span class=w> </span><span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
 </span><span id=__span-0-664><a id=__codelineno-0-664 name=__codelineno-0-664></a>        <span class=n>msg</span> <span class=o>=</span> <span class=sa>f</span><span class=s2>&quot;T:</span><span class=si>{</span><span class=bp>self</span><span class=o>.</span><span class=n>t</span><span class=si>}</span><span class=s2> [</span><span class=si>{</span><span class=bp>self</span><span class=o>.</span><span class=n>h_start</span><span class=si>}</span><span class=s2>-</span><span class=si>{</span><span class=bp>self</span><span class=o>.</span><span class=n>h_end</span><span class=si>}</span><span class=s2>) [</span><span class=si>{</span><span class=bp>self</span><span class=o>.</span><span class=n>w_start</span><span class=si>}</span><span class=s2>-</span><span class=si>{</span><span class=bp>self</span><span class=o>.</span><span class=n>w_end</span><span class=si>}</span><span class=s2>) &quot;</span>
 </span><span id=__span-0-665><a id=__codelineno-0-665 name=__codelineno-0-665></a>        <span class=k>return</span> <span class=n>msg</span>
 </span></code></pre></div></td></tr></table></div> </details> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-class"> <h2 id=careamics.lvae_training.eval_utils.TilingMode class="doc doc-heading"> <code>TilingMode</code> <a href=#careamics.lvae_training.eval_utils.TilingMode class=headerlink title="Permanent link">#</a></h2> <div class="doc doc-contents "> <p>Enum for the tiling mode.</p> <details class=quote> <summary>Source code in <code>src/careamics/lvae_training/eval_utils.py</code></summary> <div class="language-python highlight"><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-29>29</a></span>
@@ -30,7 +30,7 @@
 <span class=normal><a href=#__codelineno-0-33>33</a></span>
 <span class=normal><a href=#__codelineno-0-34>34</a></span>
 <span class=normal><a href=#__codelineno-0-35>35</a></span>
-<span class=normal><a href=#__codelineno-0-36>36</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a><span class=k>class</span> <span class=nc>TilingMode</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-36>36</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a><span class=k>class</span><span class=w> </span><span class=nc>TilingMode</span><span class=p>:</span>
 </span><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31></a><span class=sd>    Enum for the tiling mode.</span>
 </span><span id=__span-0-32><a id=__codelineno-0-32 name=__codelineno-0-32></a><span class=sd>    &quot;&quot;&quot;</span>
@@ -54,7 +54,7 @@
 <span class=normal><a href=#__codelineno-0-91>91</a></span>
 <span class=normal><a href=#__codelineno-0-92>92</a></span>
 <span class=normal><a href=#__codelineno-0-93>93</a></span>
-<span class=normal><a href=#__codelineno-0-94>94</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-78><a id=__codelineno-0-78 name=__codelineno-0-78></a><span class=k>def</span> <span class=nf>add_psnr_str</span><span class=p>(</span><span class=n>ax_</span><span class=p>,</span> <span class=n>psnr</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-94>94</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-78><a id=__codelineno-0-78 name=__codelineno-0-78></a><span class=k>def</span><span class=w> </span><span class=nf>add_psnr_str</span><span class=p>(</span><span class=n>ax_</span><span class=p>,</span> <span class=n>psnr</span><span class=p>):</span>
 </span><span id=__span-0-79><a id=__codelineno-0-79 name=__codelineno-0-79></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-80><a id=__codelineno-0-80 name=__codelineno-0-80></a><span class=sd>    Add psnr string to the axes</span>
 </span><span id=__span-0-81><a id=__codelineno-0-81 name=__codelineno-0-81></a><span class=sd>    &quot;&quot;&quot;</span>
@@ -83,7 +83,7 @@
 <span class=normal><a href=#__codelineno-0-50>50</a></span>
 <span class=normal><a href=#__codelineno-0-51>51</a></span>
 <span class=normal><a href=#__codelineno-0-52>52</a></span>
-<span class=normal><a href=#__codelineno-0-53>53</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-41><a id=__codelineno-0-41 name=__codelineno-0-41></a><span class=k>def</span> <span class=nf>clean_ax</span><span class=p>(</span><span class=n>ax</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-53>53</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-41><a id=__codelineno-0-41 name=__codelineno-0-41></a><span class=k>def</span><span class=w> </span><span class=nf>clean_ax</span><span class=p>(</span><span class=n>ax</span><span class=p>):</span>
 </span><span id=__span-0-42><a id=__codelineno-0-42 name=__codelineno-0-42></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-43><a id=__codelineno-0-43 name=__codelineno-0-43></a><span class=sd>    Helper function to remove ticks from axes in plots.</span>
 </span><span id=__span-0-44><a id=__codelineno-0-44 name=__codelineno-0-44></a><span class=sd>    &quot;&quot;&quot;</span>
@@ -228,7 +228,7 @@
 <span class=normal><a href=#__codelineno-0-641>641</a></span>
 <span class=normal><a href=#__codelineno-0-642>642</a></span>
 <span class=normal><a href=#__codelineno-0-643>643</a></span>
-<span class=normal><a href=#__codelineno-0-644>644</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-512><a id=__codelineno-0-512 name=__codelineno-0-512></a><span class=k>def</span> <span class=nf>get_dset_predictions</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-644>644</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-512><a id=__codelineno-0-512 name=__codelineno-0-512></a><span class=k>def</span><span class=w> </span><span class=nf>get_dset_predictions</span><span class=p>(</span>
 </span><span id=__span-0-513><a id=__codelineno-0-513 name=__codelineno-0-513></a>    <span class=n>model</span><span class=p>:</span> <span class=n>VAEModule</span><span class=p>,</span>
 </span><span id=__span-0-514><a id=__codelineno-0-514 name=__codelineno-0-514></a>    <span class=n>dset</span><span class=p>:</span> <span class=n>Dataset</span><span class=p>,</span>
 </span><span id=__span-0-515><a id=__codelineno-0-515 name=__codelineno-0-515></a>    <span class=n>batch_size</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
@@ -373,7 +373,7 @@
 <span class=normal><a href=#__codelineno-0-65>65</a></span>
 <span class=normal><a href=#__codelineno-0-66>66</a></span>
 <span class=normal><a href=#__codelineno-0-67>67</a></span>
-<span class=normal><a href=#__codelineno-0-68>68</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a><span class=k>def</span> <span class=nf>get_eval_output_dir</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-68>68</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a><span class=k>def</span><span class=w> </span><span class=nf>get_eval_output_dir</span><span class=p>(</span>
 </span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a>    <span class=n>saveplotsdir</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>patch_size</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>mmse_count</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>50</span>
 </span><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
@@ -392,7 +392,7 @@
 <span class=normal><a href=#__codelineno-0-438>438</a></span>
 <span class=normal><a href=#__codelineno-0-439>439</a></span>
 <span class=normal><a href=#__codelineno-0-440>440</a></span>
-<span class=normal><a href=#__codelineno-0-441>441</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-435><a id=__codelineno-0-435 name=__codelineno-0-435></a><span class=k>def</span> <span class=nf>get_fractional_change</span><span class=p>(</span><span class=n>target</span><span class=p>,</span> <span class=n>prediction</span><span class=p>,</span> <span class=n>max_val</span><span class=o>=</span><span class=kc>None</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-441>441</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-435><a id=__codelineno-0-435 name=__codelineno-0-435></a><span class=k>def</span><span class=w> </span><span class=nf>get_fractional_change</span><span class=p>(</span><span class=n>target</span><span class=p>,</span> <span class=n>prediction</span><span class=p>,</span> <span class=n>max_val</span><span class=o>=</span><span class=kc>None</span><span class=p>):</span>
 </span><span id=__span-0-436><a id=__codelineno-0-436 name=__codelineno-0-436></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-437><a id=__codelineno-0-437 name=__codelineno-0-437></a><span class=sd>    Get relative difference between target and prediction.</span>
 </span><span id=__span-0-438><a id=__codelineno-0-438 name=__codelineno-0-438></a><span class=sd>    &quot;&quot;&quot;</span>
@@ -417,7 +417,7 @@
 <span class=normal><a href=#__codelineno-0-692>692</a></span>
 <span class=normal><a href=#__codelineno-0-693>693</a></span>
 <span class=normal><a href=#__codelineno-0-694>694</a></span>
-<span class=normal><a href=#__codelineno-0-695>695</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-677><a id=__codelineno-0-677 name=__codelineno-0-677></a><span class=k>def</span> <span class=nf>get_location_from_idx</span><span class=p>(</span><span class=n>dset</span><span class=p>,</span> <span class=n>dset_input_idx</span><span class=p>,</span> <span class=n>pred_h</span><span class=p>,</span> <span class=n>pred_w</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-695>695</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-677><a id=__codelineno-0-677 name=__codelineno-0-677></a><span class=k>def</span><span class=w> </span><span class=nf>get_location_from_idx</span><span class=p>(</span><span class=n>dset</span><span class=p>,</span> <span class=n>dset_input_idx</span><span class=p>,</span> <span class=n>pred_h</span><span class=p>,</span> <span class=n>pred_w</span><span class=p>):</span>
 </span><span id=__span-0-678><a id=__codelineno-0-678 name=__codelineno-0-678></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-679><a id=__codelineno-0-679 name=__codelineno-0-679></a><span class=sd>    For a given idx of the dataset, it returns where exactly in the dataset, does this prediction lies.</span>
 </span><span id=__span-0-680><a id=__codelineno-0-680 name=__codelineno-0-680></a><span class=sd>    Note that this prediction also has padded pixels and so a subset of it will be used in the final prediction.</span>
@@ -468,7 +468,7 @@
 <span class=normal><a href=#__codelineno-0-506>506</a></span>
 <span class=normal><a href=#__codelineno-0-507>507</a></span>
 <span class=normal><a href=#__codelineno-0-508>508</a></span>
-<span class=normal><a href=#__codelineno-0-509>509</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-477><a id=__codelineno-0-477 name=__codelineno-0-477></a><span class=k>def</span> <span class=nf>get_predictions</span><span class=p>(</span><span class=n>idx</span><span class=p>,</span> <span class=n>val_dset</span><span class=p>,</span> <span class=n>model</span><span class=p>,</span> <span class=n>mmse_count</span><span class=o>=</span><span class=mi>50</span><span class=p>,</span> <span class=n>patch_size</span><span class=o>=</span><span class=mi>256</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-509>509</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-477><a id=__codelineno-0-477 name=__codelineno-0-477></a><span class=k>def</span><span class=w> </span><span class=nf>get_predictions</span><span class=p>(</span><span class=n>idx</span><span class=p>,</span> <span class=n>val_dset</span><span class=p>,</span> <span class=n>model</span><span class=p>,</span> <span class=n>mmse_count</span><span class=o>=</span><span class=mi>50</span><span class=p>,</span> <span class=n>patch_size</span><span class=o>=</span><span class=mi>256</span><span class=p>):</span>
 </span><span id=__span-0-478><a id=__codelineno-0-478 name=__codelineno-0-478></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-479><a id=__codelineno-0-479 name=__codelineno-0-479></a><span class=sd>    Given an index and a validation/test set, it returns the input, target and the reconstructed images for that index.</span>
 </span><span id=__span-0-480><a id=__codelineno-0-480 name=__codelineno-0-480></a><span class=sd>    &quot;&quot;&quot;</span>
@@ -505,7 +505,7 @@
 <span class=normal><a href=#__codelineno-0-72>72</a></span>
 <span class=normal><a href=#__codelineno-0-73>73</a></span>
 <span class=normal><a href=#__codelineno-0-74>74</a></span>
-<span class=normal><a href=#__codelineno-0-75>75</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-71><a id=__codelineno-0-71 name=__codelineno-0-71></a><span class=k>def</span> <span class=nf>get_psnr_str</span><span class=p>(</span><span class=n>tar_hsnr</span><span class=p>,</span> <span class=n>pred</span><span class=p>,</span> <span class=n>col_idx</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-75>75</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-71><a id=__codelineno-0-71 name=__codelineno-0-71></a><span class=k>def</span><span class=w> </span><span class=nf>get_psnr_str</span><span class=p>(</span><span class=n>tar_hsnr</span><span class=p>,</span> <span class=n>pred</span><span class=p>,</span> <span class=n>col_idx</span><span class=p>):</span>
 </span><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-73><a id=__codelineno-0-73 name=__codelineno-0-73></a><span class=sd>    Compute PSNR between the ground truth (`tar_hsnr`) and the predicted image (`pred`).</span>
 </span><span id=__span-0-74><a id=__codelineno-0-74 name=__codelineno-0-74></a><span class=sd>    &quot;&quot;&quot;</span>
@@ -517,7 +517,7 @@
 <span class=normal><a href=#__codelineno-0-448>448</a></span>
 <span class=normal><a href=#__codelineno-0-449>449</a></span>
 <span class=normal><a href=#__codelineno-0-450>450</a></span>
-<span class=normal><a href=#__codelineno-0-451>451</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-444><a id=__codelineno-0-444 name=__codelineno-0-444></a><span class=k>def</span> <span class=nf>get_zero_centered_midval</span><span class=p>(</span><span class=n>error</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-451>451</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-444><a id=__codelineno-0-444 name=__codelineno-0-444></a><span class=k>def</span><span class=w> </span><span class=nf>get_zero_centered_midval</span><span class=p>(</span><span class=n>error</span><span class=p>):</span>
 </span><span id=__span-0-445><a id=__codelineno-0-445 name=__codelineno-0-445></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-446><a id=__codelineno-0-446 name=__codelineno-0-446></a><span class=sd>    When done this way, the midval ensures that the colorbar is centered at 0. (Don&#39;t know how, but it works ;))</span>
 </span><span id=__span-0-447><a id=__codelineno-0-447 name=__codelineno-0-447></a><span class=sd>    &quot;&quot;&quot;</span>
@@ -549,7 +549,7 @@
 <span class=normal><a href=#__codelineno-0-377>377</a></span>
 <span class=normal><a href=#__codelineno-0-378>378</a></span>
 <span class=normal><a href=#__codelineno-0-379>379</a></span>
-<span class=normal><a href=#__codelineno-0-380>380</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-356><a id=__codelineno-0-356 name=__codelineno-0-356></a><span class=k>def</span> <span class=nf>plot_calibration</span><span class=p>(</span><span class=n>ax</span><span class=p>,</span> <span class=n>calibration_stats</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-380>380</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-356><a id=__codelineno-0-356 name=__codelineno-0-356></a><span class=k>def</span><span class=w> </span><span class=nf>plot_calibration</span><span class=p>(</span><span class=n>ax</span><span class=p>,</span> <span class=n>calibration_stats</span><span class=p>):</span>
 </span><span id=__span-0-357><a id=__codelineno-0-357 name=__codelineno-0-357></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-358><a id=__codelineno-0-358 name=__codelineno-0-358></a><span class=sd>    To plot calibration statistics (RMV vs RMSE).</span>
 </span><span id=__span-0-359><a id=__codelineno-0-359 name=__codelineno-0-359></a><span class=sd>    &quot;&quot;&quot;</span>
@@ -780,7 +780,7 @@
 <span class=normal><a href=#__codelineno-0-350>350</a></span>
 <span class=normal><a href=#__codelineno-0-351>351</a></span>
 <span class=normal><a href=#__codelineno-0-352>352</a></span>
-<span class=normal><a href=#__codelineno-0-353>353</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-147><a id=__codelineno-0-147 name=__codelineno-0-147></a><span class=k>def</span> <span class=nf>plot_crops</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-353>353</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-147><a id=__codelineno-0-147 name=__codelineno-0-147></a><span class=k>def</span><span class=w> </span><span class=nf>plot_crops</span><span class=p>(</span>
 </span><span id=__span-0-148><a id=__codelineno-0-148 name=__codelineno-0-148></a>    <span class=n>inp</span><span class=p>,</span>
 </span><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a>    <span class=n>tar</span><span class=p>,</span>
 </span><span id=__span-0-150><a id=__codelineno-0-150 name=__codelineno-0-150></a>    <span class=n>tar_hsnr</span><span class=p>,</span>
@@ -1004,7 +1004,7 @@
 <span class=normal><a href=#__codelineno-0-468>468</a></span>
 <span class=normal><a href=#__codelineno-0-469>469</a></span>
 <span class=normal><a href=#__codelineno-0-470>470</a></span>
-<span class=normal><a href=#__codelineno-0-471>471</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-454><a id=__codelineno-0-454 name=__codelineno-0-454></a><span class=k>def</span> <span class=nf>plot_error</span><span class=p>(</span><span class=n>target</span><span class=p>,</span> <span class=n>prediction</span><span class=p>,</span> <span class=n>cmap</span><span class=o>=</span><span class=n>matplotlib</span><span class=o>.</span><span class=n>cm</span><span class=o>.</span><span class=n>coolwarm</span><span class=p>,</span> <span class=n>ax</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span> <span class=n>max_val</span><span class=o>=</span><span class=kc>None</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-471>471</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-454><a id=__codelineno-0-454 name=__codelineno-0-454></a><span class=k>def</span><span class=w> </span><span class=nf>plot_error</span><span class=p>(</span><span class=n>target</span><span class=p>,</span> <span class=n>prediction</span><span class=p>,</span> <span class=n>cmap</span><span class=o>=</span><span class=n>matplotlib</span><span class=o>.</span><span class=n>cm</span><span class=o>.</span><span class=n>coolwarm</span><span class=p>,</span> <span class=n>ax</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span> <span class=n>max_val</span><span class=o>=</span><span class=kc>None</span><span class=p>):</span>
 </span><span id=__span-0-455><a id=__codelineno-0-455 name=__codelineno-0-455></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-456><a id=__codelineno-0-456 name=__codelineno-0-456></a><span class=sd>    Plot the relative difference between target and prediction.</span>
 </span><span id=__span-0-457><a id=__codelineno-0-457 name=__codelineno-0-457></a><span class=sd>    NOTE: The plot is overlapped to the prediction image (in gray scale).</span>
@@ -1071,7 +1071,7 @@
 <span class=normal><a href=#__codelineno-0-429>429</a></span>
 <span class=normal><a href=#__codelineno-0-430>430</a></span>
 <span class=normal><a href=#__codelineno-0-431>431</a></span>
-<span class=normal><a href=#__codelineno-0-432>432</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-383><a id=__codelineno-0-383 name=__codelineno-0-383></a><span class=k>def</span> <span class=nf>shiftedColorMap</span><span class=p>(</span><span class=n>cmap</span><span class=p>,</span> <span class=n>start</span><span class=o>=</span><span class=mi>0</span><span class=p>,</span> <span class=n>midpoint</span><span class=o>=</span><span class=mf>0.5</span><span class=p>,</span> <span class=n>stop</span><span class=o>=</span><span class=mf>1.0</span><span class=p>,</span> <span class=n>name</span><span class=o>=</span><span class=s2>&quot;shiftedcmap&quot;</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-432>432</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-383><a id=__codelineno-0-383 name=__codelineno-0-383></a><span class=k>def</span><span class=w> </span><span class=nf>shiftedColorMap</span><span class=p>(</span><span class=n>cmap</span><span class=p>,</span> <span class=n>start</span><span class=o>=</span><span class=mi>0</span><span class=p>,</span> <span class=n>midpoint</span><span class=o>=</span><span class=mf>0.5</span><span class=p>,</span> <span class=n>stop</span><span class=o>=</span><span class=mf>1.0</span><span class=p>,</span> <span class=n>name</span><span class=o>=</span><span class=s2>&quot;shiftedcmap&quot;</span><span class=p>):</span>
 </span><span id=__span-0-384><a id=__codelineno-0-384 name=__codelineno-0-384></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-385><a id=__codelineno-0-385 name=__codelineno-0-385></a><span class=sd>    Adapted from https://stackoverflow.com/questions/7404116/defining-the-midpoint-of-a-colormap-in-matplotlib</span>
 </span><span id=__span-0-386><a id=__codelineno-0-386 name=__codelineno-0-386></a>
@@ -1150,7 +1150,7 @@
 <span class=normal><a href=#__codelineno-0-141>141</a></span>
 <span class=normal><a href=#__codelineno-0-142>142</a></span>
 <span class=normal><a href=#__codelineno-0-143>143</a></span>
-<span class=normal><a href=#__codelineno-0-144>144</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-115><a id=__codelineno-0-115 name=__codelineno-0-115></a><span class=k>def</span> <span class=nf>show_for_one</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-144>144</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-115><a id=__codelineno-0-115 name=__codelineno-0-115></a><span class=k>def</span><span class=w> </span><span class=nf>show_for_one</span><span class=p>(</span>
 </span><span id=__span-0-116><a id=__codelineno-0-116 name=__codelineno-0-116></a>    <span class=n>idx</span><span class=p>,</span>
 </span><span id=__span-0-117><a id=__codelineno-0-117 name=__codelineno-0-117></a>    <span class=n>val_dset</span><span class=p>,</span>
 </span><span id=__span-0-118><a id=__codelineno-0-118 name=__codelineno-0-118></a>    <span class=n>highsnr_val_dset</span><span class=p>,</span>
@@ -1226,7 +1226,7 @@
 <span class=normal><a href=#__codelineno-0-775>775</a></span>
 <span class=normal><a href=#__codelineno-0-776>776</a></span>
 <span class=normal><a href=#__codelineno-0-777>777</a></span>
-<span class=normal><a href=#__codelineno-0-778>778</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-732><a id=__codelineno-0-732 name=__codelineno-0-732></a><span class=k>def</span> <span class=nf>stitch_predictions</span><span class=p>(</span><span class=n>predictions</span><span class=p>,</span> <span class=n>dset</span><span class=p>,</span> <span class=n>smoothening_pixelcount</span><span class=o>=</span><span class=mi>0</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-778>778</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-732><a id=__codelineno-0-732 name=__codelineno-0-732></a><span class=k>def</span><span class=w> </span><span class=nf>stitch_predictions</span><span class=p>(</span><span class=n>predictions</span><span class=p>,</span> <span class=n>dset</span><span class=p>,</span> <span class=n>smoothening_pixelcount</span><span class=o>=</span><span class=mi>0</span><span class=p>):</span>
 </span><span id=__span-0-733><a id=__codelineno-0-733 name=__codelineno-0-733></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-734><a id=__codelineno-0-734 name=__codelineno-0-734></a><span class=sd>    Args:</span>
 </span><span id=__span-0-735><a id=__codelineno-0-735 name=__codelineno-0-735></a><span class=sd>        smoothening_pixelcount: number of pixels which can be interpolated</span>
@@ -1353,7 +1353,7 @@
 <span class=normal><a href=#__codelineno-0-859>859</a></span>
 <span class=normal><a href=#__codelineno-0-860>860</a></span>
 <span class=normal><a href=#__codelineno-0-861>861</a></span>
-<span class=normal><a href=#__codelineno-0-862>862</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-782><a id=__codelineno-0-782 name=__codelineno-0-782></a><span class=k>def</span> <span class=nf>stitch_predictions_new</span><span class=p>(</span><span class=n>predictions</span><span class=p>,</span> <span class=n>dset</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-862>862</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-782><a id=__codelineno-0-782 name=__codelineno-0-782></a><span class=k>def</span><span class=w> </span><span class=nf>stitch_predictions_new</span><span class=p>(</span><span class=n>predictions</span><span class=p>,</span> <span class=n>dset</span><span class=p>):</span>
 </span><span id=__span-0-783><a id=__codelineno-0-783 name=__codelineno-0-783></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-784><a id=__codelineno-0-784 name=__codelineno-0-784></a><span class=sd>    Args:</span>
 </span><span id=__span-0-785><a id=__codelineno-0-785 name=__codelineno-0-785></a><span class=sd>        smoothening_pixelcount: number of pixels which can be interpolated</span>

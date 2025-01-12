@@ -278,7 +278,7 @@
 <span class=normal><a href=#__codelineno-0-307>307</a></span>
 <span class=normal><a href=#__codelineno-0-308>308</a></span>
 <span class=normal><a href=#__codelineno-0-309>309</a></span>
-<span class=normal><a href=#__codelineno-0-310>310</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a><span class=k>class</span> <span class=nc>InMemoryDataset</span><span class=p>(</span><span class=n>Dataset</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-310>310</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a><span class=k>class</span><span class=w> </span><span class=nc>InMemoryDataset</span><span class=p>(</span><span class=n>Dataset</span><span class=p>):</span>
 </span><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Dataset storing data in memory and allowing generating patches from it.</span>
 </span><span id=__span-0-32><a id=__codelineno-0-32 name=__codelineno-0-32></a>
 </span><span id=__span-0-33><a id=__codelineno-0-33 name=__codelineno-0-33></a><span class=sd>    Parameters</span>
@@ -296,7 +296,7 @@
 </span><span id=__span-0-45><a id=__codelineno-0-45 name=__codelineno-0-45></a><span class=sd>        Additional keyword arguments, unused.</span>
 </span><span id=__span-0-46><a id=__codelineno-0-46 name=__codelineno-0-46></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-47><a id=__codelineno-0-47 name=__codelineno-0-47></a>
-</span><span id=__span-0-48><a id=__codelineno-0-48 name=__codelineno-0-48></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-48><a id=__codelineno-0-48 name=__codelineno-0-48></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-49><a id=__codelineno-0-49 name=__codelineno-0-49></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a>        <span class=n>data_config</span><span class=p>:</span> <span class=n>DataConfig</span><span class=p>,</span>
 </span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a>        <span class=n>inputs</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span> <span class=nb>list</span><span class=p>[</span><span class=n>Path</span><span class=p>]],</span>
@@ -378,7 +378,7 @@
 </span><span id=__span-0-127><a id=__codelineno-0-127 name=__codelineno-0-127></a>            <span class=o>+</span> <span class=bp>self</span><span class=o>.</span><span class=n>data_config</span><span class=o>.</span><span class=n>transforms</span><span class=p>,</span>
 </span><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a>        <span class=p>)</span>
 </span><span id=__span-0-129><a id=__codelineno-0-129 name=__codelineno-0-129></a>
-</span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a>    <span class=k>def</span> <span class=nf>_prepare_patches</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>supervised</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>PatchedOutput</span><span class=p>:</span>
+</span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a>    <span class=k>def</span><span class=w> </span><span class=nf>_prepare_patches</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>supervised</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>PatchedOutput</span><span class=p>:</span>
 </span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-132><a id=__codelineno-0-132 name=__codelineno-0-132></a><span class=sd>        Iterate over data source and create an array of patches.</span>
 </span><span id=__span-0-133><a id=__codelineno-0-133 name=__codelineno-0-133></a>
@@ -431,7 +431,7 @@
 </span><span id=__span-0-180><a id=__codelineno-0-180 name=__codelineno-0-180></a>                    <span class=bp>self</span><span class=o>.</span><span class=n>read_source_func</span><span class=p>,</span>
 </span><span id=__span-0-181><a id=__codelineno-0-181 name=__codelineno-0-181></a>                <span class=p>)</span>
 </span><span id=__span-0-182><a id=__codelineno-0-182 name=__codelineno-0-182></a>
-</span><span id=__span-0-183><a id=__codelineno-0-183 name=__codelineno-0-183></a>    <span class=k>def</span> <span class=fm>__len__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span><span id=__span-0-183><a id=__codelineno-0-183 name=__codelineno-0-183></a>    <span class=k>def</span><span class=w> </span><span class=fm>__len__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
 </span><span id=__span-0-184><a id=__codelineno-0-184 name=__codelineno-0-184></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-185><a id=__codelineno-0-185 name=__codelineno-0-185></a><span class=sd>        Return the length of the dataset.</span>
 </span><span id=__span-0-186><a id=__codelineno-0-186 name=__codelineno-0-186></a>
@@ -442,7 +442,7 @@
 </span><span id=__span-0-191><a id=__codelineno-0-191 name=__codelineno-0-191></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-192><a id=__codelineno-0-192 name=__codelineno-0-192></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>data</span><span class=o>.</span><span class=n>shape</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
 </span><span id=__span-0-193><a id=__codelineno-0-193 name=__codelineno-0-193></a>
-</span><span id=__span-0-194><a id=__codelineno-0-194 name=__codelineno-0-194></a>    <span class=k>def</span> <span class=fm>__getitem__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>index</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span> <span class=o>...</span><span class=p>]:</span>
+</span><span id=__span-0-194><a id=__codelineno-0-194 name=__codelineno-0-194></a>    <span class=k>def</span><span class=w> </span><span class=fm>__getitem__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>index</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span> <span class=o>...</span><span class=p>]:</span>
 </span><span id=__span-0-195><a id=__codelineno-0-195 name=__codelineno-0-195></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-196><a id=__codelineno-0-196 name=__codelineno-0-196></a><span class=sd>        Return the patch corresponding to the provided index.</span>
 </span><span id=__span-0-197><a id=__codelineno-0-197 name=__codelineno-0-197></a>
@@ -478,7 +478,7 @@
 </span><span id=__span-0-227><a id=__codelineno-0-227 name=__codelineno-0-227></a>                <span class=s2>&quot;and no N2V manipulation (no N2V training).&quot;</span>
 </span><span id=__span-0-228><a id=__codelineno-0-228 name=__codelineno-0-228></a>            <span class=p>)</span>
 </span><span id=__span-0-229><a id=__codelineno-0-229 name=__codelineno-0-229></a>
-</span><span id=__span-0-230><a id=__codelineno-0-230 name=__codelineno-0-230></a>    <span class=k>def</span> <span class=nf>get_data_statistics</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>]]:</span>
+</span><span id=__span-0-230><a id=__codelineno-0-230 name=__codelineno-0-230></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_data_statistics</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>]]:</span>
 </span><span id=__span-0-231><a id=__codelineno-0-231 name=__codelineno-0-231></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Return training data statistics.</span>
 </span><span id=__span-0-232><a id=__codelineno-0-232 name=__codelineno-0-232></a>
 </span><span id=__span-0-233><a id=__codelineno-0-233 name=__codelineno-0-233></a><span class=sd>        This does not return the target data statistics, only those of the input.</span>
@@ -490,7 +490,7 @@
 </span><span id=__span-0-239><a id=__codelineno-0-239 name=__codelineno-0-239></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-240><a id=__codelineno-0-240 name=__codelineno-0-240></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>image_stats</span><span class=o>.</span><span class=n>get_statistics</span><span class=p>()</span>
 </span><span id=__span-0-241><a id=__codelineno-0-241 name=__codelineno-0-241></a>
-</span><span id=__span-0-242><a id=__codelineno-0-242 name=__codelineno-0-242></a>    <span class=k>def</span> <span class=nf>split_dataset</span><span class=p>(</span>
+</span><span id=__span-0-242><a id=__codelineno-0-242 name=__codelineno-0-242></a>    <span class=k>def</span><span class=w> </span><span class=nf>split_dataset</span><span class=p>(</span>
 </span><span id=__span-0-243><a id=__codelineno-0-243 name=__codelineno-0-243></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-244><a id=__codelineno-0-244 name=__codelineno-0-244></a>        <span class=n>percentage</span><span class=p>:</span> <span class=nb>float</span> <span class=o>=</span> <span class=mf>0.1</span><span class=p>,</span>
 </span><span id=__span-0-245><a id=__codelineno-0-245 name=__codelineno-0-245></a>        <span class=n>minimum_patches</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>
@@ -593,7 +593,7 @@
 <span class=normal><a href=#__codelineno-0-225>225</a></span>
 <span class=normal><a href=#__codelineno-0-226>226</a></span>
 <span class=normal><a href=#__codelineno-0-227>227</a></span>
-<span class=normal><a href=#__codelineno-0-228>228</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-194><a id=__codelineno-0-194 name=__codelineno-0-194></a><span class=k>def</span> <span class=fm>__getitem__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>index</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span> <span class=o>...</span><span class=p>]:</span>
+<span class=normal><a href=#__codelineno-0-228>228</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-194><a id=__codelineno-0-194 name=__codelineno-0-194></a><span class=k>def</span><span class=w> </span><span class=fm>__getitem__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>index</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span> <span class=o>...</span><span class=p>]:</span>
 </span><span id=__span-0-195><a id=__codelineno-0-195 name=__codelineno-0-195></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-196><a id=__codelineno-0-196 name=__codelineno-0-196></a><span class=sd>    Return the patch corresponding to the provided index.</span>
 </span><span id=__span-0-197><a id=__codelineno-0-197 name=__codelineno-0-197></a>
@@ -708,7 +708,7 @@
 <span class=normal><a href=#__codelineno-0-125>125</a></span>
 <span class=normal><a href=#__codelineno-0-126>126</a></span>
 <span class=normal><a href=#__codelineno-0-127>127</a></span>
-<span class=normal><a href=#__codelineno-0-128>128</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-48><a id=__codelineno-0-48 name=__codelineno-0-48></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-128>128</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-48><a id=__codelineno-0-48 name=__codelineno-0-48></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-49><a id=__codelineno-0-49 name=__codelineno-0-49></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a>    <span class=n>data_config</span><span class=p>:</span> <span class=n>DataConfig</span><span class=p>,</span>
 </span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a>    <span class=n>inputs</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span> <span class=nb>list</span><span class=p>[</span><span class=n>Path</span><span class=p>]],</span>
@@ -798,7 +798,7 @@
 <span class=normal><a href=#__codelineno-0-189>189</a></span>
 <span class=normal><a href=#__codelineno-0-190>190</a></span>
 <span class=normal><a href=#__codelineno-0-191>191</a></span>
-<span class=normal><a href=#__codelineno-0-192>192</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-183><a id=__codelineno-0-183 name=__codelineno-0-183></a><span class=k>def</span> <span class=fm>__len__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-192>192</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-183><a id=__codelineno-0-183 name=__codelineno-0-183></a><span class=k>def</span><span class=w> </span><span class=fm>__len__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
 </span><span id=__span-0-184><a id=__codelineno-0-184 name=__codelineno-0-184></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-185><a id=__codelineno-0-185 name=__codelineno-0-185></a><span class=sd>    Return the length of the dataset.</span>
 </span><span id=__span-0-186><a id=__codelineno-0-186 name=__codelineno-0-186></a>
@@ -818,7 +818,7 @@
 <span class=normal><a href=#__codelineno-0-237>237</a></span>
 <span class=normal><a href=#__codelineno-0-238>238</a></span>
 <span class=normal><a href=#__codelineno-0-239>239</a></span>
-<span class=normal><a href=#__codelineno-0-240>240</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-230><a id=__codelineno-0-230 name=__codelineno-0-230></a><span class=k>def</span> <span class=nf>get_data_statistics</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>]]:</span>
+<span class=normal><a href=#__codelineno-0-240>240</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-230><a id=__codelineno-0-230 name=__codelineno-0-230></a><span class=k>def</span><span class=w> </span><span class=nf>get_data_statistics</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>]]:</span>
 </span><span id=__span-0-231><a id=__codelineno-0-231 name=__codelineno-0-231></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Return training data statistics.</span>
 </span><span id=__span-0-232><a id=__codelineno-0-232 name=__codelineno-0-232></a>
 </span><span id=__span-0-233><a id=__codelineno-0-233 name=__codelineno-0-233></a><span class=sd>    This does not return the target data statistics, only those of the input.</span>
@@ -897,7 +897,7 @@
 <span class=normal><a href=#__codelineno-0-307>307</a></span>
 <span class=normal><a href=#__codelineno-0-308>308</a></span>
 <span class=normal><a href=#__codelineno-0-309>309</a></span>
-<span class=normal><a href=#__codelineno-0-310>310</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-242><a id=__codelineno-0-242 name=__codelineno-0-242></a><span class=k>def</span> <span class=nf>split_dataset</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-310>310</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-242><a id=__codelineno-0-242 name=__codelineno-0-242></a><span class=k>def</span><span class=w> </span><span class=nf>split_dataset</span><span class=p>(</span>
 </span><span id=__span-0-243><a id=__codelineno-0-243 name=__codelineno-0-243></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-244><a id=__codelineno-0-244 name=__codelineno-0-244></a>    <span class=n>percentage</span><span class=p>:</span> <span class=nb>float</span> <span class=o>=</span> <span class=mf>0.1</span><span class=p>,</span>
 </span><span id=__span-0-245><a id=__codelineno-0-245 name=__codelineno-0-245></a>    <span class=n>minimum_patches</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>

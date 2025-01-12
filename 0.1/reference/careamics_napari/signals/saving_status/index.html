@@ -2,7 +2,7 @@
 <span class=normal><a href=#__codelineno-0-15>15</a></span>
 <span class=normal><a href=#__codelineno-0-16>16</a></span>
 <span class=normal><a href=#__codelineno-0-17>17</a></span>
-<span class=normal><a href=#__codelineno-0-18>18</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=k>class</span> <span class=nc>SavingSignalGroup</span><span class=p>(</span><span class=n>SignalGroup</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-18>18</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=k>class</span><span class=w> </span><span class=nc>SavingSignalGroup</span><span class=p>(</span><span class=n>SignalGroup</span><span class=p>):</span>
 </span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Signal group for the saving status dataclass.&quot;&quot;&quot;</span>
 </span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a>    <span class=n>state</span><span class=p>:</span> <span class=n>SignalInstance</span>
@@ -20,7 +20,7 @@
 <span class=normal><a href=#__codelineno-0-44>44</a></span>
 <span class=normal><a href=#__codelineno-0-45>45</a></span>
 <span class=normal><a href=#__codelineno-0-46>46</a></span>
-<span class=normal><a href=#__codelineno-0-47>47</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-34><a id=__codelineno-0-34 name=__codelineno-0-34></a><span class=k>class</span> <span class=nc>SavingState</span><span class=p>(</span><span class=n>IntEnum</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-47>47</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-34><a id=__codelineno-0-34 name=__codelineno-0-34></a><span class=k>class</span><span class=w> </span><span class=nc>SavingState</span><span class=p>(</span><span class=n>IntEnum</span><span class=p>):</span>
 </span><span id=__span-0-35><a id=__codelineno-0-35 name=__codelineno-0-35></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Saving state.&quot;&quot;&quot;</span>
 </span><span id=__span-0-36><a id=__codelineno-0-36 name=__codelineno-0-36></a>
 </span><span id=__span-0-37><a id=__codelineno-0-37 name=__codelineno-0-37></a>    <span class=n>IDLE</span> <span class=o>=</span> <span class=mi>0</span>
@@ -62,7 +62,7 @@
 <span class=normal><a href=#__codelineno-0-86>86</a></span>
 <span class=normal><a href=#__codelineno-0-87>87</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a><span class=nd>@evented</span>
 </span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a><span class=nd>@dataclass</span>
-</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=k>class</span> <span class=nc>SavingStatus</span><span class=p>:</span>
+</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=k>class</span><span class=w> </span><span class=nc>SavingStatus</span><span class=p>:</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Status of the saving thread.</span>
 </span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a><span class=sd>    This dataclass is used to update the saving UI with the current status and</span>
@@ -78,7 +78,7 @@
 </span><span id=__span-0-76><a id=__codelineno-0-76 name=__codelineno-0-76></a>    <span class=n>state</span><span class=p>:</span> <span class=n>SavingState</span> <span class=o>=</span> <span class=n>SavingState</span><span class=o>.</span><span class=n>IDLE</span>
 </span><span id=__span-0-77><a id=__codelineno-0-77 name=__codelineno-0-77></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Current state of the saving process.&quot;&quot;&quot;</span>
 </span><span id=__span-0-78><a id=__codelineno-0-78 name=__codelineno-0-78></a>
-</span><span id=__span-0-79><a id=__codelineno-0-79 name=__codelineno-0-79></a>    <span class=k>def</span> <span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>SavingUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-79><a id=__codelineno-0-79 name=__codelineno-0-79></a>    <span class=k>def</span><span class=w> </span><span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>SavingUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-80><a id=__codelineno-0-80 name=__codelineno-0-80></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Update the status with the new update.</span>
 </span><span id=__span-0-81><a id=__codelineno-0-81 name=__codelineno-0-81></a>
 </span><span id=__span-0-82><a id=__codelineno-0-82 name=__codelineno-0-82></a><span class=sd>        Parameters</span>
@@ -95,7 +95,7 @@
 <span class=normal><a href=#__codelineno-0-84>84</a></span>
 <span class=normal><a href=#__codelineno-0-85>85</a></span>
 <span class=normal><a href=#__codelineno-0-86>86</a></span>
-<span class=normal><a href=#__codelineno-0-87>87</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-79><a id=__codelineno-0-79 name=__codelineno-0-79></a><span class=k>def</span> <span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>SavingUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-87>87</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-79><a id=__codelineno-0-79 name=__codelineno-0-79></a><span class=k>def</span><span class=w> </span><span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>SavingUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-80><a id=__codelineno-0-80 name=__codelineno-0-80></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Update the status with the new update.</span>
 </span><span id=__span-0-81><a id=__codelineno-0-81 name=__codelineno-0-81></a>
 </span><span id=__span-0-82><a id=__codelineno-0-82 name=__codelineno-0-82></a><span class=sd>    Parameters</span>
@@ -113,7 +113,7 @@
 <span class=normal><a href=#__codelineno-0-56>56</a></span>
 <span class=normal><a href=#__codelineno-0-57>57</a></span>
 <span class=normal><a href=#__codelineno-0-58>58</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a><span class=nd>@dataclass</span>
-</span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a><span class=k>class</span> <span class=nc>SavingUpdate</span><span class=p>:</span>
+</span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a><span class=k>class</span><span class=w> </span><span class=nc>SavingUpdate</span><span class=p>:</span>
 </span><span id=__span-0-52><a id=__codelineno-0-52 name=__codelineno-0-52></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Update from the saving worker.&quot;&quot;&quot;</span>
 </span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a>
 </span><span id=__span-0-54><a id=__codelineno-0-54 name=__codelineno-0-54></a>    <span class=nb>type</span><span class=p>:</span> <span class=n>SavingUpdateType</span>
@@ -131,7 +131,7 @@
 <span class=normal><a href=#__codelineno-0-28>28</a></span>
 <span class=normal><a href=#__codelineno-0-29>29</a></span>
 <span class=normal><a href=#__codelineno-0-30>30</a></span>
-<span class=normal><a href=#__codelineno-0-31>31</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-21><a id=__codelineno-0-21 name=__codelineno-0-21></a><span class=k>class</span> <span class=nc>SavingUpdateType</span><span class=p>(</span><span class=nb>str</span><span class=p>,</span> <span class=n>Enum</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-31>31</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-21><a id=__codelineno-0-21 name=__codelineno-0-21></a><span class=k>class</span><span class=w> </span><span class=nc>SavingUpdateType</span><span class=p>(</span><span class=nb>str</span><span class=p>,</span> <span class=n>Enum</span><span class=p>):</span>
 </span><span id=__span-0-22><a id=__codelineno-0-22 name=__codelineno-0-22></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Type of saving update.&quot;&quot;&quot;</span>
 </span><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a>
 </span><span id=__span-0-24><a id=__codelineno-0-24 name=__codelineno-0-24></a>    <span class=n>STATE</span> <span class=o>=</span> <span class=s2>&quot;state&quot;</span>

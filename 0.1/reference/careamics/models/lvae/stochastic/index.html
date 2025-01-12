@@ -367,7 +367,7 @@
 <span class=normal><a href=#__codelineno-0-390>390</a></span>
 <span class=normal><a href=#__codelineno-0-391>391</a></span>
 <span class=normal><a href=#__codelineno-0-392>392</a></span>
-<span class=normal><a href=#__codelineno-0-393>393</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-24><a id=__codelineno-0-24 name=__codelineno-0-24></a><span class=k>class</span> <span class=nc>NormalStochasticBlock</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-393>393</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-24><a id=__codelineno-0-24 name=__codelineno-0-24></a><span class=k>class</span><span class=w> </span><span class=nc>NormalStochasticBlock</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
 </span><span id=__span-0-25><a id=__codelineno-0-25 name=__codelineno-0-25></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26></a><span class=sd>    Stochastic block used in the Top-Down inference pass.</span>
 </span><span id=__span-0-27><a id=__codelineno-0-27 name=__codelineno-0-27></a>
@@ -386,7 +386,7 @@
 </span><span id=__span-0-40><a id=__codelineno-0-40 name=__codelineno-0-40></a><span class=sd>        portion of the latent tensor that is used for prediction.</span>
 </span><span id=__span-0-41><a id=__codelineno-0-41 name=__codelineno-0-41></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-42><a id=__codelineno-0-42 name=__codelineno-0-42></a>
-</span><span id=__span-0-43><a id=__codelineno-0-43 name=__codelineno-0-43></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-43><a id=__codelineno-0-43 name=__codelineno-0-43></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-44><a id=__codelineno-0-44 name=__codelineno-0-44></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-45><a id=__codelineno-0-45 name=__codelineno-0-45></a>        <span class=n>c_in</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-46><a id=__codelineno-0-46 name=__codelineno-0-46></a>        <span class=n>c_vars</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
@@ -444,7 +444,7 @@
 </span><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a>        <span class=bp>self</span><span class=o>.</span><span class=n>conv_in_q</span> <span class=o>=</span> <span class=n>conv_layer</span><span class=p>(</span><span class=n>c_in</span><span class=p>,</span> <span class=mi>2</span> <span class=o>*</span> <span class=n>c_vars</span><span class=p>,</span> <span class=n>kernel</span><span class=p>,</span> <span class=n>padding</span><span class=o>=</span><span class=n>pad</span><span class=p>)</span>
 </span><span id=__span-0-99><a id=__codelineno-0-99 name=__codelineno-0-99></a>        <span class=bp>self</span><span class=o>.</span><span class=n>conv_out</span> <span class=o>=</span> <span class=n>conv_layer</span><span class=p>(</span><span class=n>c_vars</span><span class=p>,</span> <span class=n>c_out</span><span class=p>,</span> <span class=n>kernel</span><span class=p>,</span> <span class=n>padding</span><span class=o>=</span><span class=n>pad</span><span class=p>)</span>
 </span><span id=__span-0-100><a id=__codelineno-0-100 name=__codelineno-0-100></a>
-</span><span id=__span-0-101><a id=__codelineno-0-101 name=__codelineno-0-101></a>    <span class=k>def</span> <span class=nf>get_z</span><span class=p>(</span>
+</span><span id=__span-0-101><a id=__codelineno-0-101 name=__codelineno-0-101></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_z</span><span class=p>(</span>
 </span><span id=__span-0-102><a id=__codelineno-0-102 name=__codelineno-0-102></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-103><a id=__codelineno-0-103 name=__codelineno-0-103></a>        <span class=n>sampling_distrib</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>distributions</span><span class=o>.</span><span class=n>normal</span><span class=o>.</span><span class=n>Normal</span><span class=p>,</span>
 </span><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a>        <span class=n>forced_latent</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=kc>None</span><span class=p>],</span>
@@ -483,7 +483,7 @@
 </span><span id=__span-0-137><a id=__codelineno-0-137 name=__codelineno-0-137></a>            <span class=n>z</span> <span class=o>=</span> <span class=n>forced_latent</span>
 </span><span id=__span-0-138><a id=__codelineno-0-138 name=__codelineno-0-138></a>        <span class=k>return</span> <span class=n>z</span>
 </span><span id=__span-0-139><a id=__codelineno-0-139 name=__codelineno-0-139></a>
-</span><span id=__span-0-140><a id=__codelineno-0-140 name=__codelineno-0-140></a>    <span class=k>def</span> <span class=nf>sample_from_q</span><span class=p>(</span>
+</span><span id=__span-0-140><a id=__codelineno-0-140 name=__codelineno-0-140></a>    <span class=k>def</span><span class=w> </span><span class=nf>sample_from_q</span><span class=p>(</span>
 </span><span id=__span-0-141><a id=__codelineno-0-141 name=__codelineno-0-141></a>        <span class=bp>self</span><span class=p>,</span> <span class=n>q_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>var_clip_max</span><span class=p>:</span> <span class=nb>float</span>
 </span><span id=__span-0-142><a id=__codelineno-0-142 name=__codelineno-0-142></a>    <span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-143><a id=__codelineno-0-143 name=__codelineno-0-143></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
@@ -502,7 +502,7 @@
 </span><span id=__span-0-156><a id=__codelineno-0-156 name=__codelineno-0-156></a>        <span class=n>_</span><span class=p>,</span> <span class=n>_</span><span class=p>,</span> <span class=n>q</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>process_q_params</span><span class=p>(</span><span class=n>q_params</span><span class=p>,</span> <span class=n>var_clip_max</span><span class=p>)</span>
 </span><span id=__span-0-157><a id=__codelineno-0-157 name=__codelineno-0-157></a>        <span class=k>return</span> <span class=n>q</span><span class=o>.</span><span class=n>rsample</span><span class=p>()</span>
 </span><span id=__span-0-158><a id=__codelineno-0-158 name=__codelineno-0-158></a>
-</span><span id=__span-0-159><a id=__codelineno-0-159 name=__codelineno-0-159></a>    <span class=k>def</span> <span class=nf>compute_kl_metrics</span><span class=p>(</span>
+</span><span id=__span-0-159><a id=__codelineno-0-159 name=__codelineno-0-159></a>    <span class=k>def</span><span class=w> </span><span class=nf>compute_kl_metrics</span><span class=p>(</span>
 </span><span id=__span-0-160><a id=__codelineno-0-160 name=__codelineno-0-160></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-161><a id=__codelineno-0-161 name=__codelineno-0-161></a>        <span class=n>p</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>distributions</span><span class=o>.</span><span class=n>normal</span><span class=o>.</span><span class=n>Normal</span><span class=p>,</span>
 </span><span id=__span-0-162><a id=__codelineno-0-162 name=__codelineno-0-162></a>        <span class=n>p_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span>
@@ -572,7 +572,7 @@
 </span><span id=__span-0-226><a id=__codelineno-0-226 name=__codelineno-0-226></a>        <span class=p>}</span>  <span class=c1># TODO revisit, check dims</span>
 </span><span id=__span-0-227><a id=__codelineno-0-227 name=__codelineno-0-227></a>        <span class=k>return</span> <span class=n>kl_dict</span>
 </span><span id=__span-0-228><a id=__codelineno-0-228 name=__codelineno-0-228></a>
-</span><span id=__span-0-229><a id=__codelineno-0-229 name=__codelineno-0-229></a>    <span class=k>def</span> <span class=nf>process_p_params</span><span class=p>(</span>
+</span><span id=__span-0-229><a id=__codelineno-0-229 name=__codelineno-0-229></a>    <span class=k>def</span><span class=w> </span><span class=nf>process_p_params</span><span class=p>(</span>
 </span><span id=__span-0-230><a id=__codelineno-0-230 name=__codelineno-0-230></a>        <span class=bp>self</span><span class=p>,</span> <span class=n>p_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>var_clip_max</span><span class=p>:</span> <span class=nb>float</span>
 </span><span id=__span-0-231><a id=__codelineno-0-231 name=__codelineno-0-231></a>    <span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Tuple</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>distributions</span><span class=o>.</span><span class=n>normal</span><span class=o>.</span><span class=n>Normal</span><span class=p>]:</span>
 </span><span id=__span-0-232><a id=__codelineno-0-232 name=__codelineno-0-232></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Process the input parameters to get the prior distribution p(z_i|z_{i+1}) (or p(z_L)).</span>
@@ -606,7 +606,7 @@
 </span><span id=__span-0-260><a id=__codelineno-0-260 name=__codelineno-0-260></a>        <span class=n>p</span> <span class=o>=</span> <span class=n>Normal</span><span class=p>(</span><span class=n>p_mu</span><span class=o>.</span><span class=n>get</span><span class=p>(),</span> <span class=n>p_lv</span><span class=o>.</span><span class=n>get_std</span><span class=p>())</span>
 </span><span id=__span-0-261><a id=__codelineno-0-261 name=__codelineno-0-261></a>        <span class=k>return</span> <span class=n>p_mu</span><span class=p>,</span> <span class=n>p_lv</span><span class=p>,</span> <span class=n>p</span>
 </span><span id=__span-0-262><a id=__codelineno-0-262 name=__codelineno-0-262></a>
-</span><span id=__span-0-263><a id=__codelineno-0-263 name=__codelineno-0-263></a>    <span class=k>def</span> <span class=nf>process_q_params</span><span class=p>(</span>
+</span><span id=__span-0-263><a id=__codelineno-0-263 name=__codelineno-0-263></a>    <span class=k>def</span><span class=w> </span><span class=nf>process_q_params</span><span class=p>(</span>
 </span><span id=__span-0-264><a id=__codelineno-0-264 name=__codelineno-0-264></a>        <span class=bp>self</span><span class=p>,</span> <span class=n>q_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>var_clip_max</span><span class=p>:</span> <span class=nb>float</span><span class=p>,</span> <span class=n>allow_oddsizes</span><span class=p>:</span> <span class=nb>bool</span> <span class=o>=</span> <span class=kc>False</span>
 </span><span id=__span-0-265><a id=__codelineno-0-265 name=__codelineno-0-265></a>    <span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Tuple</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>distributions</span><span class=o>.</span><span class=n>normal</span><span class=o>.</span><span class=n>Normal</span><span class=p>]:</span>
 </span><span id=__span-0-266><a id=__codelineno-0-266 name=__codelineno-0-266></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
@@ -642,7 +642,7 @@
 </span><span id=__span-0-296><a id=__codelineno-0-296 name=__codelineno-0-296></a>        <span class=n>q</span> <span class=o>=</span> <span class=n>Normal</span><span class=p>(</span><span class=n>q_mu</span><span class=o>.</span><span class=n>get</span><span class=p>(),</span> <span class=n>q_lv</span><span class=o>.</span><span class=n>get_std</span><span class=p>())</span>
 </span><span id=__span-0-297><a id=__codelineno-0-297 name=__codelineno-0-297></a>        <span class=k>return</span> <span class=n>q_mu</span><span class=p>,</span> <span class=n>q_lv</span><span class=p>,</span> <span class=n>q</span>
 </span><span id=__span-0-298><a id=__codelineno-0-298 name=__codelineno-0-298></a>
-</span><span id=__span-0-299><a id=__codelineno-0-299 name=__codelineno-0-299></a>    <span class=k>def</span> <span class=nf>forward</span><span class=p>(</span>
+</span><span id=__span-0-299><a id=__codelineno-0-299 name=__codelineno-0-299></a>    <span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span>
 </span><span id=__span-0-300><a id=__codelineno-0-300 name=__codelineno-0-300></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-301><a id=__codelineno-0-301 name=__codelineno-0-301></a>        <span class=n>p_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span>
 </span><span id=__span-0-302><a id=__codelineno-0-302 name=__codelineno-0-302></a>        <span class=n>q_params</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=kc>None</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
@@ -793,7 +793,7 @@
 <span class=normal><a href=#__codelineno-0-96>96</a></span>
 <span class=normal><a href=#__codelineno-0-97>97</a></span>
 <span class=normal><a href=#__codelineno-0-98>98</a></span>
-<span class=normal><a href=#__codelineno-0-99>99</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-43><a id=__codelineno-0-43 name=__codelineno-0-43></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-99>99</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-43><a id=__codelineno-0-43 name=__codelineno-0-43></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-44><a id=__codelineno-0-44 name=__codelineno-0-44></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-45><a id=__codelineno-0-45 name=__codelineno-0-45></a>    <span class=n>c_in</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-46><a id=__codelineno-0-46 name=__codelineno-0-46></a>    <span class=n>c_vars</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
@@ -918,7 +918,7 @@
 <span class=normal><a href=#__codelineno-0-224>224</a></span>
 <span class=normal><a href=#__codelineno-0-225>225</a></span>
 <span class=normal><a href=#__codelineno-0-226>226</a></span>
-<span class=normal><a href=#__codelineno-0-227>227</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-159><a id=__codelineno-0-159 name=__codelineno-0-159></a><span class=k>def</span> <span class=nf>compute_kl_metrics</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-227>227</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-159><a id=__codelineno-0-159 name=__codelineno-0-159></a><span class=k>def</span><span class=w> </span><span class=nf>compute_kl_metrics</span><span class=p>(</span>
 </span><span id=__span-0-160><a id=__codelineno-0-160 name=__codelineno-0-160></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-161><a id=__codelineno-0-161 name=__codelineno-0-161></a>    <span class=n>p</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>distributions</span><span class=o>.</span><span class=n>normal</span><span class=o>.</span><span class=n>Normal</span><span class=p>,</span>
 </span><span id=__span-0-162><a id=__codelineno-0-162 name=__codelineno-0-162></a>    <span class=n>p_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span>
@@ -1081,7 +1081,7 @@
 <span class=normal><a href=#__codelineno-0-390>390</a></span>
 <span class=normal><a href=#__codelineno-0-391>391</a></span>
 <span class=normal><a href=#__codelineno-0-392>392</a></span>
-<span class=normal><a href=#__codelineno-0-393>393</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-299><a id=__codelineno-0-299 name=__codelineno-0-299></a><span class=k>def</span> <span class=nf>forward</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-393>393</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-299><a id=__codelineno-0-299 name=__codelineno-0-299></a><span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span>
 </span><span id=__span-0-300><a id=__codelineno-0-300 name=__codelineno-0-300></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-301><a id=__codelineno-0-301 name=__codelineno-0-301></a>    <span class=n>p_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span>
 </span><span id=__span-0-302><a id=__codelineno-0-302 name=__codelineno-0-302></a>    <span class=n>q_params</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=kc>None</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
@@ -1213,7 +1213,7 @@
 <span class=normal><a href=#__codelineno-0-135>135</a></span>
 <span class=normal><a href=#__codelineno-0-136>136</a></span>
 <span class=normal><a href=#__codelineno-0-137>137</a></span>
-<span class=normal><a href=#__codelineno-0-138>138</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-101><a id=__codelineno-0-101 name=__codelineno-0-101></a><span class=k>def</span> <span class=nf>get_z</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-138>138</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-101><a id=__codelineno-0-101 name=__codelineno-0-101></a><span class=k>def</span><span class=w> </span><span class=nf>get_z</span><span class=p>(</span>
 </span><span id=__span-0-102><a id=__codelineno-0-102 name=__codelineno-0-102></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-103><a id=__codelineno-0-103 name=__codelineno-0-103></a>    <span class=n>sampling_distrib</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>distributions</span><span class=o>.</span><span class=n>normal</span><span class=o>.</span><span class=n>Normal</span><span class=p>,</span>
 </span><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a>    <span class=n>forced_latent</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=kc>None</span><span class=p>],</span>
@@ -1283,7 +1283,7 @@
 <span class=normal><a href=#__codelineno-0-258>258</a></span>
 <span class=normal><a href=#__codelineno-0-259>259</a></span>
 <span class=normal><a href=#__codelineno-0-260>260</a></span>
-<span class=normal><a href=#__codelineno-0-261>261</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-229><a id=__codelineno-0-229 name=__codelineno-0-229></a><span class=k>def</span> <span class=nf>process_p_params</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-261>261</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-229><a id=__codelineno-0-229 name=__codelineno-0-229></a><span class=k>def</span><span class=w> </span><span class=nf>process_p_params</span><span class=p>(</span>
 </span><span id=__span-0-230><a id=__codelineno-0-230 name=__codelineno-0-230></a>    <span class=bp>self</span><span class=p>,</span> <span class=n>p_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>var_clip_max</span><span class=p>:</span> <span class=nb>float</span>
 </span><span id=__span-0-231><a id=__codelineno-0-231 name=__codelineno-0-231></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Tuple</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>distributions</span><span class=o>.</span><span class=n>normal</span><span class=o>.</span><span class=n>Normal</span><span class=p>]:</span>
 </span><span id=__span-0-232><a id=__codelineno-0-232 name=__codelineno-0-232></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Process the input parameters to get the prior distribution p(z_i|z_{i+1}) (or p(z_L)).</span>
@@ -1350,7 +1350,7 @@
 <span class=normal><a href=#__codelineno-0-294>294</a></span>
 <span class=normal><a href=#__codelineno-0-295>295</a></span>
 <span class=normal><a href=#__codelineno-0-296>296</a></span>
-<span class=normal><a href=#__codelineno-0-297>297</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-263><a id=__codelineno-0-263 name=__codelineno-0-263></a><span class=k>def</span> <span class=nf>process_q_params</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-297>297</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-263><a id=__codelineno-0-263 name=__codelineno-0-263></a><span class=k>def</span><span class=w> </span><span class=nf>process_q_params</span><span class=p>(</span>
 </span><span id=__span-0-264><a id=__codelineno-0-264 name=__codelineno-0-264></a>    <span class=bp>self</span><span class=p>,</span> <span class=n>q_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>var_clip_max</span><span class=p>:</span> <span class=nb>float</span><span class=p>,</span> <span class=n>allow_oddsizes</span><span class=p>:</span> <span class=nb>bool</span> <span class=o>=</span> <span class=kc>False</span>
 </span><span id=__span-0-265><a id=__codelineno-0-265 name=__codelineno-0-265></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Tuple</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>distributions</span><span class=o>.</span><span class=n>normal</span><span class=o>.</span><span class=n>Normal</span><span class=p>]:</span>
 </span><span id=__span-0-266><a id=__codelineno-0-266 name=__codelineno-0-266></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
@@ -1402,7 +1402,7 @@
 <span class=normal><a href=#__codelineno-0-154>154</a></span>
 <span class=normal><a href=#__codelineno-0-155>155</a></span>
 <span class=normal><a href=#__codelineno-0-156>156</a></span>
-<span class=normal><a href=#__codelineno-0-157>157</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-140><a id=__codelineno-0-140 name=__codelineno-0-140></a><span class=k>def</span> <span class=nf>sample_from_q</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-157>157</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-140><a id=__codelineno-0-140 name=__codelineno-0-140></a><span class=k>def</span><span class=w> </span><span class=nf>sample_from_q</span><span class=p>(</span>
 </span><span id=__span-0-141><a id=__codelineno-0-141 name=__codelineno-0-141></a>    <span class=bp>self</span><span class=p>,</span> <span class=n>q_params</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>var_clip_max</span><span class=p>:</span> <span class=nb>float</span>
 </span><span id=__span-0-142><a id=__codelineno-0-142 name=__codelineno-0-142></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-143><a id=__codelineno-0-143 name=__codelineno-0-143></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>

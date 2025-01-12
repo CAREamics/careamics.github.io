@@ -369,7 +369,7 @@
 <span class=normal><a href=#__codelineno-0-605>605</a></span>
 <span class=normal><a href=#__codelineno-0-606>606</a></span>
 <span class=normal><a href=#__codelineno-0-607>607</a></span>
-<span class=normal><a href=#__codelineno-0-608>608</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-237><a id=__codelineno-0-237 name=__codelineno-0-237></a><span class=k>class</span> <span class=nc>GaussianMixtureNoiseModel</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-608>608</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-237><a id=__codelineno-0-237 name=__codelineno-0-237></a><span class=k>class</span><span class=w> </span><span class=nc>GaussianMixtureNoiseModel</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
 </span><span id=__span-0-238><a id=__codelineno-0-238 name=__codelineno-0-238></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Define a noise model parameterized as a mixture of gaussians.</span>
 </span><span id=__span-0-239><a id=__codelineno-0-239 name=__codelineno-0-239></a>
 </span><span id=__span-0-240><a id=__codelineno-0-240 name=__codelineno-0-240></a><span class=sd>    If `config.path` is not provided a new object is initialized from scratch.</span>
@@ -411,7 +411,7 @@
 </span><span id=__span-0-276><a id=__codelineno-0-276 name=__codelineno-0-276></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-277><a id=__codelineno-0-277 name=__codelineno-0-277></a>
 </span><span id=__span-0-278><a id=__codelineno-0-278 name=__codelineno-0-278></a>    <span class=c1># TODO training a NM relies on getting a clean data(N2V e.g,)</span>
-</span><span id=__span-0-279><a id=__codelineno-0-279 name=__codelineno-0-279></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>config</span><span class=p>:</span> <span class=n>GaussianMixtureNMConfig</span><span class=p>):</span>
+</span><span id=__span-0-279><a id=__codelineno-0-279 name=__codelineno-0-279></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>config</span><span class=p>:</span> <span class=n>GaussianMixtureNMConfig</span><span class=p>):</span>
 </span><span id=__span-0-280><a id=__codelineno-0-280 name=__codelineno-0-280></a>        <span class=nb>super</span><span class=p>()</span><span class=o>.</span><span class=fm>__init__</span><span class=p>()</span>
 </span><span id=__span-0-281><a id=__codelineno-0-281 name=__codelineno-0-281></a>
 </span><span id=__span-0-282><a id=__codelineno-0-282 name=__codelineno-0-282></a>        <span class=bp>self</span><span class=o>.</span><span class=n>device</span> <span class=o>=</span> <span class=n>torch</span><span class=o>.</span><span class=n>device</span><span class=p>(</span><span class=s2>&quot;cuda&quot;</span> <span class=k>if</span> <span class=n>torch</span><span class=o>.</span><span class=n>cuda</span><span class=o>.</span><span class=n>is_available</span><span class=p>()</span> <span class=k>else</span> <span class=s2>&quot;cpu&quot;</span><span class=p>)</span>
@@ -456,7 +456,7 @@
 </span><span id=__span-0-321><a id=__codelineno-0-321 name=__codelineno-0-321></a>
 </span><span id=__span-0-322><a id=__codelineno-0-322 name=__codelineno-0-322></a>        <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&quot;[</span><span class=si>{</span><span class=bp>self</span><span class=o>.</span><span class=vm>__class__</span><span class=o>.</span><span class=vm>__name__</span><span class=si>}</span><span class=s2>] min_sigma: </span><span class=si>{</span><span class=bp>self</span><span class=o>.</span><span class=n>min_sigma</span><span class=si>}</span><span class=s2>&quot;</span><span class=p>)</span>
 </span><span id=__span-0-323><a id=__codelineno-0-323 name=__codelineno-0-323></a>
-</span><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a>    <span class=k>def</span> <span class=nf>polynomialRegressor</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>weightParams</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
+</span><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a>    <span class=k>def</span><span class=w> </span><span class=nf>polynomialRegressor</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>weightParams</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
 </span><span id=__span-0-325><a id=__codelineno-0-325 name=__codelineno-0-325></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Combines `weightParams` and signal `signals` to regress for the gaussian parameter values.</span>
 </span><span id=__span-0-326><a id=__codelineno-0-326 name=__codelineno-0-326></a>
 </span><span id=__span-0-327><a id=__codelineno-0-327 name=__codelineno-0-327></a><span class=sd>        Parameters</span>
@@ -479,7 +479,7 @@
 </span><span id=__span-0-344><a id=__codelineno-0-344 name=__codelineno-0-344></a>            <span class=p>)</span>
 </span><span id=__span-0-345><a id=__codelineno-0-345 name=__codelineno-0-345></a>        <span class=k>return</span> <span class=n>value</span>
 </span><span id=__span-0-346><a id=__codelineno-0-346 name=__codelineno-0-346></a>
-</span><span id=__span-0-347><a id=__codelineno-0-347 name=__codelineno-0-347></a>    <span class=k>def</span> <span class=nf>normalDens</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>,</span> <span class=n>m_</span><span class=o>=</span><span class=mf>0.0</span><span class=p>,</span> <span class=n>std_</span><span class=o>=</span><span class=kc>None</span><span class=p>):</span>
+</span><span id=__span-0-347><a id=__codelineno-0-347 name=__codelineno-0-347></a>    <span class=k>def</span><span class=w> </span><span class=nf>normalDens</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>,</span> <span class=n>m_</span><span class=o>=</span><span class=mf>0.0</span><span class=p>,</span> <span class=n>std_</span><span class=o>=</span><span class=kc>None</span><span class=p>):</span>
 </span><span id=__span-0-348><a id=__codelineno-0-348 name=__codelineno-0-348></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Evaluates the normal probability density at `x` given the mean `m` and standard deviation `std`.</span>
 </span><span id=__span-0-349><a id=__codelineno-0-349 name=__codelineno-0-349></a>
 </span><span id=__span-0-350><a id=__codelineno-0-350 name=__codelineno-0-350></a><span class=sd>        Parameters</span>
@@ -504,7 +504,7 @@
 </span><span id=__span-0-369><a id=__codelineno-0-369 name=__codelineno-0-369></a>        <span class=c1># print(tmp.min().item(), tmp.mean().item(), tmp.max().item(), tmp.shape)</span>
 </span><span id=__span-0-370><a id=__codelineno-0-370 name=__codelineno-0-370></a>        <span class=k>return</span> <span class=n>tmp</span>
 </span><span id=__span-0-371><a id=__codelineno-0-371 name=__codelineno-0-371></a>
-</span><span id=__span-0-372><a id=__codelineno-0-372 name=__codelineno-0-372></a>    <span class=k>def</span> <span class=nf>likelihood</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>observations</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
+</span><span id=__span-0-372><a id=__codelineno-0-372 name=__codelineno-0-372></a>    <span class=k>def</span><span class=w> </span><span class=nf>likelihood</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>observations</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
 </span><span id=__span-0-373><a id=__codelineno-0-373 name=__codelineno-0-373></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Evaluates the likelihood of observations given the signals and the corresponding gaussian parameters.</span>
 </span><span id=__span-0-374><a id=__codelineno-0-374 name=__codelineno-0-374></a>
 </span><span id=__span-0-375><a id=__codelineno-0-375 name=__codelineno-0-375></a><span class=sd>        Parameters</span>
@@ -541,7 +541,7 @@
 </span><span id=__span-0-406><a id=__codelineno-0-406 name=__codelineno-0-406></a>            <span class=p>)</span>
 </span><span id=__span-0-407><a id=__codelineno-0-407 name=__codelineno-0-407></a>        <span class=k>return</span> <span class=n>p</span> <span class=o>+</span> <span class=bp>self</span><span class=o>.</span><span class=n>tol</span>
 </span><span id=__span-0-408><a id=__codelineno-0-408 name=__codelineno-0-408></a>
-</span><span id=__span-0-409><a id=__codelineno-0-409 name=__codelineno-0-409></a>    <span class=k>def</span> <span class=nf>getGaussianParameters</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
+</span><span id=__span-0-409><a id=__codelineno-0-409 name=__codelineno-0-409></a>    <span class=k>def</span><span class=w> </span><span class=nf>getGaussianParameters</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
 </span><span id=__span-0-410><a id=__codelineno-0-410 name=__codelineno-0-410></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Returns the noise model for given signals</span>
 </span><span id=__span-0-411><a id=__codelineno-0-411 name=__codelineno-0-411></a>
 </span><span id=__span-0-412><a id=__codelineno-0-412 name=__codelineno-0-412></a><span class=sd>        Parameters</span>
@@ -602,7 +602,7 @@
 </span><span id=__span-0-467><a id=__codelineno-0-467 name=__codelineno-0-467></a>
 </span><span id=__span-0-468><a id=__codelineno-0-468 name=__codelineno-0-468></a>        <span class=k>return</span> <span class=n>noiseModel</span>
 </span><span id=__span-0-469><a id=__codelineno-0-469 name=__codelineno-0-469></a>
-</span><span id=__span-0-470><a id=__codelineno-0-470 name=__codelineno-0-470></a>    <span class=k>def</span> <span class=nf>getSignalObservationPairs</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>signal</span><span class=p>,</span> <span class=n>observation</span><span class=p>,</span> <span class=n>lowerClip</span><span class=p>,</span> <span class=n>upperClip</span><span class=p>):</span>
+</span><span id=__span-0-470><a id=__codelineno-0-470 name=__codelineno-0-470></a>    <span class=k>def</span><span class=w> </span><span class=nf>getSignalObservationPairs</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>signal</span><span class=p>,</span> <span class=n>observation</span><span class=p>,</span> <span class=n>lowerClip</span><span class=p>,</span> <span class=n>upperClip</span><span class=p>):</span>
 </span><span id=__span-0-471><a id=__codelineno-0-471 name=__codelineno-0-471></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Returns the Signal-Observation pixel intensities as a two-column array</span>
 </span><span id=__span-0-472><a id=__codelineno-0-472 name=__codelineno-0-472></a>
 </span><span id=__span-0-473><a id=__codelineno-0-473 name=__codelineno-0-473></a><span class=sd>        Parameters</span>
@@ -638,7 +638,7 @@
 </span><span id=__span-0-503><a id=__codelineno-0-503 name=__codelineno-0-503></a>        <span class=p>]</span>
 </span><span id=__span-0-504><a id=__codelineno-0-504 name=__codelineno-0-504></a>        <span class=k>return</span> <span class=n>fastShuffle</span><span class=p>(</span><span class=n>sig_obs_pairs</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span>
 </span><span id=__span-0-505><a id=__codelineno-0-505 name=__codelineno-0-505></a>
-</span><span id=__span-0-506><a id=__codelineno-0-506 name=__codelineno-0-506></a>    <span class=k>def</span> <span class=nf>fit</span><span class=p>(</span>
+</span><span id=__span-0-506><a id=__codelineno-0-506 name=__codelineno-0-506></a>    <span class=k>def</span><span class=w> </span><span class=nf>fit</span><span class=p>(</span>
 </span><span id=__span-0-507><a id=__codelineno-0-507 name=__codelineno-0-507></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-508><a id=__codelineno-0-508 name=__codelineno-0-508></a>        <span class=n>signal</span><span class=p>,</span>
 </span><span id=__span-0-509><a id=__codelineno-0-509 name=__codelineno-0-509></a>        <span class=n>observation</span><span class=p>,</span>
@@ -722,7 +722,7 @@
 </span><span id=__span-0-587><a id=__codelineno-0-587 name=__codelineno-0-587></a>        <span class=bp>self</span><span class=o>.</span><span class=n>max_signal</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>max_signal</span><span class=o>.</span><span class=n>cpu</span><span class=p>()</span><span class=o>.</span><span class=n>detach</span><span class=p>()</span><span class=o>.</span><span class=n>numpy</span><span class=p>()</span>
 </span><span id=__span-0-588><a id=__codelineno-0-588 name=__codelineno-0-588></a>        <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;===================</span><span class=se>\n</span><span class=s2>&quot;</span><span class=p>)</span>
 </span><span id=__span-0-589><a id=__codelineno-0-589 name=__codelineno-0-589></a>
-</span><span id=__span-0-590><a id=__codelineno-0-590 name=__codelineno-0-590></a>    <span class=k>def</span> <span class=nf>save</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>path</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>name</span><span class=p>:</span> <span class=nb>str</span><span class=p>):</span>
+</span><span id=__span-0-590><a id=__codelineno-0-590 name=__codelineno-0-590></a>    <span class=k>def</span><span class=w> </span><span class=nf>save</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>path</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>name</span><span class=p>:</span> <span class=nb>str</span><span class=p>):</span>
 </span><span id=__span-0-591><a id=__codelineno-0-591 name=__codelineno-0-591></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Save the trained parameters on the noise model.</span>
 </span><span id=__span-0-592><a id=__codelineno-0-592 name=__codelineno-0-592></a>
 </span><span id=__span-0-593><a id=__codelineno-0-593 name=__codelineno-0-593></a><span class=sd>        Parameters</span>
@@ -823,7 +823,7 @@
 <span class=normal><a href=#__codelineno-0-585>585</a></span>
 <span class=normal><a href=#__codelineno-0-586>586</a></span>
 <span class=normal><a href=#__codelineno-0-587>587</a></span>
-<span class=normal><a href=#__codelineno-0-588>588</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-506><a id=__codelineno-0-506 name=__codelineno-0-506></a><span class=k>def</span> <span class=nf>fit</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-588>588</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-506><a id=__codelineno-0-506 name=__codelineno-0-506></a><span class=k>def</span><span class=w> </span><span class=nf>fit</span><span class=p>(</span>
 </span><span id=__span-0-507><a id=__codelineno-0-507 name=__codelineno-0-507></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-508><a id=__codelineno-0-508 name=__codelineno-0-508></a>    <span class=n>signal</span><span class=p>,</span>
 </span><span id=__span-0-509><a id=__codelineno-0-509 name=__codelineno-0-509></a>    <span class=n>observation</span><span class=p>,</span>
@@ -965,7 +965,7 @@
 <span class=normal><a href=#__codelineno-0-465>465</a></span>
 <span class=normal><a href=#__codelineno-0-466>466</a></span>
 <span class=normal><a href=#__codelineno-0-467>467</a></span>
-<span class=normal><a href=#__codelineno-0-468>468</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-409><a id=__codelineno-0-409 name=__codelineno-0-409></a><span class=k>def</span> <span class=nf>getGaussianParameters</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-468>468</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-409><a id=__codelineno-0-409 name=__codelineno-0-409></a><span class=k>def</span><span class=w> </span><span class=nf>getGaussianParameters</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
 </span><span id=__span-0-410><a id=__codelineno-0-410 name=__codelineno-0-410></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Returns the noise model for given signals</span>
 </span><span id=__span-0-411><a id=__codelineno-0-411 name=__codelineno-0-411></a>
 </span><span id=__span-0-412><a id=__codelineno-0-412 name=__codelineno-0-412></a><span class=sd>    Parameters</span>
@@ -1059,7 +1059,7 @@
 <span class=normal><a href=#__codelineno-0-501>501</a></span>
 <span class=normal><a href=#__codelineno-0-502>502</a></span>
 <span class=normal><a href=#__codelineno-0-503>503</a></span>
-<span class=normal><a href=#__codelineno-0-504>504</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-470><a id=__codelineno-0-470 name=__codelineno-0-470></a><span class=k>def</span> <span class=nf>getSignalObservationPairs</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>signal</span><span class=p>,</span> <span class=n>observation</span><span class=p>,</span> <span class=n>lowerClip</span><span class=p>,</span> <span class=n>upperClip</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-504>504</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-470><a id=__codelineno-0-470 name=__codelineno-0-470></a><span class=k>def</span><span class=w> </span><span class=nf>getSignalObservationPairs</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>signal</span><span class=p>,</span> <span class=n>observation</span><span class=p>,</span> <span class=n>lowerClip</span><span class=p>,</span> <span class=n>upperClip</span><span class=p>):</span>
 </span><span id=__span-0-471><a id=__codelineno-0-471 name=__codelineno-0-471></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Returns the Signal-Observation pixel intensities as a two-column array</span>
 </span><span id=__span-0-472><a id=__codelineno-0-472 name=__codelineno-0-472></a>
 </span><span id=__span-0-473><a id=__codelineno-0-473 name=__codelineno-0-473></a><span class=sd>    Parameters</span>
@@ -1129,7 +1129,7 @@
 <span class=normal><a href=#__codelineno-0-404>404</a></span>
 <span class=normal><a href=#__codelineno-0-405>405</a></span>
 <span class=normal><a href=#__codelineno-0-406>406</a></span>
-<span class=normal><a href=#__codelineno-0-407>407</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-372><a id=__codelineno-0-372 name=__codelineno-0-372></a><span class=k>def</span> <span class=nf>likelihood</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>observations</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-407>407</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-372><a id=__codelineno-0-372 name=__codelineno-0-372></a><span class=k>def</span><span class=w> </span><span class=nf>likelihood</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>observations</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
 </span><span id=__span-0-373><a id=__codelineno-0-373 name=__codelineno-0-373></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Evaluates the likelihood of observations given the signals and the corresponding gaussian parameters.</span>
 </span><span id=__span-0-374><a id=__codelineno-0-374 name=__codelineno-0-374></a>
 </span><span id=__span-0-375><a id=__codelineno-0-375 name=__codelineno-0-375></a><span class=sd>    Parameters</span>
@@ -1188,7 +1188,7 @@
 <span class=normal><a href=#__codelineno-0-367>367</a></span>
 <span class=normal><a href=#__codelineno-0-368>368</a></span>
 <span class=normal><a href=#__codelineno-0-369>369</a></span>
-<span class=normal><a href=#__codelineno-0-370>370</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-347><a id=__codelineno-0-347 name=__codelineno-0-347></a><span class=k>def</span> <span class=nf>normalDens</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>,</span> <span class=n>m_</span><span class=o>=</span><span class=mf>0.0</span><span class=p>,</span> <span class=n>std_</span><span class=o>=</span><span class=kc>None</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-370>370</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-347><a id=__codelineno-0-347 name=__codelineno-0-347></a><span class=k>def</span><span class=w> </span><span class=nf>normalDens</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>,</span> <span class=n>m_</span><span class=o>=</span><span class=mf>0.0</span><span class=p>,</span> <span class=n>std_</span><span class=o>=</span><span class=kc>None</span><span class=p>):</span>
 </span><span id=__span-0-348><a id=__codelineno-0-348 name=__codelineno-0-348></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Evaluates the normal probability density at `x` given the mean `m` and standard deviation `std`.</span>
 </span><span id=__span-0-349><a id=__codelineno-0-349 name=__codelineno-0-349></a>
 </span><span id=__span-0-350><a id=__codelineno-0-350 name=__codelineno-0-350></a><span class=sd>    Parameters</span>
@@ -1233,7 +1233,7 @@
 <span class=normal><a href=#__codelineno-0-342>342</a></span>
 <span class=normal><a href=#__codelineno-0-343>343</a></span>
 <span class=normal><a href=#__codelineno-0-344>344</a></span>
-<span class=normal><a href=#__codelineno-0-345>345</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a><span class=k>def</span> <span class=nf>polynomialRegressor</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>weightParams</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-345>345</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a><span class=k>def</span><span class=w> </span><span class=nf>polynomialRegressor</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>weightParams</span><span class=p>,</span> <span class=n>signals</span><span class=p>):</span>
 </span><span id=__span-0-325><a id=__codelineno-0-325 name=__codelineno-0-325></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Combines `weightParams` and signal `signals` to regress for the gaussian parameter values.</span>
 </span><span id=__span-0-326><a id=__codelineno-0-326 name=__codelineno-0-326></a>
 </span><span id=__span-0-327><a id=__codelineno-0-327 name=__codelineno-0-327></a><span class=sd>    Parameters</span>
@@ -1273,7 +1273,7 @@
 <span class=normal><a href=#__codelineno-0-605>605</a></span>
 <span class=normal><a href=#__codelineno-0-606>606</a></span>
 <span class=normal><a href=#__codelineno-0-607>607</a></span>
-<span class=normal><a href=#__codelineno-0-608>608</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-590><a id=__codelineno-0-590 name=__codelineno-0-590></a><span class=k>def</span> <span class=nf>save</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>path</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>name</span><span class=p>:</span> <span class=nb>str</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-608>608</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-590><a id=__codelineno-0-590 name=__codelineno-0-590></a><span class=k>def</span><span class=w> </span><span class=nf>save</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>path</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>name</span><span class=p>:</span> <span class=nb>str</span><span class=p>):</span>
 </span><span id=__span-0-591><a id=__codelineno-0-591 name=__codelineno-0-591></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Save the trained parameters on the noise model.</span>
 </span><span id=__span-0-592><a id=__codelineno-0-592 name=__codelineno-0-592></a>
 </span><span id=__span-0-593><a id=__codelineno-0-593 name=__codelineno-0-593></a><span class=sd>    Parameters</span>
@@ -1356,8 +1356,8 @@
 <span class=normal><a href=#__codelineno-0-209>209</a></span>
 <span class=normal><a href=#__codelineno-0-210>210</a></span>
 <span class=normal><a href=#__codelineno-0-211>211</a></span>
-<span class=normal><a href=#__codelineno-0-212>212</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-148><a id=__codelineno-0-148 name=__codelineno-0-148></a><span class=k>class</span> <span class=nc>MultiChannelNoiseModel</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
-</span><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nmodels</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>GaussianMixtureNoiseModel</span><span class=p>]):</span>
+<span class=normal><a href=#__codelineno-0-212>212</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-148><a id=__codelineno-0-148 name=__codelineno-0-148></a><span class=k>class</span><span class=w> </span><span class=nc>MultiChannelNoiseModel</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
+</span><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nmodels</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>GaussianMixtureNoiseModel</span><span class=p>]):</span>
 </span><span id=__span-0-150><a id=__codelineno-0-150 name=__codelineno-0-150></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Constructor.</span>
 </span><span id=__span-0-151><a id=__codelineno-0-151 name=__codelineno-0-151></a>
 </span><span id=__span-0-152><a id=__codelineno-0-152 name=__codelineno-0-152></a><span class=sd>        To handle noise models and the relative likelihood computation for multiple</span>
@@ -1387,7 +1387,7 @@
 </span><span id=__span-0-176><a id=__codelineno-0-176 name=__codelineno-0-176></a>
 </span><span id=__span-0-177><a id=__codelineno-0-177 name=__codelineno-0-177></a>        <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&quot;[</span><span class=si>{</span><span class=bp>self</span><span class=o>.</span><span class=vm>__class__</span><span class=o>.</span><span class=vm>__name__</span><span class=si>}</span><span class=s2>] Nmodels count:</span><span class=si>{</span><span class=bp>self</span><span class=o>.</span><span class=n>_nm_cnt</span><span class=si>}</span><span class=s2>&quot;</span><span class=p>)</span>
 </span><span id=__span-0-178><a id=__codelineno-0-178 name=__codelineno-0-178></a>
-</span><span id=__span-0-179><a id=__codelineno-0-179 name=__codelineno-0-179></a>    <span class=k>def</span> <span class=nf>likelihood</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>obs</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>signal</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
+</span><span id=__span-0-179><a id=__codelineno-0-179 name=__codelineno-0-179></a>    <span class=k>def</span><span class=w> </span><span class=nf>likelihood</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>obs</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>signal</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-180><a id=__codelineno-0-180 name=__codelineno-0-180></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Compute the likelihood of observations given signals for each channel.</span>
 </span><span id=__span-0-181><a id=__codelineno-0-181 name=__codelineno-0-181></a>
 </span><span id=__span-0-182><a id=__codelineno-0-182 name=__codelineno-0-182></a><span class=sd>        Parameters</span>
@@ -1449,7 +1449,7 @@
 <span class=normal><a href=#__codelineno-0-174>174</a></span>
 <span class=normal><a href=#__codelineno-0-175>175</a></span>
 <span class=normal><a href=#__codelineno-0-176>176</a></span>
-<span class=normal><a href=#__codelineno-0-177>177</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nmodels</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>GaussianMixtureNoiseModel</span><span class=p>]):</span>
+<span class=normal><a href=#__codelineno-0-177>177</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nmodels</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>GaussianMixtureNoiseModel</span><span class=p>]):</span>
 </span><span id=__span-0-150><a id=__codelineno-0-150 name=__codelineno-0-150></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Constructor.</span>
 </span><span id=__span-0-151><a id=__codelineno-0-151 name=__codelineno-0-151></a>
 </span><span id=__span-0-152><a id=__codelineno-0-152 name=__codelineno-0-152></a><span class=sd>    To handle noise models and the relative likelihood computation for multiple</span>
@@ -1511,7 +1511,7 @@
 <span class=normal><a href=#__codelineno-0-209>209</a></span>
 <span class=normal><a href=#__codelineno-0-210>210</a></span>
 <span class=normal><a href=#__codelineno-0-211>211</a></span>
-<span class=normal><a href=#__codelineno-0-212>212</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-179><a id=__codelineno-0-179 name=__codelineno-0-179></a><span class=k>def</span> <span class=nf>likelihood</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>obs</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>signal</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-212>212</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-179><a id=__codelineno-0-179 name=__codelineno-0-179></a><span class=k>def</span><span class=w> </span><span class=nf>likelihood</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>obs</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>signal</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-180><a id=__codelineno-0-180 name=__codelineno-0-180></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Compute the likelihood of observations given signals for each channel.</span>
 </span><span id=__span-0-181><a id=__codelineno-0-181 name=__codelineno-0-181></a>
 </span><span id=__span-0-182><a id=__codelineno-0-182 name=__codelineno-0-182></a><span class=sd>    Parameters</span>
@@ -1603,7 +1603,7 @@
 <span class=normal><a href=#__codelineno-0-71>71</a></span>
 <span class=normal><a href=#__codelineno-0-72>72</a></span>
 <span class=normal><a href=#__codelineno-0-73>73</a></span>
-<span class=normal><a href=#__codelineno-0-74>74</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a><span class=k>def</span> <span class=nf>create_histogram</span><span class=p>(</span><span class=n>bins</span><span class=p>,</span> <span class=n>min_val</span><span class=p>,</span> <span class=n>max_val</span><span class=p>,</span> <span class=n>observation</span><span class=p>,</span> <span class=n>signal</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-74>74</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a><span class=k>def</span><span class=w> </span><span class=nf>create_histogram</span><span class=p>(</span><span class=n>bins</span><span class=p>,</span> <span class=n>min_val</span><span class=p>,</span> <span class=n>max_val</span><span class=p>,</span> <span class=n>observation</span><span class=p>,</span> <span class=n>signal</span><span class=p>):</span>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18></a><span class=sd>    Creates a 2D histogram from &#39;observation&#39; and &#39;signal&#39;.</span>
 </span><span id=__span-0-19><a id=__codelineno-0-19 name=__codelineno-0-19></a>
@@ -1680,7 +1680,7 @@
 <span class=normal><a href=#__codelineno-0-231>231</a></span>
 <span class=normal><a href=#__codelineno-0-232>232</a></span>
 <span class=normal><a href=#__codelineno-0-233>233</a></span>
-<span class=normal><a href=#__codelineno-0-234>234</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-216><a id=__codelineno-0-216 name=__codelineno-0-216></a><span class=k>def</span> <span class=nf>fastShuffle</span><span class=p>(</span><span class=n>series</span><span class=p>,</span> <span class=n>num</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-234>234</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-216><a id=__codelineno-0-216 name=__codelineno-0-216></a><span class=k>def</span><span class=w> </span><span class=nf>fastShuffle</span><span class=p>(</span><span class=n>series</span><span class=p>,</span> <span class=n>num</span><span class=p>):</span>
 </span><span id=__span-0-217><a id=__codelineno-0-217 name=__codelineno-0-217></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;_summary_.</span>
 </span><span id=__span-0-218><a id=__codelineno-0-218 name=__codelineno-0-218></a>
 </span><span id=__span-0-219><a id=__codelineno-0-219 name=__codelineno-0-219></a><span class=sd>    Parameters</span>
@@ -1743,7 +1743,7 @@
 <span class=normal><a href=#__codelineno-0-118>118</a></span>
 <span class=normal><a href=#__codelineno-0-119>119</a></span>
 <span class=normal><a href=#__codelineno-0-120>120</a></span>
-<span class=normal><a href=#__codelineno-0-121>121</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-77><a id=__codelineno-0-77 name=__codelineno-0-77></a><span class=k>def</span> <span class=nf>noise_model_factory</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-121>121</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-77><a id=__codelineno-0-77 name=__codelineno-0-77></a><span class=k>def</span><span class=w> </span><span class=nf>noise_model_factory</span><span class=p>(</span>
 </span><span id=__span-0-78><a id=__codelineno-0-78 name=__codelineno-0-78></a>    <span class=n>model_config</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>MultiChannelNMConfig</span><span class=p>],</span>
 </span><span id=__span-0-79><a id=__codelineno-0-79 name=__codelineno-0-79></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Optional</span><span class=p>[</span><span class=n>MultiChannelNoiseModel</span><span class=p>]:</span>
 </span><span id=__span-0-80><a id=__codelineno-0-80 name=__codelineno-0-80></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Noise model factory.</span>
@@ -1809,7 +1809,7 @@
 <span class=normal><a href=#__codelineno-0-142>142</a></span>
 <span class=normal><a href=#__codelineno-0-143>143</a></span>
 <span class=normal><a href=#__codelineno-0-144>144</a></span>
-<span class=normal><a href=#__codelineno-0-145>145</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-124><a id=__codelineno-0-124 name=__codelineno-0-124></a><span class=k>def</span> <span class=nf>train_gm_noise_model</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-145>145</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-124><a id=__codelineno-0-124 name=__codelineno-0-124></a><span class=k>def</span><span class=w> </span><span class=nf>train_gm_noise_model</span><span class=p>(</span>
 </span><span id=__span-0-125><a id=__codelineno-0-125 name=__codelineno-0-125></a>    <span class=n>model_config</span><span class=p>:</span> <span class=n>GaussianMixtureNMConfig</span><span class=p>,</span>
 </span><span id=__span-0-126><a id=__codelineno-0-126 name=__codelineno-0-126></a>    <span class=n>signal</span><span class=p>:</span> <span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span>
 </span><span id=__span-0-127><a id=__codelineno-0-127 name=__codelineno-0-127></a>    <span class=n>observation</span><span class=p>:</span> <span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span>

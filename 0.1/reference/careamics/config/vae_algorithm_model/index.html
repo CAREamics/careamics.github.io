@@ -116,7 +116,7 @@
 <span class=normal><a href=#__codelineno-0-135>135</a></span>
 <span class=normal><a href=#__codelineno-0-136>136</a></span>
 <span class=normal><a href=#__codelineno-0-137>137</a></span>
-<span class=normal><a href=#__codelineno-0-138>138</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20></a><span class=k>class</span> <span class=nc>VAEAlgorithmConfig</span><span class=p>(</span><span class=n>BaseModel</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-138>138</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20></a><span class=k>class</span><span class=w> </span><span class=nc>VAEAlgorithmConfig</span><span class=p>(</span><span class=n>BaseModel</span><span class=p>):</span>
 </span><span id=__span-0-21><a id=__codelineno-0-21 name=__codelineno-0-21></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Algorithm configuration.</span>
 </span><span id=__span-0-22><a id=__codelineno-0-22 name=__codelineno-0-22></a>
 </span><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a><span class=sd>    # TODO</span>
@@ -153,7 +153,7 @@
 </span><span id=__span-0-54><a id=__codelineno-0-54 name=__codelineno-0-54></a>    <span class=n>lr_scheduler</span><span class=p>:</span> <span class=n>LrSchedulerModel</span> <span class=o>=</span> <span class=n>LrSchedulerModel</span><span class=p>()</span>
 </span><span id=__span-0-55><a id=__codelineno-0-55 name=__codelineno-0-55></a>
 </span><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a>    <span class=nd>@model_validator</span><span class=p>(</span><span class=n>mode</span><span class=o>=</span><span class=s2>&quot;after&quot;</span><span class=p>)</span>
-</span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a>    <span class=k>def</span> <span class=nf>algorithm_cross_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
+</span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a>    <span class=k>def</span><span class=w> </span><span class=nf>algorithm_cross_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
 </span><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Validate the algorithm model based on `algorithm`.</span>
 </span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59></a>
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a><span class=sd>        Returns</span>
@@ -192,7 +192,7 @@
 </span><span id=__span-0-93><a id=__codelineno-0-93 name=__codelineno-0-93></a>        <span class=k>return</span> <span class=bp>self</span>
 </span><span id=__span-0-94><a id=__codelineno-0-94 name=__codelineno-0-94></a>
 </span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a>    <span class=nd>@model_validator</span><span class=p>(</span><span class=n>mode</span><span class=o>=</span><span class=s2>&quot;after&quot;</span><span class=p>)</span>
-</span><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96></a>    <span class=k>def</span> <span class=nf>output_channels_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
+</span><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96></a>    <span class=k>def</span><span class=w> </span><span class=nf>output_channels_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
 </span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Validate the consistency between number of out channels and noise models.</span>
 </span><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a>
 </span><span id=__span-0-99><a id=__codelineno-0-99 name=__codelineno-0-99></a><span class=sd>        Returns</span>
@@ -208,7 +208,7 @@
 </span><span id=__span-0-109><a id=__codelineno-0-109 name=__codelineno-0-109></a>        <span class=k>return</span> <span class=bp>self</span>
 </span><span id=__span-0-110><a id=__codelineno-0-110 name=__codelineno-0-110></a>
 </span><span id=__span-0-111><a id=__codelineno-0-111 name=__codelineno-0-111></a>    <span class=nd>@model_validator</span><span class=p>(</span><span class=n>mode</span><span class=o>=</span><span class=s2>&quot;after&quot;</span><span class=p>)</span>
-</span><span id=__span-0-112><a id=__codelineno-0-112 name=__codelineno-0-112></a>    <span class=k>def</span> <span class=nf>predict_logvar_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
+</span><span id=__span-0-112><a id=__codelineno-0-112 name=__codelineno-0-112></a>    <span class=k>def</span><span class=w> </span><span class=nf>predict_logvar_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
 </span><span id=__span-0-113><a id=__codelineno-0-113 name=__codelineno-0-113></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Validate the consistency of `predict_logvar` throughout the model.</span>
 </span><span id=__span-0-114><a id=__codelineno-0-114 name=__codelineno-0-114></a>
 </span><span id=__span-0-115><a id=__codelineno-0-115 name=__codelineno-0-115></a><span class=sd>        Returns</span>
@@ -226,7 +226,7 @@
 </span><span id=__span-0-127><a id=__codelineno-0-127 name=__codelineno-0-127></a>            <span class=p>)</span>
 </span><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a>        <span class=k>return</span> <span class=bp>self</span>
 </span><span id=__span-0-129><a id=__codelineno-0-129 name=__codelineno-0-129></a>
-</span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a>    <span class=k>def</span> <span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a>    <span class=k>def</span><span class=w> </span><span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Pretty string representing the configuration.</span>
 </span><span id=__span-0-132><a id=__codelineno-0-132 name=__codelineno-0-132></a>
 </span><span id=__span-0-133><a id=__codelineno-0-133 name=__codelineno-0-133></a><span class=sd>        Returns</span>
@@ -243,7 +243,7 @@
 <span class=normal><a href=#__codelineno-0-135>135</a></span>
 <span class=normal><a href=#__codelineno-0-136>136</a></span>
 <span class=normal><a href=#__codelineno-0-137>137</a></span>
-<span class=normal><a href=#__codelineno-0-138>138</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a><span class=k>def</span> <span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-138>138</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a><span class=k>def</span><span class=w> </span><span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Pretty string representing the configuration.</span>
 </span><span id=__span-0-132><a id=__codelineno-0-132 name=__codelineno-0-132></a>
 </span><span id=__span-0-133><a id=__codelineno-0-133 name=__codelineno-0-133></a><span class=sd>    Returns</span>
@@ -290,7 +290,7 @@
 <span class=normal><a href=#__codelineno-0-91>91</a></span>
 <span class=normal><a href=#__codelineno-0-92>92</a></span>
 <span class=normal><a href=#__codelineno-0-93>93</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a><span class=nd>@model_validator</span><span class=p>(</span><span class=n>mode</span><span class=o>=</span><span class=s2>&quot;after&quot;</span><span class=p>)</span>
-</span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a><span class=k>def</span> <span class=nf>algorithm_cross_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
+</span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a><span class=k>def</span><span class=w> </span><span class=nf>algorithm_cross_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
 </span><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Validate the algorithm model based on `algorithm`.</span>
 </span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59></a>
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a><span class=sd>    Returns</span>
@@ -342,7 +342,7 @@
 <span class=normal><a href=#__codelineno-0-107>107</a></span>
 <span class=normal><a href=#__codelineno-0-108>108</a></span>
 <span class=normal><a href=#__codelineno-0-109>109</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a><span class=nd>@model_validator</span><span class=p>(</span><span class=n>mode</span><span class=o>=</span><span class=s2>&quot;after&quot;</span><span class=p>)</span>
-</span><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96></a><span class=k>def</span> <span class=nf>output_channels_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
+</span><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96></a><span class=k>def</span><span class=w> </span><span class=nf>output_channels_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
 </span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Validate the consistency between number of out channels and noise models.</span>
 </span><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a>
 </span><span id=__span-0-99><a id=__codelineno-0-99 name=__codelineno-0-99></a><span class=sd>    Returns</span>
@@ -374,7 +374,7 @@
 <span class=normal><a href=#__codelineno-0-126>126</a></span>
 <span class=normal><a href=#__codelineno-0-127>127</a></span>
 <span class=normal><a href=#__codelineno-0-128>128</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-111><a id=__codelineno-0-111 name=__codelineno-0-111></a><span class=nd>@model_validator</span><span class=p>(</span><span class=n>mode</span><span class=o>=</span><span class=s2>&quot;after&quot;</span><span class=p>)</span>
-</span><span id=__span-0-112><a id=__codelineno-0-112 name=__codelineno-0-112></a><span class=k>def</span> <span class=nf>predict_logvar_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
+</span><span id=__span-0-112><a id=__codelineno-0-112 name=__codelineno-0-112></a><span class=k>def</span><span class=w> </span><span class=nf>predict_logvar_validation</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
 </span><span id=__span-0-113><a id=__codelineno-0-113 name=__codelineno-0-113></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Validate the consistency of `predict_logvar` throughout the model.</span>
 </span><span id=__span-0-114><a id=__codelineno-0-114 name=__codelineno-0-114></a>
 </span><span id=__span-0-115><a id=__codelineno-0-115 name=__codelineno-0-115></a><span class=sd>    Returns</span>

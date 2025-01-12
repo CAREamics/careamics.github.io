@@ -810,7 +810,7 @@
 <span class=normal><a href=#__codelineno-0-837>837</a></span>
 <span class=normal><a href=#__codelineno-0-838>838</a></span>
 <span class=normal><a href=#__codelineno-0-839>839</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28></a><span class=nd>@register_model</span><span class=p>(</span><span class=s2>&quot;LVAE&quot;</span><span class=p>)</span>
-</span><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a><span class=k>class</span> <span class=nc>LadderVAE</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
+</span><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a><span class=k>class</span><span class=w> </span><span class=nc>LadderVAE</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
 </span><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31></a><span class=sd>    Constructor.</span>
 </span><span id=__span-0-32><a id=__codelineno-0-32 name=__codelineno-0-32></a>
@@ -849,7 +849,7 @@
 </span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=sd>        If only 2D convolutions are supported.</span>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-67><a id=__codelineno-0-67 name=__codelineno-0-67></a>
-</span><span id=__span-0-68><a id=__codelineno-0-68 name=__codelineno-0-68></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-68><a id=__codelineno-0-68 name=__codelineno-0-68></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-69><a id=__codelineno-0-69 name=__codelineno-0-69></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70></a>        <span class=n>input_shape</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-71><a id=__codelineno-0-71 name=__codelineno-0-71></a>        <span class=n>output_channels</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
@@ -1051,7 +1051,7 @@
 </span><span id=__span-0-267><a id=__codelineno-0-267 name=__codelineno-0-267></a>        <span class=c1># print(msg)</span>
 </span><span id=__span-0-268><a id=__codelineno-0-268 name=__codelineno-0-268></a>
 </span><span id=__span-0-269><a id=__codelineno-0-269 name=__codelineno-0-269></a>    <span class=c1>### SET OF METHODS TO CREATE MODEL BLOCKS</span>
-</span><span id=__span-0-270><a id=__codelineno-0-270 name=__codelineno-0-270></a>    <span class=k>def</span> <span class=nf>create_first_bottom_up</span><span class=p>(</span>
+</span><span id=__span-0-270><a id=__codelineno-0-270 name=__codelineno-0-270></a>    <span class=k>def</span><span class=w> </span><span class=nf>create_first_bottom_up</span><span class=p>(</span>
 </span><span id=__span-0-271><a id=__codelineno-0-271 name=__codelineno-0-271></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-272><a id=__codelineno-0-272 name=__codelineno-0-272></a>        <span class=n>init_stride</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-273><a id=__codelineno-0-273 name=__codelineno-0-273></a>        <span class=n>num_res_blocks</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>
@@ -1103,7 +1103,7 @@
 </span><span id=__span-0-319><a id=__codelineno-0-319 name=__codelineno-0-319></a>
 </span><span id=__span-0-320><a id=__codelineno-0-320 name=__codelineno-0-320></a>        <span class=k>return</span> <span class=n>nn</span><span class=o>.</span><span class=n>Sequential</span><span class=p>(</span><span class=o>*</span><span class=n>modules</span><span class=p>)</span>
 </span><span id=__span-0-321><a id=__codelineno-0-321 name=__codelineno-0-321></a>
-</span><span id=__span-0-322><a id=__codelineno-0-322 name=__codelineno-0-322></a>    <span class=k>def</span> <span class=nf>create_bottom_up_layers</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>lowres_separate_branch</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
+</span><span id=__span-0-322><a id=__codelineno-0-322 name=__codelineno-0-322></a>    <span class=k>def</span><span class=w> </span><span class=nf>create_bottom_up_layers</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>lowres_separate_branch</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
 </span><span id=__span-0-323><a id=__codelineno-0-323 name=__codelineno-0-323></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a><span class=sd>        Method creates the stack of bottom-up layers of the Encoder.</span>
 </span><span id=__span-0-325><a id=__codelineno-0-325 name=__codelineno-0-325></a>
@@ -1168,7 +1168,7 @@
 </span><span id=__span-0-384><a id=__codelineno-0-384 name=__codelineno-0-384></a>
 </span><span id=__span-0-385><a id=__codelineno-0-385 name=__codelineno-0-385></a>        <span class=k>return</span> <span class=n>bottom_up_layers</span>
 </span><span id=__span-0-386><a id=__codelineno-0-386 name=__codelineno-0-386></a>
-</span><span id=__span-0-387><a id=__codelineno-0-387 name=__codelineno-0-387></a>    <span class=k>def</span> <span class=nf>create_top_down_layers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
+</span><span id=__span-0-387><a id=__codelineno-0-387 name=__codelineno-0-387></a>    <span class=k>def</span><span class=w> </span><span class=nf>create_top_down_layers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
 </span><span id=__span-0-388><a id=__codelineno-0-388 name=__codelineno-0-388></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-389><a id=__codelineno-0-389 name=__codelineno-0-389></a><span class=sd>        Method creates the stack of top-down layers of the Decoder.</span>
 </span><span id=__span-0-390><a id=__codelineno-0-390 name=__codelineno-0-390></a>
@@ -1234,7 +1234,7 @@
 </span><span id=__span-0-450><a id=__codelineno-0-450 name=__codelineno-0-450></a>            <span class=p>)</span>
 </span><span id=__span-0-451><a id=__codelineno-0-451 name=__codelineno-0-451></a>        <span class=k>return</span> <span class=n>top_down_layers</span>
 </span><span id=__span-0-452><a id=__codelineno-0-452 name=__codelineno-0-452></a>
-</span><span id=__span-0-453><a id=__codelineno-0-453 name=__codelineno-0-453></a>    <span class=k>def</span> <span class=nf>create_final_topdown_layer</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>upsample</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>Sequential</span><span class=p>:</span>
+</span><span id=__span-0-453><a id=__codelineno-0-453 name=__codelineno-0-453></a>    <span class=k>def</span><span class=w> </span><span class=nf>create_final_topdown_layer</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>upsample</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>Sequential</span><span class=p>:</span>
 </span><span id=__span-0-454><a id=__codelineno-0-454 name=__codelineno-0-454></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Create the final top-down layer of the Decoder.</span>
 </span><span id=__span-0-455><a id=__codelineno-0-455 name=__codelineno-0-455></a>
 </span><span id=__span-0-456><a id=__codelineno-0-456 name=__codelineno-0-456></a><span class=sd>        NOTE: In this layer, (optional) upsampling is performed by bilinear interpolation</span>
@@ -1269,7 +1269,7 @@
 </span><span id=__span-0-485><a id=__codelineno-0-485 name=__codelineno-0-485></a>            <span class=p>)</span>
 </span><span id=__span-0-486><a id=__codelineno-0-486 name=__codelineno-0-486></a>        <span class=k>return</span> <span class=n>nn</span><span class=o>.</span><span class=n>Sequential</span><span class=p>(</span><span class=o>*</span><span class=n>modules</span><span class=p>)</span>
 </span><span id=__span-0-487><a id=__codelineno-0-487 name=__codelineno-0-487></a>
-</span><span id=__span-0-488><a id=__codelineno-0-488 name=__codelineno-0-488></a>    <span class=k>def</span> <span class=nf>_init_multires</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>config</span><span class=o>=</span><span class=kc>None</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
+</span><span id=__span-0-488><a id=__codelineno-0-488 name=__codelineno-0-488></a>    <span class=k>def</span><span class=w> </span><span class=nf>_init_multires</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>config</span><span class=o>=</span><span class=kc>None</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
 </span><span id=__span-0-489><a id=__codelineno-0-489 name=__codelineno-0-489></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-490><a id=__codelineno-0-490 name=__codelineno-0-490></a><span class=sd>        Method defines the input block/branch to encode/compress low-res lateral inputs.</span>
 </span><span id=__span-0-491><a id=__codelineno-0-491 name=__codelineno-0-491></a>
@@ -1339,7 +1339,7 @@
 </span><span id=__span-0-555><a id=__codelineno-0-555 name=__codelineno-0-555></a>        <span class=p>)</span>
 </span><span id=__span-0-556><a id=__codelineno-0-556 name=__codelineno-0-556></a>
 </span><span id=__span-0-557><a id=__codelineno-0-557 name=__codelineno-0-557></a>    <span class=c1>### SET OF FORWARD-LIKE METHODS</span>
-</span><span id=__span-0-558><a id=__codelineno-0-558 name=__codelineno-0-558></a>    <span class=k>def</span> <span class=nf>bottomup_pass</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>inp</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>]:</span>
+</span><span id=__span-0-558><a id=__codelineno-0-558 name=__codelineno-0-558></a>    <span class=k>def</span><span class=w> </span><span class=nf>bottomup_pass</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>inp</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>]:</span>
 </span><span id=__span-0-559><a id=__codelineno-0-559 name=__codelineno-0-559></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Wrapper of _bottomup_pass().&quot;&quot;&quot;</span>
 </span><span id=__span-0-560><a id=__codelineno-0-560 name=__codelineno-0-560></a>        <span class=c1># TODO Remove wrapper</span>
 </span><span id=__span-0-561><a id=__codelineno-0-561 name=__codelineno-0-561></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_bottomup_pass</span><span class=p>(</span>
@@ -1349,7 +1349,7 @@
 </span><span id=__span-0-565><a id=__codelineno-0-565 name=__codelineno-0-565></a>            <span class=bp>self</span><span class=o>.</span><span class=n>bottom_up_layers</span><span class=p>,</span>
 </span><span id=__span-0-566><a id=__codelineno-0-566 name=__codelineno-0-566></a>        <span class=p>)</span>
 </span><span id=__span-0-567><a id=__codelineno-0-567 name=__codelineno-0-567></a>
-</span><span id=__span-0-568><a id=__codelineno-0-568 name=__codelineno-0-568></a>    <span class=k>def</span> <span class=nf>_bottomup_pass</span><span class=p>(</span>
+</span><span id=__span-0-568><a id=__codelineno-0-568 name=__codelineno-0-568></a>    <span class=k>def</span><span class=w> </span><span class=nf>_bottomup_pass</span><span class=p>(</span>
 </span><span id=__span-0-569><a id=__codelineno-0-569 name=__codelineno-0-569></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-570><a id=__codelineno-0-570 name=__codelineno-0-570></a>        <span class=n>inp</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span>
 </span><span id=__span-0-571><a id=__codelineno-0-571 name=__codelineno-0-571></a>        <span class=n>first_bottom_up</span><span class=p>:</span> <span class=n>nn</span><span class=o>.</span><span class=n>Sequential</span><span class=p>,</span>
@@ -1392,7 +1392,7 @@
 </span><span id=__span-0-608><a id=__codelineno-0-608 name=__codelineno-0-608></a>
 </span><span id=__span-0-609><a id=__codelineno-0-609 name=__codelineno-0-609></a>        <span class=k>return</span> <span class=n>bu_values</span>
 </span><span id=__span-0-610><a id=__codelineno-0-610 name=__codelineno-0-610></a>
-</span><span id=__span-0-611><a id=__codelineno-0-611 name=__codelineno-0-611></a>    <span class=k>def</span> <span class=nf>topdown_pass</span><span class=p>(</span>
+</span><span id=__span-0-611><a id=__codelineno-0-611 name=__codelineno-0-611></a>    <span class=k>def</span><span class=w> </span><span class=nf>topdown_pass</span><span class=p>(</span>
 </span><span id=__span-0-612><a id=__codelineno-0-612 name=__codelineno-0-612></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-613><a id=__codelineno-0-613 name=__codelineno-0-613></a>        <span class=n>bu_values</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=kc>None</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
 </span><span id=__span-0-614><a id=__codelineno-0-614 name=__codelineno-0-614></a>        <span class=n>n_img_prior</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=kc>None</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
@@ -1533,7 +1533,7 @@
 </span><span id=__span-0-749><a id=__codelineno-0-749 name=__codelineno-0-749></a>        <span class=p>}</span>
 </span><span id=__span-0-750><a id=__codelineno-0-750 name=__codelineno-0-750></a>        <span class=k>return</span> <span class=n>out</span><span class=p>,</span> <span class=n>data</span>
 </span><span id=__span-0-751><a id=__codelineno-0-751 name=__codelineno-0-751></a>
-</span><span id=__span-0-752><a id=__codelineno-0-752 name=__codelineno-0-752></a>    <span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>]]:</span>
+</span><span id=__span-0-752><a id=__codelineno-0-752 name=__codelineno-0-752></a>    <span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>]]:</span>
 </span><span id=__span-0-753><a id=__codelineno-0-753 name=__codelineno-0-753></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-754><a id=__codelineno-0-754 name=__codelineno-0-754></a><span class=sd>        Forward pass through the LVAE model.</span>
 </span><span id=__span-0-755><a id=__codelineno-0-755 name=__codelineno-0-755></a>
@@ -1567,7 +1567,7 @@
 </span><span id=__span-0-783><a id=__codelineno-0-783 name=__codelineno-0-783></a>        <span class=k>return</span> <span class=n>out</span><span class=p>,</span> <span class=n>td_data</span>
 </span><span id=__span-0-784><a id=__codelineno-0-784 name=__codelineno-0-784></a>
 </span><span id=__span-0-785><a id=__codelineno-0-785 name=__codelineno-0-785></a>    <span class=c1>### SET OF GETTERS</span>
-</span><span id=__span-0-786><a id=__codelineno-0-786 name=__codelineno-0-786></a>    <span class=k>def</span> <span class=nf>get_padded_size</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>size</span><span class=p>):</span>
+</span><span id=__span-0-786><a id=__codelineno-0-786 name=__codelineno-0-786></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_padded_size</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>size</span><span class=p>):</span>
 </span><span id=__span-0-787><a id=__codelineno-0-787 name=__codelineno-0-787></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-788><a id=__codelineno-0-788 name=__codelineno-0-788></a><span class=sd>        Returns the smallest size (H, W) of the image with actual size given</span>
 </span><span id=__span-0-789><a id=__codelineno-0-789 name=__codelineno-0-789></a><span class=sd>        as input, such that H and W are powers of 2.</span>
@@ -1592,7 +1592,7 @@
 </span><span id=__span-0-808><a id=__codelineno-0-808 name=__codelineno-0-808></a>        <span class=c1># TODO Needed for pad/crop odd sizes. Move to dataset?</span>
 </span><span id=__span-0-809><a id=__codelineno-0-809 name=__codelineno-0-809></a>        <span class=k>return</span> <span class=n>padded_size</span>
 </span><span id=__span-0-810><a id=__codelineno-0-810 name=__codelineno-0-810></a>
-</span><span id=__span-0-811><a id=__codelineno-0-811 name=__codelineno-0-811></a>    <span class=k>def</span> <span class=nf>get_latent_spatial_size</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>level_idx</span><span class=p>:</span> <span class=nb>int</span><span class=p>):</span>
+</span><span id=__span-0-811><a id=__codelineno-0-811 name=__codelineno-0-811></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_latent_spatial_size</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>level_idx</span><span class=p>:</span> <span class=nb>int</span><span class=p>):</span>
 </span><span id=__span-0-812><a id=__codelineno-0-812 name=__codelineno-0-812></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Level_idx: 0 is the bottommost layer, the highest resolution one.&quot;&quot;&quot;</span>
 </span><span id=__span-0-813><a id=__codelineno-0-813 name=__codelineno-0-813></a>        <span class=n>actual_downsampling</span> <span class=o>=</span> <span class=n>level_idx</span> <span class=o>+</span> <span class=mi>1</span>
 </span><span id=__span-0-814><a id=__codelineno-0-814 name=__codelineno-0-814></a>        <span class=n>dwnsc</span> <span class=o>=</span> <span class=mi>2</span><span class=o>**</span><span class=n>actual_downsampling</span>
@@ -1602,7 +1602,7 @@
 </span><span id=__span-0-818><a id=__codelineno-0-818 name=__codelineno-0-818></a>        <span class=k>assert</span> <span class=n>h</span> <span class=o>==</span> <span class=n>w</span>
 </span><span id=__span-0-819><a id=__codelineno-0-819 name=__codelineno-0-819></a>        <span class=k>return</span> <span class=n>h</span>
 </span><span id=__span-0-820><a id=__codelineno-0-820 name=__codelineno-0-820></a>
-</span><span id=__span-0-821><a id=__codelineno-0-821 name=__codelineno-0-821></a>    <span class=k>def</span> <span class=nf>get_top_prior_param_shape</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>n_imgs</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>1</span><span class=p>):</span>
+</span><span id=__span-0-821><a id=__codelineno-0-821 name=__codelineno-0-821></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_top_prior_param_shape</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>n_imgs</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>1</span><span class=p>):</span>
 </span><span id=__span-0-822><a id=__codelineno-0-822 name=__codelineno-0-822></a>
 </span><span id=__span-0-823><a id=__codelineno-0-823 name=__codelineno-0-823></a>        <span class=c1># Compute the total downscaling performed in the Encoder</span>
 </span><span id=__span-0-824><a id=__codelineno-0-824 name=__codelineno-0-824></a>        <span class=k>if</span> <span class=bp>self</span><span class=o>.</span><span class=n>multiscale_decoder_retain_spatial_dims</span> <span class=ow>is</span> <span class=kc>False</span><span class=p>:</span>
@@ -1629,7 +1629,7 @@
 <span class=normal><a href=#__codelineno-0-563>563</a></span>
 <span class=normal><a href=#__codelineno-0-564>564</a></span>
 <span class=normal><a href=#__codelineno-0-565>565</a></span>
-<span class=normal><a href=#__codelineno-0-566>566</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-558><a id=__codelineno-0-558 name=__codelineno-0-558></a><span class=k>def</span> <span class=nf>bottomup_pass</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>inp</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>]:</span>
+<span class=normal><a href=#__codelineno-0-566>566</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-558><a id=__codelineno-0-558 name=__codelineno-0-558></a><span class=k>def</span><span class=w> </span><span class=nf>bottomup_pass</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>inp</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>]:</span>
 </span><span id=__span-0-559><a id=__codelineno-0-559 name=__codelineno-0-559></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Wrapper of _bottomup_pass().&quot;&quot;&quot;</span>
 </span><span id=__span-0-560><a id=__codelineno-0-560 name=__codelineno-0-560></a>    <span class=c1># TODO Remove wrapper</span>
 </span><span id=__span-0-561><a id=__codelineno-0-561 name=__codelineno-0-561></a>    <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_bottomup_pass</span><span class=p>(</span>
@@ -1701,7 +1701,7 @@
 <span class=normal><a href=#__codelineno-0-382>382</a></span>
 <span class=normal><a href=#__codelineno-0-383>383</a></span>
 <span class=normal><a href=#__codelineno-0-384>384</a></span>
-<span class=normal><a href=#__codelineno-0-385>385</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-322><a id=__codelineno-0-322 name=__codelineno-0-322></a><span class=k>def</span> <span class=nf>create_bottom_up_layers</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>lowres_separate_branch</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-385>385</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-322><a id=__codelineno-0-322 name=__codelineno-0-322></a><span class=k>def</span><span class=w> </span><span class=nf>create_bottom_up_layers</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>lowres_separate_branch</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
 </span><span id=__span-0-323><a id=__codelineno-0-323 name=__codelineno-0-323></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a><span class=sd>    Method creates the stack of bottom-up layers of the Encoder.</span>
 </span><span id=__span-0-325><a id=__codelineno-0-325 name=__codelineno-0-325></a>
@@ -1798,7 +1798,7 @@
 <span class=normal><a href=#__codelineno-0-483>483</a></span>
 <span class=normal><a href=#__codelineno-0-484>484</a></span>
 <span class=normal><a href=#__codelineno-0-485>485</a></span>
-<span class=normal><a href=#__codelineno-0-486>486</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-453><a id=__codelineno-0-453 name=__codelineno-0-453></a><span class=k>def</span> <span class=nf>create_final_topdown_layer</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>upsample</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>Sequential</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-486>486</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-453><a id=__codelineno-0-453 name=__codelineno-0-453></a><span class=k>def</span><span class=w> </span><span class=nf>create_final_topdown_layer</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>upsample</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>Sequential</span><span class=p>:</span>
 </span><span id=__span-0-454><a id=__codelineno-0-454 name=__codelineno-0-454></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Create the final top-down layer of the Decoder.</span>
 </span><span id=__span-0-455><a id=__codelineno-0-455 name=__codelineno-0-455></a>
 </span><span id=__span-0-456><a id=__codelineno-0-456 name=__codelineno-0-456></a><span class=sd>    NOTE: In this layer, (optional) upsampling is performed by bilinear interpolation</span>
@@ -1882,7 +1882,7 @@
 <span class=normal><a href=#__codelineno-0-317>317</a></span>
 <span class=normal><a href=#__codelineno-0-318>318</a></span>
 <span class=normal><a href=#__codelineno-0-319>319</a></span>
-<span class=normal><a href=#__codelineno-0-320>320</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-270><a id=__codelineno-0-270 name=__codelineno-0-270></a><span class=k>def</span> <span class=nf>create_first_bottom_up</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-320>320</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-270><a id=__codelineno-0-270 name=__codelineno-0-270></a><span class=k>def</span><span class=w> </span><span class=nf>create_first_bottom_up</span><span class=p>(</span>
 </span><span id=__span-0-271><a id=__codelineno-0-271 name=__codelineno-0-271></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-272><a id=__codelineno-0-272 name=__codelineno-0-272></a>    <span class=n>init_stride</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-273><a id=__codelineno-0-273 name=__codelineno-0-273></a>    <span class=n>num_res_blocks</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>
@@ -1997,7 +1997,7 @@
 <span class=normal><a href=#__codelineno-0-448>448</a></span>
 <span class=normal><a href=#__codelineno-0-449>449</a></span>
 <span class=normal><a href=#__codelineno-0-450>450</a></span>
-<span class=normal><a href=#__codelineno-0-451>451</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-387><a id=__codelineno-0-387 name=__codelineno-0-387></a><span class=k>def</span> <span class=nf>create_top_down_layers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-451>451</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-387><a id=__codelineno-0-387 name=__codelineno-0-387></a><span class=k>def</span><span class=w> </span><span class=nf>create_top_down_layers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>nn</span><span class=o>.</span><span class=n>ModuleList</span><span class=p>:</span>
 </span><span id=__span-0-388><a id=__codelineno-0-388 name=__codelineno-0-388></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-389><a id=__codelineno-0-389 name=__codelineno-0-389></a><span class=sd>    Method creates the stack of top-down layers of the Decoder.</span>
 </span><span id=__span-0-390><a id=__codelineno-0-390 name=__codelineno-0-390></a>
@@ -2093,7 +2093,7 @@
 <span class=normal><a href=#__codelineno-0-780>780</a></span>
 <span class=normal><a href=#__codelineno-0-781>781</a></span>
 <span class=normal><a href=#__codelineno-0-782>782</a></span>
-<span class=normal><a href=#__codelineno-0-783>783</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-752><a id=__codelineno-0-752 name=__codelineno-0-752></a><span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>]]:</span>
+<span class=normal><a href=#__codelineno-0-783>783</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-752><a id=__codelineno-0-752 name=__codelineno-0-752></a><span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>]]:</span>
 </span><span id=__span-0-753><a id=__codelineno-0-753 name=__codelineno-0-753></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-754><a id=__codelineno-0-754 name=__codelineno-0-754></a><span class=sd>    Forward pass through the LVAE model.</span>
 </span><span id=__span-0-755><a id=__codelineno-0-755 name=__codelineno-0-755></a>
@@ -2133,7 +2133,7 @@
 <span class=normal><a href=#__codelineno-0-816>816</a></span>
 <span class=normal><a href=#__codelineno-0-817>817</a></span>
 <span class=normal><a href=#__codelineno-0-818>818</a></span>
-<span class=normal><a href=#__codelineno-0-819>819</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-811><a id=__codelineno-0-811 name=__codelineno-0-811></a><span class=k>def</span> <span class=nf>get_latent_spatial_size</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>level_idx</span><span class=p>:</span> <span class=nb>int</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-819>819</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-811><a id=__codelineno-0-811 name=__codelineno-0-811></a><span class=k>def</span><span class=w> </span><span class=nf>get_latent_spatial_size</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>level_idx</span><span class=p>:</span> <span class=nb>int</span><span class=p>):</span>
 </span><span id=__span-0-812><a id=__codelineno-0-812 name=__codelineno-0-812></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Level_idx: 0 is the bottommost layer, the highest resolution one.&quot;&quot;&quot;</span>
 </span><span id=__span-0-813><a id=__codelineno-0-813 name=__codelineno-0-813></a>    <span class=n>actual_downsampling</span> <span class=o>=</span> <span class=n>level_idx</span> <span class=o>+</span> <span class=mi>1</span>
 </span><span id=__span-0-814><a id=__codelineno-0-814 name=__codelineno-0-814></a>    <span class=n>dwnsc</span> <span class=o>=</span> <span class=mi>2</span><span class=o>**</span><span class=n>actual_downsampling</span>
@@ -2165,7 +2165,7 @@
 <span class=normal><a href=#__codelineno-0-806>806</a></span>
 <span class=normal><a href=#__codelineno-0-807>807</a></span>
 <span class=normal><a href=#__codelineno-0-808>808</a></span>
-<span class=normal><a href=#__codelineno-0-809>809</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-786><a id=__codelineno-0-786 name=__codelineno-0-786></a><span class=k>def</span> <span class=nf>get_padded_size</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>size</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-809>809</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-786><a id=__codelineno-0-786 name=__codelineno-0-786></a><span class=k>def</span><span class=w> </span><span class=nf>get_padded_size</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>size</span><span class=p>):</span>
 </span><span id=__span-0-787><a id=__codelineno-0-787 name=__codelineno-0-787></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-788><a id=__codelineno-0-788 name=__codelineno-0-788></a><span class=sd>    Returns the smallest size (H, W) of the image with actual size given</span>
 </span><span id=__span-0-789><a id=__codelineno-0-789 name=__codelineno-0-789></a><span class=sd>    as input, such that H and W are powers of 2.</span>
@@ -2328,7 +2328,7 @@
 <span class=normal><a href=#__codelineno-0-747>747</a></span>
 <span class=normal><a href=#__codelineno-0-748>748</a></span>
 <span class=normal><a href=#__codelineno-0-749>749</a></span>
-<span class=normal><a href=#__codelineno-0-750>750</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-611><a id=__codelineno-0-611 name=__codelineno-0-611></a><span class=k>def</span> <span class=nf>topdown_pass</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-750>750</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-611><a id=__codelineno-0-611 name=__codelineno-0-611></a><span class=k>def</span><span class=w> </span><span class=nf>topdown_pass</span><span class=p>(</span>
 </span><span id=__span-0-612><a id=__codelineno-0-612 name=__codelineno-0-612></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-613><a id=__codelineno-0-613 name=__codelineno-0-613></a>    <span class=n>bu_values</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=kc>None</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
 </span><span id=__span-0-614><a id=__codelineno-0-614 name=__codelineno-0-614></a>    <span class=n>n_img_prior</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>,</span> <span class=kc>None</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>

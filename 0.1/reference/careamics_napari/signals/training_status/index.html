@@ -8,7 +8,7 @@
 <span class=normal><a href=#__codelineno-0-98> 98</a></span>
 <span class=normal><a href=#__codelineno-0-99> 99</a></span>
 <span class=normal><a href=#__codelineno-0-100>100</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-91><a id=__codelineno-0-91 name=__codelineno-0-91></a><span class=nd>@dataclass</span>
-</span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a><span class=k>class</span> <span class=nc>TrainUpdate</span><span class=p>:</span>
+</span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a><span class=k>class</span><span class=w> </span><span class=nc>TrainUpdate</span><span class=p>:</span>
 </span><span id=__span-0-93><a id=__codelineno-0-93 name=__codelineno-0-93></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Update from the training worker.&quot;&quot;&quot;</span>
 </span><span id=__span-0-94><a id=__codelineno-0-94 name=__codelineno-0-94></a>
 </span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a>    <span class=nb>type</span><span class=p>:</span> <span class=n>TrainUpdateType</span>
@@ -48,7 +48,7 @@
 <span class=normal><a href=#__codelineno-0-66>66</a></span>
 <span class=normal><a href=#__codelineno-0-67>67</a></span>
 <span class=normal><a href=#__codelineno-0-68>68</a></span>
-<span class=normal><a href=#__codelineno-0-69>69</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-38><a id=__codelineno-0-38 name=__codelineno-0-38></a><span class=k>class</span> <span class=nc>TrainUpdateType</span><span class=p>(</span><span class=nb>str</span><span class=p>,</span> <span class=n>Enum</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-69>69</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-38><a id=__codelineno-0-38 name=__codelineno-0-38></a><span class=k>class</span><span class=w> </span><span class=nc>TrainUpdateType</span><span class=p>(</span><span class=nb>str</span><span class=p>,</span> <span class=n>Enum</span><span class=p>):</span>
 </span><span id=__span-0-39><a id=__codelineno-0-39 name=__codelineno-0-39></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Type of training update.&quot;&quot;&quot;</span>
 </span><span id=__span-0-40><a id=__codelineno-0-40 name=__codelineno-0-40></a>
 </span><span id=__span-0-41><a id=__codelineno-0-41 name=__codelineno-0-41></a>    <span class=n>MAX_EPOCH</span> <span class=o>=</span> <span class=s2>&quot;max_epochs&quot;</span>
@@ -96,7 +96,7 @@
 <span class=normal><a href=#__codelineno-0-85>85</a></span>
 <span class=normal><a href=#__codelineno-0-86>86</a></span>
 <span class=normal><a href=#__codelineno-0-87>87</a></span>
-<span class=normal><a href=#__codelineno-0-88>88</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a><span class=k>class</span> <span class=nc>TrainingState</span><span class=p>(</span><span class=n>IntEnum</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-88>88</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a><span class=k>class</span><span class=w> </span><span class=nc>TrainingState</span><span class=p>(</span><span class=n>IntEnum</span><span class=p>):</span>
 </span><span id=__span-0-73><a id=__codelineno-0-73 name=__codelineno-0-73></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Training state.&quot;&quot;&quot;</span>
 </span><span id=__span-0-74><a id=__codelineno-0-74 name=__codelineno-0-74></a>
 </span><span id=__span-0-75><a id=__codelineno-0-75 name=__codelineno-0-75></a>    <span class=n>IDLE</span> <span class=o>=</span> <span class=mi>0</span>
@@ -166,7 +166,7 @@
 <span class=normal><a href=#__codelineno-0-153>153</a></span>
 <span class=normal><a href=#__codelineno-0-154>154</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-103><a id=__codelineno-0-103 name=__codelineno-0-103></a><span class=nd>@evented</span>
 </span><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a><span class=nd>@dataclass</span>
-</span><span id=__span-0-105><a id=__codelineno-0-105 name=__codelineno-0-105></a><span class=k>class</span> <span class=nc>TrainingStatus</span><span class=p>:</span>
+</span><span id=__span-0-105><a id=__codelineno-0-105 name=__codelineno-0-105></a><span class=k>class</span><span class=w> </span><span class=nc>TrainingStatus</span><span class=p>:</span>
 </span><span id=__span-0-106><a id=__codelineno-0-106 name=__codelineno-0-106></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Status of the training thread.</span>
 </span><span id=__span-0-107><a id=__codelineno-0-107 name=__codelineno-0-107></a>
 </span><span id=__span-0-108><a id=__codelineno-0-108 name=__codelineno-0-108></a><span class=sd>    This dataclass is used to update the training UI with the current status and</span>
@@ -200,7 +200,7 @@
 </span><span id=__span-0-136><a id=__codelineno-0-136 name=__codelineno-0-136></a>    <span class=n>state</span><span class=p>:</span> <span class=n>TrainingState</span> <span class=o>=</span> <span class=n>TrainingState</span><span class=o>.</span><span class=n>IDLE</span>
 </span><span id=__span-0-137><a id=__codelineno-0-137 name=__codelineno-0-137></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Current state of the training process.&quot;&quot;&quot;</span>
 </span><span id=__span-0-138><a id=__codelineno-0-138 name=__codelineno-0-138></a>
-</span><span id=__span-0-139><a id=__codelineno-0-139 name=__codelineno-0-139></a>    <span class=k>def</span> <span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>TrainUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-139><a id=__codelineno-0-139 name=__codelineno-0-139></a>    <span class=k>def</span><span class=w> </span><span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>TrainUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-140><a id=__codelineno-0-140 name=__codelineno-0-140></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Update the status with the new values.</span>
 </span><span id=__span-0-141><a id=__codelineno-0-141 name=__codelineno-0-141></a>
 </span><span id=__span-0-142><a id=__codelineno-0-142 name=__codelineno-0-142></a><span class=sd>        Exceptions, debugging messages and CAREamist instances are ignored.</span>
@@ -231,7 +231,7 @@
 <span class=normal><a href=#__codelineno-0-151>151</a></span>
 <span class=normal><a href=#__codelineno-0-152>152</a></span>
 <span class=normal><a href=#__codelineno-0-153>153</a></span>
-<span class=normal><a href=#__codelineno-0-154>154</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-139><a id=__codelineno-0-139 name=__codelineno-0-139></a><span class=k>def</span> <span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>TrainUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-154>154</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-139><a id=__codelineno-0-139 name=__codelineno-0-139></a><span class=k>def</span><span class=w> </span><span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>TrainUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-140><a id=__codelineno-0-140 name=__codelineno-0-140></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Update the status with the new values.</span>
 </span><span id=__span-0-141><a id=__codelineno-0-141 name=__codelineno-0-141></a>
 </span><span id=__span-0-142><a id=__codelineno-0-142 name=__codelineno-0-142></a><span class=sd>    Exceptions, debugging messages and CAREamist instances are ignored.</span>
@@ -269,7 +269,7 @@
 <span class=normal><a href=#__codelineno-0-32>32</a></span>
 <span class=normal><a href=#__codelineno-0-33>33</a></span>
 <span class=normal><a href=#__codelineno-0-34>34</a></span>
-<span class=normal><a href=#__codelineno-0-35>35</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-13><a id=__codelineno-0-13 name=__codelineno-0-13></a><span class=k>class</span> <span class=nc>TrainingStatusSignalGroup</span><span class=p>(</span><span class=n>SignalGroup</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-35>35</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-13><a id=__codelineno-0-13 name=__codelineno-0-13></a><span class=k>class</span><span class=w> </span><span class=nc>TrainingStatusSignalGroup</span><span class=p>(</span><span class=n>SignalGroup</span><span class=p>):</span>
 </span><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Signal group for the training status dataclass.&quot;&quot;&quot;</span>
 </span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a>
 </span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a>    <span class=n>max_epochs</span><span class=p>:</span> <span class=n>SignalInstance</span>

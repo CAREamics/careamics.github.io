@@ -77,10 +77,10 @@
 <span class=normal><a href=#__codelineno-0-87>87</a></span>
 <span class=normal><a href=#__codelineno-0-88>88</a></span>
 <span class=normal><a href=#__codelineno-0-89>89</a></span>
-<span class=normal><a href=#__codelineno-0-90>90</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-11><a id=__codelineno-0-11 name=__codelineno-0-11></a><span class=k>class</span> <span class=nc>ProgressBarCallback</span><span class=p>(</span><span class=n>TQDMProgressBar</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-90>90</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-11><a id=__codelineno-0-11 name=__codelineno-0-11></a><span class=k>class</span><span class=w> </span><span class=nc>ProgressBarCallback</span><span class=p>(</span><span class=n>TQDMProgressBar</span><span class=p>):</span>
 </span><span id=__span-0-12><a id=__codelineno-0-12 name=__codelineno-0-12></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Progress bar for training and validation steps.&quot;&quot;&quot;</span>
 </span><span id=__span-0-13><a id=__codelineno-0-13 name=__codelineno-0-13></a>
-</span><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a>    <span class=k>def</span> <span class=nf>init_train_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
+</span><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a>    <span class=k>def</span><span class=w> </span><span class=nf>init_train_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
 </span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Override this to customize the tqdm bar for training.</span>
 </span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a><span class=sd>        Returns</span>
@@ -99,7 +99,7 @@
 </span><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a>        <span class=p>)</span>
 </span><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31></a>        <span class=k>return</span> <span class=n>bar</span>
 </span><span id=__span-0-32><a id=__codelineno-0-32 name=__codelineno-0-32></a>
-</span><span id=__span-0-33><a id=__codelineno-0-33 name=__codelineno-0-33></a>    <span class=k>def</span> <span class=nf>init_validation_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
+</span><span id=__span-0-33><a id=__codelineno-0-33 name=__codelineno-0-33></a>    <span class=k>def</span><span class=w> </span><span class=nf>init_validation_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
 </span><span id=__span-0-34><a id=__codelineno-0-34 name=__codelineno-0-34></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Override this to customize the tqdm bar for validation.</span>
 </span><span id=__span-0-35><a id=__codelineno-0-35 name=__codelineno-0-35></a>
 </span><span id=__span-0-36><a id=__codelineno-0-36 name=__codelineno-0-36></a><span class=sd>        Returns</span>
@@ -119,7 +119,7 @@
 </span><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a>        <span class=p>)</span>
 </span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a>        <span class=k>return</span> <span class=n>bar</span>
 </span><span id=__span-0-52><a id=__codelineno-0-52 name=__codelineno-0-52></a>
-</span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a>    <span class=k>def</span> <span class=nf>init_test_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
+</span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a>    <span class=k>def</span><span class=w> </span><span class=nf>init_test_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
 </span><span id=__span-0-54><a id=__codelineno-0-54 name=__codelineno-0-54></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Override this to customize the tqdm bar for testing.</span>
 </span><span id=__span-0-55><a id=__codelineno-0-55 name=__codelineno-0-55></a>
 </span><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a><span class=sd>        Returns</span>
@@ -138,7 +138,7 @@
 </span><span id=__span-0-69><a id=__codelineno-0-69 name=__codelineno-0-69></a>        <span class=p>)</span>
 </span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70></a>        <span class=k>return</span> <span class=n>bar</span>
 </span><span id=__span-0-71><a id=__codelineno-0-71 name=__codelineno-0-71></a>
-</span><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a>    <span class=k>def</span> <span class=nf>get_metrics</span><span class=p>(</span>
+</span><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_metrics</span><span class=p>(</span>
 </span><span id=__span-0-73><a id=__codelineno-0-73 name=__codelineno-0-73></a>        <span class=bp>self</span><span class=p>,</span> <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span> <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span>
 </span><span id=__span-0-74><a id=__codelineno-0-74 name=__codelineno-0-74></a>    <span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Union</span><span class=p>[</span><span class=nb>int</span><span class=p>,</span> <span class=nb>str</span><span class=p>,</span> <span class=nb>float</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=nb>float</span><span class=p>]]]:</span>
 </span><span id=__span-0-75><a id=__codelineno-0-75 name=__codelineno-0-75></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Override this to customize the metrics displayed in the progress bar.</span>
@@ -175,7 +175,7 @@
 <span class=normal><a href=#__codelineno-0-87>87</a></span>
 <span class=normal><a href=#__codelineno-0-88>88</a></span>
 <span class=normal><a href=#__codelineno-0-89>89</a></span>
-<span class=normal><a href=#__codelineno-0-90>90</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a><span class=k>def</span> <span class=nf>get_metrics</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-90>90</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a><span class=k>def</span><span class=w> </span><span class=nf>get_metrics</span><span class=p>(</span>
 </span><span id=__span-0-73><a id=__codelineno-0-73 name=__codelineno-0-73></a>    <span class=bp>self</span><span class=p>,</span> <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span> <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span>
 </span><span id=__span-0-74><a id=__codelineno-0-74 name=__codelineno-0-74></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Union</span><span class=p>[</span><span class=nb>int</span><span class=p>,</span> <span class=nb>str</span><span class=p>,</span> <span class=nb>float</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=nb>float</span><span class=p>]]]:</span>
 </span><span id=__span-0-75><a id=__codelineno-0-75 name=__codelineno-0-75></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Override this to customize the metrics displayed in the progress bar.</span>
@@ -211,7 +211,7 @@
 <span class=normal><a href=#__codelineno-0-67>67</a></span>
 <span class=normal><a href=#__codelineno-0-68>68</a></span>
 <span class=normal><a href=#__codelineno-0-69>69</a></span>
-<span class=normal><a href=#__codelineno-0-70>70</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a><span class=k>def</span> <span class=nf>init_test_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-70>70</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a><span class=k>def</span><span class=w> </span><span class=nf>init_test_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
 </span><span id=__span-0-54><a id=__codelineno-0-54 name=__codelineno-0-54></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Override this to customize the tqdm bar for testing.</span>
 </span><span id=__span-0-55><a id=__codelineno-0-55 name=__codelineno-0-55></a>
 </span><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a><span class=sd>    Returns</span>
@@ -246,7 +246,7 @@
 <span class=normal><a href=#__codelineno-0-28>28</a></span>
 <span class=normal><a href=#__codelineno-0-29>29</a></span>
 <span class=normal><a href=#__codelineno-0-30>30</a></span>
-<span class=normal><a href=#__codelineno-0-31>31</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=k>def</span> <span class=nf>init_train_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-31>31</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=k>def</span><span class=w> </span><span class=nf>init_train_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
 </span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Override this to customize the tqdm bar for training.</span>
 </span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a><span class=sd>    Returns</span>
@@ -282,7 +282,7 @@
 <span class=normal><a href=#__codelineno-0-48>48</a></span>
 <span class=normal><a href=#__codelineno-0-49>49</a></span>
 <span class=normal><a href=#__codelineno-0-50>50</a></span>
-<span class=normal><a href=#__codelineno-0-51>51</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-33><a id=__codelineno-0-33 name=__codelineno-0-33></a><span class=k>def</span> <span class=nf>init_validation_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-51>51</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-33><a id=__codelineno-0-33 name=__codelineno-0-33></a><span class=k>def</span><span class=w> </span><span class=nf>init_validation_tqdm</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>tqdm</span><span class=p>:</span>
 </span><span id=__span-0-34><a id=__codelineno-0-34 name=__codelineno-0-34></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Override this to customize the tqdm bar for validation.</span>
 </span><span id=__span-0-35><a id=__codelineno-0-35 name=__codelineno-0-35></a>
 </span><span id=__span-0-36><a id=__codelineno-0-36 name=__codelineno-0-36></a><span class=sd>    Returns</span>

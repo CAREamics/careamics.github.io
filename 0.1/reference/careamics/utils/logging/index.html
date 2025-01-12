@@ -248,7 +248,7 @@
 <span class=normal><a href=#__codelineno-0-320>320</a></span>
 <span class=normal><a href=#__codelineno-0-321>321</a></span>
 <span class=normal><a href=#__codelineno-0-322>322</a></span>
-<span class=normal><a href=#__codelineno-0-323>323</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-74><a id=__codelineno-0-74 name=__codelineno-0-74></a><span class=k>class</span> <span class=nc>ProgressBar</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-323>323</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-74><a id=__codelineno-0-74 name=__codelineno-0-74></a><span class=k>class</span><span class=w> </span><span class=nc>ProgressBar</span><span class=p>:</span>
 </span><span id=__span-0-75><a id=__codelineno-0-75 name=__codelineno-0-75></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-76><a id=__codelineno-0-76 name=__codelineno-0-76></a><span class=sd>    Keras style progress bar.</span>
 </span><span id=__span-0-77><a id=__codelineno-0-77 name=__codelineno-0-77></a>
@@ -272,7 +272,7 @@
 </span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a><span class=sd>        Mode, one of &quot;train&quot;, &quot;val&quot;, or &quot;predict&quot;, by default &quot;train&quot;.</span>
 </span><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97></a>
-</span><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-99><a id=__codelineno-0-99 name=__codelineno-0-99></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-100><a id=__codelineno-0-100 name=__codelineno-0-100></a>        <span class=n>max_value</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>int</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
 </span><span id=__span-0-101><a id=__codelineno-0-101 name=__codelineno-0-101></a>        <span class=n>epoch</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>int</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
@@ -335,7 +335,7 @@
 </span><span id=__span-0-158><a id=__codelineno-0-158 name=__codelineno-0-158></a>        <span class=k>elif</span> <span class=n>mode</span> <span class=o>==</span> <span class=s2>&quot;predict&quot;</span><span class=p>:</span>
 </span><span id=__span-0-159><a id=__codelineno-0-159 name=__codelineno-0-159></a>            <span class=bp>self</span><span class=o>.</span><span class=n>message</span> <span class=o>=</span> <span class=s2>&quot;Denoising&quot;</span>
 </span><span id=__span-0-160><a id=__codelineno-0-160 name=__codelineno-0-160></a>
-</span><span id=__span-0-161><a id=__codelineno-0-161 name=__codelineno-0-161></a>    <span class=k>def</span> <span class=nf>update</span><span class=p>(</span>
+</span><span id=__span-0-161><a id=__codelineno-0-161 name=__codelineno-0-161></a>    <span class=k>def</span><span class=w> </span><span class=nf>update</span><span class=p>(</span>
 </span><span id=__span-0-162><a id=__codelineno-0-162 name=__codelineno-0-162></a>        <span class=bp>self</span><span class=p>,</span> <span class=n>current_step</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>batch_size</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>list</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span>
 </span><span id=__span-0-163><a id=__codelineno-0-163 name=__codelineno-0-163></a>    <span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-164><a id=__codelineno-0-164 name=__codelineno-0-164></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
@@ -441,7 +441,7 @@
 </span><span id=__span-0-264><a id=__codelineno-0-264 name=__codelineno-0-264></a>
 </span><span id=__span-0-265><a id=__codelineno-0-265 name=__codelineno-0-265></a>        <span class=bp>self</span><span class=o>.</span><span class=n>_last_update</span> <span class=o>=</span> <span class=n>now</span>
 </span><span id=__span-0-266><a id=__codelineno-0-266 name=__codelineno-0-266></a>
-</span><span id=__span-0-267><a id=__codelineno-0-267 name=__codelineno-0-267></a>    <span class=k>def</span> <span class=nf>add</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>n</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>list</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-267><a id=__codelineno-0-267 name=__codelineno-0-267></a>    <span class=k>def</span><span class=w> </span><span class=nf>add</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>n</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>list</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-268><a id=__codelineno-0-268 name=__codelineno-0-268></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-269><a id=__codelineno-0-269 name=__codelineno-0-269></a><span class=sd>        Update the progress bar by n steps.</span>
 </span><span id=__span-0-270><a id=__codelineno-0-270 name=__codelineno-0-270></a>
@@ -454,7 +454,7 @@
 </span><span id=__span-0-277><a id=__codelineno-0-277 name=__codelineno-0-277></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-278><a id=__codelineno-0-278 name=__codelineno-0-278></a>        <span class=bp>self</span><span class=o>.</span><span class=n>update</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>_seen_so_far</span> <span class=o>+</span> <span class=n>n</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=n>values</span><span class=o>=</span><span class=n>values</span><span class=p>)</span>
 </span><span id=__span-0-279><a id=__codelineno-0-279 name=__codelineno-0-279></a>
-</span><span id=__span-0-280><a id=__codelineno-0-280 name=__codelineno-0-280></a>    <span class=k>def</span> <span class=nf>spinning_cursor</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Generator</span><span class=p>:</span>
+</span><span id=__span-0-280><a id=__codelineno-0-280 name=__codelineno-0-280></a>    <span class=k>def</span><span class=w> </span><span class=nf>spinning_cursor</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Generator</span><span class=p>:</span>
 </span><span id=__span-0-281><a id=__codelineno-0-281 name=__codelineno-0-281></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-282><a id=__codelineno-0-282 name=__codelineno-0-282></a><span class=sd>        Generate a spinning cursor animation.</span>
 </span><span id=__span-0-283><a id=__codelineno-0-283 name=__codelineno-0-283></a>
@@ -559,7 +559,7 @@
 <span class=normal><a href=#__codelineno-0-156>156</a></span>
 <span class=normal><a href=#__codelineno-0-157>157</a></span>
 <span class=normal><a href=#__codelineno-0-158>158</a></span>
-<span class=normal><a href=#__codelineno-0-159>159</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-159>159</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-99><a id=__codelineno-0-99 name=__codelineno-0-99></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-100><a id=__codelineno-0-100 name=__codelineno-0-100></a>    <span class=n>max_value</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>int</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
 </span><span id=__span-0-101><a id=__codelineno-0-101 name=__codelineno-0-101></a>    <span class=n>epoch</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>int</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
@@ -632,7 +632,7 @@
 <span class=normal><a href=#__codelineno-0-275>275</a></span>
 <span class=normal><a href=#__codelineno-0-276>276</a></span>
 <span class=normal><a href=#__codelineno-0-277>277</a></span>
-<span class=normal><a href=#__codelineno-0-278>278</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-267><a id=__codelineno-0-267 name=__codelineno-0-267></a><span class=k>def</span> <span class=nf>add</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>n</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>list</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-278>278</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-267><a id=__codelineno-0-267 name=__codelineno-0-267></a><span class=k>def</span><span class=w> </span><span class=nf>add</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>n</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>list</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-268><a id=__codelineno-0-268 name=__codelineno-0-268></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-269><a id=__codelineno-0-269 name=__codelineno-0-269></a><span class=sd>    Update the progress bar by n steps.</span>
 </span><span id=__span-0-270><a id=__codelineno-0-270 name=__codelineno-0-270></a>
@@ -687,7 +687,7 @@
 <span class=normal><a href=#__codelineno-0-320>320</a></span>
 <span class=normal><a href=#__codelineno-0-321>321</a></span>
 <span class=normal><a href=#__codelineno-0-322>322</a></span>
-<span class=normal><a href=#__codelineno-0-323>323</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-280><a id=__codelineno-0-280 name=__codelineno-0-280></a><span class=k>def</span> <span class=nf>spinning_cursor</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Generator</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-323>323</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-280><a id=__codelineno-0-280 name=__codelineno-0-280></a><span class=k>def</span><span class=w> </span><span class=nf>spinning_cursor</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Generator</span><span class=p>:</span>
 </span><span id=__span-0-281><a id=__codelineno-0-281 name=__codelineno-0-281></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-282><a id=__codelineno-0-282 name=__codelineno-0-282></a><span class=sd>    Generate a spinning cursor animation.</span>
 </span><span id=__span-0-283><a id=__codelineno-0-283 name=__codelineno-0-283></a>
@@ -835,7 +835,7 @@
 <span class=normal><a href=#__codelineno-0-262>262</a></span>
 <span class=normal><a href=#__codelineno-0-263>263</a></span>
 <span class=normal><a href=#__codelineno-0-264>264</a></span>
-<span class=normal><a href=#__codelineno-0-265>265</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-161><a id=__codelineno-0-161 name=__codelineno-0-161></a><span class=k>def</span> <span class=nf>update</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-265>265</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-161><a id=__codelineno-0-161 name=__codelineno-0-161></a><span class=k>def</span><span class=w> </span><span class=nf>update</span><span class=p>(</span>
 </span><span id=__span-0-162><a id=__codelineno-0-162 name=__codelineno-0-162></a>    <span class=bp>self</span><span class=p>,</span> <span class=n>current_step</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>batch_size</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>list</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span>
 </span><span id=__span-0-163><a id=__codelineno-0-163 name=__codelineno-0-163></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-164><a id=__codelineno-0-164 name=__codelineno-0-164></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
@@ -994,7 +994,7 @@
 <span class=normal><a href=#__codelineno-0-68>68</a></span>
 <span class=normal><a href=#__codelineno-0-69>69</a></span>
 <span class=normal><a href=#__codelineno-0-70>70</a></span>
-<span class=normal><a href=#__codelineno-0-71>71</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a><span class=k>def</span> <span class=nf>get_logger</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-71>71</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a><span class=k>def</span><span class=w> </span><span class=nf>get_logger</span><span class=p>(</span>
 </span><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18></a>    <span class=n>name</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
 </span><span id=__span-0-19><a id=__codelineno-0-19 name=__codelineno-0-19></a>    <span class=n>log_level</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=n>logging</span><span class=o>.</span><span class=n>INFO</span><span class=p>,</span>
 </span><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20></a>    <span class=n>log_path</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Path</span><span class=p>]]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>

@@ -14,7 +14,7 @@
 <span class=normal><a href=#__codelineno-0-63>63</a></span>
 <span class=normal><a href=#__codelineno-0-64>64</a></span>
 <span class=normal><a href=#__codelineno-0-65>65</a></span>
-<span class=normal><a href=#__codelineno-0-66>66</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a><span class=k>class</span> <span class=nc>PredictionState</span><span class=p>(</span><span class=n>IntEnum</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-66>66</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a><span class=k>class</span><span class=w> </span><span class=nc>PredictionState</span><span class=p>(</span><span class=n>IntEnum</span><span class=p>):</span>
 </span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Prediction state.&quot;&quot;&quot;</span>
 </span><span id=__span-0-52><a id=__codelineno-0-52 name=__codelineno-0-52></a>
 </span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a>    <span class=n>IDLE</span> <span class=o>=</span> <span class=mi>0</span>
@@ -72,7 +72,7 @@
 <span class=normal><a href=#__codelineno-0-118>118</a></span>
 <span class=normal><a href=#__codelineno-0-119>119</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-80><a id=__codelineno-0-80 name=__codelineno-0-80></a><span class=nd>@evented</span>
 </span><span id=__span-0-81><a id=__codelineno-0-81 name=__codelineno-0-81></a><span class=nd>@dataclass</span>
-</span><span id=__span-0-82><a id=__codelineno-0-82 name=__codelineno-0-82></a><span class=k>class</span> <span class=nc>PredictionStatus</span><span class=p>:</span>
+</span><span id=__span-0-82><a id=__codelineno-0-82 name=__codelineno-0-82></a><span class=k>class</span><span class=w> </span><span class=nc>PredictionStatus</span><span class=p>:</span>
 </span><span id=__span-0-83><a id=__codelineno-0-83 name=__codelineno-0-83></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Status of the prediction thread.</span>
 </span><span id=__span-0-84><a id=__codelineno-0-84 name=__codelineno-0-84></a>
 </span><span id=__span-0-85><a id=__codelineno-0-85 name=__codelineno-0-85></a><span class=sd>    This dataclass is used to update the prediction UI with the current status and</span>
@@ -94,7 +94,7 @@
 </span><span id=__span-0-101><a id=__codelineno-0-101 name=__codelineno-0-101></a>    <span class=n>state</span><span class=p>:</span> <span class=n>PredictionState</span> <span class=o>=</span> <span class=n>PredictionState</span><span class=o>.</span><span class=n>IDLE</span>
 </span><span id=__span-0-102><a id=__codelineno-0-102 name=__codelineno-0-102></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Current state of the prediction process.&quot;&quot;&quot;</span>
 </span><span id=__span-0-103><a id=__codelineno-0-103 name=__codelineno-0-103></a>
-</span><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a>    <span class=k>def</span> <span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>PredictionUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a>    <span class=k>def</span><span class=w> </span><span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>PredictionUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-105><a id=__codelineno-0-105 name=__codelineno-0-105></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Update the status with the new values.</span>
 </span><span id=__span-0-106><a id=__codelineno-0-106 name=__codelineno-0-106></a>
 </span><span id=__span-0-107><a id=__codelineno-0-107 name=__codelineno-0-107></a><span class=sd>        Exceptions, debugging messages and samples are ignored.</span>
@@ -125,7 +125,7 @@
 <span class=normal><a href=#__codelineno-0-116>116</a></span>
 <span class=normal><a href=#__codelineno-0-117>117</a></span>
 <span class=normal><a href=#__codelineno-0-118>118</a></span>
-<span class=normal><a href=#__codelineno-0-119>119</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a><span class=k>def</span> <span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>PredictionUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-119>119</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a><span class=k>def</span><span class=w> </span><span class=nf>update</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>new_update</span><span class=p>:</span> <span class=n>PredictionUpdate</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-105><a id=__codelineno-0-105 name=__codelineno-0-105></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Update the status with the new values.</span>
 </span><span id=__span-0-106><a id=__codelineno-0-106 name=__codelineno-0-106></a>
 </span><span id=__span-0-107><a id=__codelineno-0-107 name=__codelineno-0-107></a><span class=sd>    Exceptions, debugging messages and samples are ignored.</span>
@@ -151,7 +151,7 @@
 <span class=normal><a href=#__codelineno-0-22>22</a></span>
 <span class=normal><a href=#__codelineno-0-23>23</a></span>
 <span class=normal><a href=#__codelineno-0-24>24</a></span>
-<span class=normal><a href=#__codelineno-0-25>25</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a><span class=k>class</span> <span class=nc>PredictionStatusSignalGroup</span><span class=p>(</span><span class=n>SignalGroup</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-25>25</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a><span class=k>class</span><span class=w> </span><span class=nc>PredictionStatusSignalGroup</span><span class=p>(</span><span class=n>SignalGroup</span><span class=p>):</span>
 </span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Signal group for the prediction status dataclass.&quot;&quot;&quot;</span>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a>
 </span><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18></a>    <span class=n>max_samples</span><span class=p>:</span> <span class=n>SignalInstance</span>
@@ -171,7 +171,7 @@
 <span class=normal><a href=#__codelineno-0-75>75</a></span>
 <span class=normal><a href=#__codelineno-0-76>76</a></span>
 <span class=normal><a href=#__codelineno-0-77>77</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-69><a id=__codelineno-0-69 name=__codelineno-0-69></a><span class=nd>@dataclass</span>
-</span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70></a><span class=k>class</span> <span class=nc>PredictionUpdate</span><span class=p>:</span>
+</span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70></a><span class=k>class</span><span class=w> </span><span class=nc>PredictionUpdate</span><span class=p>:</span>
 </span><span id=__span-0-71><a id=__codelineno-0-71 name=__codelineno-0-71></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Update from the prediction worker.&quot;&quot;&quot;</span>
 </span><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a>
 </span><span id=__span-0-73><a id=__codelineno-0-73 name=__codelineno-0-73></a>    <span class=nb>type</span><span class=p>:</span> <span class=n>PredictionUpdateType</span>
@@ -198,7 +198,7 @@
 <span class=normal><a href=#__codelineno-0-44>44</a></span>
 <span class=normal><a href=#__codelineno-0-45>45</a></span>
 <span class=normal><a href=#__codelineno-0-46>46</a></span>
-<span class=normal><a href=#__codelineno-0-47>47</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28></a><span class=k>class</span> <span class=nc>PredictionUpdateType</span><span class=p>(</span><span class=nb>str</span><span class=p>,</span> <span class=n>Enum</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-47>47</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28></a><span class=k>class</span><span class=w> </span><span class=nc>PredictionUpdateType</span><span class=p>(</span><span class=nb>str</span><span class=p>,</span> <span class=n>Enum</span><span class=p>):</span>
 </span><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Type of prediction update.&quot;&quot;&quot;</span>
 </span><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a>
 </span><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31></a>    <span class=n>MAX_SAMPLES</span> <span class=o>=</span> <span class=s2>&quot;max_samples&quot;</span>

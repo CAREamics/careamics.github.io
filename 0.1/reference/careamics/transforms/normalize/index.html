@@ -86,7 +86,7 @@
 <span class=normal><a href=#__codelineno-0-251>251</a></span>
 <span class=normal><a href=#__codelineno-0-252>252</a></span>
 <span class=normal><a href=#__codelineno-0-253>253</a></span>
-<span class=normal><a href=#__codelineno-0-254>254</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-166><a id=__codelineno-0-166 name=__codelineno-0-166></a><span class=k>class</span> <span class=nc>Denormalize</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-254>254</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-166><a id=__codelineno-0-166 name=__codelineno-0-166></a><span class=k>class</span><span class=w> </span><span class=nc>Denormalize</span><span class=p>:</span>
 </span><span id=__span-0-167><a id=__codelineno-0-167 name=__codelineno-0-167></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-168><a id=__codelineno-0-168 name=__codelineno-0-168></a><span class=sd>    Denormalize an image.</span>
 </span><span id=__span-0-169><a id=__codelineno-0-169 name=__codelineno-0-169></a>
@@ -106,7 +106,7 @@
 </span><span id=__span-0-183><a id=__codelineno-0-183 name=__codelineno-0-183></a>
 </span><span id=__span-0-184><a id=__codelineno-0-184 name=__codelineno-0-184></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-185><a id=__codelineno-0-185 name=__codelineno-0-185></a>
-</span><span id=__span-0-186><a id=__codelineno-0-186 name=__codelineno-0-186></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-186><a id=__codelineno-0-186 name=__codelineno-0-186></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-187><a id=__codelineno-0-187 name=__codelineno-0-187></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-188><a id=__codelineno-0-188 name=__codelineno-0-188></a>        <span class=n>image_means</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span>
 </span><span id=__span-0-189><a id=__codelineno-0-189 name=__codelineno-0-189></a>        <span class=n>image_stds</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span>
@@ -125,7 +125,7 @@
 </span><span id=__span-0-202><a id=__codelineno-0-202 name=__codelineno-0-202></a>
 </span><span id=__span-0-203><a id=__codelineno-0-203 name=__codelineno-0-203></a>        <span class=bp>self</span><span class=o>.</span><span class=n>eps</span> <span class=o>=</span> <span class=mf>1e-6</span>
 </span><span id=__span-0-204><a id=__codelineno-0-204 name=__codelineno-0-204></a>
-</span><span id=__span-0-205><a id=__codelineno-0-205 name=__codelineno-0-205></a>    <span class=k>def</span> <span class=fm>__call__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>patch</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
+</span><span id=__span-0-205><a id=__codelineno-0-205 name=__codelineno-0-205></a>    <span class=k>def</span><span class=w> </span><span class=fm>__call__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>patch</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
 </span><span id=__span-0-206><a id=__codelineno-0-206 name=__codelineno-0-206></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Reverse the normalization operation for a batch of patches.</span>
 </span><span id=__span-0-207><a id=__codelineno-0-207 name=__codelineno-0-207></a>
 </span><span id=__span-0-208><a id=__codelineno-0-208 name=__codelineno-0-208></a><span class=sd>        Parameters</span>
@@ -156,7 +156,7 @@
 </span><span id=__span-0-233><a id=__codelineno-0-233 name=__codelineno-0-233></a>
 </span><span id=__span-0-234><a id=__codelineno-0-234 name=__codelineno-0-234></a>        <span class=k>return</span> <span class=n>denorm_array</span><span class=o>.</span><span class=n>astype</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>float32</span><span class=p>)</span>
 </span><span id=__span-0-235><a id=__codelineno-0-235 name=__codelineno-0-235></a>
-</span><span id=__span-0-236><a id=__codelineno-0-236 name=__codelineno-0-236></a>    <span class=k>def</span> <span class=nf>_apply</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>array</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span> <span class=n>mean</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span> <span class=n>std</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
+</span><span id=__span-0-236><a id=__codelineno-0-236 name=__codelineno-0-236></a>    <span class=k>def</span><span class=w> </span><span class=nf>_apply</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>array</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span> <span class=n>mean</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span> <span class=n>std</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
 </span><span id=__span-0-237><a id=__codelineno-0-237 name=__codelineno-0-237></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-238><a id=__codelineno-0-238 name=__codelineno-0-238></a><span class=sd>        Apply the transform to the image.</span>
 </span><span id=__span-0-239><a id=__codelineno-0-239 name=__codelineno-0-239></a>
@@ -204,7 +204,7 @@
 <span class=normal><a href=#__codelineno-0-231>231</a></span>
 <span class=normal><a href=#__codelineno-0-232>232</a></span>
 <span class=normal><a href=#__codelineno-0-233>233</a></span>
-<span class=normal><a href=#__codelineno-0-234>234</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-205><a id=__codelineno-0-205 name=__codelineno-0-205></a><span class=k>def</span> <span class=fm>__call__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>patch</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-234>234</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-205><a id=__codelineno-0-205 name=__codelineno-0-205></a><span class=k>def</span><span class=w> </span><span class=fm>__call__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>patch</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
 </span><span id=__span-0-206><a id=__codelineno-0-206 name=__codelineno-0-206></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Reverse the normalization operation for a batch of patches.</span>
 </span><span id=__span-0-207><a id=__codelineno-0-207 name=__codelineno-0-207></a>
 </span><span id=__span-0-208><a id=__codelineno-0-208 name=__codelineno-0-208></a><span class=sd>    Parameters</span>
@@ -251,7 +251,7 @@
 <span class=normal><a href=#__codelineno-0-200>200</a></span>
 <span class=normal><a href=#__codelineno-0-201>201</a></span>
 <span class=normal><a href=#__codelineno-0-202>202</a></span>
-<span class=normal><a href=#__codelineno-0-203>203</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-186><a id=__codelineno-0-186 name=__codelineno-0-186></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-203>203</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-186><a id=__codelineno-0-186 name=__codelineno-0-186></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-187><a id=__codelineno-0-187 name=__codelineno-0-187></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-188><a id=__codelineno-0-188 name=__codelineno-0-188></a>    <span class=n>image_means</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span>
 </span><span id=__span-0-189><a id=__codelineno-0-189 name=__codelineno-0-189></a>    <span class=n>image_stds</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span>
@@ -400,7 +400,7 @@
 <span class=normal><a href=#__codelineno-0-160>160</a></span>
 <span class=normal><a href=#__codelineno-0-161>161</a></span>
 <span class=normal><a href=#__codelineno-0-162>162</a></span>
-<span class=normal><a href=#__codelineno-0-163>163</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-32><a id=__codelineno-0-32 name=__codelineno-0-32></a><span class=k>class</span> <span class=nc>Normalize</span><span class=p>(</span><span class=n>Transform</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-163>163</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-32><a id=__codelineno-0-32 name=__codelineno-0-32></a><span class=k>class</span><span class=w> </span><span class=nc>Normalize</span><span class=p>(</span><span class=n>Transform</span><span class=p>):</span>
 </span><span id=__span-0-33><a id=__codelineno-0-33 name=__codelineno-0-33></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-34><a id=__codelineno-0-34 name=__codelineno-0-34></a><span class=sd>    Normalize an image or image patch.</span>
 </span><span id=__span-0-35><a id=__codelineno-0-35 name=__codelineno-0-35></a>
@@ -433,7 +433,7 @@
 </span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a><span class=sd>        Target standard deviation value per channel, by default None.</span>
 </span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a>
-</span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-67><a id=__codelineno-0-67 name=__codelineno-0-67></a>        <span class=n>image_means</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span>
 </span><span id=__span-0-68><a id=__codelineno-0-68 name=__codelineno-0-68></a>        <span class=n>image_stds</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span>
@@ -460,7 +460,7 @@
 </span><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a>
 </span><span id=__span-0-90><a id=__codelineno-0-90 name=__codelineno-0-90></a>        <span class=bp>self</span><span class=o>.</span><span class=n>eps</span> <span class=o>=</span> <span class=mf>1e-6</span>
 </span><span id=__span-0-91><a id=__codelineno-0-91 name=__codelineno-0-91></a>
-</span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a>    <span class=k>def</span> <span class=fm>__call__</span><span class=p>(</span>
+</span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a>    <span class=k>def</span><span class=w> </span><span class=fm>__call__</span><span class=p>(</span>
 </span><span id=__span-0-93><a id=__codelineno-0-93 name=__codelineno-0-93></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-94><a id=__codelineno-0-94 name=__codelineno-0-94></a>        <span class=n>patch</span><span class=p>:</span> <span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span>
 </span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a>        <span class=n>target</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>NDArray</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
@@ -513,7 +513,7 @@
 </span><span id=__span-0-142><a id=__codelineno-0-142 name=__codelineno-0-142></a>
 </span><span id=__span-0-143><a id=__codelineno-0-143 name=__codelineno-0-143></a>        <span class=k>return</span> <span class=n>norm_patch</span><span class=p>,</span> <span class=n>norm_target</span><span class=p>,</span> <span class=n>additional_arrays</span>
 </span><span id=__span-0-144><a id=__codelineno-0-144 name=__codelineno-0-144></a>
-</span><span id=__span-0-145><a id=__codelineno-0-145 name=__codelineno-0-145></a>    <span class=k>def</span> <span class=nf>_apply</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>patch</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span> <span class=n>mean</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span> <span class=n>std</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
+</span><span id=__span-0-145><a id=__codelineno-0-145 name=__codelineno-0-145></a>    <span class=k>def</span><span class=w> </span><span class=nf>_apply</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>patch</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span> <span class=n>mean</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span> <span class=n>std</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
 </span><span id=__span-0-146><a id=__codelineno-0-146 name=__codelineno-0-146></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-147><a id=__codelineno-0-147 name=__codelineno-0-147></a><span class=sd>        Apply the transform to the image.</span>
 </span><span id=__span-0-148><a id=__codelineno-0-148 name=__codelineno-0-148></a>
@@ -583,7 +583,7 @@
 <span class=normal><a href=#__codelineno-0-140>140</a></span>
 <span class=normal><a href=#__codelineno-0-141>141</a></span>
 <span class=normal><a href=#__codelineno-0-142>142</a></span>
-<span class=normal><a href=#__codelineno-0-143>143</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a><span class=k>def</span> <span class=fm>__call__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-143>143</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a><span class=k>def</span><span class=w> </span><span class=fm>__call__</span><span class=p>(</span>
 </span><span id=__span-0-93><a id=__codelineno-0-93 name=__codelineno-0-93></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-94><a id=__codelineno-0-94 name=__codelineno-0-94></a>    <span class=n>patch</span><span class=p>:</span> <span class=n>np</span><span class=o>.</span><span class=n>ndarray</span><span class=p>,</span>
 </span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a>    <span class=n>target</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>NDArray</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
@@ -660,7 +660,7 @@
 <span class=normal><a href=#__codelineno-0-87>87</a></span>
 <span class=normal><a href=#__codelineno-0-88>88</a></span>
 <span class=normal><a href=#__codelineno-0-89>89</a></span>
-<span class=normal><a href=#__codelineno-0-90>90</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-90>90</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-67><a id=__codelineno-0-67 name=__codelineno-0-67></a>    <span class=n>image_means</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span>
 </span><span id=__span-0-68><a id=__codelineno-0-68 name=__codelineno-0-68></a>    <span class=n>image_stds</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=nb>float</span><span class=p>],</span>

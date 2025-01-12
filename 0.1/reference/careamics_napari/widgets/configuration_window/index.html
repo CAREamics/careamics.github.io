@@ -260,7 +260,7 @@
 <span class=normal><a href=#__codelineno-0-299>299</a></span>
 <span class=normal><a href=#__codelineno-0-300>300</a></span>
 <span class=normal><a href=#__codelineno-0-301>301</a></span>
-<span class=normal><a href=#__codelineno-0-302>302</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-40><a id=__codelineno-0-40 name=__codelineno-0-40></a><span class=k>class</span> <span class=nc>AdvancedConfigurationWindow</span><span class=p>(</span><span class=n>QDialog</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-302>302</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-40><a id=__codelineno-0-40 name=__codelineno-0-40></a><span class=k>class</span><span class=w> </span><span class=nc>AdvancedConfigurationWindow</span><span class=p>(</span><span class=n>QDialog</span><span class=p>):</span>
 </span><span id=__span-0-41><a id=__codelineno-0-41 name=__codelineno-0-41></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;A dialog widget allowing modifying advanced settings.</span>
 </span><span id=__span-0-42><a id=__codelineno-0-42 name=__codelineno-0-42></a>
 </span><span id=__span-0-43><a id=__codelineno-0-43 name=__codelineno-0-43></a><span class=sd>    Parameters</span>
@@ -271,7 +271,7 @@
 </span><span id=__span-0-48><a id=__codelineno-0-48 name=__codelineno-0-48></a><span class=sd>        Signal used to update the parameters set by the user.</span>
 </span><span id=__span-0-49><a id=__codelineno-0-49 name=__codelineno-0-49></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a>
-</span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-52><a id=__codelineno-0-52 name=__codelineno-0-52></a>        <span class=bp>self</span><span class=p>,</span> <span class=n>parent</span><span class=p>:</span> <span class=n>QWidget</span><span class=p>,</span> <span class=n>training_signal</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>TrainingSignal</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span>
 </span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a>    <span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-54><a id=__codelineno-0-54 name=__codelineno-0-54></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Initialize the widget.</span>
@@ -475,7 +475,7 @@
 </span><span id=__span-0-252><a id=__codelineno-0-252 name=__codelineno-0-252></a>            <span class=p>)</span>
 </span><span id=__span-0-253><a id=__codelineno-0-253 name=__codelineno-0-253></a>            <span class=bp>self</span><span class=o>.</span><span class=n>_update_to_algorithm</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>configuration_signal</span><span class=o>.</span><span class=n>algorithm</span><span class=p>)</span>
 </span><span id=__span-0-254><a id=__codelineno-0-254 name=__codelineno-0-254></a>
-</span><span id=__span-0-255><a id=__codelineno-0-255 name=__codelineno-0-255></a>    <span class=k>def</span> <span class=nf>_update_to_algorithm</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>,</span> <span class=n>name</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-255><a id=__codelineno-0-255 name=__codelineno-0-255></a>    <span class=k>def</span><span class=w> </span><span class=nf>_update_to_algorithm</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>,</span> <span class=n>name</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-256><a id=__codelineno-0-256 name=__codelineno-0-256></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Update the widget to the selected algorithm.</span>
 </span><span id=__span-0-257><a id=__codelineno-0-257 name=__codelineno-0-257></a>
 </span><span id=__span-0-258><a id=__codelineno-0-258 name=__codelineno-0-258></a><span class=sd>        If Noise2Void is selected, the widget will show the N2V2 parameters.</span>
@@ -492,7 +492,7 @@
 </span><span id=__span-0-269><a id=__codelineno-0-269 name=__codelineno-0-269></a>            <span class=bp>self</span><span class=o>.</span><span class=n>n2v2_widget</span><span class=o>.</span><span class=n>setVisible</span><span class=p>(</span><span class=kc>False</span><span class=p>)</span>
 </span><span id=__span-0-270><a id=__codelineno-0-270 name=__codelineno-0-270></a>            <span class=bp>self</span><span class=o>.</span><span class=n>channels_stack</span><span class=o>.</span><span class=n>setCurrentIndex</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
 </span><span id=__span-0-271><a id=__codelineno-0-271 name=__codelineno-0-271></a>
-</span><span id=__span-0-272><a id=__codelineno-0-272 name=__codelineno-0-272></a>    <span class=k>def</span> <span class=nf>_update_to_channels</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>,</span> <span class=n>use_channels</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-272><a id=__codelineno-0-272 name=__codelineno-0-272></a>    <span class=k>def</span><span class=w> </span><span class=nf>_update_to_channels</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>,</span> <span class=n>use_channels</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-273><a id=__codelineno-0-273 name=__codelineno-0-273></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Update the widget to show the channels parameters.</span>
 </span><span id=__span-0-274><a id=__codelineno-0-274 name=__codelineno-0-274></a>
 </span><span id=__span-0-275><a id=__codelineno-0-275 name=__codelineno-0-275></a><span class=sd>        Parameters</span>
@@ -502,7 +502,7 @@
 </span><span id=__span-0-279><a id=__codelineno-0-279 name=__codelineno-0-279></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-280><a id=__codelineno-0-280 name=__codelineno-0-280></a>        <span class=bp>self</span><span class=o>.</span><span class=n>channels</span><span class=o>.</span><span class=n>setVisible</span><span class=p>(</span><span class=n>use_channels</span><span class=p>)</span>
 </span><span id=__span-0-281><a id=__codelineno-0-281 name=__codelineno-0-281></a>
-</span><span id=__span-0-282><a id=__codelineno-0-282 name=__codelineno-0-282></a>    <span class=k>def</span> <span class=nf>_save</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-282><a id=__codelineno-0-282 name=__codelineno-0-282></a>    <span class=k>def</span><span class=w> </span><span class=nf>_save</span><span class=p>(</span><span class=bp>self</span><span class=p>:</span> <span class=n>Self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-283><a id=__codelineno-0-283 name=__codelineno-0-283></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Save the parameters and close the dialog.&quot;&quot;&quot;</span>
 </span><span id=__span-0-284><a id=__codelineno-0-284 name=__codelineno-0-284></a>        <span class=c1># Update the parameters</span>
 </span><span id=__span-0-285><a id=__codelineno-0-285 name=__codelineno-0-285></a>        <span class=k>if</span> <span class=bp>self</span><span class=o>.</span><span class=n>configuration_signal</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
@@ -725,7 +725,7 @@
 <span class=normal><a href=#__codelineno-0-250>250</a></span>
 <span class=normal><a href=#__codelineno-0-251>251</a></span>
 <span class=normal><a href=#__codelineno-0-252>252</a></span>
-<span class=normal><a href=#__codelineno-0-253>253</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-253>253</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-52><a id=__codelineno-0-52 name=__codelineno-0-52></a>    <span class=bp>self</span><span class=p>,</span> <span class=n>parent</span><span class=p>:</span> <span class=n>QWidget</span><span class=p>,</span> <span class=n>training_signal</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>TrainingSignal</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span>
 </span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-54><a id=__codelineno-0-54 name=__codelineno-0-54></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Initialize the widget.</span>

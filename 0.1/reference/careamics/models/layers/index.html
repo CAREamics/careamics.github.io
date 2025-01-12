@@ -140,7 +140,7 @@
 <span class=normal><a href=#__codelineno-0-153>153</a></span>
 <span class=normal><a href=#__codelineno-0-154>154</a></span>
 <span class=normal><a href=#__codelineno-0-155>155</a></span>
-<span class=normal><a href=#__codelineno-0-156>156</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=k>class</span> <span class=nc>Conv_Block</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-156>156</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=k>class</span><span class=w> </span><span class=nc>Conv_Block</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
 </span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a><span class=sd>    Convolution block used in UNets.</span>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a>
@@ -176,7 +176,7 @@
 </span><span id=__span-0-47><a id=__codelineno-0-47 name=__codelineno-0-47></a><span class=sd>        Use batch norm, by default False.</span>
 </span><span id=__span-0-48><a id=__codelineno-0-48 name=__codelineno-0-48></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-49><a id=__codelineno-0-49 name=__codelineno-0-49></a>
-</span><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-52><a id=__codelineno-0-52 name=__codelineno-0-52></a>        <span class=n>conv_dim</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a>        <span class=n>in_channels</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
@@ -254,7 +254,7 @@
 </span><span id=__span-0-125><a id=__codelineno-0-125 name=__codelineno-0-125></a>            <span class=nb>getattr</span><span class=p>(</span><span class=n>nn</span><span class=p>,</span> <span class=sa>f</span><span class=s2>&quot;</span><span class=si>{</span><span class=n>activation</span><span class=si>}</span><span class=s2>&quot;</span><span class=p>)()</span> <span class=k>if</span> <span class=n>activation</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span> <span class=k>else</span> <span class=n>nn</span><span class=o>.</span><span class=n>Identity</span><span class=p>()</span>
 </span><span id=__span-0-126><a id=__codelineno-0-126 name=__codelineno-0-126></a>        <span class=p>)</span>
 </span><span id=__span-0-127><a id=__codelineno-0-127 name=__codelineno-0-127></a>
-</span><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a>    <span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
+</span><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a>    <span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-129><a id=__codelineno-0-129 name=__codelineno-0-129></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a><span class=sd>        Forward pass.</span>
 </span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a>
@@ -359,7 +359,7 @@
 <span class=normal><a href=#__codelineno-0-123>123</a></span>
 <span class=normal><a href=#__codelineno-0-124>124</a></span>
 <span class=normal><a href=#__codelineno-0-125>125</a></span>
-<span class=normal><a href=#__codelineno-0-126>126</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-126>126</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-52><a id=__codelineno-0-52 name=__codelineno-0-52></a>    <span class=n>conv_dim</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a>    <span class=n>in_channels</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
@@ -464,7 +464,7 @@
 <span class=normal><a href=#__codelineno-0-153>153</a></span>
 <span class=normal><a href=#__codelineno-0-154>154</a></span>
 <span class=normal><a href=#__codelineno-0-155>155</a></span>
-<span class=normal><a href=#__codelineno-0-156>156</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a><span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-156>156</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a><span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-129><a id=__codelineno-0-129 name=__codelineno-0-129></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a><span class=sd>    Forward pass.</span>
 </span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a>
@@ -575,7 +575,7 @@
 <span class=normal><a href=#__codelineno-0-492>492</a></span>
 <span class=normal><a href=#__codelineno-0-493>493</a></span>
 <span class=normal><a href=#__codelineno-0-494>494</a></span>
-<span class=normal><a href=#__codelineno-0-495>495</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-413><a id=__codelineno-0-413 name=__codelineno-0-413></a><span class=k>class</span> <span class=nc>MaxBlurPool</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-495>495</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-413><a id=__codelineno-0-413 name=__codelineno-0-413></a><span class=k>class</span><span class=w> </span><span class=nc>MaxBlurPool</span><span class=p>(</span><span class=n>nn</span><span class=o>.</span><span class=n>Module</span><span class=p>):</span>
 </span><span id=__span-0-414><a id=__codelineno-0-414 name=__codelineno-0-414></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Compute pools and blurs and downsample a given feature map.</span>
 </span><span id=__span-0-415><a id=__codelineno-0-415 name=__codelineno-0-415></a>
 </span><span id=__span-0-416><a id=__codelineno-0-416 name=__codelineno-0-416></a><span class=sd>    Inspired by Kornia MaxBlurPool implementation. Equivalent to</span>
@@ -595,7 +595,7 @@
 </span><span id=__span-0-430><a id=__codelineno-0-430 name=__codelineno-0-430></a><span class=sd>        Ceil mode, by default False. Set to True to match output size of conv2d.</span>
 </span><span id=__span-0-431><a id=__codelineno-0-431 name=__codelineno-0-431></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-432><a id=__codelineno-0-432 name=__codelineno-0-432></a>
-</span><span id=__span-0-433><a id=__codelineno-0-433 name=__codelineno-0-433></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-433><a id=__codelineno-0-433 name=__codelineno-0-433></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-434><a id=__codelineno-0-434 name=__codelineno-0-434></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-435><a id=__codelineno-0-435 name=__codelineno-0-435></a>        <span class=n>dim</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-436><a id=__codelineno-0-436 name=__codelineno-0-436></a>        <span class=n>kernel_size</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>tuple</span><span class=p>[</span><span class=nb>int</span><span class=p>,</span> <span class=nb>int</span><span class=p>],</span> <span class=nb>int</span><span class=p>],</span>
@@ -627,7 +627,7 @@
 </span><span id=__span-0-462><a id=__codelineno-0-462 name=__codelineno-0-462></a>        <span class=n>kernel</span> <span class=o>=</span> <span class=n>_get_pascal_kernel_nd</span><span class=p>(</span><span class=n>kernel_size</span><span class=p>,</span> <span class=n>norm</span><span class=o>=</span><span class=kc>True</span><span class=p>,</span> <span class=n>dim</span><span class=o>=</span><span class=bp>self</span><span class=o>.</span><span class=n>dim</span><span class=p>)</span>
 </span><span id=__span-0-463><a id=__codelineno-0-463 name=__codelineno-0-463></a>        <span class=bp>self</span><span class=o>.</span><span class=n>register_buffer</span><span class=p>(</span><span class=s2>&quot;kernel&quot;</span><span class=p>,</span> <span class=n>kernel</span><span class=p>,</span> <span class=n>persistent</span><span class=o>=</span><span class=kc>False</span><span class=p>)</span>
 </span><span id=__span-0-464><a id=__codelineno-0-464 name=__codelineno-0-464></a>
-</span><span id=__span-0-465><a id=__codelineno-0-465 name=__codelineno-0-465></a>    <span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
+</span><span id=__span-0-465><a id=__codelineno-0-465 name=__codelineno-0-465></a>    <span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-466><a id=__codelineno-0-466 name=__codelineno-0-466></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Forward pass of the function.</span>
 </span><span id=__span-0-467><a id=__codelineno-0-467 name=__codelineno-0-467></a>
 </span><span id=__span-0-468><a id=__codelineno-0-468 name=__codelineno-0-468></a><span class=sd>        Parameters</span>
@@ -688,7 +688,7 @@
 <span class=normal><a href=#__codelineno-0-460>460</a></span>
 <span class=normal><a href=#__codelineno-0-461>461</a></span>
 <span class=normal><a href=#__codelineno-0-462>462</a></span>
-<span class=normal><a href=#__codelineno-0-463>463</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-433><a id=__codelineno-0-433 name=__codelineno-0-433></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-463>463</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-433><a id=__codelineno-0-433 name=__codelineno-0-433></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-434><a id=__codelineno-0-434 name=__codelineno-0-434></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-435><a id=__codelineno-0-435 name=__codelineno-0-435></a>    <span class=n>dim</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-436><a id=__codelineno-0-436 name=__codelineno-0-436></a>    <span class=n>kernel_size</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>tuple</span><span class=p>[</span><span class=nb>int</span><span class=p>,</span> <span class=nb>int</span><span class=p>],</span> <span class=nb>int</span><span class=p>],</span>
@@ -749,7 +749,7 @@
 <span class=normal><a href=#__codelineno-0-492>492</a></span>
 <span class=normal><a href=#__codelineno-0-493>493</a></span>
 <span class=normal><a href=#__codelineno-0-494>494</a></span>
-<span class=normal><a href=#__codelineno-0-495>495</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-465><a id=__codelineno-0-465 name=__codelineno-0-465></a><span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-495>495</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-465><a id=__codelineno-0-465 name=__codelineno-0-465></a><span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>torch</span><span class=o>.</span><span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-466><a id=__codelineno-0-466 name=__codelineno-0-466></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Forward pass of the function.</span>
 </span><span id=__span-0-467><a id=__codelineno-0-467 name=__codelineno-0-467></a>
 </span><span id=__span-0-468><a id=__codelineno-0-468 name=__codelineno-0-468></a><span class=sd>    Parameters</span>
@@ -851,7 +851,7 @@
 <span class=normal><a href=#__codelineno-0-262>262</a></span>
 <span class=normal><a href=#__codelineno-0-263>263</a></span>
 <span class=normal><a href=#__codelineno-0-264>264</a></span>
-<span class=normal><a href=#__codelineno-0-265>265</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-206><a id=__codelineno-0-206 name=__codelineno-0-206></a><span class=k>def</span> <span class=nf>get_pascal_kernel_1d</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-265>265</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-206><a id=__codelineno-0-206 name=__codelineno-0-206></a><span class=k>def</span><span class=w> </span><span class=nf>get_pascal_kernel_1d</span><span class=p>(</span>
 </span><span id=__span-0-207><a id=__codelineno-0-207 name=__codelineno-0-207></a>    <span class=n>kernel_size</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span>
 </span><span id=__span-0-208><a id=__codelineno-0-208 name=__codelineno-0-208></a>    <span class=n>norm</span><span class=p>:</span> <span class=nb>bool</span> <span class=o>=</span> <span class=kc>False</span><span class=p>,</span>
 </span><span id=__span-0-209><a id=__codelineno-0-209 name=__codelineno-0-209></a>    <span class=o>*</span><span class=p>,</span>

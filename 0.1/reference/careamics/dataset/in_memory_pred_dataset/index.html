@@ -71,7 +71,7 @@
 <span class=normal><a href=#__codelineno-0-85>85</a></span>
 <span class=normal><a href=#__codelineno-0-86>86</a></span>
 <span class=normal><a href=#__codelineno-0-87>87</a></span>
-<span class=normal><a href=#__codelineno-0-88>88</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a><span class=k>class</span> <span class=nc>InMemoryPredDataset</span><span class=p>(</span><span class=n>Dataset</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-88>88</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a><span class=k>class</span><span class=w> </span><span class=nc>InMemoryPredDataset</span><span class=p>(</span><span class=n>Dataset</span><span class=p>):</span>
 </span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Simple prediction dataset returning images along the sample axis.</span>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a>
 </span><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18></a><span class=sd>    Parameters</span>
@@ -82,7 +82,7 @@
 </span><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a><span class=sd>        Input data.</span>
 </span><span id=__span-0-24><a id=__codelineno-0-24 name=__codelineno-0-24></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-25><a id=__codelineno-0-25 name=__codelineno-0-25></a>
-</span><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-27><a id=__codelineno-0-27 name=__codelineno-0-27></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28></a>        <span class=n>prediction_config</span><span class=p>:</span> <span class=n>InferenceConfig</span><span class=p>,</span>
 </span><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a>        <span class=n>inputs</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span>
@@ -117,7 +117,7 @@
 </span><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a>            <span class=p>],</span>
 </span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59></a>        <span class=p>)</span>
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a>
-</span><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a>    <span class=k>def</span> <span class=fm>__len__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a>    <span class=k>def</span><span class=w> </span><span class=fm>__len__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
 </span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=sd>        Return the length of the dataset.</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a>
@@ -128,7 +128,7 @@
 </span><span id=__span-0-69><a id=__codelineno-0-69 name=__codelineno-0-69></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70></a>        <span class=k>return</span> <span class=nb>len</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>data</span><span class=p>)</span>
 </span><span id=__span-0-71><a id=__codelineno-0-71 name=__codelineno-0-71></a>
-</span><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a>    <span class=k>def</span> <span class=fm>__getitem__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>index</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
+</span><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a>    <span class=k>def</span><span class=w> </span><span class=fm>__getitem__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>index</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
 </span><span id=__span-0-73><a id=__codelineno-0-73 name=__codelineno-0-73></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-74><a id=__codelineno-0-74 name=__codelineno-0-74></a><span class=sd>        Return the patch corresponding to the provided index.</span>
 </span><span id=__span-0-75><a id=__codelineno-0-75 name=__codelineno-0-75></a>
@@ -161,7 +161,7 @@
 <span class=normal><a href=#__codelineno-0-85>85</a></span>
 <span class=normal><a href=#__codelineno-0-86>86</a></span>
 <span class=normal><a href=#__codelineno-0-87>87</a></span>
-<span class=normal><a href=#__codelineno-0-88>88</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a><span class=k>def</span> <span class=fm>__getitem__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>index</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-88>88</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a><span class=k>def</span><span class=w> </span><span class=fm>__getitem__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>index</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NDArray</span><span class=p>:</span>
 </span><span id=__span-0-73><a id=__codelineno-0-73 name=__codelineno-0-73></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-74><a id=__codelineno-0-74 name=__codelineno-0-74></a><span class=sd>    Return the patch corresponding to the provided index.</span>
 </span><span id=__span-0-75><a id=__codelineno-0-75 name=__codelineno-0-75></a>
@@ -211,7 +211,7 @@
 <span class=normal><a href=#__codelineno-0-56>56</a></span>
 <span class=normal><a href=#__codelineno-0-57>57</a></span>
 <span class=normal><a href=#__codelineno-0-58>58</a></span>
-<span class=normal><a href=#__codelineno-0-59>59</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-59>59</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-27><a id=__codelineno-0-27 name=__codelineno-0-27></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28></a>    <span class=n>prediction_config</span><span class=p>:</span> <span class=n>InferenceConfig</span><span class=p>,</span>
 </span><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a>    <span class=n>inputs</span><span class=p>:</span> <span class=n>NDArray</span><span class=p>,</span>
@@ -254,7 +254,7 @@
 <span class=normal><a href=#__codelineno-0-67>67</a></span>
 <span class=normal><a href=#__codelineno-0-68>68</a></span>
 <span class=normal><a href=#__codelineno-0-69>69</a></span>
-<span class=normal><a href=#__codelineno-0-70>70</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a><span class=k>def</span> <span class=fm>__len__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-70>70</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a><span class=k>def</span><span class=w> </span><span class=fm>__len__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
 </span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=sd>    Return the length of the dataset.</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a>

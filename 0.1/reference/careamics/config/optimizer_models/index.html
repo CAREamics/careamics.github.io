@@ -65,7 +65,7 @@
 <span class=normal><a href=#__codelineno-0-186>186</a></span>
 <span class=normal><a href=#__codelineno-0-187>187</a></span>
 <span class=normal><a href=#__codelineno-0-188>188</a></span>
-<span class=normal><a href=#__codelineno-0-189>189</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-122><a id=__codelineno-0-122 name=__codelineno-0-122></a><span class=k>class</span> <span class=nc>LrSchedulerModel</span><span class=p>(</span><span class=n>BaseModel</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-189>189</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-122><a id=__codelineno-0-122 name=__codelineno-0-122></a><span class=k>class</span><span class=w> </span><span class=nc>LrSchedulerModel</span><span class=p>(</span><span class=n>BaseModel</span><span class=p>):</span>
 </span><span id=__span-0-123><a id=__codelineno-0-123 name=__codelineno-0-123></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Torch learning rate scheduler Pydantic model.</span>
 </span><span id=__span-0-124><a id=__codelineno-0-124 name=__codelineno-0-124></a>
 </span><span id=__span-0-125><a id=__codelineno-0-125 name=__codelineno-0-125></a><span class=sd>    Only parameters supported by the corresponding torch lr scheduler will be taken</span>
@@ -100,7 +100,7 @@
 </span><span id=__span-0-154><a id=__codelineno-0-154 name=__codelineno-0-154></a>
 </span><span id=__span-0-155><a id=__codelineno-0-155 name=__codelineno-0-155></a>    <span class=nd>@field_validator</span><span class=p>(</span><span class=s2>&quot;parameters&quot;</span><span class=p>)</span>
 </span><span id=__span-0-156><a id=__codelineno-0-156 name=__codelineno-0-156></a>    <span class=nd>@classmethod</span>
-</span><span id=__span-0-157><a id=__codelineno-0-157 name=__codelineno-0-157></a>    <span class=k>def</span> <span class=nf>filter_parameters</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>user_params</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>ValidationInfo</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
+</span><span id=__span-0-157><a id=__codelineno-0-157 name=__codelineno-0-157></a>    <span class=k>def</span><span class=w> </span><span class=nf>filter_parameters</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>user_params</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>ValidationInfo</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
 </span><span id=__span-0-158><a id=__codelineno-0-158 name=__codelineno-0-158></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Filter parameters based on the learning rate scheduler&#39;s signature.</span>
 </span><span id=__span-0-159><a id=__codelineno-0-159 name=__codelineno-0-159></a>
 </span><span id=__span-0-160><a id=__codelineno-0-160 name=__codelineno-0-160></a><span class=sd>        Parameters</span>
@@ -169,7 +169,7 @@
 <span class=normal><a href=#__codelineno-0-188>188</a></span>
 <span class=normal><a href=#__codelineno-0-189>189</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-155><a id=__codelineno-0-155 name=__codelineno-0-155></a><span class=nd>@field_validator</span><span class=p>(</span><span class=s2>&quot;parameters&quot;</span><span class=p>)</span>
 </span><span id=__span-0-156><a id=__codelineno-0-156 name=__codelineno-0-156></a><span class=nd>@classmethod</span>
-</span><span id=__span-0-157><a id=__codelineno-0-157 name=__codelineno-0-157></a><span class=k>def</span> <span class=nf>filter_parameters</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>user_params</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>ValidationInfo</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
+</span><span id=__span-0-157><a id=__codelineno-0-157 name=__codelineno-0-157></a><span class=k>def</span><span class=w> </span><span class=nf>filter_parameters</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>user_params</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>ValidationInfo</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
 </span><span id=__span-0-158><a id=__codelineno-0-158 name=__codelineno-0-158></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Filter parameters based on the learning rate scheduler&#39;s signature.</span>
 </span><span id=__span-0-159><a id=__codelineno-0-159 name=__codelineno-0-159></a>
 </span><span id=__span-0-160><a id=__codelineno-0-160 name=__codelineno-0-160></a><span class=sd>    Parameters</span>
@@ -298,7 +298,7 @@
 <span class=normal><a href=#__codelineno-0-116>116</a></span>
 <span class=normal><a href=#__codelineno-0-117>117</a></span>
 <span class=normal><a href=#__codelineno-0-118>118</a></span>
-<span class=normal><a href=#__codelineno-0-119>119</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a><span class=k>class</span> <span class=nc>OptimizerModel</span><span class=p>(</span><span class=n>BaseModel</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-119>119</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a><span class=k>class</span><span class=w> </span><span class=nc>OptimizerModel</span><span class=p>(</span><span class=n>BaseModel</span><span class=p>):</span>
 </span><span id=__span-0-24><a id=__codelineno-0-24 name=__codelineno-0-24></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Torch optimizer Pydantic model.</span>
 </span><span id=__span-0-25><a id=__codelineno-0-25 name=__codelineno-0-25></a>
 </span><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26></a><span class=sd>    Only parameters supported by the corresponding torch optimizer will be taken</span>
@@ -338,7 +338,7 @@
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a>
 </span><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a>    <span class=nd>@field_validator</span><span class=p>(</span><span class=s2>&quot;parameters&quot;</span><span class=p>)</span>
 </span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a>    <span class=nd>@classmethod</span>
-</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a>    <span class=k>def</span> <span class=nf>filter_parameters</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>user_params</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>ValidationInfo</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
+</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a>    <span class=k>def</span><span class=w> </span><span class=nf>filter_parameters</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>user_params</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>ValidationInfo</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=sd>        Validate optimizer parameters.</span>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a>
@@ -372,7 +372,7 @@
 </span><span id=__span-0-94><a id=__codelineno-0-94 name=__codelineno-0-94></a>        <span class=k>return</span> <span class=n>parameters</span>
 </span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a>
 </span><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96></a>    <span class=nd>@model_validator</span><span class=p>(</span><span class=n>mode</span><span class=o>=</span><span class=s2>&quot;after&quot;</span><span class=p>)</span>
-</span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97></a>    <span class=k>def</span> <span class=nf>sgd_lr_parameter</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
+</span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97></a>    <span class=k>def</span><span class=w> </span><span class=nf>sgd_lr_parameter</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
 </span><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-99><a id=__codelineno-0-99 name=__codelineno-0-99></a><span class=sd>        Check that SGD optimizer has the mandatory `lr` parameter specified.</span>
 </span><span id=__span-0-100><a id=__codelineno-0-100 name=__codelineno-0-100></a>
@@ -430,7 +430,7 @@
 <span class=normal><a href=#__codelineno-0-93>93</a></span>
 <span class=normal><a href=#__codelineno-0-94>94</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a><span class=nd>@field_validator</span><span class=p>(</span><span class=s2>&quot;parameters&quot;</span><span class=p>)</span>
 </span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a><span class=nd>@classmethod</span>
-</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=k>def</span> <span class=nf>filter_parameters</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>user_params</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>ValidationInfo</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
+</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=k>def</span><span class=w> </span><span class=nf>filter_parameters</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>user_params</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>values</span><span class=p>:</span> <span class=n>ValidationInfo</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=sd>    Validate optimizer parameters.</span>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a>
@@ -486,7 +486,7 @@
 <span class=normal><a href=#__codelineno-0-117>117</a></span>
 <span class=normal><a href=#__codelineno-0-118>118</a></span>
 <span class=normal><a href=#__codelineno-0-119>119</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96></a><span class=nd>@model_validator</span><span class=p>(</span><span class=n>mode</span><span class=o>=</span><span class=s2>&quot;after&quot;</span><span class=p>)</span>
-</span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97></a><span class=k>def</span> <span class=nf>sgd_lr_parameter</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
+</span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97></a><span class=k>def</span><span class=w> </span><span class=nf>sgd_lr_parameter</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Self</span><span class=p>:</span>
 </span><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-99><a id=__codelineno-0-99 name=__codelineno-0-99></a><span class=sd>    Check that SGD optimizer has the mandatory `lr` parameter specified.</span>
 </span><span id=__span-0-100><a id=__codelineno-0-100 name=__codelineno-0-100></a>

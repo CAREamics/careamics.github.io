@@ -27,7 +27,7 @@
 <span class=normal><a href=#__codelineno-0-34>34</a></span>
 <span class=normal><a href=#__codelineno-0-35>35</a></span>
 <span class=normal><a href=#__codelineno-0-36>36</a></span>
-<span class=normal><a href=#__codelineno-0-37>37</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-8><a id=__codelineno-0-8 name=__codelineno-0-8></a><span class=k>class</span> <span class=nc>ArchitectureModel</span><span class=p>(</span><span class=n>BaseModel</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-37>37</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-8><a id=__codelineno-0-8 name=__codelineno-0-8></a><span class=k>class</span><span class=w> </span><span class=nc>ArchitectureModel</span><span class=p>(</span><span class=n>BaseModel</span><span class=p>):</span>
 </span><span id=__span-0-9><a id=__codelineno-0-9 name=__codelineno-0-9></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-10><a id=__codelineno-0-10 name=__codelineno-0-10></a><span class=sd>    Base Pydantic model for all model architectures.</span>
 </span><span id=__span-0-11><a id=__codelineno-0-11 name=__codelineno-0-11></a>
@@ -37,7 +37,7 @@
 </span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a>    <span class=n>architecture</span><span class=p>:</span> <span class=nb>str</span>
 </span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Name of the architecture.&quot;&quot;&quot;</span>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a>
-</span><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18></a>    <span class=k>def</span> <span class=nf>model_dump</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=o>**</span><span class=n>kwargs</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]:</span>
+</span><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18></a>    <span class=k>def</span><span class=w> </span><span class=nf>model_dump</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=o>**</span><span class=n>kwargs</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]:</span>
 </span><span id=__span-0-19><a id=__codelineno-0-19 name=__codelineno-0-19></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20></a><span class=sd>        Dump the model as a dictionary, ignoring the architecture keyword.</span>
 </span><span id=__span-0-21><a id=__codelineno-0-21 name=__codelineno-0-21></a>
@@ -76,7 +76,7 @@
 <span class=normal><a href=#__codelineno-0-34>34</a></span>
 <span class=normal><a href=#__codelineno-0-35>35</a></span>
 <span class=normal><a href=#__codelineno-0-36>36</a></span>
-<span class=normal><a href=#__codelineno-0-37>37</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18></a><span class=k>def</span> <span class=nf>model_dump</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=o>**</span><span class=n>kwargs</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]:</span>
+<span class=normal><a href=#__codelineno-0-37>37</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18></a><span class=k>def</span><span class=w> </span><span class=nf>model_dump</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=o>**</span><span class=n>kwargs</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]:</span>
 </span><span id=__span-0-19><a id=__codelineno-0-19 name=__codelineno-0-19></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20></a><span class=sd>    Dump the model as a dictionary, ignoring the architecture keyword.</span>
 </span><span id=__span-0-21><a id=__codelineno-0-21 name=__codelineno-0-21></a>

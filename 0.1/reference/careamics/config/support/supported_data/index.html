@@ -97,7 +97,7 @@
 <span class=normal><a href=#__codelineno-0-106>106</a></span>
 <span class=normal><a href=#__codelineno-0-107>107</a></span>
 <span class=normal><a href=#__codelineno-0-108>108</a></span>
-<span class=normal><a href=#__codelineno-0-109>109</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-10><a id=__codelineno-0-10 name=__codelineno-0-10></a><span class=k>class</span> <span class=nc>SupportedData</span><span class=p>(</span><span class=nb>str</span><span class=p>,</span> <span class=n>BaseEnum</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-109>109</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-10><a id=__codelineno-0-10 name=__codelineno-0-10></a><span class=k>class</span><span class=w> </span><span class=nc>SupportedData</span><span class=p>(</span><span class=nb>str</span><span class=p>,</span> <span class=n>BaseEnum</span><span class=p>):</span>
 </span><span id=__span-0-11><a id=__codelineno-0-11 name=__codelineno-0-11></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Supported data types.</span>
 </span><span id=__span-0-12><a id=__codelineno-0-12 name=__codelineno-0-12></a>
 </span><span id=__span-0-13><a id=__codelineno-0-13 name=__codelineno-0-13></a><span class=sd>    Attributes</span>
@@ -117,7 +117,7 @@
 </span><span id=__span-0-27><a id=__codelineno-0-27 name=__codelineno-0-27></a>
 </span><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28></a>    <span class=c1># TODO remove?</span>
 </span><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a>    <span class=nd>@classmethod</span>
-</span><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a>    <span class=k>def</span> <span class=nf>_missing_</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>value</span><span class=p>:</span> <span class=nb>object</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a>    <span class=k>def</span><span class=w> </span><span class=nf>_missing_</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>value</span><span class=p>:</span> <span class=nb>object</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-32><a id=__codelineno-0-32 name=__codelineno-0-32></a><span class=sd>        Override default behaviour for missing values.</span>
 </span><span id=__span-0-33><a id=__codelineno-0-33 name=__codelineno-0-33></a>
@@ -150,7 +150,7 @@
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a>        <span class=k>return</span> <span class=nb>super</span><span class=p>()</span><span class=o>.</span><span class=n>_missing_</span><span class=p>(</span><span class=n>value</span><span class=p>)</span>
 </span><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a>
 </span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a>    <span class=nd>@classmethod</span>
-</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a>    <span class=k>def</span> <span class=nf>get_extension_pattern</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>data_type</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>SupportedData</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_extension_pattern</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>data_type</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>SupportedData</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=sd>        Get Path.rglob and fnmatch compatible extension.</span>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a>
@@ -174,7 +174,7 @@
 </span><span id=__span-0-84><a id=__codelineno-0-84 name=__codelineno-0-84></a>            <span class=k>raise</span> <span class=ne>ValueError</span><span class=p>(</span><span class=sa>f</span><span class=s2>&quot;Data type </span><span class=si>{</span><span class=n>data_type</span><span class=si>}</span><span class=s2> is not supported.&quot;</span><span class=p>)</span>
 </span><span id=__span-0-85><a id=__codelineno-0-85 name=__codelineno-0-85></a>
 </span><span id=__span-0-86><a id=__codelineno-0-86 name=__codelineno-0-86></a>    <span class=nd>@classmethod</span>
-</span><span id=__span-0-87><a id=__codelineno-0-87 name=__codelineno-0-87></a>    <span class=k>def</span> <span class=nf>get_extension</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>data_type</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>SupportedData</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-87><a id=__codelineno-0-87 name=__codelineno-0-87></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_extension</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>data_type</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>SupportedData</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-88><a id=__codelineno-0-88 name=__codelineno-0-88></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a><span class=sd>        Get file extension of corresponding data type.</span>
 </span><span id=__span-0-90><a id=__codelineno-0-90 name=__codelineno-0-90></a>
@@ -221,7 +221,7 @@
 <span class=normal><a href=#__codelineno-0-107>107</a></span>
 <span class=normal><a href=#__codelineno-0-108>108</a></span>
 <span class=normal><a href=#__codelineno-0-109>109</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-86><a id=__codelineno-0-86 name=__codelineno-0-86></a><span class=nd>@classmethod</span>
-</span><span id=__span-0-87><a id=__codelineno-0-87 name=__codelineno-0-87></a><span class=k>def</span> <span class=nf>get_extension</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>data_type</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>SupportedData</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-87><a id=__codelineno-0-87 name=__codelineno-0-87></a><span class=k>def</span><span class=w> </span><span class=nf>get_extension</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>data_type</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>SupportedData</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-88><a id=__codelineno-0-88 name=__codelineno-0-88></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a><span class=sd>    Get file extension of corresponding data type.</span>
 </span><span id=__span-0-90><a id=__codelineno-0-90 name=__codelineno-0-90></a>
@@ -267,7 +267,7 @@
 <span class=normal><a href=#__codelineno-0-82>82</a></span>
 <span class=normal><a href=#__codelineno-0-83>83</a></span>
 <span class=normal><a href=#__codelineno-0-84>84</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a><span class=nd>@classmethod</span>
-</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=k>def</span> <span class=nf>get_extension_pattern</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>data_type</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>SupportedData</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=k>def</span><span class=w> </span><span class=nf>get_extension_pattern</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>data_type</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>SupportedData</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=sd>    Get Path.rglob and fnmatch compatible extension.</span>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a>

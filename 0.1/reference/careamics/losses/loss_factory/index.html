@@ -8,7 +8,7 @@
 <span class=normal><a href=#__codelineno-0-26>26</a></span>
 <span class=normal><a href=#__codelineno-0-27>27</a></span>
 <span class=normal><a href=#__codelineno-0-28>28</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-19><a id=__codelineno-0-19 name=__codelineno-0-19></a><span class=nd>@dataclass</span>
-</span><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20></a><span class=k>class</span> <span class=nc>FCNLossParameters</span><span class=p>:</span>
+</span><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20></a><span class=k>class</span><span class=w> </span><span class=nc>FCNLossParameters</span><span class=p>:</span>
 </span><span id=__span-0-21><a id=__codelineno-0-21 name=__codelineno-0-21></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Dataclass for FCN loss.&quot;&quot;&quot;</span>
 </span><span id=__span-0-22><a id=__codelineno-0-22 name=__codelineno-0-22></a>
 </span><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a>    <span class=c1># TODO check</span>
@@ -57,7 +57,7 @@
 <span class=normal><a href=#__codelineno-0-68>68</a></span>
 <span class=normal><a href=#__codelineno-0-69>69</a></span>
 <span class=normal><a href=#__codelineno-0-70>70</a></span>
-<span class=normal><a href=#__codelineno-0-71>71</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31></a><span class=k>def</span> <span class=nf>loss_factory</span><span class=p>(</span><span class=n>loss</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>SupportedLoss</span><span class=p>,</span> <span class=nb>str</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=n>Callable</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-71>71</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31></a><span class=k>def</span><span class=w> </span><span class=nf>loss_factory</span><span class=p>(</span><span class=n>loss</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>SupportedLoss</span><span class=p>,</span> <span class=nb>str</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=n>Callable</span><span class=p>:</span>
 </span><span id=__span-0-32><a id=__codelineno-0-32 name=__codelineno-0-32></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Return loss function.</span>
 </span><span id=__span-0-33><a id=__codelineno-0-33 name=__codelineno-0-33></a>
 </span><span id=__span-0-34><a id=__codelineno-0-34 name=__codelineno-0-34></a><span class=sd>    Parameters</span>

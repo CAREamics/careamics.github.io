@@ -204,7 +204,7 @@
 <span class=normal><a href=#__codelineno-0-231>231</a></span>
 <span class=normal><a href=#__codelineno-0-232>232</a></span>
 <span class=normal><a href=#__codelineno-0-233>233</a></span>
-<span class=normal><a href=#__codelineno-0-234>234</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28></a><span class=k>class</span> <span class=nc>PredictionWriterCallback</span><span class=p>(</span><span class=n>BasePredictionWriter</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-234>234</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28></a><span class=k>class</span><span class=w> </span><span class=nc>PredictionWriterCallback</span><span class=p>(</span><span class=n>BasePredictionWriter</span><span class=p>):</span>
 </span><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a><span class=sd>    A PyTorch Lightning callback to save predictions.</span>
 </span><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31></a>
@@ -229,7 +229,7 @@
 </span><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50></a><span class=sd>        If writing predictions is turned on or off.</span>
 </span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-52><a id=__codelineno-0-52 name=__codelineno-0-52></a>
-</span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-54><a id=__codelineno-0-54 name=__codelineno-0-54></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-55><a id=__codelineno-0-55 name=__codelineno-0-55></a>        <span class=n>write_strategy</span><span class=p>:</span> <span class=n>WriteStrategy</span><span class=p>,</span>
 </span><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a>        <span class=n>dirpath</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>Path</span><span class=p>,</span> <span class=nb>str</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&quot;predictions&quot;</span><span class=p>,</span>
@@ -259,7 +259,7 @@
 </span><span id=__span-0-80><a id=__codelineno-0-80 name=__codelineno-0-80></a>        <span class=bp>self</span><span class=o>.</span><span class=n>_init_dirpath</span><span class=p>(</span><span class=n>dirpath</span><span class=p>)</span>
 </span><span id=__span-0-81><a id=__codelineno-0-81 name=__codelineno-0-81></a>
 </span><span id=__span-0-82><a id=__codelineno-0-82 name=__codelineno-0-82></a>    <span class=nd>@classmethod</span>
-</span><span id=__span-0-83><a id=__codelineno-0-83 name=__codelineno-0-83></a>    <span class=k>def</span> <span class=nf>from_write_func_params</span><span class=p>(</span>
+</span><span id=__span-0-83><a id=__codelineno-0-83 name=__codelineno-0-83></a>    <span class=k>def</span><span class=w> </span><span class=nf>from_write_func_params</span><span class=p>(</span>
 </span><span id=__span-0-84><a id=__codelineno-0-84 name=__codelineno-0-84></a>        <span class=bp>cls</span><span class=p>,</span>
 </span><span id=__span-0-85><a id=__codelineno-0-85 name=__codelineno-0-85></a>        <span class=n>write_type</span><span class=p>:</span> <span class=n>SupportedWriteType</span><span class=p>,</span>
 </span><span id=__span-0-86><a id=__codelineno-0-86 name=__codelineno-0-86></a>        <span class=n>tiled</span><span class=p>:</span> <span class=nb>bool</span><span class=p>,</span>
@@ -307,7 +307,7 @@
 </span><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a>        <span class=p>)</span>
 </span><span id=__span-0-129><a id=__codelineno-0-129 name=__codelineno-0-129></a>        <span class=k>return</span> <span class=bp>cls</span><span class=p>(</span><span class=n>write_strategy</span><span class=o>=</span><span class=n>write_strategy</span><span class=p>,</span> <span class=n>dirpath</span><span class=o>=</span><span class=n>dirpath</span><span class=p>)</span>
 </span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a>
-</span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a>    <span class=k>def</span> <span class=nf>_init_dirpath</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>dirpath</span><span class=p>):</span>
+</span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a>    <span class=k>def</span><span class=w> </span><span class=nf>_init_dirpath</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>dirpath</span><span class=p>):</span>
 </span><span id=__span-0-132><a id=__codelineno-0-132 name=__codelineno-0-132></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-133><a id=__codelineno-0-133 name=__codelineno-0-133></a><span class=sd>        Initialize directory path. Should only be called from `__init__`.</span>
 </span><span id=__span-0-134><a id=__codelineno-0-134 name=__codelineno-0-134></a>
@@ -325,7 +325,7 @@
 </span><span id=__span-0-146><a id=__codelineno-0-146 name=__codelineno-0-146></a>            <span class=p>)</span>
 </span><span id=__span-0-147><a id=__codelineno-0-147 name=__codelineno-0-147></a>        <span class=bp>self</span><span class=o>.</span><span class=n>dirpath</span> <span class=o>=</span> <span class=n>dirpath</span>
 </span><span id=__span-0-148><a id=__codelineno-0-148 name=__codelineno-0-148></a>
-</span><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a>    <span class=k>def</span> <span class=nf>setup</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span> <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span> <span class=n>stage</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a>    <span class=k>def</span><span class=w> </span><span class=nf>setup</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span> <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span> <span class=n>stage</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-150><a id=__codelineno-0-150 name=__codelineno-0-150></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-151><a id=__codelineno-0-151 name=__codelineno-0-151></a><span class=sd>        Create the prediction output directory when predict begins.</span>
 </span><span id=__span-0-152><a id=__codelineno-0-152 name=__codelineno-0-152></a>
@@ -346,7 +346,7 @@
 </span><span id=__span-0-167><a id=__codelineno-0-167 name=__codelineno-0-167></a>            <span class=n>logger</span><span class=o>.</span><span class=n>info</span><span class=p>(</span><span class=s2>&quot;Making prediction output directory.&quot;</span><span class=p>)</span>
 </span><span id=__span-0-168><a id=__codelineno-0-168 name=__codelineno-0-168></a>            <span class=bp>self</span><span class=o>.</span><span class=n>dirpath</span><span class=o>.</span><span class=n>mkdir</span><span class=p>(</span><span class=n>parents</span><span class=o>=</span><span class=kc>True</span><span class=p>,</span> <span class=n>exist_ok</span><span class=o>=</span><span class=kc>True</span><span class=p>)</span>
 </span><span id=__span-0-169><a id=__codelineno-0-169 name=__codelineno-0-169></a>
-</span><span id=__span-0-170><a id=__codelineno-0-170 name=__codelineno-0-170></a>    <span class=k>def</span> <span class=nf>write_on_batch_end</span><span class=p>(</span>
+</span><span id=__span-0-170><a id=__codelineno-0-170 name=__codelineno-0-170></a>    <span class=k>def</span><span class=w> </span><span class=nf>write_on_batch_end</span><span class=p>(</span>
 </span><span id=__span-0-171><a id=__codelineno-0-171 name=__codelineno-0-171></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-172><a id=__codelineno-0-172 name=__codelineno-0-172></a>        <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-173><a id=__codelineno-0-173 name=__codelineno-0-173></a>        <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>
@@ -438,7 +438,7 @@
 <span class=normal><a href=#__codelineno-0-77>77</a></span>
 <span class=normal><a href=#__codelineno-0-78>78</a></span>
 <span class=normal><a href=#__codelineno-0-79>79</a></span>
-<span class=normal><a href=#__codelineno-0-80>80</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-80>80</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-54><a id=__codelineno-0-54 name=__codelineno-0-54></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-55><a id=__codelineno-0-55 name=__codelineno-0-55></a>    <span class=n>write_strategy</span><span class=p>:</span> <span class=n>WriteStrategy</span><span class=p>,</span>
 </span><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a>    <span class=n>dirpath</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>Path</span><span class=p>,</span> <span class=nb>str</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&quot;predictions&quot;</span><span class=p>,</span>
@@ -514,7 +514,7 @@
 <span class=normal><a href=#__codelineno-0-127>127</a></span>
 <span class=normal><a href=#__codelineno-0-128>128</a></span>
 <span class=normal><a href=#__codelineno-0-129>129</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-82><a id=__codelineno-0-82 name=__codelineno-0-82></a><span class=nd>@classmethod</span>
-</span><span id=__span-0-83><a id=__codelineno-0-83 name=__codelineno-0-83></a><span class=k>def</span> <span class=nf>from_write_func_params</span><span class=p>(</span>
+</span><span id=__span-0-83><a id=__codelineno-0-83 name=__codelineno-0-83></a><span class=k>def</span><span class=w> </span><span class=nf>from_write_func_params</span><span class=p>(</span>
 </span><span id=__span-0-84><a id=__codelineno-0-84 name=__codelineno-0-84></a>    <span class=bp>cls</span><span class=p>,</span>
 </span><span id=__span-0-85><a id=__codelineno-0-85 name=__codelineno-0-85></a>    <span class=n>write_type</span><span class=p>:</span> <span class=n>SupportedWriteType</span><span class=p>,</span>
 </span><span id=__span-0-86><a id=__codelineno-0-86 name=__codelineno-0-86></a>    <span class=n>tiled</span><span class=p>:</span> <span class=nb>bool</span><span class=p>,</span>
@@ -580,7 +580,7 @@
 <span class=normal><a href=#__codelineno-0-165>165</a></span>
 <span class=normal><a href=#__codelineno-0-166>166</a></span>
 <span class=normal><a href=#__codelineno-0-167>167</a></span>
-<span class=normal><a href=#__codelineno-0-168>168</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a><span class=k>def</span> <span class=nf>setup</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span> <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span> <span class=n>stage</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-168>168</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a><span class=k>def</span><span class=w> </span><span class=nf>setup</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span> <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span> <span class=n>stage</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-150><a id=__codelineno-0-150 name=__codelineno-0-150></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-151><a id=__codelineno-0-151 name=__codelineno-0-151></a><span class=sd>    Create the prediction output directory when predict begins.</span>
 </span><span id=__span-0-152><a id=__codelineno-0-152 name=__codelineno-0-152></a>
@@ -664,7 +664,7 @@
 <span class=normal><a href=#__codelineno-0-231>231</a></span>
 <span class=normal><a href=#__codelineno-0-232>232</a></span>
 <span class=normal><a href=#__codelineno-0-233>233</a></span>
-<span class=normal><a href=#__codelineno-0-234>234</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-170><a id=__codelineno-0-170 name=__codelineno-0-170></a><span class=k>def</span> <span class=nf>write_on_batch_end</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-234>234</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-170><a id=__codelineno-0-170 name=__codelineno-0-170></a><span class=k>def</span><span class=w> </span><span class=nf>write_on_batch_end</span><span class=p>(</span>
 </span><span id=__span-0-171><a id=__codelineno-0-171 name=__codelineno-0-171></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-172><a id=__codelineno-0-172 name=__codelineno-0-172></a>    <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-173><a id=__codelineno-0-173 name=__codelineno-0-173></a>    <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>

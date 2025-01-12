@@ -201,7 +201,7 @@
 <span class=normal><a href=#__codelineno-0-237>237</a></span>
 <span class=normal><a href=#__codelineno-0-238>238</a></span>
 <span class=normal><a href=#__codelineno-0-239>239</a></span>
-<span class=normal><a href=#__codelineno-0-240>240</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-37><a id=__codelineno-0-37 name=__codelineno-0-37></a><span class=k>class</span> <span class=nc>FCNModule</span><span class=p>(</span><span class=n>L</span><span class=o>.</span><span class=n>LightningModule</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-240>240</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-37><a id=__codelineno-0-37 name=__codelineno-0-37></a><span class=k>class</span><span class=w> </span><span class=nc>FCNModule</span><span class=p>(</span><span class=n>L</span><span class=o>.</span><span class=n>LightningModule</span><span class=p>):</span>
 </span><span id=__span-0-38><a id=__codelineno-0-38 name=__codelineno-0-38></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-39><a id=__codelineno-0-39 name=__codelineno-0-39></a><span class=sd>    CAREamics Lightning module.</span>
 </span><span id=__span-0-40><a id=__codelineno-0-40 name=__codelineno-0-40></a>
@@ -227,7 +227,7 @@
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a><span class=sd>        Learning rate scheduler name.</span>
 </span><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a>
-</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>algorithm_config</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>FCNAlgorithmConfig</span><span class=p>,</span> <span class=nb>dict</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>algorithm_config</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>FCNAlgorithmConfig</span><span class=p>,</span> <span class=nb>dict</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Lightning module for CAREamics.</span>
 </span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a><span class=sd>        This class encapsulates the a PyTorch model along with the training, validation,</span>
@@ -253,7 +253,7 @@
 </span><span id=__span-0-86><a id=__codelineno-0-86 name=__codelineno-0-86></a>        <span class=bp>self</span><span class=o>.</span><span class=n>lr_scheduler_name</span> <span class=o>=</span> <span class=n>algorithm_config</span><span class=o>.</span><span class=n>lr_scheduler</span><span class=o>.</span><span class=n>name</span>
 </span><span id=__span-0-87><a id=__codelineno-0-87 name=__codelineno-0-87></a>        <span class=bp>self</span><span class=o>.</span><span class=n>lr_scheduler_params</span> <span class=o>=</span> <span class=n>algorithm_config</span><span class=o>.</span><span class=n>lr_scheduler</span><span class=o>.</span><span class=n>parameters</span>
 </span><span id=__span-0-88><a id=__codelineno-0-88 name=__codelineno-0-88></a>
-</span><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a>    <span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+</span><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a>    <span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-90><a id=__codelineno-0-90 name=__codelineno-0-90></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Forward pass.</span>
 </span><span id=__span-0-91><a id=__codelineno-0-91 name=__codelineno-0-91></a>
 </span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a><span class=sd>        Parameters</span>
@@ -268,7 +268,7 @@
 </span><span id=__span-0-101><a id=__codelineno-0-101 name=__codelineno-0-101></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-102><a id=__codelineno-0-102 name=__codelineno-0-102></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>model</span><span class=p>(</span><span class=n>x</span><span class=p>)</span>
 </span><span id=__span-0-103><a id=__codelineno-0-103 name=__codelineno-0-103></a>
-</span><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a>    <span class=k>def</span> <span class=nf>training_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+</span><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a>    <span class=k>def</span><span class=w> </span><span class=nf>training_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-105><a id=__codelineno-0-105 name=__codelineno-0-105></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Training step.</span>
 </span><span id=__span-0-106><a id=__codelineno-0-106 name=__codelineno-0-106></a>
 </span><span id=__span-0-107><a id=__codelineno-0-107 name=__codelineno-0-107></a><span class=sd>        Parameters</span>
@@ -292,7 +292,7 @@
 </span><span id=__span-0-125><a id=__codelineno-0-125 name=__codelineno-0-125></a>        <span class=p>)</span>
 </span><span id=__span-0-126><a id=__codelineno-0-126 name=__codelineno-0-126></a>        <span class=k>return</span> <span class=n>loss</span>
 </span><span id=__span-0-127><a id=__codelineno-0-127 name=__codelineno-0-127></a>
-</span><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a>    <span class=k>def</span> <span class=nf>validation_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a>    <span class=k>def</span><span class=w> </span><span class=nf>validation_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-129><a id=__codelineno-0-129 name=__codelineno-0-129></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Validation step.</span>
 </span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a>
 </span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a><span class=sd>        Parameters</span>
@@ -316,7 +316,7 @@
 </span><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a>            <span class=n>logger</span><span class=o>=</span><span class=kc>True</span><span class=p>,</span>
 </span><span id=__span-0-150><a id=__codelineno-0-150 name=__codelineno-0-150></a>        <span class=p>)</span>
 </span><span id=__span-0-151><a id=__codelineno-0-151 name=__codelineno-0-151></a>
-</span><span id=__span-0-152><a id=__codelineno-0-152 name=__codelineno-0-152></a>    <span class=k>def</span> <span class=nf>predict_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+</span><span id=__span-0-152><a id=__codelineno-0-152 name=__codelineno-0-152></a>    <span class=k>def</span><span class=w> </span><span class=nf>predict_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-153><a id=__codelineno-0-153 name=__codelineno-0-153></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Prediction step.</span>
 </span><span id=__span-0-154><a id=__codelineno-0-154 name=__codelineno-0-154></a>
 </span><span id=__span-0-155><a id=__codelineno-0-155 name=__codelineno-0-155></a><span class=sd>        Parameters</span>
@@ -384,7 +384,7 @@
 </span><span id=__span-0-217><a id=__codelineno-0-217 name=__codelineno-0-217></a>        <span class=k>else</span><span class=p>:</span>
 </span><span id=__span-0-218><a id=__codelineno-0-218 name=__codelineno-0-218></a>            <span class=k>return</span> <span class=n>denormalized_output</span>
 </span><span id=__span-0-219><a id=__codelineno-0-219 name=__codelineno-0-219></a>
-</span><span id=__span-0-220><a id=__codelineno-0-220 name=__codelineno-0-220></a>    <span class=k>def</span> <span class=nf>configure_optimizers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+</span><span id=__span-0-220><a id=__codelineno-0-220 name=__codelineno-0-220></a>    <span class=k>def</span><span class=w> </span><span class=nf>configure_optimizers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-221><a id=__codelineno-0-221 name=__codelineno-0-221></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Configure optimizers and learning rate schedulers.</span>
 </span><span id=__span-0-222><a id=__codelineno-0-222 name=__codelineno-0-222></a>
 </span><span id=__span-0-223><a id=__codelineno-0-223 name=__codelineno-0-223></a><span class=sd>        Returns</span>
@@ -429,7 +429,7 @@
 <span class=normal><a href=#__codelineno-0-84>84</a></span>
 <span class=normal><a href=#__codelineno-0-85>85</a></span>
 <span class=normal><a href=#__codelineno-0-86>86</a></span>
-<span class=normal><a href=#__codelineno-0-87>87</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>algorithm_config</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>FCNAlgorithmConfig</span><span class=p>,</span> <span class=nb>dict</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-87>87</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>algorithm_config</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>FCNAlgorithmConfig</span><span class=p>,</span> <span class=nb>dict</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Lightning module for CAREamics.</span>
 </span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a><span class=sd>    This class encapsulates the a PyTorch model along with the training, validation,</span>
@@ -474,7 +474,7 @@
 <span class=normal><a href=#__codelineno-0-237>237</a></span>
 <span class=normal><a href=#__codelineno-0-238>238</a></span>
 <span class=normal><a href=#__codelineno-0-239>239</a></span>
-<span class=normal><a href=#__codelineno-0-240>240</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-220><a id=__codelineno-0-220 name=__codelineno-0-220></a><span class=k>def</span> <span class=nf>configure_optimizers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-240>240</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-220><a id=__codelineno-0-220 name=__codelineno-0-220></a><span class=k>def</span><span class=w> </span><span class=nf>configure_optimizers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-221><a id=__codelineno-0-221 name=__codelineno-0-221></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Configure optimizers and learning rate schedulers.</span>
 </span><span id=__span-0-222><a id=__codelineno-0-222 name=__codelineno-0-222></a>
 </span><span id=__span-0-223><a id=__codelineno-0-223 name=__codelineno-0-223></a><span class=sd>    Returns</span>
@@ -508,7 +508,7 @@
 <span class=normal><a href=#__codelineno-0-99> 99</a></span>
 <span class=normal><a href=#__codelineno-0-100>100</a></span>
 <span class=normal><a href=#__codelineno-0-101>101</a></span>
-<span class=normal><a href=#__codelineno-0-102>102</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a><span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-102>102</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a><span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-90><a id=__codelineno-0-90 name=__codelineno-0-90></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Forward pass.</span>
 </span><span id=__span-0-91><a id=__codelineno-0-91 name=__codelineno-0-91></a>
 </span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a><span class=sd>    Parameters</span>
@@ -588,7 +588,7 @@
 <span class=normal><a href=#__codelineno-0-215>215</a></span>
 <span class=normal><a href=#__codelineno-0-216>216</a></span>
 <span class=normal><a href=#__codelineno-0-217>217</a></span>
-<span class=normal><a href=#__codelineno-0-218>218</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-152><a id=__codelineno-0-152 name=__codelineno-0-152></a><span class=k>def</span> <span class=nf>predict_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-218>218</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-152><a id=__codelineno-0-152 name=__codelineno-0-152></a><span class=k>def</span><span class=w> </span><span class=nf>predict_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-153><a id=__codelineno-0-153 name=__codelineno-0-153></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Prediction step.</span>
 </span><span id=__span-0-154><a id=__codelineno-0-154 name=__codelineno-0-154></a>
 </span><span id=__span-0-155><a id=__codelineno-0-155 name=__codelineno-0-155></a><span class=sd>    Parameters</span>
@@ -677,7 +677,7 @@
 <span class=normal><a href=#__codelineno-0-123>123</a></span>
 <span class=normal><a href=#__codelineno-0-124>124</a></span>
 <span class=normal><a href=#__codelineno-0-125>125</a></span>
-<span class=normal><a href=#__codelineno-0-126>126</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a><span class=k>def</span> <span class=nf>training_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-126>126</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a><span class=k>def</span><span class=w> </span><span class=nf>training_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-105><a id=__codelineno-0-105 name=__codelineno-0-105></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Training step.</span>
 </span><span id=__span-0-106><a id=__codelineno-0-106 name=__codelineno-0-106></a>
 </span><span id=__span-0-107><a id=__codelineno-0-107 name=__codelineno-0-107></a><span class=sd>    Parameters</span>
@@ -722,7 +722,7 @@
 <span class=normal><a href=#__codelineno-0-147>147</a></span>
 <span class=normal><a href=#__codelineno-0-148>148</a></span>
 <span class=normal><a href=#__codelineno-0-149>149</a></span>
-<span class=normal><a href=#__codelineno-0-150>150</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a><span class=k>def</span> <span class=nf>validation_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-150>150</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a><span class=k>def</span><span class=w> </span><span class=nf>validation_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-129><a id=__codelineno-0-129 name=__codelineno-0-129></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Validation step.</span>
 </span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a>
 </span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a><span class=sd>    Parameters</span>
@@ -1087,7 +1087,7 @@
 <span class=normal><a href=#__codelineno-0-582>582</a></span>
 <span class=normal><a href=#__codelineno-0-583>583</a></span>
 <span class=normal><a href=#__codelineno-0-584>584</a></span>
-<span class=normal><a href=#__codelineno-0-585>585</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-243><a id=__codelineno-0-243 name=__codelineno-0-243></a><span class=k>class</span> <span class=nc>VAEModule</span><span class=p>(</span><span class=n>L</span><span class=o>.</span><span class=n>LightningModule</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-585>585</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-243><a id=__codelineno-0-243 name=__codelineno-0-243></a><span class=k>class</span><span class=w> </span><span class=nc>VAEModule</span><span class=p>(</span><span class=n>L</span><span class=o>.</span><span class=n>LightningModule</span><span class=p>):</span>
 </span><span id=__span-0-244><a id=__codelineno-0-244 name=__codelineno-0-244></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-245><a id=__codelineno-0-245 name=__codelineno-0-245></a><span class=sd>    CAREamics Lightning module.</span>
 </span><span id=__span-0-246><a id=__codelineno-0-246 name=__codelineno-0-246></a>
@@ -1113,7 +1113,7 @@
 </span><span id=__span-0-266><a id=__codelineno-0-266 name=__codelineno-0-266></a><span class=sd>        Learning rate scheduler name.</span>
 </span><span id=__span-0-267><a id=__codelineno-0-267 name=__codelineno-0-267></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-268><a id=__codelineno-0-268 name=__codelineno-0-268></a>
-</span><span id=__span-0-269><a id=__codelineno-0-269 name=__codelineno-0-269></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>algorithm_config</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>VAEAlgorithmConfig</span><span class=p>,</span> <span class=nb>dict</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-269><a id=__codelineno-0-269 name=__codelineno-0-269></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>algorithm_config</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>VAEAlgorithmConfig</span><span class=p>,</span> <span class=nb>dict</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-270><a id=__codelineno-0-270 name=__codelineno-0-270></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Lightning module for CAREamics.</span>
 </span><span id=__span-0-271><a id=__codelineno-0-271 name=__codelineno-0-271></a>
 </span><span id=__span-0-272><a id=__codelineno-0-272 name=__codelineno-0-272></a><span class=sd>        This class encapsulates the a PyTorch model along with the training, validation,</span>
@@ -1168,7 +1168,7 @@
 </span><span id=__span-0-321><a id=__codelineno-0-321 name=__codelineno-0-321></a>            <span class=n>RunningPSNR</span><span class=p>()</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>algorithm_config</span><span class=o>.</span><span class=n>model</span><span class=o>.</span><span class=n>output_channels</span><span class=p>)</span>
 </span><span id=__span-0-322><a id=__codelineno-0-322 name=__codelineno-0-322></a>        <span class=p>]</span>
 </span><span id=__span-0-323><a id=__codelineno-0-323 name=__codelineno-0-323></a>
-</span><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a>    <span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]]:</span>
+</span><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a>    <span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]]:</span>
 </span><span id=__span-0-325><a id=__codelineno-0-325 name=__codelineno-0-325></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Forward pass.</span>
 </span><span id=__span-0-326><a id=__codelineno-0-326 name=__codelineno-0-326></a>
 </span><span id=__span-0-327><a id=__codelineno-0-327 name=__codelineno-0-327></a><span class=sd>        Parameters</span>
@@ -1184,7 +1184,7 @@
 </span><span id=__span-0-337><a id=__codelineno-0-337 name=__codelineno-0-337></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-338><a id=__codelineno-0-338 name=__codelineno-0-338></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>model</span><span class=p>(</span><span class=n>x</span><span class=p>)</span>  <span class=c1># TODO Different model can have more than one output</span>
 </span><span id=__span-0-339><a id=__codelineno-0-339 name=__codelineno-0-339></a>
-</span><span id=__span-0-340><a id=__codelineno-0-340 name=__codelineno-0-340></a>    <span class=k>def</span> <span class=nf>training_step</span><span class=p>(</span>
+</span><span id=__span-0-340><a id=__codelineno-0-340 name=__codelineno-0-340></a>    <span class=k>def</span><span class=w> </span><span class=nf>training_step</span><span class=p>(</span>
 </span><span id=__span-0-341><a id=__codelineno-0-341 name=__codelineno-0-341></a>        <span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>Tensor</span><span class=p>],</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span>
 </span><span id=__span-0-342><a id=__codelineno-0-342 name=__codelineno-0-342></a>    <span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Tensor</span><span class=p>]]:</span>
 </span><span id=__span-0-343><a id=__codelineno-0-343 name=__codelineno-0-343></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Training step.</span>
@@ -1228,7 +1228,7 @@
 </span><span id=__span-0-381><a id=__codelineno-0-381 name=__codelineno-0-381></a>        <span class=c1># self.log(&quot;lr&quot;, self, on_epoch=True)</span>
 </span><span id=__span-0-382><a id=__codelineno-0-382 name=__codelineno-0-382></a>        <span class=k>return</span> <span class=n>loss</span>
 </span><span id=__span-0-383><a id=__codelineno-0-383 name=__codelineno-0-383></a>
-</span><span id=__span-0-384><a id=__codelineno-0-384 name=__codelineno-0-384></a>    <span class=k>def</span> <span class=nf>validation_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>Tensor</span><span class=p>],</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-384><a id=__codelineno-0-384 name=__codelineno-0-384></a>    <span class=k>def</span><span class=w> </span><span class=nf>validation_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>Tensor</span><span class=p>],</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-385><a id=__codelineno-0-385 name=__codelineno-0-385></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Validation step.</span>
 </span><span id=__span-0-386><a id=__codelineno-0-386 name=__codelineno-0-386></a>
 </span><span id=__span-0-387><a id=__codelineno-0-387 name=__codelineno-0-387></a><span class=sd>        Parameters</span>
@@ -1264,7 +1264,7 @@
 </span><span id=__span-0-417><a id=__codelineno-0-417 name=__codelineno-0-417></a>        <span class=k>for</span> <span class=n>i</span><span class=p>,</span> <span class=n>psnr</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>curr_psnr</span><span class=p>):</span>
 </span><span id=__span-0-418><a id=__codelineno-0-418 name=__codelineno-0-418></a>            <span class=bp>self</span><span class=o>.</span><span class=n>log</span><span class=p>(</span><span class=sa>f</span><span class=s2>&quot;val_psnr_ch</span><span class=si>{</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=si>}</span><span class=s2>_batch&quot;</span><span class=p>,</span> <span class=n>psnr</span><span class=p>,</span> <span class=n>on_epoch</span><span class=o>=</span><span class=kc>True</span><span class=p>)</span>
 </span><span id=__span-0-419><a id=__codelineno-0-419 name=__codelineno-0-419></a>
-</span><span id=__span-0-420><a id=__codelineno-0-420 name=__codelineno-0-420></a>    <span class=k>def</span> <span class=nf>on_validation_epoch_end</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-420><a id=__codelineno-0-420 name=__codelineno-0-420></a>    <span class=k>def</span><span class=w> </span><span class=nf>on_validation_epoch_end</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-421><a id=__codelineno-0-421 name=__codelineno-0-421></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Validation epoch end.&quot;&quot;&quot;</span>
 </span><span id=__span-0-422><a id=__codelineno-0-422 name=__codelineno-0-422></a>        <span class=n>psnr_</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>reduce_running_psnr</span><span class=p>()</span>
 </span><span id=__span-0-423><a id=__codelineno-0-423 name=__codelineno-0-423></a>        <span class=k>if</span> <span class=n>psnr_</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
@@ -1272,7 +1272,7 @@
 </span><span id=__span-0-425><a id=__codelineno-0-425 name=__codelineno-0-425></a>        <span class=k>else</span><span class=p>:</span>
 </span><span id=__span-0-426><a id=__codelineno-0-426 name=__codelineno-0-426></a>            <span class=bp>self</span><span class=o>.</span><span class=n>log</span><span class=p>(</span><span class=s2>&quot;val_psnr&quot;</span><span class=p>,</span> <span class=mf>0.0</span><span class=p>,</span> <span class=n>on_epoch</span><span class=o>=</span><span class=kc>True</span><span class=p>,</span> <span class=n>prog_bar</span><span class=o>=</span><span class=kc>True</span><span class=p>)</span>
 </span><span id=__span-0-427><a id=__codelineno-0-427 name=__codelineno-0-427></a>
-</span><span id=__span-0-428><a id=__codelineno-0-428 name=__codelineno-0-428></a>    <span class=k>def</span> <span class=nf>predict_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+</span><span id=__span-0-428><a id=__codelineno-0-428 name=__codelineno-0-428></a>    <span class=k>def</span><span class=w> </span><span class=nf>predict_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-429><a id=__codelineno-0-429 name=__codelineno-0-429></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Prediction step.</span>
 </span><span id=__span-0-430><a id=__codelineno-0-430 name=__codelineno-0-430></a>
 </span><span id=__span-0-431><a id=__codelineno-0-431 name=__codelineno-0-431></a><span class=sd>        Parameters</span>
@@ -1318,7 +1318,7 @@
 </span><span id=__span-0-471><a id=__codelineno-0-471 name=__codelineno-0-471></a>        <span class=k>else</span><span class=p>:</span>
 </span><span id=__span-0-472><a id=__codelineno-0-472 name=__codelineno-0-472></a>            <span class=k>return</span> <span class=n>denormalized_output</span>
 </span><span id=__span-0-473><a id=__codelineno-0-473 name=__codelineno-0-473></a>
-</span><span id=__span-0-474><a id=__codelineno-0-474 name=__codelineno-0-474></a>    <span class=k>def</span> <span class=nf>configure_optimizers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+</span><span id=__span-0-474><a id=__codelineno-0-474 name=__codelineno-0-474></a>    <span class=k>def</span><span class=w> </span><span class=nf>configure_optimizers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-475><a id=__codelineno-0-475 name=__codelineno-0-475></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Configure optimizers and learning rate schedulers.</span>
 </span><span id=__span-0-476><a id=__codelineno-0-476 name=__codelineno-0-476></a>
 </span><span id=__span-0-477><a id=__codelineno-0-477 name=__codelineno-0-477></a><span class=sd>        Returns</span>
@@ -1344,7 +1344,7 @@
 </span><span id=__span-0-497><a id=__codelineno-0-497 name=__codelineno-0-497></a>    <span class=c1># TODO: this same operation is done in many other places, like in loss_func</span>
 </span><span id=__span-0-498><a id=__codelineno-0-498 name=__codelineno-0-498></a>    <span class=c1># should we refactor LadderVAE so that it already outputs</span>
 </span><span id=__span-0-499><a id=__codelineno-0-499 name=__codelineno-0-499></a>    <span class=c1># tuple(`mean`, `logvar`, `td_data`)?</span>
-</span><span id=__span-0-500><a id=__codelineno-0-500 name=__codelineno-0-500></a>    <span class=k>def</span> <span class=nf>get_reconstructed_tensor</span><span class=p>(</span>
+</span><span id=__span-0-500><a id=__codelineno-0-500 name=__codelineno-0-500></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_reconstructed_tensor</span><span class=p>(</span>
 </span><span id=__span-0-501><a id=__codelineno-0-501 name=__codelineno-0-501></a>        <span class=bp>self</span><span class=p>,</span> <span class=n>model_outputs</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]]</span>
 </span><span id=__span-0-502><a id=__codelineno-0-502 name=__codelineno-0-502></a>    <span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-503><a id=__codelineno-0-503 name=__codelineno-0-503></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Get the reconstructed tensor from the LVAE model outputs.</span>
@@ -1366,7 +1366,7 @@
 </span><span id=__span-0-519><a id=__codelineno-0-519 name=__codelineno-0-519></a>        <span class=k>elif</span> <span class=bp>self</span><span class=o>.</span><span class=n>model</span><span class=o>.</span><span class=n>predict_logvar</span> <span class=o>==</span> <span class=s2>&quot;pixelwise&quot;</span><span class=p>:</span>
 </span><span id=__span-0-520><a id=__codelineno-0-520 name=__codelineno-0-520></a>            <span class=k>return</span> <span class=n>predictions</span><span class=o>.</span><span class=n>chunk</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span> <span class=n>dim</span><span class=o>=</span><span class=mi>1</span><span class=p>)[</span><span class=mi>0</span><span class=p>]</span>
 </span><span id=__span-0-521><a id=__codelineno-0-521 name=__codelineno-0-521></a>
-</span><span id=__span-0-522><a id=__codelineno-0-522 name=__codelineno-0-522></a>    <span class=k>def</span> <span class=nf>compute_val_psnr</span><span class=p>(</span>
+</span><span id=__span-0-522><a id=__codelineno-0-522 name=__codelineno-0-522></a>    <span class=k>def</span><span class=w> </span><span class=nf>compute_val_psnr</span><span class=p>(</span>
 </span><span id=__span-0-523><a id=__codelineno-0-523 name=__codelineno-0-523></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-524><a id=__codelineno-0-524 name=__codelineno-0-524></a>        <span class=n>model_output</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]],</span>
 </span><span id=__span-0-525><a id=__codelineno-0-525 name=__codelineno-0-525></a>        <span class=n>target</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span>
@@ -1409,7 +1409,7 @@
 </span><span id=__span-0-562><a id=__codelineno-0-562 name=__codelineno-0-562></a>            <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>out_channels</span><span class=p>)</span>
 </span><span id=__span-0-563><a id=__codelineno-0-563 name=__codelineno-0-563></a>        <span class=p>]</span>
 </span><span id=__span-0-564><a id=__codelineno-0-564 name=__codelineno-0-564></a>
-</span><span id=__span-0-565><a id=__codelineno-0-565 name=__codelineno-0-565></a>    <span class=k>def</span> <span class=nf>reduce_running_psnr</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>float</span><span class=p>]:</span>
+</span><span id=__span-0-565><a id=__codelineno-0-565 name=__codelineno-0-565></a>    <span class=k>def</span><span class=w> </span><span class=nf>reduce_running_psnr</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>float</span><span class=p>]:</span>
 </span><span id=__span-0-566><a id=__codelineno-0-566 name=__codelineno-0-566></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Reduce the running PSNR statistics and reset the running PSNR.</span>
 </span><span id=__span-0-567><a id=__codelineno-0-567 name=__codelineno-0-567></a>
 </span><span id=__span-0-568><a id=__codelineno-0-568 name=__codelineno-0-568></a><span class=sd>        Returns</span>
@@ -1483,7 +1483,7 @@
 <span class=normal><a href=#__codelineno-0-319>319</a></span>
 <span class=normal><a href=#__codelineno-0-320>320</a></span>
 <span class=normal><a href=#__codelineno-0-321>321</a></span>
-<span class=normal><a href=#__codelineno-0-322>322</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-269><a id=__codelineno-0-269 name=__codelineno-0-269></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>algorithm_config</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>VAEAlgorithmConfig</span><span class=p>,</span> <span class=nb>dict</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-322>322</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-269><a id=__codelineno-0-269 name=__codelineno-0-269></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>algorithm_config</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>VAEAlgorithmConfig</span><span class=p>,</span> <span class=nb>dict</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-270><a id=__codelineno-0-270 name=__codelineno-0-270></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Lightning module for CAREamics.</span>
 </span><span id=__span-0-271><a id=__codelineno-0-271 name=__codelineno-0-271></a>
 </span><span id=__span-0-272><a id=__codelineno-0-272 name=__codelineno-0-272></a><span class=sd>    This class encapsulates the a PyTorch model along with the training, validation,</span>
@@ -1578,7 +1578,7 @@
 <span class=normal><a href=#__codelineno-0-560>560</a></span>
 <span class=normal><a href=#__codelineno-0-561>561</a></span>
 <span class=normal><a href=#__codelineno-0-562>562</a></span>
-<span class=normal><a href=#__codelineno-0-563>563</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-522><a id=__codelineno-0-522 name=__codelineno-0-522></a><span class=k>def</span> <span class=nf>compute_val_psnr</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-563>563</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-522><a id=__codelineno-0-522 name=__codelineno-0-522></a><span class=k>def</span><span class=w> </span><span class=nf>compute_val_psnr</span><span class=p>(</span>
 </span><span id=__span-0-523><a id=__codelineno-0-523 name=__codelineno-0-523></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-524><a id=__codelineno-0-524 name=__codelineno-0-524></a>    <span class=n>model_output</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]],</span>
 </span><span id=__span-0-525><a id=__codelineno-0-525 name=__codelineno-0-525></a>    <span class=n>target</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span>
@@ -1640,7 +1640,7 @@
 <span class=normal><a href=#__codelineno-0-491>491</a></span>
 <span class=normal><a href=#__codelineno-0-492>492</a></span>
 <span class=normal><a href=#__codelineno-0-493>493</a></span>
-<span class=normal><a href=#__codelineno-0-494>494</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-474><a id=__codelineno-0-474 name=__codelineno-0-474></a><span class=k>def</span> <span class=nf>configure_optimizers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-494>494</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-474><a id=__codelineno-0-474 name=__codelineno-0-474></a><span class=k>def</span><span class=w> </span><span class=nf>configure_optimizers</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-475><a id=__codelineno-0-475 name=__codelineno-0-475></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Configure optimizers and learning rate schedulers.</span>
 </span><span id=__span-0-476><a id=__codelineno-0-476 name=__codelineno-0-476></a>
 </span><span id=__span-0-477><a id=__codelineno-0-477 name=__codelineno-0-477></a><span class=sd>    Returns</span>
@@ -1675,7 +1675,7 @@
 <span class=normal><a href=#__codelineno-0-335>335</a></span>
 <span class=normal><a href=#__codelineno-0-336>336</a></span>
 <span class=normal><a href=#__codelineno-0-337>337</a></span>
-<span class=normal><a href=#__codelineno-0-338>338</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a><span class=k>def</span> <span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]]:</span>
+<span class=normal><a href=#__codelineno-0-338>338</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-324><a id=__codelineno-0-324 name=__codelineno-0-324></a><span class=k>def</span><span class=w> </span><span class=nf>forward</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]]:</span>
 </span><span id=__span-0-325><a id=__codelineno-0-325 name=__codelineno-0-325></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Forward pass.</span>
 </span><span id=__span-0-326><a id=__codelineno-0-326 name=__codelineno-0-326></a>
 </span><span id=__span-0-327><a id=__codelineno-0-327 name=__codelineno-0-327></a><span class=sd>    Parameters</span>
@@ -1710,7 +1710,7 @@
 <span class=normal><a href=#__codelineno-0-517>517</a></span>
 <span class=normal><a href=#__codelineno-0-518>518</a></span>
 <span class=normal><a href=#__codelineno-0-519>519</a></span>
-<span class=normal><a href=#__codelineno-0-520>520</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-500><a id=__codelineno-0-500 name=__codelineno-0-500></a><span class=k>def</span> <span class=nf>get_reconstructed_tensor</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-520>520</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-500><a id=__codelineno-0-500 name=__codelineno-0-500></a><span class=k>def</span><span class=w> </span><span class=nf>get_reconstructed_tensor</span><span class=p>(</span>
 </span><span id=__span-0-501><a id=__codelineno-0-501 name=__codelineno-0-501></a>    <span class=bp>self</span><span class=p>,</span> <span class=n>model_outputs</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]]</span>
 </span><span id=__span-0-502><a id=__codelineno-0-502 name=__codelineno-0-502></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Tensor</span><span class=p>:</span>
 </span><span id=__span-0-503><a id=__codelineno-0-503 name=__codelineno-0-503></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Get the reconstructed tensor from the LVAE model outputs.</span>
@@ -1737,7 +1737,7 @@
 <span class=normal><a href=#__codelineno-0-423>423</a></span>
 <span class=normal><a href=#__codelineno-0-424>424</a></span>
 <span class=normal><a href=#__codelineno-0-425>425</a></span>
-<span class=normal><a href=#__codelineno-0-426>426</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-420><a id=__codelineno-0-420 name=__codelineno-0-420></a><span class=k>def</span> <span class=nf>on_validation_epoch_end</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-426>426</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-420><a id=__codelineno-0-420 name=__codelineno-0-420></a><span class=k>def</span><span class=w> </span><span class=nf>on_validation_epoch_end</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-421><a id=__codelineno-0-421 name=__codelineno-0-421></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Validation epoch end.&quot;&quot;&quot;</span>
 </span><span id=__span-0-422><a id=__codelineno-0-422 name=__codelineno-0-422></a>    <span class=n>psnr_</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>reduce_running_psnr</span><span class=p>()</span>
 </span><span id=__span-0-423><a id=__codelineno-0-423 name=__codelineno-0-423></a>    <span class=k>if</span> <span class=n>psnr_</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
@@ -1788,7 +1788,7 @@
 <span class=normal><a href=#__codelineno-0-469>469</a></span>
 <span class=normal><a href=#__codelineno-0-470>470</a></span>
 <span class=normal><a href=#__codelineno-0-471>471</a></span>
-<span class=normal><a href=#__codelineno-0-472>472</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-428><a id=__codelineno-0-428 name=__codelineno-0-428></a><span class=k>def</span> <span class=nf>predict_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-472>472</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-428><a id=__codelineno-0-428 name=__codelineno-0-428></a><span class=k>def</span><span class=w> </span><span class=nf>predict_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=n>Tensor</span><span class=p>,</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Any</span><span class=p>:</span>
 </span><span id=__span-0-429><a id=__codelineno-0-429 name=__codelineno-0-429></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Prediction step.</span>
 </span><span id=__span-0-430><a id=__codelineno-0-430 name=__codelineno-0-430></a>
 </span><span id=__span-0-431><a id=__codelineno-0-431 name=__codelineno-0-431></a><span class=sd>    Parameters</span>
@@ -1853,7 +1853,7 @@
 <span class=normal><a href=#__codelineno-0-582>582</a></span>
 <span class=normal><a href=#__codelineno-0-583>583</a></span>
 <span class=normal><a href=#__codelineno-0-584>584</a></span>
-<span class=normal><a href=#__codelineno-0-585>585</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-565><a id=__codelineno-0-565 name=__codelineno-0-565></a><span class=k>def</span> <span class=nf>reduce_running_psnr</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>float</span><span class=p>]:</span>
+<span class=normal><a href=#__codelineno-0-585>585</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-565><a id=__codelineno-0-565 name=__codelineno-0-565></a><span class=k>def</span><span class=w> </span><span class=nf>reduce_running_psnr</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>float</span><span class=p>]:</span>
 </span><span id=__span-0-566><a id=__codelineno-0-566 name=__codelineno-0-566></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Reduce the running PSNR statistics and reset the running PSNR.</span>
 </span><span id=__span-0-567><a id=__codelineno-0-567 name=__codelineno-0-567></a>
 </span><span id=__span-0-568><a id=__codelineno-0-568 name=__codelineno-0-568></a><span class=sd>    Returns</span>
@@ -1916,7 +1916,7 @@
 <span class=normal><a href=#__codelineno-0-379>379</a></span>
 <span class=normal><a href=#__codelineno-0-380>380</a></span>
 <span class=normal><a href=#__codelineno-0-381>381</a></span>
-<span class=normal><a href=#__codelineno-0-382>382</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-340><a id=__codelineno-0-340 name=__codelineno-0-340></a><span class=k>def</span> <span class=nf>training_step</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-382>382</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-340><a id=__codelineno-0-340 name=__codelineno-0-340></a><span class=k>def</span><span class=w> </span><span class=nf>training_step</span><span class=p>(</span>
 </span><span id=__span-0-341><a id=__codelineno-0-341 name=__codelineno-0-341></a>    <span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>Tensor</span><span class=p>],</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span>
 </span><span id=__span-0-342><a id=__codelineno-0-342 name=__codelineno-0-342></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Optional</span><span class=p>[</span><span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Tensor</span><span class=p>]]:</span>
 </span><span id=__span-0-343><a id=__codelineno-0-343 name=__codelineno-0-343></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Training step.</span>
@@ -1993,7 +1993,7 @@
 <span class=normal><a href=#__codelineno-0-415>415</a></span>
 <span class=normal><a href=#__codelineno-0-416>416</a></span>
 <span class=normal><a href=#__codelineno-0-417>417</a></span>
-<span class=normal><a href=#__codelineno-0-418>418</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-384><a id=__codelineno-0-384 name=__codelineno-0-384></a><span class=k>def</span> <span class=nf>validation_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>Tensor</span><span class=p>],</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-418>418</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-384><a id=__codelineno-0-384 name=__codelineno-0-384></a><span class=k>def</span><span class=w> </span><span class=nf>validation_step</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>batch</span><span class=p>:</span> <span class=nb>tuple</span><span class=p>[</span><span class=n>Tensor</span><span class=p>,</span> <span class=n>Tensor</span><span class=p>],</span> <span class=n>batch_idx</span><span class=p>:</span> <span class=n>Any</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-385><a id=__codelineno-0-385 name=__codelineno-0-385></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Validation step.</span>
 </span><span id=__span-0-386><a id=__codelineno-0-386 name=__codelineno-0-386></a>
 </span><span id=__span-0-387><a id=__codelineno-0-387 name=__codelineno-0-387></a><span class=sd>    Parameters</span>
@@ -2104,7 +2104,7 @@
 <span class=normal><a href=#__codelineno-0-662>662</a></span>
 <span class=normal><a href=#__codelineno-0-663>663</a></span>
 <span class=normal><a href=#__codelineno-0-664>664</a></span>
-<span class=normal><a href=#__codelineno-0-665>665</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-589><a id=__codelineno-0-589 name=__codelineno-0-589></a><span class=k>def</span> <span class=nf>create_careamics_module</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-665>665</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-589><a id=__codelineno-0-589 name=__codelineno-0-589></a><span class=k>def</span><span class=w> </span><span class=nf>create_careamics_module</span><span class=p>(</span>
 </span><span id=__span-0-590><a id=__codelineno-0-590 name=__codelineno-0-590></a>    <span class=n>algorithm</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>SupportedAlgorithm</span><span class=p>,</span> <span class=nb>str</span><span class=p>],</span>
 </span><span id=__span-0-591><a id=__codelineno-0-591 name=__codelineno-0-591></a>    <span class=n>loss</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>SupportedLoss</span><span class=p>,</span> <span class=nb>str</span><span class=p>],</span>
 </span><span id=__span-0-592><a id=__codelineno-0-592 name=__codelineno-0-592></a>    <span class=n>architecture</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>SupportedArchitecture</span><span class=p>,</span> <span class=nb>str</span><span class=p>],</span>

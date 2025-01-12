@@ -240,7 +240,7 @@
 <span class=normal><a href=#__codelineno-0-248>248</a></span>
 <span class=normal><a href=#__codelineno-0-249>249</a></span>
 <span class=normal><a href=#__codelineno-0-250>250</a></span>
-<span class=normal><a href=#__codelineno-0-251>251</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-9><a id=__codelineno-0-9 name=__codelineno-0-9></a><span class=k>class</span> <span class=nc>PortfolioEntry</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-251>251</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-9><a id=__codelineno-0-9 name=__codelineno-0-9></a><span class=k>class</span><span class=w> </span><span class=nc>PortfolioEntry</span><span class=p>:</span>
 </span><span id=__span-0-10><a id=__codelineno-0-10 name=__codelineno-0-10></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Base class for portfolio entries.</span>
 </span><span id=__span-0-11><a id=__codelineno-0-11 name=__codelineno-0-11></a>
 </span><span id=__span-0-12><a id=__codelineno-0-12 name=__codelineno-0-12></a><span class=sd>    Attributes</span>
@@ -258,7 +258,7 @@
 </span><span id=__span-0-24><a id=__codelineno-0-24 name=__codelineno-0-24></a><span class=sd>        is_zip (bool): Whether the dataset is a zip file.</span>
 </span><span id=__span-0-25><a id=__codelineno-0-25 name=__codelineno-0-25></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26></a>
-</span><span id=__span-0-27><a id=__codelineno-0-27 name=__codelineno-0-27></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-27><a id=__codelineno-0-27 name=__codelineno-0-27></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29></a>        <span class=n>portfolio</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
 </span><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30></a>        <span class=n>name</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
@@ -290,7 +290,7 @@
 </span><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56></a>        <span class=bp>self</span><span class=o>.</span><span class=n>_is_zip</span> <span class=o>=</span> <span class=n>is_zip</span>
 </span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57></a>
 </span><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a>    <span class=nd>@property</span>
-</span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59></a>    <span class=k>def</span> <span class=nf>portfolio</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59></a>    <span class=k>def</span><span class=w> </span><span class=nf>portfolio</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Name of the portfolio the dataset belong to.</span>
 </span><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a>
 </span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62></a><span class=sd>        Returns</span>
@@ -301,7 +301,7 @@
 </span><span id=__span-0-67><a id=__codelineno-0-67 name=__codelineno-0-67></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_portfolio</span>
 </span><span id=__span-0-68><a id=__codelineno-0-68 name=__codelineno-0-68></a>
 </span><span id=__span-0-69><a id=__codelineno-0-69 name=__codelineno-0-69></a>    <span class=nd>@property</span>
-</span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70></a>    <span class=k>def</span> <span class=nf>name</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70></a>    <span class=k>def</span><span class=w> </span><span class=nf>name</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-71><a id=__codelineno-0-71 name=__codelineno-0-71></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Name of the dataset.</span>
 </span><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72></a>
 </span><span id=__span-0-73><a id=__codelineno-0-73 name=__codelineno-0-73></a><span class=sd>        Returns</span>
@@ -312,7 +312,7 @@
 </span><span id=__span-0-78><a id=__codelineno-0-78 name=__codelineno-0-78></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_name</span>
 </span><span id=__span-0-79><a id=__codelineno-0-79 name=__codelineno-0-79></a>
 </span><span id=__span-0-80><a id=__codelineno-0-80 name=__codelineno-0-80></a>    <span class=nd>@property</span>
-</span><span id=__span-0-81><a id=__codelineno-0-81 name=__codelineno-0-81></a>    <span class=k>def</span> <span class=nf>url</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-81><a id=__codelineno-0-81 name=__codelineno-0-81></a>    <span class=k>def</span><span class=w> </span><span class=nf>url</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-82><a id=__codelineno-0-82 name=__codelineno-0-82></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;URL of the dataset.</span>
 </span><span id=__span-0-83><a id=__codelineno-0-83 name=__codelineno-0-83></a>
 </span><span id=__span-0-84><a id=__codelineno-0-84 name=__codelineno-0-84></a><span class=sd>        Returns</span>
@@ -323,7 +323,7 @@
 </span><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_url</span>
 </span><span id=__span-0-90><a id=__codelineno-0-90 name=__codelineno-0-90></a>
 </span><span id=__span-0-91><a id=__codelineno-0-91 name=__codelineno-0-91></a>    <span class=nd>@property</span>
-</span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a>    <span class=k>def</span> <span class=nf>description</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a>    <span class=k>def</span><span class=w> </span><span class=nf>description</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-93><a id=__codelineno-0-93 name=__codelineno-0-93></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Description of the dataset.</span>
 </span><span id=__span-0-94><a id=__codelineno-0-94 name=__codelineno-0-94></a>
 </span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a><span class=sd>        Returns</span>
@@ -334,7 +334,7 @@
 </span><span id=__span-0-100><a id=__codelineno-0-100 name=__codelineno-0-100></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_description</span>
 </span><span id=__span-0-101><a id=__codelineno-0-101 name=__codelineno-0-101></a>
 </span><span id=__span-0-102><a id=__codelineno-0-102 name=__codelineno-0-102></a>    <span class=nd>@property</span>
-</span><span id=__span-0-103><a id=__codelineno-0-103 name=__codelineno-0-103></a>    <span class=k>def</span> <span class=nf>license</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-103><a id=__codelineno-0-103 name=__codelineno-0-103></a>    <span class=k>def</span><span class=w> </span><span class=nf>license</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-104><a id=__codelineno-0-104 name=__codelineno-0-104></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;License of the dataset.</span>
 </span><span id=__span-0-105><a id=__codelineno-0-105 name=__codelineno-0-105></a>
 </span><span id=__span-0-106><a id=__codelineno-0-106 name=__codelineno-0-106></a><span class=sd>        Returns</span>
@@ -345,7 +345,7 @@
 </span><span id=__span-0-111><a id=__codelineno-0-111 name=__codelineno-0-111></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_license</span>
 </span><span id=__span-0-112><a id=__codelineno-0-112 name=__codelineno-0-112></a>
 </span><span id=__span-0-113><a id=__codelineno-0-113 name=__codelineno-0-113></a>    <span class=nd>@property</span>
-</span><span id=__span-0-114><a id=__codelineno-0-114 name=__codelineno-0-114></a>    <span class=k>def</span> <span class=nf>citation</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-114><a id=__codelineno-0-114 name=__codelineno-0-114></a>    <span class=k>def</span><span class=w> </span><span class=nf>citation</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-115><a id=__codelineno-0-115 name=__codelineno-0-115></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Citation to use when referring to the dataset.</span>
 </span><span id=__span-0-116><a id=__codelineno-0-116 name=__codelineno-0-116></a>
 </span><span id=__span-0-117><a id=__codelineno-0-117 name=__codelineno-0-117></a><span class=sd>        Returns</span>
@@ -356,7 +356,7 @@
 </span><span id=__span-0-122><a id=__codelineno-0-122 name=__codelineno-0-122></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_citation</span>
 </span><span id=__span-0-123><a id=__codelineno-0-123 name=__codelineno-0-123></a>
 </span><span id=__span-0-124><a id=__codelineno-0-124 name=__codelineno-0-124></a>    <span class=nd>@property</span>
-</span><span id=__span-0-125><a id=__codelineno-0-125 name=__codelineno-0-125></a>    <span class=k>def</span> <span class=nf>file_name</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-125><a id=__codelineno-0-125 name=__codelineno-0-125></a>    <span class=k>def</span><span class=w> </span><span class=nf>file_name</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-126><a id=__codelineno-0-126 name=__codelineno-0-126></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Name of the downloaded file.</span>
 </span><span id=__span-0-127><a id=__codelineno-0-127 name=__codelineno-0-127></a>
 </span><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a><span class=sd>        Returns</span>
@@ -367,7 +367,7 @@
 </span><span id=__span-0-133><a id=__codelineno-0-133 name=__codelineno-0-133></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_file_name</span>
 </span><span id=__span-0-134><a id=__codelineno-0-134 name=__codelineno-0-134></a>
 </span><span id=__span-0-135><a id=__codelineno-0-135 name=__codelineno-0-135></a>    <span class=nd>@property</span>
-</span><span id=__span-0-136><a id=__codelineno-0-136 name=__codelineno-0-136></a>    <span class=k>def</span> <span class=nf>hash</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-136><a id=__codelineno-0-136 name=__codelineno-0-136></a>    <span class=k>def</span><span class=w> </span><span class=nf>hash</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-137><a id=__codelineno-0-137 name=__codelineno-0-137></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;SHA256 hash of the downloaded file.</span>
 </span><span id=__span-0-138><a id=__codelineno-0-138 name=__codelineno-0-138></a>
 </span><span id=__span-0-139><a id=__codelineno-0-139 name=__codelineno-0-139></a><span class=sd>        Returns</span>
@@ -378,7 +378,7 @@
 </span><span id=__span-0-144><a id=__codelineno-0-144 name=__codelineno-0-144></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_hash</span>
 </span><span id=__span-0-145><a id=__codelineno-0-145 name=__codelineno-0-145></a>
 </span><span id=__span-0-146><a id=__codelineno-0-146 name=__codelineno-0-146></a>    <span class=nd>@property</span>
-</span><span id=__span-0-147><a id=__codelineno-0-147 name=__codelineno-0-147></a>    <span class=k>def</span> <span class=nf>size</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>float</span><span class=p>:</span>
+</span><span id=__span-0-147><a id=__codelineno-0-147 name=__codelineno-0-147></a>    <span class=k>def</span><span class=w> </span><span class=nf>size</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>float</span><span class=p>:</span>
 </span><span id=__span-0-148><a id=__codelineno-0-148 name=__codelineno-0-148></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Size of the dataset in MB.</span>
 </span><span id=__span-0-149><a id=__codelineno-0-149 name=__codelineno-0-149></a>
 </span><span id=__span-0-150><a id=__codelineno-0-150 name=__codelineno-0-150></a><span class=sd>        Returns</span>
@@ -389,7 +389,7 @@
 </span><span id=__span-0-155><a id=__codelineno-0-155 name=__codelineno-0-155></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_size</span>
 </span><span id=__span-0-156><a id=__codelineno-0-156 name=__codelineno-0-156></a>
 </span><span id=__span-0-157><a id=__codelineno-0-157 name=__codelineno-0-157></a>    <span class=nd>@property</span>
-</span><span id=__span-0-158><a id=__codelineno-0-158 name=__codelineno-0-158></a>    <span class=k>def</span> <span class=nf>tags</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>List</span><span class=p>[</span><span class=nb>str</span><span class=p>]:</span>
+</span><span id=__span-0-158><a id=__codelineno-0-158 name=__codelineno-0-158></a>    <span class=k>def</span><span class=w> </span><span class=nf>tags</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>List</span><span class=p>[</span><span class=nb>str</span><span class=p>]:</span>
 </span><span id=__span-0-159><a id=__codelineno-0-159 name=__codelineno-0-159></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;List of tags associated to the dataset.</span>
 </span><span id=__span-0-160><a id=__codelineno-0-160 name=__codelineno-0-160></a>
 </span><span id=__span-0-161><a id=__codelineno-0-161 name=__codelineno-0-161></a><span class=sd>        Returns</span>
@@ -400,7 +400,7 @@
 </span><span id=__span-0-166><a id=__codelineno-0-166 name=__codelineno-0-166></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_tags</span>
 </span><span id=__span-0-167><a id=__codelineno-0-167 name=__codelineno-0-167></a>
 </span><span id=__span-0-168><a id=__codelineno-0-168 name=__codelineno-0-168></a>    <span class=nd>@property</span>
-</span><span id=__span-0-169><a id=__codelineno-0-169 name=__codelineno-0-169></a>    <span class=k>def</span> <span class=nf>is_zip</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>bool</span><span class=p>:</span>
+</span><span id=__span-0-169><a id=__codelineno-0-169 name=__codelineno-0-169></a>    <span class=k>def</span><span class=w> </span><span class=nf>is_zip</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>bool</span><span class=p>:</span>
 </span><span id=__span-0-170><a id=__codelineno-0-170 name=__codelineno-0-170></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Whether the dataset is a zip file.</span>
 </span><span id=__span-0-171><a id=__codelineno-0-171 name=__codelineno-0-171></a>
 </span><span id=__span-0-172><a id=__codelineno-0-172 name=__codelineno-0-172></a><span class=sd>        Returns</span>
@@ -410,7 +410,7 @@
 </span><span id=__span-0-176><a id=__codelineno-0-176 name=__codelineno-0-176></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-177><a id=__codelineno-0-177 name=__codelineno-0-177></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_is_zip</span>
 </span><span id=__span-0-178><a id=__codelineno-0-178 name=__codelineno-0-178></a>
-</span><span id=__span-0-179><a id=__codelineno-0-179 name=__codelineno-0-179></a>    <span class=k>def</span> <span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-179><a id=__codelineno-0-179 name=__codelineno-0-179></a>    <span class=k>def</span><span class=w> </span><span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-180><a id=__codelineno-0-180 name=__codelineno-0-180></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Convert PortfolioEntry to a string.</span>
 </span><span id=__span-0-181><a id=__codelineno-0-181 name=__codelineno-0-181></a>
 </span><span id=__span-0-182><a id=__codelineno-0-182 name=__codelineno-0-182></a><span class=sd>        Returns</span>
@@ -419,7 +419,7 @@
 </span><span id=__span-0-185><a id=__codelineno-0-185 name=__codelineno-0-185></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-186><a id=__codelineno-0-186 name=__codelineno-0-186></a>        <span class=k>return</span> <span class=nb>str</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>to_dict</span><span class=p>())</span>
 </span><span id=__span-0-187><a id=__codelineno-0-187 name=__codelineno-0-187></a>
-</span><span id=__span-0-188><a id=__codelineno-0-188 name=__codelineno-0-188></a>    <span class=k>def</span> <span class=nf>get_registry_name</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span><span id=__span-0-188><a id=__codelineno-0-188 name=__codelineno-0-188></a>    <span class=k>def</span><span class=w> </span><span class=nf>get_registry_name</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-189><a id=__codelineno-0-189 name=__codelineno-0-189></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Return the name of the entry in the global registry.</span>
 </span><span id=__span-0-190><a id=__codelineno-0-190 name=__codelineno-0-190></a>
 </span><span id=__span-0-191><a id=__codelineno-0-191 name=__codelineno-0-191></a><span class=sd>        Returns</span>
@@ -429,7 +429,7 @@
 </span><span id=__span-0-195><a id=__codelineno-0-195 name=__codelineno-0-195></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-196><a id=__codelineno-0-196 name=__codelineno-0-196></a>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>portfolio</span> <span class=o>+</span> <span class=s2>&quot;-&quot;</span> <span class=o>+</span> <span class=bp>self</span><span class=o>.</span><span class=n>name</span>
 </span><span id=__span-0-197><a id=__codelineno-0-197 name=__codelineno-0-197></a>
-</span><span id=__span-0-198><a id=__codelineno-0-198 name=__codelineno-0-198></a>    <span class=k>def</span> <span class=nf>to_dict</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
+</span><span id=__span-0-198><a id=__codelineno-0-198 name=__codelineno-0-198></a>    <span class=k>def</span><span class=w> </span><span class=nf>to_dict</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
 </span><span id=__span-0-199><a id=__codelineno-0-199 name=__codelineno-0-199></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Convert PortfolioEntry to a dictionary.</span>
 </span><span id=__span-0-200><a id=__codelineno-0-200 name=__codelineno-0-200></a>
 </span><span id=__span-0-201><a id=__codelineno-0-201 name=__codelineno-0-201></a><span class=sd>        Returns</span>
@@ -448,7 +448,7 @@
 </span><span id=__span-0-214><a id=__codelineno-0-214 name=__codelineno-0-214></a>            <span class=s2>&quot;tags&quot;</span><span class=p>:</span> <span class=bp>self</span><span class=o>.</span><span class=n>tags</span><span class=p>,</span>
 </span><span id=__span-0-215><a id=__codelineno-0-215 name=__codelineno-0-215></a>        <span class=p>}</span>
 </span><span id=__span-0-216><a id=__codelineno-0-216 name=__codelineno-0-216></a>
-</span><span id=__span-0-217><a id=__codelineno-0-217 name=__codelineno-0-217></a>    <span class=k>def</span> <span class=nf>download</span><span class=p>(</span>
+</span><span id=__span-0-217><a id=__codelineno-0-217 name=__codelineno-0-217></a>    <span class=k>def</span><span class=w> </span><span class=nf>download</span><span class=p>(</span>
 </span><span id=__span-0-218><a id=__codelineno-0-218 name=__codelineno-0-218></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-219><a id=__codelineno-0-219 name=__codelineno-0-219></a>        <span class=n>path</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Path</span><span class=p>]]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
 </span><span id=__span-0-220><a id=__codelineno-0-220 name=__codelineno-0-220></a>    <span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Union</span><span class=p>[</span><span class=n>List</span><span class=p>[</span><span class=nb>str</span><span class=p>],</span> <span class=n>Any</span><span class=p>]:</span>
@@ -490,7 +490,7 @@
 <span class=normal><a href=#__codelineno-0-183>183</a></span>
 <span class=normal><a href=#__codelineno-0-184>184</a></span>
 <span class=normal><a href=#__codelineno-0-185>185</a></span>
-<span class=normal><a href=#__codelineno-0-186>186</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-179><a id=__codelineno-0-179 name=__codelineno-0-179></a><span class=k>def</span> <span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-186>186</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-179><a id=__codelineno-0-179 name=__codelineno-0-179></a><span class=k>def</span><span class=w> </span><span class=fm>__str__</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-180><a id=__codelineno-0-180 name=__codelineno-0-180></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Convert PortfolioEntry to a string.</span>
 </span><span id=__span-0-181><a id=__codelineno-0-181 name=__codelineno-0-181></a>
 </span><span id=__span-0-182><a id=__codelineno-0-182 name=__codelineno-0-182></a><span class=sd>    Returns</span>
@@ -532,7 +532,7 @@
 <span class=normal><a href=#__codelineno-0-248>248</a></span>
 <span class=normal><a href=#__codelineno-0-249>249</a></span>
 <span class=normal><a href=#__codelineno-0-250>250</a></span>
-<span class=normal><a href=#__codelineno-0-251>251</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-217><a id=__codelineno-0-217 name=__codelineno-0-217></a><span class=k>def</span> <span class=nf>download</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-251>251</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-217><a id=__codelineno-0-217 name=__codelineno-0-217></a><span class=k>def</span><span class=w> </span><span class=nf>download</span><span class=p>(</span>
 </span><span id=__span-0-218><a id=__codelineno-0-218 name=__codelineno-0-218></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-219><a id=__codelineno-0-219 name=__codelineno-0-219></a>    <span class=n>path</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Path</span><span class=p>]]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
 </span><span id=__span-0-220><a id=__codelineno-0-220 name=__codelineno-0-220></a><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>Union</span><span class=p>[</span><span class=n>List</span><span class=p>[</span><span class=nb>str</span><span class=p>],</span> <span class=n>Any</span><span class=p>]:</span>
@@ -575,7 +575,7 @@
 <span class=normal><a href=#__codelineno-0-193>193</a></span>
 <span class=normal><a href=#__codelineno-0-194>194</a></span>
 <span class=normal><a href=#__codelineno-0-195>195</a></span>
-<span class=normal><a href=#__codelineno-0-196>196</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-188><a id=__codelineno-0-188 name=__codelineno-0-188></a><span class=k>def</span> <span class=nf>get_registry_name</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-196>196</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-188><a id=__codelineno-0-188 name=__codelineno-0-188></a><span class=k>def</span><span class=w> </span><span class=nf>get_registry_name</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
 </span><span id=__span-0-189><a id=__codelineno-0-189 name=__codelineno-0-189></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Return the name of the entry in the global registry.</span>
 </span><span id=__span-0-190><a id=__codelineno-0-190 name=__codelineno-0-190></a>
 </span><span id=__span-0-191><a id=__codelineno-0-191 name=__codelineno-0-191></a><span class=sd>    Returns</span>
@@ -601,7 +601,7 @@
 <span class=normal><a href=#__codelineno-0-212>212</a></span>
 <span class=normal><a href=#__codelineno-0-213>213</a></span>
 <span class=normal><a href=#__codelineno-0-214>214</a></span>
-<span class=normal><a href=#__codelineno-0-215>215</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-198><a id=__codelineno-0-198 name=__codelineno-0-198></a><span class=k>def</span> <span class=nf>to_dict</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-215>215</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-198><a id=__codelineno-0-198 name=__codelineno-0-198></a><span class=k>def</span><span class=w> </span><span class=nf>to_dict</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
 </span><span id=__span-0-199><a id=__codelineno-0-199 name=__codelineno-0-199></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Convert PortfolioEntry to a dictionary.</span>
 </span><span id=__span-0-200><a id=__codelineno-0-200 name=__codelineno-0-200></a>
 </span><span id=__span-0-201><a id=__codelineno-0-201 name=__codelineno-0-201></a><span class=sd>    Returns</span>

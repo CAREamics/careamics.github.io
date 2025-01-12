@@ -102,7 +102,7 @@
 <span class=normal><a href=#__codelineno-0-115>115</a></span>
 <span class=normal><a href=#__codelineno-0-116>116</a></span>
 <span class=normal><a href=#__codelineno-0-117>117</a></span>
-<span class=normal><a href=#__codelineno-0-118>118</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=k>class</span> <span class=nc>UNetModel</span><span class=p>(</span><span class=n>ArchitectureModel</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-118>118</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=k>class</span><span class=w> </span><span class=nc>UNetModel</span><span class=p>(</span><span class=n>ArchitectureModel</span><span class=p>):</span>
 </span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16></a><span class=sd>    Pydantic model for a N2V(2)-compatible UNet.</span>
 </span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17></a>
@@ -155,7 +155,7 @@
 </span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64></a>
 </span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a>    <span class=nd>@field_validator</span><span class=p>(</span><span class=s2>&quot;num_channels_init&quot;</span><span class=p>)</span>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a>    <span class=nd>@classmethod</span>
-</span><span id=__span-0-67><a id=__codelineno-0-67 name=__codelineno-0-67></a>    <span class=k>def</span> <span class=nf>validate_num_channels_init</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>num_channels_init</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span><span id=__span-0-67><a id=__codelineno-0-67 name=__codelineno-0-67></a>    <span class=k>def</span><span class=w> </span><span class=nf>validate_num_channels_init</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>num_channels_init</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
 </span><span id=__span-0-68><a id=__codelineno-0-68 name=__codelineno-0-68></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-69><a id=__codelineno-0-69 name=__codelineno-0-69></a><span class=sd>        Validate that num_channels_init is even.</span>
 </span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70></a>
@@ -183,7 +183,7 @@
 </span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92></a>
 </span><span id=__span-0-93><a id=__codelineno-0-93 name=__codelineno-0-93></a>        <span class=k>return</span> <span class=n>num_channels_init</span>
 </span><span id=__span-0-94><a id=__codelineno-0-94 name=__codelineno-0-94></a>
-</span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a>    <span class=k>def</span> <span class=nf>set_3D</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>is_3D</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a>    <span class=k>def</span><span class=w> </span><span class=nf>set_3D</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>is_3D</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97></a><span class=sd>        Set 3D model by setting the `conv_dims` parameters.</span>
 </span><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a>
@@ -197,7 +197,7 @@
 </span><span id=__span-0-106><a id=__codelineno-0-106 name=__codelineno-0-106></a>        <span class=k>else</span><span class=p>:</span>
 </span><span id=__span-0-107><a id=__codelineno-0-107 name=__codelineno-0-107></a>            <span class=bp>self</span><span class=o>.</span><span class=n>conv_dims</span> <span class=o>=</span> <span class=mi>2</span>
 </span><span id=__span-0-108><a id=__codelineno-0-108 name=__codelineno-0-108></a>
-</span><span id=__span-0-109><a id=__codelineno-0-109 name=__codelineno-0-109></a>    <span class=k>def</span> <span class=nf>is_3D</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>bool</span><span class=p>:</span>
+</span><span id=__span-0-109><a id=__codelineno-0-109 name=__codelineno-0-109></a>    <span class=k>def</span><span class=w> </span><span class=nf>is_3D</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>bool</span><span class=p>:</span>
 </span><span id=__span-0-110><a id=__codelineno-0-110 name=__codelineno-0-110></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-111><a id=__codelineno-0-111 name=__codelineno-0-111></a><span class=sd>        Return whether the model is 3D or not.</span>
 </span><span id=__span-0-112><a id=__codelineno-0-112 name=__codelineno-0-112></a>
@@ -216,7 +216,7 @@
 <span class=normal><a href=#__codelineno-0-115>115</a></span>
 <span class=normal><a href=#__codelineno-0-116>116</a></span>
 <span class=normal><a href=#__codelineno-0-117>117</a></span>
-<span class=normal><a href=#__codelineno-0-118>118</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-109><a id=__codelineno-0-109 name=__codelineno-0-109></a><span class=k>def</span> <span class=nf>is_3D</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>bool</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-118>118</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-109><a id=__codelineno-0-109 name=__codelineno-0-109></a><span class=k>def</span><span class=w> </span><span class=nf>is_3D</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>bool</span><span class=p>:</span>
 </span><span id=__span-0-110><a id=__codelineno-0-110 name=__codelineno-0-110></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-111><a id=__codelineno-0-111 name=__codelineno-0-111></a><span class=sd>    Return whether the model is 3D or not.</span>
 </span><span id=__span-0-112><a id=__codelineno-0-112 name=__codelineno-0-112></a>
@@ -238,7 +238,7 @@
 <span class=normal><a href=#__codelineno-0-104>104</a></span>
 <span class=normal><a href=#__codelineno-0-105>105</a></span>
 <span class=normal><a href=#__codelineno-0-106>106</a></span>
-<span class=normal><a href=#__codelineno-0-107>107</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a><span class=k>def</span> <span class=nf>set_3D</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>is_3D</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+<span class=normal><a href=#__codelineno-0-107>107</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95></a><span class=k>def</span><span class=w> </span><span class=nf>set_3D</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>is_3D</span><span class=p>:</span> <span class=nb>bool</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97></a><span class=sd>    Set 3D model by setting the `conv_dims` parameters.</span>
 </span><span id=__span-0-98><a id=__codelineno-0-98 name=__codelineno-0-98></a>
@@ -281,7 +281,7 @@
 <span class=normal><a href=#__codelineno-0-92>92</a></span>
 <span class=normal><a href=#__codelineno-0-93>93</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=nd>@field_validator</span><span class=p>(</span><span class=s2>&quot;num_channels_init&quot;</span><span class=p>)</span>
 </span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66></a><span class=nd>@classmethod</span>
-</span><span id=__span-0-67><a id=__codelineno-0-67 name=__codelineno-0-67></a><span class=k>def</span> <span class=nf>validate_num_channels_init</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>num_channels_init</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span><span id=__span-0-67><a id=__codelineno-0-67 name=__codelineno-0-67></a><span class=k>def</span><span class=w> </span><span class=nf>validate_num_channels_init</span><span class=p>(</span><span class=bp>cls</span><span class=p>,</span> <span class=n>num_channels_init</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
 </span><span id=__span-0-68><a id=__codelineno-0-68 name=__codelineno-0-68></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-69><a id=__codelineno-0-69 name=__codelineno-0-69></a><span class=sd>    Validate that num_channels_init is even.</span>
 </span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70></a>

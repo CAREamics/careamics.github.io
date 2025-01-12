@@ -191,7 +191,7 @@
 <span class=normal><a href=#__codelineno-0-248>248</a></span>
 <span class=normal><a href=#__codelineno-0-249>249</a></span>
 <span class=normal><a href=#__codelineno-0-250>250</a></span>
-<span class=normal><a href=#__codelineno-0-251>251</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a><span class=k>class</span> <span class=nc>CacheTiles</span><span class=p>(</span><span class=n>WriteStrategy</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-251>251</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58></a><span class=k>class</span><span class=w> </span><span class=nc>CacheTiles</span><span class=p>(</span><span class=n>WriteStrategy</span><span class=p>):</span>
 </span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60></a><span class=sd>    A write strategy that will cache tiles.</span>
 </span><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61></a>
@@ -221,7 +221,7 @@
 </span><span id=__span-0-85><a id=__codelineno-0-85 name=__codelineno-0-85></a><span class=sd>        Cached tile information for stitching prediction.</span>
 </span><span id=__span-0-86><a id=__codelineno-0-86 name=__codelineno-0-86></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-87><a id=__codelineno-0-87 name=__codelineno-0-87></a>
-</span><span id=__span-0-88><a id=__codelineno-0-88 name=__codelineno-0-88></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-88><a id=__codelineno-0-88 name=__codelineno-0-88></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-90><a id=__codelineno-0-90 name=__codelineno-0-90></a>        <span class=n>write_func</span><span class=p>:</span> <span class=n>WriteFunc</span><span class=p>,</span>
 </span><span id=__span-0-91><a id=__codelineno-0-91 name=__codelineno-0-91></a>        <span class=n>write_extension</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
@@ -253,7 +253,7 @@
 </span><span id=__span-0-117><a id=__codelineno-0-117 name=__codelineno-0-117></a>        <span class=bp>self</span><span class=o>.</span><span class=n>tile_info_cache</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>TileInformation</span><span class=p>]</span> <span class=o>=</span> <span class=p>[]</span>
 </span><span id=__span-0-118><a id=__codelineno-0-118 name=__codelineno-0-118></a>
 </span><span id=__span-0-119><a id=__codelineno-0-119 name=__codelineno-0-119></a>    <span class=nd>@property</span>
-</span><span id=__span-0-120><a id=__codelineno-0-120 name=__codelineno-0-120></a>    <span class=k>def</span> <span class=nf>last_tiles</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>[</span><span class=nb>bool</span><span class=p>]:</span>
+</span><span id=__span-0-120><a id=__codelineno-0-120 name=__codelineno-0-120></a>    <span class=k>def</span><span class=w> </span><span class=nf>last_tiles</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>[</span><span class=nb>bool</span><span class=p>]:</span>
 </span><span id=__span-0-121><a id=__codelineno-0-121 name=__codelineno-0-121></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-122><a id=__codelineno-0-122 name=__codelineno-0-122></a><span class=sd>        List of bool to determine whether each tile in the cache is the last tile.</span>
 </span><span id=__span-0-123><a id=__codelineno-0-123 name=__codelineno-0-123></a>
@@ -264,7 +264,7 @@
 </span><span id=__span-0-128><a id=__codelineno-0-128 name=__codelineno-0-128></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-129><a id=__codelineno-0-129 name=__codelineno-0-129></a>        <span class=k>return</span> <span class=p>[</span><span class=n>tile_info</span><span class=o>.</span><span class=n>last_tile</span> <span class=k>for</span> <span class=n>tile_info</span> <span class=ow>in</span> <span class=bp>self</span><span class=o>.</span><span class=n>tile_info_cache</span><span class=p>]</span>
 </span><span id=__span-0-130><a id=__codelineno-0-130 name=__codelineno-0-130></a>
-</span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a>    <span class=k>def</span> <span class=nf>write_batch</span><span class=p>(</span>
+</span><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a>    <span class=k>def</span><span class=w> </span><span class=nf>write_batch</span><span class=p>(</span>
 </span><span id=__span-0-132><a id=__codelineno-0-132 name=__codelineno-0-132></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-133><a id=__codelineno-0-133 name=__codelineno-0-133></a>        <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-134><a id=__codelineno-0-134 name=__codelineno-0-134></a>        <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>
@@ -335,7 +335,7 @@
 </span><span id=__span-0-199><a id=__codelineno-0-199 name=__codelineno-0-199></a>                <span class=n>file_path</span><span class=o>=</span><span class=n>file_path</span><span class=p>,</span> <span class=n>img</span><span class=o>=</span><span class=n>prediction_image</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=o>**</span><span class=bp>self</span><span class=o>.</span><span class=n>write_func_kwargs</span>
 </span><span id=__span-0-200><a id=__codelineno-0-200 name=__codelineno-0-200></a>            <span class=p>)</span>
 </span><span id=__span-0-201><a id=__codelineno-0-201 name=__codelineno-0-201></a>
-</span><span id=__span-0-202><a id=__codelineno-0-202 name=__codelineno-0-202></a>    <span class=k>def</span> <span class=nf>_has_last_tile</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>bool</span><span class=p>:</span>
+</span><span id=__span-0-202><a id=__codelineno-0-202 name=__codelineno-0-202></a>    <span class=k>def</span><span class=w> </span><span class=nf>_has_last_tile</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>bool</span><span class=p>:</span>
 </span><span id=__span-0-203><a id=__codelineno-0-203 name=__codelineno-0-203></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-204><a id=__codelineno-0-204 name=__codelineno-0-204></a><span class=sd>        Whether a last tile is contained in the cached tiles.</span>
 </span><span id=__span-0-205><a id=__codelineno-0-205 name=__codelineno-0-205></a>
@@ -346,13 +346,13 @@
 </span><span id=__span-0-210><a id=__codelineno-0-210 name=__codelineno-0-210></a><span class=sd>        &quot;&quot;&quot;</span>
 </span><span id=__span-0-211><a id=__codelineno-0-211 name=__codelineno-0-211></a>        <span class=k>return</span> <span class=nb>any</span><span class=p>(</span><span class=bp>self</span><span class=o>.</span><span class=n>last_tiles</span><span class=p>)</span>
 </span><span id=__span-0-212><a id=__codelineno-0-212 name=__codelineno-0-212></a>
-</span><span id=__span-0-213><a id=__codelineno-0-213 name=__codelineno-0-213></a>    <span class=k>def</span> <span class=nf>_clear_cache</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span><span id=__span-0-213><a id=__codelineno-0-213 name=__codelineno-0-213></a>    <span class=k>def</span><span class=w> </span><span class=nf>_clear_cache</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
 </span><span id=__span-0-214><a id=__codelineno-0-214 name=__codelineno-0-214></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;Remove the tiles in the cache up to the first last tile.&quot;&quot;&quot;</span>
 </span><span id=__span-0-215><a id=__codelineno-0-215 name=__codelineno-0-215></a>        <span class=n>index</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>_last_tile_index</span><span class=p>()</span>
 </span><span id=__span-0-216><a id=__codelineno-0-216 name=__codelineno-0-216></a>        <span class=bp>self</span><span class=o>.</span><span class=n>tile_cache</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>tile_cache</span><span class=p>[</span><span class=n>index</span> <span class=o>+</span> <span class=mi>1</span> <span class=p>:]</span>
 </span><span id=__span-0-217><a id=__codelineno-0-217 name=__codelineno-0-217></a>        <span class=bp>self</span><span class=o>.</span><span class=n>tile_info_cache</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>tile_info_cache</span><span class=p>[</span><span class=n>index</span> <span class=o>+</span> <span class=mi>1</span> <span class=p>:]</span>
 </span><span id=__span-0-218><a id=__codelineno-0-218 name=__codelineno-0-218></a>
-</span><span id=__span-0-219><a id=__codelineno-0-219 name=__codelineno-0-219></a>    <span class=k>def</span> <span class=nf>_last_tile_index</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span><span id=__span-0-219><a id=__codelineno-0-219 name=__codelineno-0-219></a>    <span class=k>def</span><span class=w> </span><span class=nf>_last_tile_index</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
 </span><span id=__span-0-220><a id=__codelineno-0-220 name=__codelineno-0-220></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-221><a id=__codelineno-0-221 name=__codelineno-0-221></a><span class=sd>        Find the index of the last tile in the tile cache.</span>
 </span><span id=__span-0-222><a id=__codelineno-0-222 name=__codelineno-0-222></a>
@@ -372,7 +372,7 @@
 </span><span id=__span-0-236><a id=__codelineno-0-236 name=__codelineno-0-236></a>        <span class=n>index</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>where</span><span class=p>(</span><span class=n>last_tiles</span><span class=p>)[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span>
 </span><span id=__span-0-237><a id=__codelineno-0-237 name=__codelineno-0-237></a>        <span class=k>return</span> <span class=n>index</span>
 </span><span id=__span-0-238><a id=__codelineno-0-238 name=__codelineno-0-238></a>
-</span><span id=__span-0-239><a id=__codelineno-0-239 name=__codelineno-0-239></a>    <span class=k>def</span> <span class=nf>_get_image_tiles</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=nb>list</span><span class=p>[</span><span class=n>NDArray</span><span class=p>],</span> <span class=nb>list</span><span class=p>[</span><span class=n>TileInformation</span><span class=p>]]:</span>
+</span><span id=__span-0-239><a id=__codelineno-0-239 name=__codelineno-0-239></a>    <span class=k>def</span><span class=w> </span><span class=nf>_get_image_tiles</span><span class=p>(</span><span class=bp>self</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>tuple</span><span class=p>[</span><span class=nb>list</span><span class=p>[</span><span class=n>NDArray</span><span class=p>],</span> <span class=nb>list</span><span class=p>[</span><span class=n>TileInformation</span><span class=p>]]:</span>
 </span><span id=__span-0-240><a id=__codelineno-0-240 name=__codelineno-0-240></a><span class=w>        </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-241><a id=__codelineno-0-241 name=__codelineno-0-241></a><span class=sd>        Get the tiles corresponding to a single image.</span>
 </span><span id=__span-0-242><a id=__codelineno-0-242 name=__codelineno-0-242></a>
@@ -414,7 +414,7 @@
 <span class=normal><a href=#__codelineno-0-114>114</a></span>
 <span class=normal><a href=#__codelineno-0-115>115</a></span>
 <span class=normal><a href=#__codelineno-0-116>116</a></span>
-<span class=normal><a href=#__codelineno-0-117>117</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-88><a id=__codelineno-0-88 name=__codelineno-0-88></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-117>117</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-88><a id=__codelineno-0-88 name=__codelineno-0-88></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-90><a id=__codelineno-0-90 name=__codelineno-0-90></a>    <span class=n>write_func</span><span class=p>:</span> <span class=n>WriteFunc</span><span class=p>,</span>
 </span><span id=__span-0-91><a id=__codelineno-0-91 name=__codelineno-0-91></a>    <span class=n>write_extension</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
@@ -513,7 +513,7 @@
 <span class=normal><a href=#__codelineno-0-197>197</a></span>
 <span class=normal><a href=#__codelineno-0-198>198</a></span>
 <span class=normal><a href=#__codelineno-0-199>199</a></span>
-<span class=normal><a href=#__codelineno-0-200>200</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a><span class=k>def</span> <span class=nf>write_batch</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-200>200</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-131><a id=__codelineno-0-131 name=__codelineno-0-131></a><span class=k>def</span><span class=w> </span><span class=nf>write_batch</span><span class=p>(</span>
 </span><span id=__span-0-132><a id=__codelineno-0-132 name=__codelineno-0-132></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-133><a id=__codelineno-0-133 name=__codelineno-0-133></a>    <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-134><a id=__codelineno-0-134 name=__codelineno-0-134></a>    <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>
@@ -685,7 +685,7 @@
 <span class=normal><a href=#__codelineno-0-396>396</a></span>
 <span class=normal><a href=#__codelineno-0-397>397</a></span>
 <span class=normal><a href=#__codelineno-0-398>398</a></span>
-<span class=normal><a href=#__codelineno-0-399>399</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-297><a id=__codelineno-0-297 name=__codelineno-0-297></a><span class=k>class</span> <span class=nc>WriteImage</span><span class=p>(</span><span class=n>WriteStrategy</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-399>399</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-297><a id=__codelineno-0-297 name=__codelineno-0-297></a><span class=k>class</span><span class=w> </span><span class=nc>WriteImage</span><span class=p>(</span><span class=n>WriteStrategy</span><span class=p>):</span>
 </span><span id=__span-0-298><a id=__codelineno-0-298 name=__codelineno-0-298></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
 </span><span id=__span-0-299><a id=__codelineno-0-299 name=__codelineno-0-299></a><span class=sd>    A strategy for writing image predictions (i.e. un-tiled predictions).</span>
 </span><span id=__span-0-300><a id=__codelineno-0-300 name=__codelineno-0-300></a>
@@ -708,7 +708,7 @@
 </span><span id=__span-0-317><a id=__codelineno-0-317 name=__codelineno-0-317></a><span class=sd>        Extra kwargs to pass to `write_func`.</span>
 </span><span id=__span-0-318><a id=__codelineno-0-318 name=__codelineno-0-318></a><span class=sd>    &quot;&quot;&quot;</span>
 </span><span id=__span-0-319><a id=__codelineno-0-319 name=__codelineno-0-319></a>
-</span><span id=__span-0-320><a id=__codelineno-0-320 name=__codelineno-0-320></a>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+</span><span id=__span-0-320><a id=__codelineno-0-320 name=__codelineno-0-320></a>    <span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-321><a id=__codelineno-0-321 name=__codelineno-0-321></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-322><a id=__codelineno-0-322 name=__codelineno-0-322></a>        <span class=n>write_func</span><span class=p>:</span> <span class=n>WriteFunc</span><span class=p>,</span>
 </span><span id=__span-0-323><a id=__codelineno-0-323 name=__codelineno-0-323></a>        <span class=n>write_extension</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
@@ -732,7 +732,7 @@
 </span><span id=__span-0-341><a id=__codelineno-0-341 name=__codelineno-0-341></a>        <span class=bp>self</span><span class=o>.</span><span class=n>write_extension</span><span class=p>:</span> <span class=nb>str</span> <span class=o>=</span> <span class=n>write_extension</span>
 </span><span id=__span-0-342><a id=__codelineno-0-342 name=__codelineno-0-342></a>        <span class=bp>self</span><span class=o>.</span><span class=n>write_func_kwargs</span><span class=p>:</span> <span class=nb>dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]</span> <span class=o>=</span> <span class=n>write_func_kwargs</span>
 </span><span id=__span-0-343><a id=__codelineno-0-343 name=__codelineno-0-343></a>
-</span><span id=__span-0-344><a id=__codelineno-0-344 name=__codelineno-0-344></a>    <span class=k>def</span> <span class=nf>write_batch</span><span class=p>(</span>
+</span><span id=__span-0-344><a id=__codelineno-0-344 name=__codelineno-0-344></a>    <span class=k>def</span><span class=w> </span><span class=nf>write_batch</span><span class=p>(</span>
 </span><span id=__span-0-345><a id=__codelineno-0-345 name=__codelineno-0-345></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-346><a id=__codelineno-0-346 name=__codelineno-0-346></a>        <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-347><a id=__codelineno-0-347 name=__codelineno-0-347></a>        <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>
@@ -810,7 +810,7 @@
 <span class=normal><a href=#__codelineno-0-339>339</a></span>
 <span class=normal><a href=#__codelineno-0-340>340</a></span>
 <span class=normal><a href=#__codelineno-0-341>341</a></span>
-<span class=normal><a href=#__codelineno-0-342>342</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-320><a id=__codelineno-0-320 name=__codelineno-0-320></a><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-342>342</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-320><a id=__codelineno-0-320 name=__codelineno-0-320></a><span class=k>def</span><span class=w> </span><span class=fm>__init__</span><span class=p>(</span>
 </span><span id=__span-0-321><a id=__codelineno-0-321 name=__codelineno-0-321></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-322><a id=__codelineno-0-322 name=__codelineno-0-322></a>    <span class=n>write_func</span><span class=p>:</span> <span class=n>WriteFunc</span><span class=p>,</span>
 </span><span id=__span-0-323><a id=__codelineno-0-323 name=__codelineno-0-323></a>    <span class=n>write_extension</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
@@ -888,7 +888,7 @@
 <span class=normal><a href=#__codelineno-0-396>396</a></span>
 <span class=normal><a href=#__codelineno-0-397>397</a></span>
 <span class=normal><a href=#__codelineno-0-398>398</a></span>
-<span class=normal><a href=#__codelineno-0-399>399</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-344><a id=__codelineno-0-344 name=__codelineno-0-344></a><span class=k>def</span> <span class=nf>write_batch</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-399>399</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-344><a id=__codelineno-0-344 name=__codelineno-0-344></a><span class=k>def</span><span class=w> </span><span class=nf>write_batch</span><span class=p>(</span>
 </span><span id=__span-0-345><a id=__codelineno-0-345 name=__codelineno-0-345></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-346><a id=__codelineno-0-346 name=__codelineno-0-346></a>    <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-347><a id=__codelineno-0-347 name=__codelineno-0-347></a>    <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>
@@ -979,10 +979,10 @@
 <span class=normal><a href=#__codelineno-0-52>52</a></span>
 <span class=normal><a href=#__codelineno-0-53>53</a></span>
 <span class=normal><a href=#__codelineno-0-54>54</a></span>
-<span class=normal><a href=#__codelineno-0-55>55</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20></a><span class=k>class</span> <span class=nc>WriteStrategy</span><span class=p>(</span><span class=n>Protocol</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-55>55</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20></a><span class=k>class</span><span class=w> </span><span class=nc>WriteStrategy</span><span class=p>(</span><span class=n>Protocol</span><span class=p>):</span>
 </span><span id=__span-0-21><a id=__codelineno-0-21 name=__codelineno-0-21></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Protocol for write strategy classes.&quot;&quot;&quot;</span>
 </span><span id=__span-0-22><a id=__codelineno-0-22 name=__codelineno-0-22></a>
-</span><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a>    <span class=k>def</span> <span class=nf>write_batch</span><span class=p>(</span>
+</span><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a>    <span class=k>def</span><span class=w> </span><span class=nf>write_batch</span><span class=p>(</span>
 </span><span id=__span-0-24><a id=__codelineno-0-24 name=__codelineno-0-24></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-25><a id=__codelineno-0-25 name=__codelineno-0-25></a>        <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26></a>        <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>
@@ -1047,7 +1047,7 @@
 <span class=normal><a href=#__codelineno-0-52>52</a></span>
 <span class=normal><a href=#__codelineno-0-53>53</a></span>
 <span class=normal><a href=#__codelineno-0-54>54</a></span>
-<span class=normal><a href=#__codelineno-0-55>55</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a><span class=k>def</span> <span class=nf>write_batch</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-55>55</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23></a><span class=k>def</span><span class=w> </span><span class=nf>write_batch</span><span class=p>(</span>
 </span><span id=__span-0-24><a id=__codelineno-0-24 name=__codelineno-0-24></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-25><a id=__codelineno-0-25 name=__codelineno-0-25></a>    <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26></a>    <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>
@@ -1120,10 +1120,10 @@
 <span class=normal><a href=#__codelineno-0-291>291</a></span>
 <span class=normal><a href=#__codelineno-0-292>292</a></span>
 <span class=normal><a href=#__codelineno-0-293>293</a></span>
-<span class=normal><a href=#__codelineno-0-294>294</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-254><a id=__codelineno-0-254 name=__codelineno-0-254></a><span class=k>class</span> <span class=nc>WriteTilesZarr</span><span class=p>(</span><span class=n>WriteStrategy</span><span class=p>):</span>
+<span class=normal><a href=#__codelineno-0-294>294</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-254><a id=__codelineno-0-254 name=__codelineno-0-254></a><span class=k>class</span><span class=w> </span><span class=nc>WriteTilesZarr</span><span class=p>(</span><span class=n>WriteStrategy</span><span class=p>):</span>
 </span><span id=__span-0-255><a id=__codelineno-0-255 name=__codelineno-0-255></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;Strategy to write tiles to Zarr file.&quot;&quot;&quot;</span>
 </span><span id=__span-0-256><a id=__codelineno-0-256 name=__codelineno-0-256></a>
-</span><span id=__span-0-257><a id=__codelineno-0-257 name=__codelineno-0-257></a>    <span class=k>def</span> <span class=nf>write_batch</span><span class=p>(</span>
+</span><span id=__span-0-257><a id=__codelineno-0-257 name=__codelineno-0-257></a>    <span class=k>def</span><span class=w> </span><span class=nf>write_batch</span><span class=p>(</span>
 </span><span id=__span-0-258><a id=__codelineno-0-258 name=__codelineno-0-258></a>        <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-259><a id=__codelineno-0-259 name=__codelineno-0-259></a>        <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-260><a id=__codelineno-0-260 name=__codelineno-0-260></a>        <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>
@@ -1198,7 +1198,7 @@
 <span class=normal><a href=#__codelineno-0-291>291</a></span>
 <span class=normal><a href=#__codelineno-0-292>292</a></span>
 <span class=normal><a href=#__codelineno-0-293>293</a></span>
-<span class=normal><a href=#__codelineno-0-294>294</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-257><a id=__codelineno-0-257 name=__codelineno-0-257></a><span class=k>def</span> <span class=nf>write_batch</span><span class=p>(</span>
+<span class=normal><a href=#__codelineno-0-294>294</a></span></pre></div></td><td class=code><div><pre><span></span><code><span id=__span-0-257><a id=__codelineno-0-257 name=__codelineno-0-257></a><span class=k>def</span><span class=w> </span><span class=nf>write_batch</span><span class=p>(</span>
 </span><span id=__span-0-258><a id=__codelineno-0-258 name=__codelineno-0-258></a>    <span class=bp>self</span><span class=p>,</span>
 </span><span id=__span-0-259><a id=__codelineno-0-259 name=__codelineno-0-259></a>    <span class=n>trainer</span><span class=p>:</span> <span class=n>Trainer</span><span class=p>,</span>
 </span><span id=__span-0-260><a id=__codelineno-0-260 name=__codelineno-0-260></a>    <span class=n>pl_module</span><span class=p>:</span> <span class=n>LightningModule</span><span class=p>,</span>
