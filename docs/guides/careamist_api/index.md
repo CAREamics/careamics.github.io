@@ -6,18 +6,49 @@ description: CAREamist API main page.
 
 The CAREamist API is the recommended way to use CAREamics, it is a two stage process, in
 which users first define a configuration and then use a the `CAREamist` to run their 
-training and prediction. The [applications](../../applications/index.md) section provides
-examples.
+training and prediction.
 
-```python title="Basic CAREamics usage"
---8<-- "careamics-examples/guides/careamist_api/careamist_api.py:careamist_api"
-```
+## Quick start
 
-1. Obviously, one should choose a more realistic number of epochs for training.
+The simplest way to use CAREamics is to create a configuration using the [convenience functions](configuration/convenience_functions.md). Checkout the [applications](../../applications/index.md) section for real-world examples of the various algorithms.
 
-2. One should use real data for training!
+=== "Noise2Void"
+    
+    ```python
+    --8<-- "careamics-examples/guides/careamist_api/careamist_api.py:quick_start_n2v"
+    ```
+
+    1. Obviously, choose a more realistic number of epochs for training.
+
+    2. Use real data for training!
 
 
+=== "CARE"
+
+    ```python
+    --8<-- "careamics-examples/guides/careamist_api/careamist_api.py:quick_start_care"
+    ```
+
+    1. Obviously, choose a more realistic number of epochs for training.
+
+    2. Use real data for training! Here, we added validation data as well.
+
+
+=== "Noise2Noise"
+
+    ```python
+    --8<-- "careamics-examples/guides/careamist_api/careamist_api.py:quick_start_n2n"
+    ```
+
+    1. Obviously, choose a more realistic number of epochs for training.
+
+    2. Use real data for training!
+
+
+## Documentation
+
+There are many features that can be useful for your application, explore the
+documentation to learn all the various aspects of CAREamics.
 
 <div class="md-container secondary-section">
     <div class="g">

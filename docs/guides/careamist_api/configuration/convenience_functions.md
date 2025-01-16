@@ -191,6 +191,14 @@ only apply flipping along the `X` axis and not apply any rotation.
     1. Only flipping along the `X` axis is applied.
 
 
+!!! information "Available augmentations"
+
+    The available augmentations are the following:
+
+    - `XYFlipModel`, which can be along `X`, `Y` or both.
+    - `XYRandomRotate90Model`
+
+
 ## Choosing a logger
 
 By default, CAREamics simply log the training progress in the console. However, it is 
@@ -226,9 +234,41 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 
     1. `wandb` or `tensorboard`
 
+## (Advanced) Passing data loader parameters
+
+The convenience functions allow passing data loader parameters directly through the
+`dataloader_params` parameter. These are the same parameters as those accepted by the
+`torch.utils.data.DataLoader` class (see [PyTorch documentation](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader)).
+
+
+=== "Noise2Void"
+    
+    ```python title="Configuration with data loader parameters"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_dataloader_kwargs"
+    ```
+
+    1. In practice this is the one parameter you might want to change.
+
+=== "CARE"
+
+    ```python title="Configuration with data loader parameters"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_dataloader_kwargs"
+    ```
+
+    1. In practice this is the one parameter you might want to change.
+
+=== "Noise2Noise"
+
+    ```python title="Configuration with data loader parameters"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_dataloader_kwargs"
+    ```
+
+    1. In practice this is the one parameter you might want to change.
+    
+
 ## (Advanced) Passing model specific parameters
 
-By default, the convenience functions use the default [UNet model parameters](). But if 
+By default, the convenience functions use the default [UNet model parameters](../../../reference/careamics/config/architectures/unet_model). But if 
 you are feeling brave, you can pass model specific parameters in the `model_params` dictionary. 
 
 === "Noise2Void"
@@ -268,6 +308,21 @@ you are feeling brave, you can pass model specific parameters in the `model_para
     Therefore, these are overwritten by the convenience functions. For instance,
     if you pass `in_channels` or `independent_channels` in the `model_kwargs` dictionary, 
     they will be ignored and replaced by the explicit parameters passed to the convenience function.
+
+!!! information "Model parameters"
+
+    The model parameters are the following:
+
+    - `conv_dims`
+    - `num_classes`
+    - `in_channels`
+    - `depth`
+    - `num_channels_init`
+    - `final_activation`  
+    - `n2v2`
+    - `independent_channels`
+
+    Description for each parameter can be found in the [code reference](../../../reference/careamics/config/architectures/unet_model).
 
 
 ## Noise2Void specific parameters
