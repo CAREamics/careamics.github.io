@@ -22,4 +22,5 @@ function-after[validate_n2v2(), function-after[validate_3D(), N2VConfiguration]]
 ...
 ```
 
+In this case, the input to `data_config.data_type` should be either `'array'`, `'tiff'` or `'custom'`. The error message is telling us that the input value `'arrray'` is not a valid option.
 

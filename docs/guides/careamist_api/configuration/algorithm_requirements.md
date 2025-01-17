@@ -1,47 +1,40 @@
 # Algorithm requirements
 
-In this section we detail the constraints of each algorithm on the configuration.
+In this section we detail the constraints of each algorithm on the configuration and
+their differences. 
+
+
+### Parent configuration
+
+The parent configuration is `Configuration` and it is the same for all algorithms. It 
+should not be used to train any of the algorithms as the child classes ensure coherence
+across the parameters.
 
 ### Noise2Void family
 
-This is valid for `Noise2Void`, `N2V2` and `structN2V`.
+Noise2Void algorithms (N2V, N2V2, structN2V) are configured using `N2VConfiguration`.
+It enforces the following constraints:
 
-#### Algorithm configuration
 
-- `algorithm="n2v"`
-- `loss="n2v"`
-- `model`: 
+- `algorithm_config`: must be a `N2VAlgorithm`
+- `algorithm_config.algorithm="n2v"`
+- `algorithm_config.loss="n2v"`
+- `algorithm_config.model`: 
     - must be a UNet (`architecture="UNet"`)
     - `in_channels` and `num_classes` must be equal
+- `data_config`: must be a `N2VDataConfiguration`
+- `data_config.transforms`: must contain `N2VManipulateModel` as the last transform
 
 
-#### Data configuration
+### CARE and Noise2Noise
 
-- `transforms`: must contain `N2VManipulateModel` as the last transform
+The two algorithms are very similar and therefore their constraints are sensibly
+the same. They are configured using `CAREConfiguration` and `N2NConfiguration`
+respectively.
 
-
-### CARE
-
-#### Algorithm configuration
-
-- `algorithm="care"`
-- `loss`: any but `n2v`
-
-#### Data configuration
-
-- `transforms`: must not contain `N2VManipulateModel`
-
-
-### Noise2Noise
-
-#### Algorithm configuration
-
-- `algorithm="care"`
-- `loss`: any but `n2v`
-
-#### Data configuration
-
-- `transforms`: must not contain `N2VManipulateModel`
-
-
-
+- `algorithm_config`: must be a `CAREAlgorithm` (CARE) or `N2NAlgorithm` (Noise2Noise)
+- `algorithm_config.algorithm`: `care` (CARE) or `n2n` (Noise2Noise)
+- `algorithm_config.loss`: `mae` or `mse`
+- `algorithm_config.model`: must be a UNet (`architecture="UNet"`)
+- `data_config`: must be a `DataConfiguration`
+- `data_config.transforms`: must not contain `N2VManipulateModel`

@@ -16,7 +16,7 @@ currently supports [Noise2Void](../../../algorithms/Noise2Void) and its variants
 [CARE](../../../algorithms/CARE) and [Noise2Noise](../../../algorithms/Noise2Noise). 
 
 ``` python title="Import convenience functions"
---8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:imports"
+--8<-- "careamics-examples/guides/careamist_api/configuration/import_convenience.py:imports"
 ```
 
 Each method does all the heavy lifting to make the configuration coherent. They share
