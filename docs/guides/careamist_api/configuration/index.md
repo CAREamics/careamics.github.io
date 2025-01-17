@@ -13,7 +13,7 @@ Configurations are created for specific algorithms using convenience functions. 
     Here is an example of a configuration for the `Noise2Void` algorithm.
 
     ```python title="Noise2Void configuration"
-    --8<-- "careamics-examples/guides/careamist_api/configuration/config.yaml"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/config.yml"
     ```
 
 The number of parameters might appear overwhelming, but in practice users only call a function with few parameters. The configuration is designed to hide the complexity of the algorithms and provide a simple interface to the user.

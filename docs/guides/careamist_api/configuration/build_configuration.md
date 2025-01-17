@@ -79,7 +79,7 @@ closer to the source of the error.
 ## Using nested dictionaries
 
 An alternative to working with Pydantic models is to assemble the configuration using
-a dictionary. While this is neat, because you are dealing with nested dictionaries, it is easy to add the parameters at the wrong level and you need to constantly refer to the [code documentation](../../reference) to know which parameters are available. Finally, because you are validating the configuration at once, you will get all the validation
+a dictionary. While this is neat, because you are dealing with nested dictionaries, it is easy to add the parameters at the wrong level and you need to constantly refer to the [code documentation](../../../../reference) to know which parameters are available. Finally, because you are validating the configuration at once, you will get all the validation
 errors in one go.
 
 Here, we reproduce the same configuration as previously, but as a dictionary this time:

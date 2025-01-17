@@ -9,3 +9,17 @@ examples are here to highlight how to read Pydantic errors.
 
 !!! warning "Under construction"
     This page is under construction and will be updated soon.
+
+
+
+### Pydantic error
+
+```python
+ValidationError: 1 validation errors for union[function-after[validate_n2v2(), function-after[validate_3D(), N2VConfiguration]],function-after[validate_3D(), N2NConfiguration],function-after[validate_3D(), CAREConfiguration]]
+function-after[validate_n2v2(), function-after[validate_3D(), N2VConfiguration]].data_config.data_type
+  Input should be 'array', 'tiff' or 'custom' [type=literal_error, input_value='arrray', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+...
+```
+
+

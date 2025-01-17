@@ -264,11 +264,11 @@ The convenience functions allow passing data loader parameters directly through 
     ```
 
     1. In practice this is the one parameter you might want to change.
-    
+
 
 ## (Advanced) Passing model specific parameters
 
-By default, the convenience functions use the default [UNet model parameters](../../../reference/careamics/config/architectures/unet_model). But if 
+By default, the convenience functions use the default [UNet model parameters](../../../../reference/careamics/config/architectures/unet_model). But if 
 you are feeling brave, you can pass model specific parameters in the `model_params` dictionary. 
 
 === "Noise2Void"
@@ -322,7 +322,7 @@ you are feeling brave, you can pass model specific parameters in the `model_para
     - `n2v2`
     - `independent_channels`
 
-    Description for each parameter can be found in the [code reference](../../../reference/careamics/config/architectures/unet_model).
+    Description for each parameter can be found in the [code reference](../../../../reference/careamics/config/architectures/unet_model).
 
 
 ## Noise2Void specific parameters
