@@ -143,7 +143,7 @@ each algorithm.
             </div>
         </div>
     </div>
-
+</div>
 
 ## Supervised restoration without ground-truth
 
