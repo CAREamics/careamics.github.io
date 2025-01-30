@@ -127,7 +127,7 @@
             "source": "algorithms/structn2v/structN2V.ipynb"
         },
         {
-            "name": "NoiseModels",
+            "name": "Noise Models",
             "source": "algorithms/noise_models/NoiseModels.ipynb"
         }
     ]
