@@ -120,7 +120,7 @@ Here is a list of the extra dependencies:
         ``` bash
         CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
         conda activate careamics
-        conda config --env --set-subdir osx-64
+        conda config --env --set subdir osx-arm64
         ```
 
     3. Install PyTorch following the [official 
@@ -129,10 +129,17 @@ Here is a list of the extra dependencies:
         As an example, our test machine requires:
 
         ``` bash
-        conda install pytorch::pytorch torchvision -c pytorch
+        pip3 install torch torchvision
         ```
     
-    4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+    4. Verify that GPU is available:
+        ```bash
+        python -c "import torch; import platform; print((platform.processor() in ('arm', 'arm64') and torch.backends.mps.is_available()))"
+        ```
+        
+        If this prints `False`, make sure that you do have an M1, M2 or M3 chip, and that the `conda`/`mamba` macOS-arm64 release was installed correctly.
+    
+    5. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
         we recommend the following:
 
@@ -154,10 +161,17 @@ Here is a list of the extra dependencies:
         As an example, our test machine requires:
 
         ``` bash
-        mamba install pytorch::pytorch torchvision -c pytorch --platform osx-64
+        pip3 install torch torchvision
         ```
     
-    4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+    4. Verify that GPU is available:
+        ```bash
+        python -c "import torch; import platform; print((platform.processor() in ('arm', 'arm64') and torch.backends.mps.is_available()))"
+        ```
+
+        If this prints `False`, make sure that you do have an M1, M2 or M3 chip, and that the `conda`/`mamba` macOS-arm64 release was installed correctly.
+    
+    5. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
         we recommend the following:
 
@@ -250,17 +264,26 @@ is to look at the [applications](applications/index.md) for full examples and th
         ``` bash
         CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
         conda activate careamics
-        conda config --env --set-subdir osx-64
+        conda config --env --set subdir osx-arm64
         ```
 
     3. Install PyTorch following the [official 
         instructions](https://pytorch.org/get-started/locally/)
 
+        As an example, our test machine requires:
+        
         ``` bash
-        conda install pytorch::pytorch torchvision -c pytorch
+        pip3 install torch torchvision
         ```
+
+    4. Verify that GPU is available:
+        ```bash
+        python -c "import torch; import platform; print((platform.processor() in ('arm', 'arm64') and torch.backends.mps.is_available()))"
+        ```
+
+        If this prints `False`, make sure that you do have an M1, M2 or M3 chip, and that the `conda`/`mamba` macOS-arm64 release was installed correctly.
     
-    4. Install CAREamics napari plugin and napari:
+    5. Install CAREamics napari plugin and napari:
 
         ``` bash
         pip install careamics-napari "napari[all]"
@@ -279,7 +302,7 @@ is to look at the [applications](applications/index.md) for full examples and th
         while specifying the platform. As an example, our test machine requires:
 
         ``` bash
-        mamba install pytorch::pytorch torchvision -c pytorch --platform osx-64
+        pip3 install torch torchvision
         ```
 
     4. Install CAREamics napari plugin and napari:
