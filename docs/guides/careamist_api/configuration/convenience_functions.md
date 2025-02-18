@@ -237,7 +237,7 @@ possible to use either [WandB](https://wandb.ai/site) or [TensorBoard](https://p
 ## (Advanced) Passing data loader parameters
 
 The convenience functions allow passing data loader parameters directly through the
-`dataloader_params` parameter. These are the same parameters as those accepted by the
+`train_dataloader_params` or `val_dataloader_params` parameters. These are the same parameters as those accepted by the
 `torch.utils.data.DataLoader` class (see [PyTorch documentation](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader)).
 
 
@@ -248,6 +248,7 @@ The convenience functions allow passing data loader parameters directly through 
     ```
 
     1. In practice this is the one parameter you might want to change.
+    2. You can also set the parameters for the validation dataloader.
 
 === "CARE"
 
@@ -256,6 +257,7 @@ The convenience functions allow passing data loader parameters directly through 
     ```
 
     1. In practice this is the one parameter you might want to change.
+    2. You can also set the parameters for the validation dataloader.
 
 === "Noise2Noise"
 
@@ -264,6 +266,7 @@ The convenience functions allow passing data loader parameters directly through 
     ```
 
     1. In practice this is the one parameter you might want to change.
+    2. You can also set the parameters for the validation dataloader.
 
 
 ## (Advanced) Passing model specific parameters

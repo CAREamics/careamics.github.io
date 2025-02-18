@@ -60,21 +60,21 @@ closer to the source of the error.
     errors when assembling the final configuration. For instance, Noise2Void requires
     the same number of input and output channels, which is not checked here.
 5. Noise2Void requires a specific algorithm configuration.
-6. Other parameters are related to the optimizer and learning rate scheduler.
+6. Here once can modify also the N2V specific parameters related to the pixel replacement (see
+    N2V algorithm description).
 7. As opposed to CARE and Noise2Noise, Noise2Void requires a specific data configuration.
 8. You can decide on the augmentations and their parameters.
-9. Noise2Void requires the last augmentation to be `N2VManipulate`.
-10. The dataloader parameters are the general parameters that can be passed to PyTorch's
-    `DataLoader` class (see [documentation](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader)).
-11. The early stopping callback has many parameters, which are those available in the  
+9. The dataloader parameters are the general parameters that can be passed to PyTorch's
+    `DataLoader` class (see [documentation](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader)). If
+    you modify these, you need to add the `shuffle` parameter to the dictionary. We strongly
+    recommend to keep the default value (`True`) for the shuffling.
+10. The early stopping callback has many parameters, which are those available in the  
     PyTorch Lightning callback (see [documentation](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.EarlyStopping.html#lightning.pytorch.callbacks.EarlyStopping)).
-12. Similarly, the `CheckpointModel` parameters are those of the corresponding PyTorch
+11. Similarly, the `CheckpointModel` parameters are those of the corresponding PyTorch
     Lightning callback (see [documentation](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.ModelCheckpoint.html)).
-13. The training configuration is general and has many parameters, checkout the code
+12. The training configuration is general and has many parameters, checkout the code
     reference or the code base for more information.
-14. Finally the Noise2Void configuration can be instantiated.
-15. Alternatively, CAREamics uses internally a factory to select and instantiate the 
-    correct configuration based on the various parameters.
+13. Finally the Noise2Void configuration can be instantiated.
 
 ## Using nested dictionaries
 
@@ -92,9 +92,9 @@ Here, we reproduce the same configuration as previously, but as a dictionary thi
     to explicitely specify certain paramaters that otherwise have a default value when
     using Pydantic. This is the case for the `algorithm` parameter.
 2. As previously, we also specify the architecture.
-3. Since many parameters have default values, we don't need to specify them but still
+3. In parctice, we do not change the `n2v_config`, but this is were one could. The `n2v_config`
+    is related to the parameters of the pixel replacement in N2V.
+4. Since many parameters have default values, we don't need to specify them but still
     need to pass an empty dictionary to make sure that there is an early stopping
     callback.
-4. Here we are using the Pydantic class with the unpacked dictionary.
-5. An alternative is to use the configuration factory, this function is used internally
-    to select the correct algorithm based on the parameters.
+5. Here we are using the Pydantic class with the unpacked dictionary.
