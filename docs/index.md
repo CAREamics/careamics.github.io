@@ -18,7 +18,7 @@ description: Guide and documentation.
 
 # Documentation
 
-Documentation for [CAREamics v0.0.6](https://github.com/CAREamics/careamics/releases/tag/v0.0.6).
+Documentation for [CAREamics v0.0.9](https://github.com/CAREamics/careamics/releases/tag/v0.0.9).
 
 
 CAREamics is a PyTorch library aimed at simplifying the use of Noise2Void and its many
