@@ -188,6 +188,11 @@ plugins:
         - codespell: # or nested configs
             dictionaries: [clear, rare]
 
+  # exclude careamics sources files that are in development
+  - exclude:
+      glob:
+        - "*/careamics/dataset_ng/*"
+
 watch:
   - docs
 
