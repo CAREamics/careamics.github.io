@@ -32,6 +32,7 @@ In order to build the pages locally, follow these steps:
 2. Create a new environment and install the dependencies:
     ```bash
     conda create -n careamics-docs python=3.11
+    conda activate careamics-docs
     pip install -r requirements.txt
     ```
 4. Run the following scripts (which are normally run by the CI):

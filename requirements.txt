@@ -8,3 +8,4 @@ mkdocs-section-index
 mkdocstrings[python]
 mkdocs-jupyter
 mike
+mkdocs-exclude
