@@ -300,7 +300,6 @@ is to look at the [applications](applications/index.md) for full examples and th
 
     3. Install PyTorch following the [official instructions](https://pytorch.org/get-started/locally/)
         while specifying the platform. As an example, our test machine requires:
-        As an example, our test machine requires:
 
         ``` bash
         pip3 install torch torchvision
