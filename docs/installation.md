@@ -151,7 +151,7 @@ Here is a list of the extra dependencies:
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10 --platform osx-64
+        mamba create -n careamics python=3.10 --platform osx-arm64
         mamba activate careamics
         ```
 
@@ -241,7 +241,7 @@ is to look at the [applications](applications/index.md) for full examples and th
         As an example, our test machine requires:
 
         ``` bash
-        mamba install pytorch::pytorch torchvision -c pytorch
+        pip3 install torch torchvision
         ```
 
         :warning: Note that this will probably not install silicon GPU acceleration. If
@@ -294,7 +294,7 @@ is to look at the [applications](applications/index.md) for full examples and th
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10 --platform osx-64
+        mamba create -n careamics python=3.10 --platform osx-arm64
         mamba activate careamics
         ```
 
@@ -305,7 +305,14 @@ is to look at the [applications](applications/index.md) for full examples and th
         pip3 install torch torchvision
         ```
 
-    4. Install CAREamics napari plugin and napari:
+    4. Verify that GPU is available:
+        ```bash
+        python -c "import torch; import platform; print((platform.processor() in ('arm', 'arm64') and torch.backends.mps.is_available()))"
+        ```
+
+        If this prints `False`, make sure that you do have an M1, M2 or M3 chip, and that the `conda`/`mamba` macOS-arm64 release was installed correctly.
+
+    5. Install CAREamics napari plugin and napari:
 
         ``` bash
         pip install careamics-napari "napari[all]"
