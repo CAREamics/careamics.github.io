@@ -298,15 +298,14 @@ is to look at the [applications](applications/index.md) for full examples and th
         mamba activate careamics
         ```
 
-    3. Install PyTorch following the [official 
-        instructions](https://pytorch.org/get-started/locally/)
-
+    3. Install PyTorch following the [official instructions](https://pytorch.org/get-started/locally/)
+        while specifying the platform. As an example, our test machine requires:
         As an example, our test machine requires:
 
         ``` bash
         pip3 install torch torchvision
         ```
-        
+
     4. Verify that GPU is available:
         ```bash
         python -c "import torch; import platform; print((platform.processor() in ('arm', 'arm64') and torch.backends.mps.is_available()))"
