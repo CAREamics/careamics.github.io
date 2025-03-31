@@ -312,7 +312,7 @@ is to look at the [applications](applications/index.md) for full examples and th
 
         If this prints `False`, make sure that you do have an M1, M2 or M3 chip, and that the `conda`/`mamba` macOS-arm64 release was installed correctly.
 
-    4. Install CAREamics napari plugin and napari:
+    5. Install CAREamics napari plugin and napari:
 
         ``` bash
         pip install careamics-napari "napari[all]"
