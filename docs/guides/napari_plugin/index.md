@@ -26,7 +26,13 @@ The easiest way to try out the plugin, is to start the plugin and load a sample 
 napari
 ```
 
-Then, in the napari UI:
+Then, in the napari UI, select _"Train CAREamics (CAREamics)"_ from the plugin menu:
+
+<p align="center">
+<img src="../../assets/careamics_ui/start_plugin.png" width="400">
+</p>
+
+The sample data can be downloaded from: _File > Open Sample > CAREamics_:
 
 <p align="center">
 <img src="../../assets/careamics_ui/select_sample_data.png" width="600">
