@@ -17,7 +17,7 @@ In order to build the pages locally, follow these steps:
 1. Fork this repository and clone it.
 2. Create a new environment and install the dependencies:
     ```bash
-    conda create -n careamics-docs python=3.11
+    conda create -n careamics-docs python=3.12
     pip install -r requirements.txt
     ```
 4. Run the following scripts (which are normally run by the CI):
@@ -31,7 +31,7 @@ In order to build the pages locally, follow these steps:
     ```
 4. Open the local link in your browser.
 
-**Note**: This will not show you the version mechanism. For this, check out the 
+**Note**: This will not show you the versioning mechanism. For this, check out the 
 **Version release** section.
 
 

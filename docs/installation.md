@@ -27,7 +27,7 @@ or as scripts. For the napari plugin, refer to the next section.
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10
+        mamba create -n careamics python=3.12
         mamba activate careamics
         ```
 
@@ -66,7 +66,7 @@ or as scripts. For the napari plugin, refer to the next section.
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10
+        mamba create -n careamics python=3.12
         mamba activate careamics
         ```
 
@@ -118,7 +118,7 @@ Here is a list of the extra dependencies:
     2. Create a new environment:
         
         ``` bash
-        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
+        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.12
         conda activate careamics
         conda config --env --set subdir osx-arm64
         ```
@@ -151,7 +151,7 @@ Here is a list of the extra dependencies:
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10 --platform osx-arm64
+        mamba create -n careamics python=3.12 --platform osx-arm64
         mamba activate careamics
         ```
 
@@ -194,7 +194,7 @@ is to look at the [applications](applications/index.md) for full examples and th
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10
+        mamba create -n careamics python=3.12
         mamba activate careamics
         ```
 
@@ -231,7 +231,7 @@ is to look at the [applications](applications/index.md) for full examples and th
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10
+        mamba create -n careamics python=3.12
         mamba activate careamics
         ```
 
@@ -262,7 +262,7 @@ is to look at the [applications](applications/index.md) for full examples and th
     2. Create a new environment:
         
         ``` bash
-        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
+        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.12
         conda activate careamics
         conda config --env --set subdir osx-arm64
         ```
@@ -294,7 +294,7 @@ is to look at the [applications](applications/index.md) for full examples and th
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10 --platform osx-arm64
+        mamba create -n careamics python=3.12 --platform osx-arm64
         mamba activate careamics
         ```
 

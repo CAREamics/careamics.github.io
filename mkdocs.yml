@@ -8,7 +8,6 @@ edit_uri: "" # disable the edit button
 nav:
   - Home: index.md
   - Installation: installation.md
-  - Current State: current_state.md
   - Guides:
       - Guides: guides/index.md
       - CAREamist API:
