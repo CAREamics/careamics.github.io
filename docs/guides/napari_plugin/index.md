@@ -77,7 +77,7 @@ Unsurprisingly, the `Train` data is used for training, and the `Val` one for val
 </p>
 
 
-!!! important "Size of the validatin data"
+!!! important "Size of the validation data"
 
     If your validation data is too large, this will slow down training.
 

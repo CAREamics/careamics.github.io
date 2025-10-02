@@ -50,6 +50,27 @@ restoration deep-learning algorithms, such as CARE, Noise2Void, HDN, MicroSplit,
                             </div>
                         </div>
                     </a>
+                    <!-- Features -->
+                    <a class="card-wrapper" href="features">
+                        <div class="card">
+                            <div class="card-body"> 
+                                <div class="logo">
+                                    <span class="twemoji">
+                                        --8<-- "milestone.svg"
+                                    </span>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Features</h5>
+                                    <p>
+                                        What you can do with CAREamics.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- New row -->
+                <div class="responsive-grid">
                     <!-- Guides -->
                     <a class="card-wrapper" href="guides">
                         <div class="card">
@@ -68,9 +89,6 @@ restoration deep-learning algorithms, such as CARE, Noise2Void, HDN, MicroSplit,
                             </div>
                         </div>
                     </a>
-                </div>
-                <!-- New row -->
-                <div class="responsive-grid">
                     <!-- Application -->
                     <a class="card-wrapper" href="applications">
                         <div class="card">
@@ -89,6 +107,9 @@ restoration deep-learning algorithms, such as CARE, Noise2Void, HDN, MicroSplit,
                             </div>
                         </div>
                     </a>
+                </div>
+                <!-- New row -->
+                <div class="responsive-grid">
                     <!-- Algorithms -->
                     <a class="card-wrapper" href="algorithms">
                         <div class="card">
@@ -107,9 +128,6 @@ restoration deep-learning algorithms, such as CARE, Noise2Void, HDN, MicroSplit,
                             </div>
                         </div>
                     </a>
-                </div>
-                <!-- New row -->
-                <div class="responsive-grid">
                     <!-- Code reference -->
                     <a class="card-wrapper" href="reference">
                         <div class="card">

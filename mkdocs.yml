@@ -7,7 +7,11 @@ edit_uri: "" # disable the edit button
 
 nav:
   - Home: index.md
-  - Installation: installation.md
+  - Installation:
+      - installation/index.md
+      - conda/mamba: installation/conda_mamba.md
+      - Using uv: installation/uv.md
+  - Features: features.md
   - Guides:
       - Guides: guides/index.md
       - CAREamist API:
@@ -53,7 +57,7 @@ nav:
       - Lightning API: applications/Lightning_API/
   - Algorithms: algorithms/
 
-  - Code Reference: reference/
+  - API documentation: reference/
 
 theme:
   name: material
