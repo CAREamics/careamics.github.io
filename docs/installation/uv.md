@@ -57,7 +57,7 @@ using standard `uv`:
 ```bash
 uv init careamics_project
 cd careamics_project
-uv add "careamics[examples]>=0.0.16" # (1)
+uv add "careamics[examples]>=0.0.16"  # (1)!
 ```
 
 1. Pin the dependency for reproducibility

@@ -31,7 +31,46 @@ a certain numbers of mandatory parameters:
 - `num_epochs`: Number of epochs.
     
     
-Additional optional parameters can be passed to tweak the configuration. 
+Additional optional parameters can be passed to tweak the configuration (e.g. the number
+of steps per epoch). 
+
+
+## Settings the number of steps per epoch
+
+For large images, the number of patches may be very large as well. A consequence are
+long epochs, and a sparser sampling in time of the network performances during training.
+In such cases, it is useful to set the number of step per epochs. By setting a number
+of steps samller than the number of total patches, the epoch length is reduced and
+metrics calculation over the validation set occurs more often.
+
+
+=== "Noise2Void"
+    
+    ```python title="Configuration with maximum number of steps"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2v_steps"
+    ```
+
+    1. Set the maximum number of steps. If the number of patches is smaller than that number, then
+    it simply trains as if we would not have set the number of steps.
+
+=== "CARE"
+
+    ```python title="Configuration with maximum number of steps"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:care_steps"
+    ```
+
+    1. Set the maximum number of steps. If the number of patches is smaller than that number, then
+    it simply trains as if we would not have set the number of steps.
+
+=== "Noise2Noise"
+
+    ```python title="Configuration with maximum number of steps"
+    --8<-- "careamics-examples/guides/careamist_api/configuration/convenience_functions.py:n2n_steps"
+    ```
+
+    1. Set the maximum number of steps. If the number of patches is smaller than that number, then
+    it simply trains as if we would not have set the number of steps.
+
 
 
 ## Training with channels

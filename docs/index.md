@@ -18,7 +18,7 @@ description: Guide and documentation.
 
 # Documentation
 
-Documentation for [CAREamics v0.0.15](https://github.com/CAREamics/careamics/releases/tag/v0.0.15).
+Documentation for [CAREamics v0.0.16](https://github.com/CAREamics/careamics/releases/tag/v0.0.16).
 
 
 CAREamics is a PyTorch library aimed at simplifying the use of state of the art image
