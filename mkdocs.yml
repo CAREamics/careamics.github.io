@@ -7,8 +7,11 @@ edit_uri: "" # disable the edit button
 
 nav:
   - Home: index.md
-  - Installation: installation.md
-  - Current State: current_state.md
+  - Installation:
+      - installation/index.md
+      - Using mamba/conda: installation/conda_mamba.md
+      - Using uv: installation/uv.md
+  - Features: features.md
   - Guides:
       - Guides: guides/index.md
       - CAREamist API:
@@ -47,14 +50,12 @@ nav:
   - Applications:
       - applications/index.md
       - Noise2Void: applications/Noise2Void/
-      - N2V2: applications/N2V2/
-      - structN2V: applications/structN2V/
       - Noise2Noise: applications/Noise2Noise/
       - CARE: applications/CARE/
       - Lightning API: applications/Lightning_API/
   - Algorithms: algorithms/
 
-  - Code Reference: reference/
+  - API documentation: reference/
 
 theme:
   name: material

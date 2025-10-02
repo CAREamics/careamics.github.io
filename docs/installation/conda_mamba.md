@@ -1,23 +1,14 @@
 ---
-icon: octicons/desktop-download-24
-description: Installation instructions
+description: Install with mamba or conda
 ---
 
-# Installation
-
-CAREamics is a deep-learning library and we therefore recommend having GPU support as
-training the algorithms on the CPU can be very slow.
+# Install using mamba/conda
 
 We recommend using [mamba (miniforge)](https://github.com/conda-forge/miniforge#download) 
 to install all packages in a virtual environment. As an alternative, you can use
 [conda 
 (miniconda)](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html)
 with the same commands (replacing `mamba` by `conda`). 
-
-For macOS silicon-acceleration, please refer to the specific sections!
-
-
-## CAREamics library step-by-step
 
 This section install CAREamics for use in your own library or tool, via jupyter notebook
 or as scripts. For the napari plugin, refer to the next section.
@@ -181,9 +172,9 @@ Here is a list of the extra dependencies:
 
 ### Quickstart
 
-Once you have [installed CAREamics](installation.md), the easiest way to get started
-is to look at the [applications](applications/index.md) for full examples and the 
-[guides](guides/index.md) for in-depth tweaking.
+Once you have [installed CAREamics](index.md), the easiest way to get started
+is to look at the [applications](../applications/index.md) for full examples and the 
+[guides](../guides/index.md) for in-depth tweaking.
 
 
 ## CAREamics napari plugin

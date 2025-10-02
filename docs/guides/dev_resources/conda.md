@@ -1,4 +1,4 @@
-# Conda
+# Conda-forge package
 
 CAREamics is available via [conda-forge](https://conda-forge.org/). Package maintenance
 is done through the [careamics-feedstock](https://github.com/conda-forge/careamics-feedstock).
@@ -25,7 +25,7 @@ case one needs to test locally what can go wrong. Here is how to do it:
 
 ```bash
 cd careamics-feedstock
-conda create -n forge python=3.10
+conda create -n forge python=3.12
 conda activate forge
 conda install conda-build
 conda config --add channels conda-forge
@@ -42,7 +42,7 @@ And add the following content:
  
 ```yaml
 python_min:
-  - "3.8"  # Set the minimum Python version required for your recipe
+  - "3.11"  # Set the minimum Python version required for your recipe
 ```
 
 Finally, build the package:

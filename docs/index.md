@@ -18,11 +18,12 @@ description: Guide and documentation.
 
 # Documentation
 
-Documentation for [CAREamics v0.0.9](https://github.com/CAREamics/careamics/releases/tag/v0.0.9).
+Documentation for [CAREamics v0.0.16](https://github.com/CAREamics/careamics/releases/tag/v0.0.16).
 
 
-CAREamics is a PyTorch library aimed at simplifying the use of Noise2Void and its many
-variants and cousins (CARE, Noise2Noise, N2V2, P(P)N2V, HDN, muSplit etc.).
+CAREamics is a PyTorch library aimed at simplifying the use of state of the art image
+restoration deep-learning algorithms, such as CARE, Noise2Void, HDN, MicroSplit, etc.
+
 
 ## Getting Started
 <div class="md-container secondary-section">
@@ -49,19 +50,19 @@ variants and cousins (CARE, Noise2Noise, N2V2, P(P)N2V, HDN, muSplit etc.).
                             </div>
                         </div>
                     </a>
-                    <!-- Current state -->
-                    <a class="card-wrapper" href="current_state">
+                    <!-- Features -->
+                    <a class="card-wrapper" href="features">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body"> 
                                 <div class="logo">
                                     <span class="twemoji">
                                         --8<-- "milestone.svg"
                                     </span>
                                 </div>
                                 <div class="card-content">
-                                    <h5>Current State</h5>
+                                    <h5>Features</h5>
                                     <p>
-                                        Check out where we stand and where we want to go.
+                                        What you can do with CAREamics.
                                     </p>
                                 </div>
                             </div>
@@ -137,7 +138,7 @@ variants and cousins (CARE, Noise2Noise, N2V2, P(P)N2V, HDN, muSplit etc.).
                                     </span>
                                 </div>
                                 <div class="card-content">
-                                    <h5>Code Reference</h5>
+                                    <h5>API Documentation</h5>
                                     <p>
                                         Code documentation for all CAREamics libraries.
                                     </p>

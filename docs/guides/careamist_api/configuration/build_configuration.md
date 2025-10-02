@@ -89,7 +89,7 @@ Here, we reproduce the same configuration as previously, but as a dictionary thi
 ```
 
 1. In order to correctly instantiate the N2V configuration via a dictionary, we have
-    to explicitely specify certain paramaters that otherwise have a default value when
+    to explicitly specify certain parameters that otherwise have a default value when
     using Pydantic. This is the case for the `algorithm` parameter.
 2. As previously, we also specify the architecture.
 3. In parctice, we do not change the `n2v_config`, but this is were one could. The `n2v_config`

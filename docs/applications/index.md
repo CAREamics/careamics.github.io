@@ -53,54 +53,6 @@ reasonable size.
                             </div>
                         </div>
                     </a>
-                    <!-- N2V2 -->
-                    <a class="card-wrapper" href="N2V2">
-                        <div class="card"> 
-                            <div class="card-body">
-                                <div class="logo">
-                                    <span class="twemoji">
-                                        --8<--  "cpu.svg"
-                                    </span>
-                                </div>
-                                <div class="card-content">
-                                    <h5>N2V2</h5>
-                                    <p>
-                                        A variant of Noise2Void capable of removing 
-                                        checkboard artefacts.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-tags">
-                                <span class=tag>no ground-truth</span>
-                                <span class=tag>single image</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="responsive-grid">
-                    <!-- structN2V -->
-                    <a class="card-wrapper" href="structN2V">
-                        <div class="card"> 
-                            <div class="card-body">
-                                <div class="logo">
-                                    <span class="twemoji">
-                                        --8<--  "cpu.svg"
-                                    </span>
-                                </div>
-                                <div class="card-content">
-                                    <h5>StructN2V</h5>
-                                    <p>
-                                        A variant of Noise2Void that uses an enhanced mask
-                                        to remove structured noise.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-tags">
-                                <span class=tag>no ground-truth</span>
-                                <span class=tag>single image</span>
-                            </div>
-                        </div>
-                    </a>
                 </div>
             </div>
         </div>
