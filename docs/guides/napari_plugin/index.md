@@ -1,7 +1,7 @@
 # CAREamics napari plugin
 
 CAREamics provides a napari plugin for running our algorithms with a friendly GUI. Check
-out the [installation instructions](../../installation.md) to get started.
+out the [installation instructions](../../installation/index.md) to get started.
 
 <p align="center">
 <img src="../../assets/careamics_ui/intro.png" width="600">

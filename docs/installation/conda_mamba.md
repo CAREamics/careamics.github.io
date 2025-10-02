@@ -172,7 +172,7 @@ Here is a list of the extra dependencies:
 
 ### Quickstart
 
-Once you have [installed CAREamics](installation.md), the easiest way to get started
+Once you have [installed CAREamics](installation/index.md), the easiest way to get started
 is to look at the [applications](applications/index.md) for full examples and the 
 [guides](guides/index.md) for in-depth tweaking.
 
