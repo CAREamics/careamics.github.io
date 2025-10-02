@@ -18,6 +18,7 @@ CAREamics is an on-going project and the API is not yet stable.
 - Training
     - training in memory or from multiple files
     - choose number of epochs and steps per epochs
+    - WandB and TensorBoard monitoring
 - Prediction
     - Tiled prediction
 - Algorithms

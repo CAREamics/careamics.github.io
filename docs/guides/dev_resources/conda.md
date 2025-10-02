@@ -1,4 +1,4 @@
-# Conda
+# Conda-forge package
 
 CAREamics is available via [conda-forge](https://conda-forge.org/). Package maintenance
 is done through the [careamics-feedstock](https://github.com/conda-forge/careamics-feedstock).
