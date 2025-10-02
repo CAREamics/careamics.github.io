@@ -9,8 +9,8 @@ nav:
   - Home: index.md
   - Installation:
       - installation/index.md
-      - conda/mamba: installation/conda_mamba.md
-      - Using uv: installation/uv.md
+      - mamba/conda: installation/conda_mamba.md
+      - uv: installation/uv.md
   - Features: features.md
   - Guides:
       - Guides: guides/index.md
