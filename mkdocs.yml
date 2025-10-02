@@ -9,8 +9,8 @@ nav:
   - Home: index.md
   - Installation:
       - installation/index.md
-      - mamba/conda: installation/conda_mamba.md
-      - uv: installation/uv.md
+      - Using mamba/conda: installation/conda_mamba.md
+      - Using uv: installation/uv.md
   - Features: features.md
   - Guides:
       - Guides: guides/index.md
@@ -50,8 +50,6 @@ nav:
   - Applications:
       - applications/index.md
       - Noise2Void: applications/Noise2Void/
-      - N2V2: applications/N2V2/
-      - structN2V: applications/structN2V/
       - Noise2Noise: applications/Noise2Noise/
       - CARE: applications/CARE/
       - Lightning API: applications/Lightning_API/

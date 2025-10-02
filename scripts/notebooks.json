@@ -33,14 +33,6 @@
             "tags": "2D, benchmark"
         },
         {
-            "name": "Convallaria",
-            "description": "An example of using structN2V on the convallaria dataset.",
-            "cover": "Convallaria_structN2V.jpeg",
-            "source": "applications/n2v/2D/Convallaria_structN2V.ipynb",
-            "destination": "structN2V",
-            "tags": "2D, fluorescence, structN2V"
-        },
-        {
             "name": "SEM",
             "description": "Denoising of 2D scanning electron microscopy with Noise2Noise.",
             "cover": "SEM_Noise2Noise.jpeg",

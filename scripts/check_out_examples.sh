@@ -2,6 +2,8 @@
 
 # This script clone the example repository, and copy some notebooks into
 # the docs. The rest is kept for snippets.
+#
+# requires installing `jq`
 
 # optional argument to specify a branch
 if [ -z "$1" ]; then

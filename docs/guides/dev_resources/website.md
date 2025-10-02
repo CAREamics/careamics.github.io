@@ -25,6 +25,12 @@ In order to build the pages locally, follow these steps:
     sh scripts/check_out_repos.sh
     sh scripts/check_out_examples.sh
     ```
+
+    !!! note
+
+        To run the scripts locally, you will need to install `jq`. For instance with
+        `brew install jq`.
+
 3. Build the pages:
     ```bash
     mkdocs serve

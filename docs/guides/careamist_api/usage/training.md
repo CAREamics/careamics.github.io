@@ -104,3 +104,12 @@ To decide on the logger, check out the [Configuration section](../configuration/
 
     Using WandB or TensorBoard require the installation of `extra` dependencies. Check
     out the [installation section](../../../installation.md#extra-dependencies) to know more about it.
+
+
+### Plotting loss
+
+To plot the loss curves, you can use the `CAREamist.get_losses` function:
+
+```python title="Plotting losses"
+--8<-- "careamics-examples/guides/careamist_api/usage/training.py:losses"
+```
