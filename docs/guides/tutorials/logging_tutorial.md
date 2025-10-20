@@ -8,7 +8,7 @@ Training deep learning models for microscopy image restoration involves monitori
 
 !!! note "Installation required"
 
-    Both WandB and TensorBoard require additional dependencies. You can install them as extras:
+    Both WandB and TensorBoard require additional dependencies. You can install them [as extras](https://careamics.github.io/0.1/installation/conda_mamba/#extra-dependencies):
     
     ```bash
     # For WandB
@@ -16,9 +16,6 @@ Training deep learning models for microscopy image restoration involves monitori
     
     # For TensorBoard
     pip install "careamics[tensorboard]"
-    
-    # Or both
-    pip install "careamics[wandb,tensorboard]"
     ```
 
 ## Weights & Biases (WandB)
@@ -29,27 +26,28 @@ WandB offers cloud-based experiment tracking with collaborative features, making
 
 To enable WandB logging in your CAREamics workflow, simply specify `logger="wandb"` when creating your configuration:
 
-=== "Example with Noise2Void"
+```python title="Using WandB with Noise2Void"
+from careamics import CAREamist
+from careamics.config import create_n2v_configuration
 
-    ```python
-    from careamics import CAREamist
-    from careamics.config import create_n2v_configuration
-    
-    # Create configuration with WandB logging
-    config = create_n2v_configuration(
-        experiment_name="n2v_experiment", # This is the WandB run name
-        data_type="array",
-        axes="YX",
-        patch_size=(64, 64),
-        batch_size=16,
-        num_epochs=100,
-        logger="wandb"  # Enable WandB logging
-    )
-    
-    # Initialize and train
-    careamist = CAREamist(source=config)
-    careamist.train(train_source=train_data)
-    ```
+# Create configuration with WandB logging
+config = create_n2v_configuration(
+    experiment_name="n2v_experiment",  # (1)!
+    data_type="array",
+    axes="YX",
+    patch_size=(64, 64),
+    batch_size=16,
+    num_epochs=100,
+    logger="wandb"  # (2)!
+)
+
+# Initialize and train
+careamist = CAREamist(source=config)
+careamist.train(train_source=train_data)
+```
+
+1. Name of the experiment run as it will appear in WandB.
+2. Enable WandB logging.
 
 ### WandB authentication and configuration
 
@@ -86,6 +84,9 @@ os.environ["WANDB_RUN_NAME"] = "n2v_experiment_001"
 # Disable WandB (useful for debugging)
 os.environ["WANDB_MODE"] = "disabled"
 ```
+!!! tip "Finding your API key"
+    
+    Get your WandB API key from [https://wandb.ai/authorize](https://wandb.ai/authorize)
 
 ### What WandB logs
 
@@ -105,30 +106,29 @@ TensorBoard provides local experiment tracking and visualization, making it exce
 
 Enable TensorBoard logging by specifying `logger="tensorboard"` in your configuration:
 
-=== "Example with Noise2Void"
+```python title="TensorBoard with Noise2Void"
+from careamics import CAREamist
+from careamics.config import create_n2v_configuration
+from pathlib import Path
 
-    ```python
-    from careamics import CAREamist
-    from careamics.config import create_n2v_configuration
-    from pathlib import Path
-    
-    # Create configuration with TensorBoard logging
-    config = create_n2v_configuration(
-        experiment_name="n2v_experiment",
-        data_type="array",
-        axes="YX",
-        patch_size=(64, 64),
-        batch_size=16,
-        num_epochs=100,
-        logger="tensorboard"  # Enable TensorBoard logging
-    )
-    
-    # Initialize with specific working directory
-    work_dir = Path("experiments/n2v_runs")
-    careamist = CAREamist(source=config, work_dir=work_dir)  
-    careamist.train(train_source=train_data)
-    ```
+# Create configuration with TensorBoard logging
+config = create_n2v_configuration(
+    experiment_name="n2v_experiment",
+    data_type="array",
+    axes="YX",
+    patch_size=(64, 64),
+    batch_size=16,
+    num_epochs=100,
+    logger="tensorboard"  # (1)!
+)
 
+# Initialize with specific working directory
+work_dir = Path("experiments/n2v_runs")
+careamist = CAREamist(source=config, work_dir=work_dir)  
+careamist.train(train_source=train_data)
+```
+
+1. Enable TensorBoard logging.
 
 ### Viewing TensorBoard logs
 
@@ -206,7 +206,6 @@ Create a SLURM script to run your CAREamics training with WandB logging. Remembe
 #SBATCH --time=4:00:00 
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
-#SBATCH --partition=gpuq
 #SBATCH --gres=gpu:1
 
 # Load required modules
@@ -257,7 +256,7 @@ wandb sync /scratch/$USER/wandb/offline-run-20240315_143022-abc123
 
     WandB caches data locally. On HPC systems:
     
-    - Always use scratch space for `WANDB_DIR` and `WANDB_CACHE_DIR`
+    - Use scratch space for `WANDB_DIR` and `WANDB_CACHE_DIR` if you have access to such space
     - Avoid using home directories (often have strict quotas)
     - Clean up old runs periodically: `wandb sync --clean`
 
@@ -291,21 +290,9 @@ mkdir -p $WORK_DIR
 
 ### Viewing TensorBoard on HPC
 
-Since HPC compute nodes typically don't allow direct browser access, you have several options for viewing TensorBoard:
+Since HPC compute nodes typically don't allow direct browser access, you have two options for viewing TensorBoard:
 
-#### Option 1: SSH port forwarding
-
-```bash
-# On your local machine, create SSH tunnel to HPC login node
-ssh -L 6006:localhost:6006 username@hpc-login.university.edu
-
-# On the HPC login node, start TensorBoard
-tensorboard --logdir /scratch/username/tensorboard_runs --port 6006
-
-# Open browser on your local machine to http://localhost:6006
-```
-
-#### Option 2: Using SLURM job for TensorBoard server
+#### Option 1: Using SLURM job for TensorBoard server
 
 ```bash
 #!/bin/bash
@@ -349,11 +336,11 @@ Then on your local machine:
 ssh -L 6006:compute-node-123:6006 username@hpc-login.university.edu
 ```
 
-#### Option 3: Download logs and view locally 
+#### Option 2: Download logs and view locally 
 
 ```bash
 # On your local machine, download TensorBoard logs
-rsync -avz username@hpc-login.university.edu:/scratch/username/tensorboard_runs ./local_tensorboard_runs
+rsync -avz username@hpc-login.university.edu:/path_to_folders/tensorboard_runs ./local_tensorboard_runs
 
 # View locally
 tensorboard --logdir ./local_tensorboard_runs
@@ -395,7 +382,7 @@ for exp in experiments:
     careamist.train(train_source=train_data)
 
 # View all experiments together
-# tensorboard --logdir /scratch/username/tensorboard_runs/n2v_comparison
+tensorboard --logdir /path_to_folders/tensorboard_runs/n2v_comparison
 ```
 When you launch TensorBoard pointing to the parent directory, it will automatically display all experiments together for comparison.
 Both WandB and TensorBoard offer powerful experiment tracking capabilities for CAREamics:
