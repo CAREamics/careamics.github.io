@@ -52,8 +52,10 @@ Before opening a pull request, make sure that you installed the `dev` optional d
 of CAREamics:
 
 ```bash
-pip install careamics[dev]
+pip install --group dev -e . # (1)!
 ```
+
+1. Here we are installing from the locally cloned git repository!
 
 In particular, make sure that you use pre-commit before committing changes:
 
