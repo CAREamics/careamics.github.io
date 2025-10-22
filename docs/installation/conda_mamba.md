@@ -18,7 +18,7 @@ or as scripts. For the napari plugin, refer to the next section.
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10
+        mamba create -n careamics python=3.12
         mamba activate careamics
         ```
 
@@ -41,7 +41,7 @@ or as scripts. For the napari plugin, refer to the next section.
         will need to change the `pytorch` and `pytorch-cuda` versions to match your
         hardware (linux and windows).
     
-    5. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+    5. Install CAREamics. We have several extra options (`examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
         we recommend the following:
 
@@ -57,7 +57,7 @@ or as scripts. For the napari plugin, refer to the next section.
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10
+        mamba create -n careamics python=3.12
         mamba activate careamics
         ```
 
@@ -74,7 +74,7 @@ or as scripts. For the napari plugin, refer to the next section.
         you want GPU acceleration, please refer to the relevant section to ensure that
         you install packages for the correct platform.
     
-    4. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+    4. Install CAREamics. We have several extra options (`examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
         we recommend the following:
 
@@ -98,8 +98,7 @@ Here is a list of the extra dependencies:
 - `examples`: Dependencies required to run the example notebooks.
 - `wandb`: Dependencies to use [WandB](https://wandb.ai/site) as a logger.
 - `tensorboard`: Dependencies to use [TensorBoard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html) as a logger.
-- `dev`: Dependencies required to run all the tooling necessary to develop with CAREamics.
-        
+
 
 ### MacOS silicon GPU
 
@@ -109,7 +108,7 @@ Here is a list of the extra dependencies:
     2. Create a new environment:
         
         ``` bash
-        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
+        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.12
         conda activate careamics
         conda config --env --set subdir osx-arm64
         ```
@@ -130,7 +129,7 @@ Here is a list of the extra dependencies:
         
         If this prints `False`, make sure that you do have an M1, M2 or M3 chip, and that the `conda`/`mamba` macOS-arm64 release was installed correctly.
     
-    5. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+    5. Install CAREamics. We have several extra options (`examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
         we recommend the following:
 
@@ -142,7 +141,7 @@ Here is a list of the extra dependencies:
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10 --platform osx-arm64
+        mamba create -n careamics python=3.12 --platform osx-arm64
         mamba activate careamics
         ```
 
@@ -162,7 +161,7 @@ Here is a list of the extra dependencies:
 
         If this prints `False`, make sure that you do have an M1, M2 or M3 chip, and that the `conda`/`mamba` macOS-arm64 release was installed correctly.
     
-    5. Install CAREamics. We have several extra options (`dev`, `examples`, `wandb`
+    5. Install CAREamics. We have several extra options (`examples`, `wandb`
         and `tensorboard`). If you wish to run the [example notebooks](https://github.com/CAREamics/careamics-examples),
         we recommend the following:
 
@@ -185,7 +184,7 @@ is to look at the [applications](../applications/index.md) for full examples and
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10
+        mamba create -n careamics python=3.12
         mamba activate careamics
         ```
 
@@ -222,7 +221,7 @@ is to look at the [applications](../applications/index.md) for full examples and
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10
+        mamba create -n careamics python=3.12
         mamba activate careamics
         ```
 
@@ -253,7 +252,7 @@ is to look at the [applications](../applications/index.md) for full examples and
     2. Create a new environment:
         
         ``` bash
-        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.10
+        CONDA_SUBDIR=osx-arm64 conda create -n careamics python=3.12
         conda activate careamics
         conda config --env --set subdir osx-arm64
         ```
@@ -285,7 +284,7 @@ is to look at the [applications](../applications/index.md) for full examples and
     2. Create a new environment:
         
         ``` bash
-        mamba create -n careamics python=3.10 --platform osx-arm64
+        mamba create -n careamics python=3.12 --platform osx-arm64
         mamba activate careamics
         ```
 
