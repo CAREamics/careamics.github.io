@@ -382,7 +382,7 @@ for exp in experiments:
     careamist.train(train_source=train_data)
 
 # View all experiments together
-tensorboard --logdir /path_to_folders/tensorboard_runs/n2v_comparison
+tensorboard --logdir="/path_to_folders/tensorboard_runs/n2v_comparison"
 ```
 When you launch TensorBoard pointing to the parent directory, it will automatically display all experiments together for comparison.
 Both WandB and TensorBoard offer powerful experiment tracking capabilities for CAREamics:
