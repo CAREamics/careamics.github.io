@@ -11,7 +11,7 @@ to use `uv`.
 !!! important
     Please refer to the [installing PyTorch](https://docs.astral.sh/uv/guides/integration/pytorch/#installing-pytorch)
     section of `uv` documentation should you encounter issues running on GPU. In particular
-    it may be necessary to install torch independently in the `venv` on Windows (see [this section](#))
+    it may be necessary to install torch independently in the `venv` on Windows (see [this section](#installing-careamics-with-gpu-on-windows))
 
 
 ## Using notebooks
