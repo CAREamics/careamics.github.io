@@ -45,9 +45,8 @@ config = create_n2v_configuration(
 careamist = CAREamist(source=config)
 careamist.train(train_source=train_data)
 ```
-
-1. Name of the experiment run as it will appear in WandB.
-2. Enable WandB logging.
+1. Name of the experiment run as it will appear in WandB
+2. Enable WandB logging
 
 ### WandB authentication and configuration
 
@@ -93,10 +92,9 @@ os.environ["WANDB_MODE"] = "disabled"
 When using WandB with CAREamics, the following information is automatically tracked:
 
 - **Training metrics**: Loss values for each epoch
-- **Validation metrics**: Validation loss when validation data is provided
-- **Hyperparameters**: Model architecture, learning rate, batch size, and all configuration parameters
-- **System metrics**: GPU utilization, memory usage, CPU usage
-- **Code version**: Git commit hash if working in a git repository
+- **Validation metrics**: Validation loss and PSNR when validation data is provided
+- **Hyperparameters**: All configuration parameters (learning rate, batch size, model architecture, etc.)
+- **Learning rate**: Learning rate schedule throughout training
 
 ## TensorBoard
 
@@ -127,8 +125,7 @@ work_dir = Path("experiments/n2v_runs")
 careamist = CAREamist(source=config, work_dir=work_dir)  
 careamist.train(train_source=train_data)
 ```
-
-1. Enable TensorBoard logging.
+1. Enable TensorBoard logging
 
 ### Viewing TensorBoard logs
 
@@ -151,10 +148,9 @@ Then open your browser to `http://localhost:6006` (or your specified port).
 
 TensorBoard captures:
 
-- **Scalars**: Training and validation loss curves
-- **Hyperparameters**: Configuration parameters for comparison
-- **System metrics**: Hardware utilization when available
-- **Model graph**: Network architecture visualization
+- **Scalars**: Training and validation loss curves, PSNR metrics
+- **Hyperparameters**: Complete configuration parameters
+- **Learning rate**: Learning rate changes during training
 
 !!! info "Log directory structure"
 
@@ -163,12 +159,13 @@ TensorBoard captures:
     work_dir/
     └── experiment_name/
         ├── logs/
-        │   └── version_0/  # Each training run creates a new version directory
+        │   └── version_0/   # (1)!
         │       └── events.out.tfevents...
         └── checkpoints/
             ├── last.ckpt
             └── best.ckpt
     ```    
+    1. Each training run creates a new version directory.
 
 ## Using WandB on HPC
 
@@ -203,31 +200,30 @@ Create a SLURM script to run your CAREamics training with WandB logging. Remembe
 #SBATCH --job-name=experiment_name
 #SBATCH --output=logs/experiment_name_%j.out
 #SBATCH --error=logs/experiment_name_%j.err
-#SBATCH --time=4:00:00 
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=32G
-#SBATCH --gres=gpu:1
+#SBATCH --time=4:00:00 # (1)!
+#SBATCH --mem=32G # (1)!
+#SBATCH --gres=gpu:1 # (1)!
 
 # Load required modules
 # WandB configuration
-export WANDB_API_KEY="your_api_key_here"  # (1)!
+export WANDB_API_KEY="your_api_key_here"  # (2)!
 export WANDB_PROJECT="careamics-experiment"
-export WANDB_ENTITY="your_username"  # (2)!
-export WANDB_RUN_NAME="n2v_${SLURM_JOB_ID}"  # (3)!
+export WANDB_ENTITY="your_username"  # (3)!
+export WANDB_RUN_NAME="n2v_${SLURM_JOB_ID}"  # (4)!
 
 # Optional: Configure WandB cache directory
-export WANDB_DIR="/scratch/${USER}/wandb"  # (4)!
+export WANDB_DIR="/scratch/${USER}/wandb"  # (5)!
 export WANDB_CACHE_DIR="/scratch/${USER}/wandb_cache"
 mkdir -p $WANDB_DIR $WANDB_CACHE_DIR
 
 # Activate environment
 # Run training script
 ```
-
-1. Get your API key from https://wandb.ai/authorize
-2. Replace with your WandB username or team name
-3. Automatically name runs with the SLURM job ID for tracking
-4. Use fast scratch storage for WandB cache to improve performance
+1. Adjust according to your HPC parameters
+2. Get your API key from https://wandb.ai/authorize
+3. Replace with your WandB username or team name
+4. Automatically name runs with the SLURM job ID for tracking
+5. Use fast scratch storage for WandB cache to improve performance
 
 ### Handling connectivity issues
 
@@ -272,11 +268,9 @@ TensorBoard is well-suited for HPC environments due to its offline nature and mi
 #SBATCH --job-name=experiment_name
 #SBATCH --output=logs/experiment_name_%j.out
 #SBATCH --error=logs/experiment_name_%j.err
-#SBATCH --time=4:00:00
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=32G
-#SBATCH --partition=gpuq
-#SBATCH --gres=gpu:1
+#SBATCH --time=4:00:00 # (1)!
+#SBATCH --mem=32G # (1)!
+#SBATCH --gres=gpu:1 # (1)!
 
 # Load required modules
 # Set working directories
@@ -287,6 +281,7 @@ mkdir -p $WORK_DIR
 # Activate environment
 # Run training script
 ```
+1. Adjust according to your HPC parameters
 
 ### Viewing TensorBoard on HPC
 
@@ -298,9 +293,9 @@ Since HPC compute nodes typically don't allow direct browser access, you have tw
 #!/bin/bash
 #SBATCH --job-name=experiment_name
 #SBATCH --output=logs/experiment_name_%j.out
-#SBATCH --time=2:00:00  # (1)!
-#SBATCH --cpus-per-task=2
-#SBATCH --mem=8G
+#SBATCH --time=2:00:00  # (1)! # (2)!
+#SBATCH --mem=8G # (1)!
+#SBATCH --gres=gpu:1 # (1)!
 
 # Load required modules
 # Activate environment
@@ -324,11 +319,11 @@ echo "========================================="
 tensorboard \
     --logdir /scratch/${USER}/tensorboard_runs \
     --port ${PORT} \
-    --bind_all  # (2)!
+    --bind_all  # (3)!
 ```
-
-1. Keep it running while you need to view results
-2. Allow connections from any host (required for HPC networking)
+1. Adjust according to your HPC parameters
+2. Keep it running while you need to view results
+3. Allow connections from any host (required for HPC networking)
 
 Then on your local machine:
 ```bash
