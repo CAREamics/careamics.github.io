@@ -47,6 +47,9 @@ nav:
           - guides/dev_resources/website.md
           - guides/dev_resources/docstring.md
           - guides/dev_resources/conda.md
+      - Tutorials:
+        - guides/tutorials/index.md
+        - Wandb and Tensorboard logging: guides/tutorials/logging_tutorial.md      
   - Applications:
       - applications/index.md
       - Noise2Void: applications/Noise2Void/
