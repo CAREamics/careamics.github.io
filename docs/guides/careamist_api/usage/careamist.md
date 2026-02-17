@@ -71,6 +71,29 @@ CAREamics uses two different callbacks from PyTorch Lightning:
 The parameters for the callbacks are the same as the ones from PyTorch Lightning, and
 can be set in the configuration.
 
+!!! info "Early stopping example"
+    Parameters follow PyTorch Lightning `EarlyStopping`.
+
+```python
+    from careamics.config import create_n2v_configuration
+
+    config = create_n2v_configuration(
+        experiment_name="n2v_2D",
+        data_type="array",
+        axes="YX",
+        patch_size=[64, 64],
+        batch_size=8,
+        num_epochs=20,
+    )
+
+    config.training_config.early_stopping_callback = {
+        "monitor": "val_loss",
+        "patience": 10,
+        "mode": "min",
+    }
+```
+
+
 Custom callbacks can be passed to the `CAREamist` constructor. The callbacks must inherit
 from the PyTorch Lightning `Callback` class.
 
