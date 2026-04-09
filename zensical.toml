@@ -1,0 +1,179 @@
+[project]
+site_name = "CAREamics"
+site_description = "A deep-learning focused microscopy image restoration library."
+site_author = "CAREamics team"
+site_url = "https://careamics.github.io/"
+repo_url = "https://github.com/CAREamics/careamics"
+copyright = """
+Copyright &copy; 2026 CAREamics team
+"""
+
+# Read more: https://zensical.org/docs/setup/navigation/
+nav = [
+  { "Home" = "index.md" },
+  { "Installation" = [
+        "content/installation/index.md", 
+        "content/installation/install_with_uv.md", 
+        "content/installation/install_with_mamba.md", 
+        "content/installation/testing_gpu_support.md", 
+    ]},
+  { "Features" = "content/features.md" },
+  { "Guides" = [
+        "content/guides/index.md",
+        {"CAREamist API" = [
+            "content/guides/careamist_api/index.md",
+            {"Configuration" = [
+                "content/guides/careamist_api/configuration/index.md",
+                "content/guides/careamist_api/configuration/convenience_functions.md",
+                "content/guides/careamist_api/configuration/save_load.md",
+                "content/guides/careamist_api/configuration/custom_types.md",
+                "content/guides/careamist_api/configuration/configuration_errors.md",
+                "content/guides/careamist_api/configuration/build_configuration.md",
+                "content/guides/careamist_api/configuration/algorithm_requirements.md",
+            ]},
+            {"Using CAREamics" = [
+                "content/guides/careamist_api/usage/index.md",
+                "content/guides/careamist_api/usage/careamist.md",
+                "content/guides/careamist_api/usage/training.md",
+                "content/guides/careamist_api/usage/datasets.md",
+                "content/guides/careamist_api/usage/prediction.md",
+                "content/guides/careamist_api/usage/model_export.md",
+            ]},
+        ]},
+        {"Lightning API" = ["content/guides/lightning_api/index.md"]},
+        {"napari plugin" = ["content/guides/napari_plugin/index.md"]},
+        {"Dev resources" = [
+            "content/guides/dev_resources/index.md",
+            "content/guides/dev_resources/contribute.md",
+            "content/guides/dev_resources/website.md",
+            "content/guides/dev_resources/docstring.md",
+            "content/guides/dev_resources/conda-forge.md",
+        ]},
+  ]},
+  {"API Reference" = [
+ 
+  ]},
+]
+
+# With the "extra_css" option you can add your own CSS styling to customize
+# your Zensical project according to your needs. You can add any number of
+# CSS files.
+#
+# The path provided should be relative to the "docs_dir".
+#
+# Read more: https://zensical.org/docs/customization/#additional-css
+#
+extra_css = [
+    "stylesheets/extra.css",
+]
+
+# With the `extra_javascript` option you can add your own JavaScript to your
+# project to customize the behavior according to your needs.
+#
+# The path provided should be relative to the "docs_dir".
+#
+# Read more: https://zensical.org/docs/customization/#additional-javascript
+# extra_javascript = ["javascripts/extra.js"]
+
+[project.extra.version]
+provider = "mike"
+
+# ----------------------------------------------------------------------------
+# Section for configuring theme options
+# ----------------------------------------------------------------------------
+[project.theme]
+#variant = "classic" # traditional material for MkDocs look
+# https://zensical.org/docs/customization/#extending-the-theme
+custom_dir = "overrides"
+favicon = "images/favicon_careamics.png"
+logo = "images/logo_careamics_v2.png"
+language = "en"
+features = [
+    "announce.dismiss", # allow dismissing announcement bar
+    #"content.action.edit", # edit button for pages
+    #"content.action.view", # view source button for the page
+    "content.code.annotate", # tooltip button for code explanations
+    "content.code.copy", # button to copy content of code block
+    "content.code.select", # allow selecting lines of code before copy
+    #"content.footnote.tooltips", # show footnote content in a tooltip on hover
+    "content.tabs.link", # link content tabs with the same title
+    "content.tooltips", # enable tooltips for links
+    # "header.autohide", # hide parts of the header automatically when scrolling
+    # "navigation.expand", # expand all section in nav side-bar by default
+    "navigation.footer", # enable next/previous page links in the footer
+    "navigation.indexes", # enable section index pages
+    "navigation.instant", # enable instant navigation
+    "navigation.instant.prefetch", # prefetch pages on hover
+    #"navigation.instant.progress", # progress indicator for slow connections
+    "navigation.path", # breadcrumb navigation for current page
+    #"navigation.prune", # enable navigation pruning to reduce the size of the site
+    "navigation.sections", # group top-level sections in the sidebar
+    "navigation.tabs", # menu layer at the top of the page for top-level sections
+    "navigation.tabs.sticky", # enable sticky navigation tabs
+    "navigation.top", # back to top button
+    "navigation.tracking", # enable automatic URL updates with active anchor
+    "search.highlight", # enable search result highlighting in page
+    # "toc.follow", # enable anchor following for the table of contents
+    #"toc.integrate", # enable navigation integration for the table of contents
+]
+
+
+# - https://zensical.org/docs/setup/colors/
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+#[project.theme.font]
+#text = "Inter"
+#code = "Jetbrains Mono"
+
+# - https://zensical.org/docs/setup/logo-and-icons
+# - https://zensical.org/docs/authoring/icons-emojis/#search
+[project.theme.icon]
+favicon = "images/favicon_careamics.png"
+repo = "fontawesome/brands/github"
+#repo = "lucide/smile"
+
+#[[project.extra.social]]
+#icon = "fontawesome/brands/github"
+#link = "https://github.com/user/repo"
+
+# plugins
+[project.plugins.mkdocstrings.handlers.python]
+inventories = ["https://docs.python.org/3/objects.inv"]
+paths = ["from_git/careamics/src"]
+
+[project.plugins.mkdocstrings.handlers.python.options]
+docstring_style = "numpy"
+inherited_members = true
+show_source = false
+filters = ["!^_"]
+
+# extensions
+[project.markdown_extensions.admonition] # necessary for admonitions
+[project.markdown_extensions.pymdownx.superfences]  # necessary for admonitions
+[project.markdown_extensions.pymdownx.details] # necessary for admonitions
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.snippets]
+base_path=[
+    "docs/snippets",
+    "docs/extras",
+]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true # necessary for tabs
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+[project.markdown_extensions.attr_list] # necessary for gris, emojis
+[project.markdown_extensions.md_in_html] # necessary for grids
+[project.markdown_extensions.pymdownx.emoji] # necessary for grids, emojis
+emoji_index = "zensical.extensions.emoji.twemoji"
+emoji_generator = "zensical.extensions.emoji.to_svg"
+[project.markdown_extensions.pymdownx.blocks.caption] # captions for images

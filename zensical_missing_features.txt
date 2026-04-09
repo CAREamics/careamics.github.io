@@ -1,0 +1,3 @@
+- mkdocs-jupyter for examples: https://github.com/zensical/backlog/issues/9
+- gen-files to generate our own navigation
+- latex support for the documentation
