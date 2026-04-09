@@ -1,6 +1,0 @@
-.vscode
-*.DS_Store*
-src/*
-site/*
-temp/*
-**/*.ipynb
