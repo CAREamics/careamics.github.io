@@ -39,7 +39,7 @@ nav = [
                 "content/guides/careamist_api/usage/prediction.md",
                 "content/guides/careamist_api/usage/model_export.md",
             ]},
-            {"FAQ" = "content/guides/careamist_api/faq.md"},
+            {"FAQ" = "content/guides/faq.md"},
         ]},
         {"Lightning API" = ["content/guides/lightning_api/index.md"]},
         {"napari plugin" = ["content/guides/napari_plugin/index.md"]},
