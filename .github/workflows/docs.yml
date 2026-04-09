@@ -1,0 +1,54 @@
+name: Documentation
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.13
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+      
+      - name: Install dependencies
+        run: uv sync
+
+        # - run: pip install zensical git+https://github.com/squidfunk/mike.git
+        
+      - name: Pull from repos
+        run: bash scripts/pull_from_repos.sh
+
+      - name: Generate reference pages
+        run: uv run python scripts/gen_ref_pages.py --write
+
+      - name: Build documentation
+        run: uv run zensical build --clean
+
+      - name: Pull version from file
+        id: version
+        run: echo "VERSION=$(sed 's/^v//; s/\([0-9]*\.[0-9]*\).*/\1/' docs/extras/version.txt)" >> $GITHUB_OUTPUT
+
+      - name: Deploy documentation
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          VERSION=${{ steps.version.outputs.VERSION }}
+          git fetch origin gh-pages --depth=1 || true
+          uv run mike delete latest || true
+          uv run mike deploy --push --update-aliases "$VERSION" latest
+          uv run mike set-default --push latest
+        id: deployment

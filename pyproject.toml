@@ -1,0 +1,14 @@
+[project]
+name = "careamics-github-io-zen"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mkdocstrings-python>=2.0.3",
+    "mike",
+    "zensical>=0.0.32", # 24
+]
+
+[tool.uv.sources]
+mike = { git = "https://github.com/squidfunk/mike.git" }
