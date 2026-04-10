@@ -29,9 +29,12 @@ jobs:
 
         # - run: pip install zensical git+https://github.com/squidfunk/mike.git
         
+      # pull from repos, copy md files to guides, py files to snippets
+      # and update zensical.toml navigation
       - name: Pull from repos
-        run: bash scripts/pull_from_repos.sh
+        run: bash scripts/pull_from_repos.sh --write
 
+      # generate reference pages from docstrings and update zensical.toml navigation
       - name: Generate reference pages
         run: uv run python scripts/gen_ref_pages.py --write
 
