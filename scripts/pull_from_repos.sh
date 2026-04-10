@@ -136,6 +136,30 @@ copy_careamics_docs_v2() {
 }
 
 
+# merge navigation entries from nav.toml (in the careamics docs) into
+# zensical.toml, replacing empty list placeholders marked with
+# "# filled by pull_from_repos.sh".
+#
+# nav.toml format: a valid TOML file with a top-level `nav` array whose
+# elements are the same inline-table blocks used in zensical.toml, e.g.:
+#   nav = [
+#     {"Using CAREamics" = ["file.md", ...]},
+#     {"Tutorials"       = [...]},
+#   ]
+merge_nav() {
+  local nav_file="$CAREAMICS_REPO_DIR/docs/nav.toml"
+  local zensical_file="$ROOT_DIR/zensical.toml"
+
+  if [[ ! -f "$nav_file" ]]; then
+    echo "Warning: $nav_file not found, skipping nav merge."
+    return 0
+  fi
+
+  echo "Merging nav entries from $nav_file into zensical.toml ..."
+  python3 "$SCRIPT_DIR/update_nav.py" --nav "$nav_file" --toml "$zensical_file"
+}
+
+
 # -- Main
 
 main() {
@@ -176,6 +200,9 @@ main() {
   # copy docs from the same version as the exported one
   # (otherwise there will be a mismatch between docs and version)
   copy_careamics_docs_v2
+
+  # merge nav.toml entries into zensical.toml
+  merge_nav
 }
 
 main "$@"

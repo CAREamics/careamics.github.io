@@ -15,6 +15,10 @@ import shutil
 import sys
 from pathlib import Path
 
+# nav_utils lives alongside this script; make it importable regardless of cwd.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from nav_utils import replace_nav_section  # noqa: E402
+
 if sys.version_info >= (3, 11):
     import tomllib
 else:
@@ -326,32 +330,21 @@ def check_nav(nav: list) -> bool:
 
 def write_nav_to_toml(nav: list) -> None:
     """Replace the API Reference nav block in zensical.toml with the generated nav."""
-    import re
-
     toml_text = TOML_PATH.read_text()
 
     # Build the replacement TOML block
-    inner_lines = []
-    inner_lines.append('    "reference/index.md",')
+    inner_lines = ['    "reference/index.md",']
     inner_lines.extend(nav_to_toml_lines(nav, indent=1))
-    replacement = '{"API Reference" = [\n' + "\n".join(inner_lines) + "\n  ]}"
+    new_block = '{"API Reference" = [\n' + "\n".join(inner_lines) + "\n  ]},"
 
-    # Match the existing {"API Reference" = [ ... ]} block
-    # This regex handles any content (including nested braces) between the brackets
-    pattern = re.compile(
-        r'\{"API Reference"\s*=\s*\[.*?\]\}',
-        re.DOTALL,
-    )
-
-    match = pattern.search(toml_text)
-    if not match:
+    new_text, ok = replace_nav_section(toml_text, "API Reference", new_block)
+    if not ok:
         print(
             "Error: could not find 'API Reference' block in zensical.toml.",
             file=sys.stderr,
         )
         sys.exit(1)
 
-    new_text = toml_text[: match.start()] + replacement + toml_text[match.end() :]
     TOML_PATH.write_text(new_text)
     print(f"Updated API Reference nav in {TOML_PATH}")
 
