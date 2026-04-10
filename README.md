@@ -29,15 +29,14 @@ In order to build the pages locally, follow these steps:
     ```
 3. Run the script to get the latest release of CAREamics:
     ```bash
-    bash scripts/pull_from_repos.sh
+    bash scripts/pull_from_repos.sh --write
     ```
+
+    `--write` indicates that the `zensical.toml` will be updated.
 4. Generate the reference pages:
     ```bash
     uv run python scripts/gen_ref_pages.py --write
     ```
-
-    `--write` indicates that the `zensical.toml` file should be updated with the API
-    reference navigation structure.
 3. Build the pages:
     ```bash
     zensical serve
@@ -45,6 +44,14 @@ In order to build the pages locally, follow these steps:
 4. Open the local link in your browser.
 
 **Note**: This will not show you the versioning mechanism.
+
+## Working with a local version of CAREamics
+
+In step 3, use instead:
+
+```bash
+bash scripts/pull_from_repos.sh  --write --local /path/to/local/careamics
+```
 
 ## How to update the pages without any commit
 
