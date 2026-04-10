@@ -1,4 +1,19 @@
 #!/usr/bin/env bash
+# Usage: pull_from_repos.sh [OPTIONS]
+#
+# Pull documentation and source files from remote repositories into the website.
+#
+# Options:
+#   --dev          Stay on the main branch instead of checking out the latest
+#                  stable release tag (skips checkout_stable_release).
+#   --local <path> Use a local repository at <path> instead of cloning/updating
+#                  from the remote. Skips all git clone/pull and tag-checkout
+#                  steps; version extraction and file copy still run normally.
+#
+# Examples:
+#   pull_from_repos.sh                        # release mode (stable tag)
+#   pull_from_repos.sh --dev                  # dev mode (main branch)
+#   pull_from_repos.sh --local ~/code/careamics  # local repo
 set -euo pipefail # fail fast
 
 # -- Configuration
@@ -6,6 +21,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 FROM_GIT_DIR="$ROOT_DIR/from_git"
 GUIDES_DIR="$ROOT_DIR/docs/content/guides"
+CAREAMICS_REPO_DIR="$FROM_GIT_DIR/careamics"
 
 # Add repositories here (one per line)
 REPOS=(
@@ -40,7 +56,7 @@ clone_or_update_repo() {
 # matches the released version (used for API reference generation).
 # Skipped in --dev mode to stay on main.
 checkout_stable_release() {
-  local repo_dir="$FROM_GIT_DIR/careamics"
+  local repo_dir="$CAREAMICS_REPO_DIR"
 
   if [[ ! -d "$repo_dir/.git" ]]; then
     echo "Error: $repo_dir is not a git repo, skipping checkout."
@@ -62,7 +78,7 @@ checkout_stable_release() {
 # extract the current version from the repo (latest stable tag) and write it
 # to docs/extras/version.txt and docs/extras/version.md
 extract_version() {
-  local repo_dir="$FROM_GIT_DIR/careamics"
+  local repo_dir="$CAREAMICS_REPO_DIR"
   local version_file="$ROOT_DIR/docs/extras/version.txt"
 
   if [[ ! -d "$repo_dir/.git" ]]; then
@@ -94,7 +110,7 @@ extract_version() {
 #   .md  -> docs/content/guides  (preserving relative paths)
 #   .py  -> docs/snippets        (preserving relative paths)
 copy_careamics_docs_v2() {
-  local src="$FROM_GIT_DIR/careamics/docs"
+  local src="$CAREAMICS_REPO_DIR/docs"
   local snippets_dir="$ROOT_DIR/docs/snippets"
 
   if [[ ! -d "$src" ]]; then
@@ -124,23 +140,34 @@ copy_careamics_docs_v2() {
 
 main() {
   local dev_mode=false
+  local local_path=""
 
   while [[ $# -gt 0 ]]; do
     case "$1" in
       --dev) dev_mode=true; shift ;;
+      --local)
+        [[ -n "${2:-}" ]] || { echo "Error: --local requires a path."; exit 1; }
+        local_path="$(cd "$2" && pwd)"
+        shift 2
+        ;;
       *) echo "Unknown option: $1"; exit 1 ;;
     esac
   done
 
   mkdir -p "$FROM_GIT_DIR"
 
-  for url in "${REPOS[@]}"; do
-    clone_or_update_repo "$url"
-  done
+  if [[ -n "$local_path" ]]; then
+    echo "Using local repo at '$local_path' ..."
+    CAREAMICS_REPO_DIR="$local_path"
+  else
+    for url in "${REPOS[@]}"; do
+      clone_or_update_repo "$url"
+    done
 
-  # in release mode, checkout the stable tag for API reference generation
-  if [[ "$dev_mode" == false ]]; then
-    checkout_stable_release
+    # in release mode, checkout the stable tag for API reference generation
+    if [[ "$dev_mode" == false ]]; then
+      checkout_stable_release
+    fi
   fi
 
   # extract and write the version (always based on the latest stable tag)
