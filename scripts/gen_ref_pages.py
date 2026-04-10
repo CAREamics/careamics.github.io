@@ -5,9 +5,12 @@ module containing the mkdocstrings identifier (`::: package.module`), and builds
 a navigation sub-tree compatible with zensical.toml.
 
 Usage:
-    python scripts/gen_ref_pages.py                        # generate files + print nav block
-    python scripts/gen_ref_pages.py --check                # also compare nav with zensical.toml
-    python scripts/gen_ref_pages.py --local /path/to/repo  # use a local repo instead of from_git/
+    python scripts/gen_ref_pages.py           # generate files + print nav block
+    python scripts/gen_ref_pages.py --check   # also compare nav with zensical.toml
+    python scripts/gen_ref_pages.py --write   # write generated nav into zensical.toml
+
+To use a local careamics repo, run pull_from_repos.sh --local <path> first.
+This creates a symlink at from_git/careamics so this script works transparently.
 """
 from __future__ import annotations
 
@@ -367,25 +370,7 @@ def main() -> None:
         action="store_true",
         help="Write the generated nav directly into zensical.toml.",
     )
-    parser.add_argument(
-        "--local",
-        type=Path,
-        metavar="PATH",
-        help="Path to a local careamics repo to use instead of from_git/careamics.",
-    )
     args = parser.parse_args()
-
-    if args.local:
-        global SRC_DIR, PACKAGE_DIR, GITHUB_SOURCE_URL
-        SRC_DIR = args.local.resolve() / "src"
-        PACKAGE_DIR = SRC_DIR / PACKAGE_NAME
-        GITHUB_SOURCE_URL = f"file://{SRC_DIR}"
-        if not PACKAGE_DIR.exists():
-            print(
-                f"Error: {PACKAGE_DIR} not found in local repo.",
-                file=sys.stderr,
-            )
-            sys.exit(1)
 
     nav = generate_md_files()
     print(f"Generated reference pages in {OUT_DIR}")

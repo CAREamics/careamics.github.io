@@ -7,8 +7,9 @@
 #   --dev          Stay on the main branch instead of checking out the latest
 #                  stable release tag (skips checkout_stable_release).
 #   --local <path> Use a local repository at <path> instead of cloning/updating
-#                  from the remote. Skips all git clone/pull and tag-checkout
-#                  steps; version extraction and file copy still run normally.
+#                  from the remote. Creates a symlink at from_git/careamics so
+#                  all downstream tools (zensical.toml paths, gen_ref_pages.py,
+#                  etc.) work transparently. Skips clone/pull and tag-checkout.
 #   --write        Write merged nav entries into zensical.toml. Without this
 #                  flag merge_nav prints the nav blocks to stdout (dry-run).
 #
@@ -190,7 +191,12 @@ main() {
 
   if [[ -n "$local_path" ]]; then
     echo "Using local repo at '$local_path' ..."
-    CAREAMICS_REPO_DIR="$local_path"
+    local symlink="$FROM_GIT_DIR/careamics"
+    # Replace any existing clone or symlink with a symlink to the local repo.
+    [[ -e "$symlink" || -L "$symlink" ]] && rm -rf "$symlink"
+    ln -s "$local_path" "$symlink"
+    echo "Created symlink: $symlink -> $local_path"
+    CAREAMICS_REPO_DIR="$symlink"
   else
     for url in "${REPOS[@]}"; do
       clone_or_update_repo "$url"
