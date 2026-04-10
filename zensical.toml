@@ -19,41 +19,14 @@ nav = [
     ]},
   { "Features" = "content/features.md" },
   { "Guides" = [
-        "content/guides/index.md",
-        {"CAREamist API" = [
-            "content/guides/careamist_api/index.md",
-            {"Configuration" = [
-                "content/guides/careamist_api/configuration/index.md",
-                "content/guides/careamist_api/configuration/convenience_functions.md",
-                "content/guides/careamist_api/configuration/save_load.md",
-                "content/guides/careamist_api/configuration/custom_types.md",
-                "content/guides/careamist_api/configuration/configuration_errors.md",
-                "content/guides/careamist_api/configuration/build_configuration.md",
-                "content/guides/careamist_api/configuration/algorithm_requirements.md",
-            ]},
-            {"Using CAREamics" = [
-                "content/guides/careamist_api/usage/index.md",
-                "content/guides/careamist_api/usage/careamist.md",
-                "content/guides/careamist_api/usage/training.md",
-                "content/guides/careamist_api/usage/datasets.md",
-                "content/guides/careamist_api/usage/prediction.md",
-                "content/guides/careamist_api/usage/model_export.md",
-            ]},
-            {"FAQ" = "content/guides/faq.md"},
-        ]},
-        {"Lightning API" = ["content/guides/lightning_api/index.md"]},
-        {"napari plugin" = ["content/guides/napari_plugin/index.md"]},
-        {"Dev resources" = [
-            "content/guides/dev_resources/index.md",
-            "content/guides/dev_resources/contribute.md",
-            "content/guides/dev_resources/website.md",
-            "content/guides/dev_resources/docstring.md",
-            "content/guides/dev_resources/conda-forge.md",
-        ]},
+        "content/guides/index.md", 
+        {"Using CAREamics" = []}, # filled by pull_from_repos.sh 
+        {"Tutorials" = []},  # filled by pull_from_repos.sh
+        {"CAREamics UI" = ["content/guides/ui/index.md"]}, 
+        {"FAQ" = []}, # filled by pull_from_repos.sh
+        {"Legacy (v0.1)" = []}, # filled by pull_from_repos.sh
   ]},
-  {"API Reference" = [
- 
-  ]},
+  {"API Reference" = []}, # filled by script/gen_ref_pages.py
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize

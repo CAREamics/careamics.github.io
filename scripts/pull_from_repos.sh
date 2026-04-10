@@ -36,36 +36,32 @@ clone_or_update_repo() {
   fi
 }
 
-# copy docs from careamics/docs into docs/content/guides
-copy_careamics_docs_v2() {
-  local src="$FROM_GIT_DIR/careamics/docs"
+# checkout the latest stable tag in the careamics repo so the source code
+# matches the released version (used for API reference generation).
+# Skipped in --dev mode to stay on main.
+checkout_stable_release() {
+  local repo_dir="$FROM_GIT_DIR/careamics"
 
-  if [[ ! -d "$src" ]]; then
-    echo "Error: $src not found, skipping copy."
+  if [[ ! -d "$repo_dir/.git" ]]; then
+    echo "Error: $repo_dir is not a git repo, skipping checkout."
     return 1
   fi
 
-  echo "Copying careamics docs to $GUIDES_DIR ..."
-  mkdir -p "$GUIDES_DIR"
-  cp -R "$src"/. "$GUIDES_DIR"/
-}
+  local tag
+  tag="$(git -C "$repo_dir" tag --list 'v[0-9]*' --sort=-v:refname | grep -v -E '(rc|alpha|beta|dev)' | head -1 || true)"
 
-copy_careamics_docs_v1() {
-  local src="$FROM_GIT_DIR/careamics/docs/v0.1"
-
-  if [[ ! -d "$src" ]]; then
-    echo "Error: $src not found, skipping copy."
+  if [[ -z "$tag" ]]; then
+    echo "Warning: no stable git tag found in $repo_dir, skipping checkout."
     return 1
   fi
 
-  echo "Copying careamics docs to $GUIDES_DIR ..."
-  mkdir -p "$GUIDES_DIR"
-  cp -R "$src"/. "$GUIDES_DIR"/
+  echo "Checking out $tag in $repo_dir"
+  git -C "$repo_dir" checkout "$tag"
 }
 
-
-# write the careamics version (from its latest git tag) to docs/extras/version.txt
-write_version() {
+# extract the current version from the repo (latest stable tag) and write it
+# to docs/extras/version.txt and docs/extras/version.md
+extract_version() {
   local repo_dir="$FROM_GIT_DIR/careamics"
   local version_file="$ROOT_DIR/docs/extras/version.txt"
 
@@ -84,12 +80,6 @@ write_version() {
     return 1
   fi
 
-  # Checkout the stable tag so the source code matches the version label.
-  # This ensures the API reference is built from the tagged release,
-  # not from main (which may contain pre-release changes).
-  echo "Checking out $tag in $repo_dir"
-  git -C "$repo_dir" checkout "$tag"
-
   echo "Writing version $tag to $version_file"
   mkdir -p "$(dirname "$version_file")"
   echo "$tag" > "$version_file"
@@ -100,18 +90,65 @@ write_version() {
   echo "Writing version link to $version_md"
 }
 
+# copy docs from careamics/docs:
+#   .md  -> docs/content/guides  (preserving relative paths)
+#   .py  -> docs/snippets        (preserving relative paths)
+copy_careamics_docs_v2() {
+  local src="$FROM_GIT_DIR/careamics/docs"
+  local snippets_dir="$ROOT_DIR/docs/snippets"
+
+  if [[ ! -d "$src" ]]; then
+    echo "Error: $src not found, skipping copy."
+    return 1
+  fi
+
+  # Copy .md files to docs/content/guides
+  echo "Copying .md files to $GUIDES_DIR ..."
+  mkdir -p "$GUIDES_DIR"
+  (cd "$src" && find . -name '*.md' -print0 | while IFS= read -r -d '' f; do
+    mkdir -p "$GUIDES_DIR/$(dirname "$f")"
+    cp "$f" "$GUIDES_DIR/$f"
+  done)
+
+  # Copy .py files to docs/snippets
+  echo "Copying .py files to $snippets_dir ..."
+  mkdir -p "$snippets_dir"
+  (cd "$src" && find . -name '*.py' -print0 | while IFS= read -r -d '' f; do
+    mkdir -p "$snippets_dir/$(dirname "$f")"
+    cp "$f" "$snippets_dir/$f"
+  done)
+}
+
+
 # -- Main
 
 main() {
+  local dev_mode=false
+
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --dev) dev_mode=true; shift ;;
+      *) echo "Unknown option: $1"; exit 1 ;;
+    esac
+  done
+
   mkdir -p "$FROM_GIT_DIR"
 
   for url in "${REPOS[@]}"; do
     clone_or_update_repo "$url"
   done
 
-  # copy_careamics_docs_v2
+  # in release mode, checkout the stable tag for API reference generation
+  if [[ "$dev_mode" == false ]]; then
+    checkout_stable_release
+  fi
 
-  write_version
+  # extract and write the version (always based on the latest stable tag)
+  extract_version
+
+  # copy docs from the same version as the exported one
+  # (otherwise there will be a mismatch between docs and version)
+  copy_careamics_docs_v2
 }
 
 main "$@"

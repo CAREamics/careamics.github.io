@@ -1,51 +1,49 @@
----
-icon: octicons/repo-24
-description: Guides
----
-
 # Guides
 
-CAREamics can be used in two ways, the recommended way is to use the CAREamist API, as
-it made to be simple, intuitive and minimize potential errors. Advanced users might want
-to only use parts of CAREamics in their own pipeline, for this they should refer to the
-Lightning API.
 
 <div class="grid cards" markdown>
 
--   :octicons-code-24:{ .lg .middle } __CAREamist API__
+-   :lucide-home:{ .lg .middle } __Using CAREamics__
 
     ---
 
-    The recommended way to use CAREamics in a few lines of code to apply various
-    methods in the most comfortable way possible.
+    Use CAREamics in Python.
 
-    [:octicons-arrow-right-24: CAREamist API](careamist_api/)
+    [:octicons-arrow-right-24: Configuration](./current/index.md)
 
--   :octicons-zap-24:{ .lg .middle } __Lightning API__
-
-    ---
-
-    Advanced users can re-use parts of CAREamics in their Lightning pipeline, with
-    more customization potential available.
-
-    [:octicons-arrow-right-24: Lightning API](lightning_api/)
-
--   :octicons-device-desktop-24:{ .lg .middle } __napari plugin__
+-   :lucide-graduation-cap:{ .lg .middle } __Tutorials__
 
     ---
 
-    A UI interface for CAREamics in the popular napari image viewer, allowing
-    training, predicting and saving models on your own data.
+    In-depth tutorials on advanced usage.
 
-    [:octicons-arrow-right-24: napari plugin](napari_plugin/)
+    [:octicons-arrow-right-24: Tutorials](./tutorials/index.md)
 
--   :octicons-law-24:{ .lg .middle } __Developer resources__
+
+-   :lucide-tv:{ .lg .middle } __CAREamics UI__
 
     ---
 
-    More details on how the documentation is set up, and guidelines for modifying
-    and contributing to CAREamics.
+    Use the CAREamics UI to train and predict in napari.
 
-    [:octicons-arrow-right-24: Developer resources](dev_resources/)
+    [:octicons-arrow-right-24: CAREamics UI](./ui/index.md)
+
+
+-   :lucide-file-question-mark:{ .lg .middle } __FAQ__
+
+    ---
+
+    Frequently asked questions.
+
+    [:octicons-arrow-right-24: FAQ](./faq/index.md)
+
+
+-   :octicons-repo-24:{ .lg .middle } __Legacy__
+
+    ---
+
+    Legacy guide for `v0.1` via the compatibility module.
+
+    [:octicons-arrow-right-24: Legacy](./v0.1/index.md)
 
 </div>
