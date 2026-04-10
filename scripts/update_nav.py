@@ -6,8 +6,9 @@ replacement is idempotent: running the script multiple times always produces
 the same result regardless of the current state of zensical.toml.
 
 Usage:
-    python scripts/update_nav.py
-    python scripts/update_nav.py --nav path/to/nav.toml --toml path/to/zensical.toml
+    python scripts/update_nav.py                  # print merged nav to stdout (dry-run)
+    python scripts/update_nav.py --write           # apply changes to zensical.toml
+    python scripts/update_nav.py --nav path/to/nav.toml --toml path/to/zensical.toml --write
 """
 from __future__ import annotations
 
@@ -42,6 +43,11 @@ def main() -> None:
         default=DEFAULT_TOML,
         help="Path to zensical.toml (default: zensical.toml at repo root)",
     )
+    parser.add_argument(
+        "--write",
+        action="store_true",
+        help="Write changes into zensical.toml. Without this flag the merged nav is printed to stdout.",
+    )
     args = parser.parse_args()
 
     if not args.nav.exists():
@@ -62,14 +68,19 @@ def main() -> None:
         if ok:
             toml_text = new_text
             replaced += 1
-            print(f"  Replaced: {name!r}")
+            if args.write:
+                print(f"  Replaced: {name!r}")
+            else:
+                print(f"=== {name} ===")
+                print(block)
+                print()
         else:
             print(
                 f"  Warning: no placeholder found for {name!r}, skipping.",
                 file=sys.stderr,
             )
 
-    if replaced:
+    if args.write and replaced:
         args.toml.write_text(toml_text)
         print(f"  Wrote {args.toml}")
 

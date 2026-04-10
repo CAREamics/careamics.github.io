@@ -23,7 +23,7 @@ nav = [
         {"Using CAREamics" = []}, # filled by pull_from_repos.sh 
         {"Tutorials" = []},  # filled by pull_from_repos.sh
         {"CAREamics UI" = ["content/guides/ui/index.md"]}, 
-        {"FAQ" = ["content/faq/index.md"]},
+        {"FAQ" = ["content/guides/faq/index.md"]},
         {"Legacy (v0.1)" = []}, # filled by pull_from_repos.sh
   ]},
   {"API Reference" = []}, # filled by script/gen_ref_pages.py

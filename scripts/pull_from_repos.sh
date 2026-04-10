@@ -156,7 +156,7 @@ merge_nav() {
   fi
 
   echo "Merging nav entries from $nav_file into zensical.toml ..."
-  python3 "$SCRIPT_DIR/update_nav.py" --nav "$nav_file" --toml "$zensical_file"
+  python3 "$SCRIPT_DIR/update_nav.py" --nav "$nav_file" --toml "$zensical_file" --write
 }
 
 
