@@ -9,11 +9,14 @@
 #   --local <path> Use a local repository at <path> instead of cloning/updating
 #                  from the remote. Skips all git clone/pull and tag-checkout
 #                  steps; version extraction and file copy still run normally.
+#   --write        Write merged nav entries into zensical.toml. Without this
+#                  flag merge_nav prints the nav blocks to stdout (dry-run).
 #
 # Examples:
-#   pull_from_repos.sh                        # release mode (stable tag)
-#   pull_from_repos.sh --dev                  # dev mode (main branch)
+#   pull_from_repos.sh                           # release mode (stable tag)
+#   pull_from_repos.sh --dev                     # dev mode (main branch)
 #   pull_from_repos.sh --local ~/code/careamics  # local repo
+#   pull_from_repos.sh --write                   # apply nav changes to zensical.toml
 set -euo pipefail # fail fast
 
 # -- Configuration
@@ -149,6 +152,7 @@ copy_careamics_docs_v2() {
 merge_nav() {
   local nav_file="$CAREAMICS_REPO_DIR/docs/nav.toml"
   local zensical_file="$ROOT_DIR/zensical.toml"
+  local write_flag="$1"
 
   if [[ ! -f "$nav_file" ]]; then
     echo "Warning: $nav_file not found, skipping nav merge."
@@ -156,7 +160,9 @@ merge_nav() {
   fi
 
   echo "Merging nav entries from $nav_file into zensical.toml ..."
-  python3 "$SCRIPT_DIR/update_nav.py" --nav "$nav_file" --toml "$zensical_file" --write
+  local extra_args=()
+  [[ "$write_flag" == true ]] && extra_args+=(--write)
+  python3 "$SCRIPT_DIR/update_nav.py" --nav "$nav_file" --toml "$zensical_file" "${extra_args[@]}"
 }
 
 
@@ -165,10 +171,12 @@ merge_nav() {
 main() {
   local dev_mode=false
   local local_path=""
+  local write_nav=false
 
   while [[ $# -gt 0 ]]; do
     case "$1" in
       --dev) dev_mode=true; shift ;;
+      --write) write_nav=true; shift ;;
       --local)
         [[ -n "${2:-}" ]] || { echo "Error: --local requires a path."; exit 1; }
         local_path="$(cd "$2" && pwd)"
@@ -202,7 +210,7 @@ main() {
   copy_careamics_docs_v2
 
   # merge nav.toml entries into zensical.toml
-  merge_nav
+  merge_nav "$write_nav"
 }
 
 main "$@"
