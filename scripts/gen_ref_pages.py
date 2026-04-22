@@ -378,7 +378,7 @@ def main() -> None:
         ),
     )
     args = parser.parse_args()
-    if args.local is not None:
+    if args.local:
         ref_source = "from_git"
     else:
         ref_source = GITHUB_SOURCE_URL
