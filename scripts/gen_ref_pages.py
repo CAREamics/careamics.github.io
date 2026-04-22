@@ -8,8 +8,10 @@ Usage:
     python scripts/gen_ref_pages.py           # generate files + print nav block
     python scripts/gen_ref_pages.py --check   # also compare nav with zensical.toml
     python scripts/gen_ref_pages.py --write   # write generated nav into zensical.toml
+    python scripts/gen_ref_pages.py --write --local # use local files in from_git dir.
 
 To use a local careamics repo, run pull_from_repos.sh --local <path> first.
+Then 
 This creates a symlink at from_git/careamics so this script works transparently.
 """
 from __future__ import annotations
@@ -56,7 +58,7 @@ def is_private(name: str) -> bool:
 # ---------------------------------------------------------------------------
 # Phase 1 — Generate reference .md files
 # ---------------------------------------------------------------------------
-def generate_md_files() -> dict:
+def generate_md_files(source: str) -> dict:
     """Walk the source tree and write .md files. Returns the nav tree."""
     if not PACKAGE_DIR.exists():
         print(f"Error: source directory {PACKAGE_DIR} not found.", file=sys.stderr)
@@ -68,7 +70,7 @@ def generate_md_files() -> dict:
     OUT_DIR.mkdir(parents=True)
 
     # Collect the navigation tree (nested dict/list structure)
-    nav_tree = _walk_package(PACKAGE_DIR, PACKAGE_NAME)
+    nav_tree = _walk_package(PACKAGE_DIR, PACKAGE_NAME, source)
 
     # Write top-level reference index with grid cards linking to subpackages
     _write_reference_index()
@@ -76,7 +78,7 @@ def generate_md_files() -> dict:
     return nav_tree
 
 
-def _walk_package(package_path: Path, dotted_path: str) -> list:
+def _walk_package(package_path: Path, dotted_path: str, source: str) -> list:
     """Recursively walk a package directory, generate .md files, return nav entries."""
     entries = []
 
@@ -111,7 +113,7 @@ def _walk_package(package_path: Path, dotted_path: str) -> list:
     init_file = package_path / "__init__.py"
     if init_file.exists():
         rel_md = _dotted_to_md_path(dotted_path, is_init=True)
-        _write_md(rel_md, dotted_path)
+        _write_md(rel_md, dotted_path, source)
         entries.append(f"reference/{rel_md}")
 
     # Process regular modules (non-__init__)
@@ -121,13 +123,13 @@ def _walk_package(package_path: Path, dotted_path: str) -> list:
         mod_name = mod.stem
         mod_dotted = f"{dotted_path}.{mod_name}"
         rel_md = _dotted_to_md_path(mod_dotted, is_init=False)
-        _write_md(rel_md, mod_dotted)
+        _write_md(rel_md, mod_dotted, source)
         entries.append(f"reference/{rel_md}")
 
     # Process subpackages recursively
     for subpkg in subpackages:
         sub_dotted = f"{dotted_path}.{subpkg.name}"
-        sub_entries = _walk_package(subpkg, sub_dotted)
+        sub_entries = _walk_package(subpkg, sub_dotted, source)
         if sub_entries:
             entries.append({_format_nav_title(subpkg.name): sub_entries})
 
@@ -144,21 +146,21 @@ def _dotted_to_md_path(dotted: str, is_init: bool) -> str:
         return "/".join(parts[:-1]) + f"/{parts[-1]}.md"
 
 
-def _dotted_to_source_url(dotted_path: str, is_init: bool) -> str:
+def _dotted_to_source_url(dotted_path: str, is_init: bool, source: str) -> str:
     """Convert a dotted path to a GitHub source URL."""
     parts = dotted_path.split(".")
     if is_init:
-        return f"{GITHUB_SOURCE_URL}/{'/'.join(parts)}/__init__.py"
+        return f"{source}/{'/'.join(parts)}/__init__.py"
     else:
-        return f"{GITHUB_SOURCE_URL}/{'/'.join(parts[:-1])}/{parts[-1]}.py"
+        return f"{source}/{'/'.join(parts[:-1])}/{parts[-1]}.py"
 
 
-def _write_md(rel_md: str, dotted_path: str) -> None:
+def _write_md(rel_md: str, dotted_path: str, source: str) -> None:
     """Write a single .md file with a GitHub source link and mkdocstrings identifier."""
     out_path = OUT_DIR / rel_md
     out_path.parent.mkdir(parents=True, exist_ok=True)
     is_init = rel_md.endswith("index.md")
-    source_url = _dotted_to_source_url(dotted_path, is_init)
+    source_url = _dotted_to_source_url(dotted_path, is_init, source)
     # Derive title from the last component of the dotted path
     name = dotted_path.rsplit(".", 1)[-1]
     title = _format_nav_title(name)
@@ -235,8 +237,8 @@ def _write_reference_index() -> None:
         "",
         "# API Reference",
         "",
-        'Use the navigation on the left to explore the code reference, or pick a '
-        'subpackage below.',
+        "Use the navigation on the left to explore the code reference, or pick a "
+        "subpackage below.",
         "",
         '<div class="grid cards" markdown>',
         "",
@@ -248,10 +250,7 @@ def _write_reference_index() -> None:
         lines.append("")
         lines.append("    ---")
         lines.append("")
-        lines.append(
-            f"    [:octicons-arrow-right-24: {title}]"
-            f"(careamics/{pkg}/)"
-        )
+        lines.append(f"    [:octicons-arrow-right-24: {title}](careamics/{pkg}/)")
         lines.append("")
 
     lines.append("</div>")
@@ -370,9 +369,21 @@ def main() -> None:
         action="store_true",
         help="Write the generated nav directly into zensical.toml.",
     )
+    parser.add_argument(
+        "--local",
+        action="store_true",
+        help=(
+            "Whether to use local files as the API reference source. (These have to be "
+            "in the from_git directory)"
+        ),
+    )
     args = parser.parse_args()
+    if args.local is not None:
+        ref_source = "from_git"
+    else:
+        ref_source = GITHUB_SOURCE_URL
 
-    nav = generate_md_files()
+    nav = generate_md_files(ref_source)
     print(f"Generated reference pages in {OUT_DIR}")
     print()
     print("=== Nav block for zensical.toml ===")
