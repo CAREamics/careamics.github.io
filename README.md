@@ -61,6 +61,24 @@ In step 3, use instead:
 bash scripts/pull_from_repos.sh  --write --local /path/to/local/careamics
 ```
 
+## Committing changes
+
+Before committing changes, make sure to use the pre-commit hook to avoid committing
+navigation from the pages that are automatically added at build time. 
+
+
+To add pre-commit:
+
+```bash
+uv run pre-commit install
+```
+
+To run the hooks:
+
+```bash
+uv run pre-commit run --all-files
+```
+
 ## How to update the pages without any commit
 
 This can be useful when one of the project has changed and we need to update the API
