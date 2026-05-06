@@ -70,6 +70,8 @@ def generate_md_files() -> dict:
     # Collect the navigation tree (nested dict/list structure)
     nav_tree = _walk_package(PACKAGE_DIR, PACKAGE_NAME)
 
+    # Put `Compat` package at the end of the nav
+
     # Write top-level reference index with grid cards linking to subpackages
     _write_reference_index()
 
@@ -124,8 +126,11 @@ def _walk_package(package_path: Path, dotted_path: str) -> list:
         _write_md(rel_md, mod_dotted)
         entries.append(f"reference/{rel_md}")
 
-    # Process subpackages recursively
-    for subpkg in subpackages:
+    # Process subpackages recursively, put `compat` last
+    sorted_subpackages = sorted(
+        subpackages, key=lambda p: (p.name == "compat", p.name)
+    )
+    for subpkg in sorted_subpackages:
         sub_dotted = f"{dotted_path}.{subpkg.name}"
         sub_entries = _walk_package(subpkg, sub_dotted)
         if sub_entries:
@@ -216,7 +221,7 @@ def _format_nav_title(name: str) -> str:
 
 def _write_reference_index() -> None:
     """Write the top-level reference/index.md with grid cards."""
-    subpackages = sorted(
+    candidates = [
         p.name
         for p in PACKAGE_DIR.iterdir()
         if p.is_dir()
@@ -225,6 +230,10 @@ def _write_reference_index() -> None:
         and p.name != "__pycache__"
         and p.name not in SKIP_DIRS
         and not any(p.name.startswith(pr) for pr in SKIP_PREFIXES)
+    ]
+    # Put `compat` at the end
+    subpackages = sorted(
+        candidates, key=lambda name: (name == "compat", name)
     )
 
     lines = [
