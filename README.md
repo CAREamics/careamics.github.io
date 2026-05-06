@@ -47,7 +47,7 @@ In order to build the pages locally, follow these steps:
     ```
 3. Build the pages:
     ```bash
-    zensical serve
+    uv run zensical serve
     ```
 4. Open the local link in your browser.
 
