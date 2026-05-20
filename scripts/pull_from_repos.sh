@@ -1,4 +1,23 @@
 #!/usr/bin/env bash
+# Usage: pull_from_repos.sh [OPTIONS]
+#
+# Pull documentation and source files from remote repositories into the website.
+#
+# Options:
+#   --dev          Stay on the main branch instead of checking out the latest
+#                  stable release tag (skips checkout_stable_release).
+#   --local <path> Use a local repository at <path> instead of cloning/updating
+#                  from the remote. Creates a symlink at from_git/careamics so
+#                  all downstream tools (zensical.toml paths, gen_ref_pages.py,
+#                  etc.) work transparently. Skips clone/pull and tag-checkout.
+#   --write        Write merged nav entries into zensical.toml. Without this
+#                  flag merge_nav prints the nav blocks to stdout (dry-run).
+#
+# Examples:
+#   pull_from_repos.sh                           # release mode (stable tag)
+#   pull_from_repos.sh --dev                     # dev mode (main branch)
+#   pull_from_repos.sh --local ~/code/careamics  # local repo
+#   pull_from_repos.sh --write                   # apply nav changes to zensical.toml
 set -euo pipefail # fail fast
 
 # -- Configuration
@@ -6,6 +25,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 FROM_GIT_DIR="$ROOT_DIR/from_git"
 GUIDES_DIR="$ROOT_DIR/docs/content/guides"
+CAREAMICS_REPO_DIR="$FROM_GIT_DIR/careamics"
 
 # Add repositories here (one per line)
 REPOS=(
@@ -36,37 +56,33 @@ clone_or_update_repo() {
   fi
 }
 
-# copy docs from careamics/docs into docs/content/guides
-copy_careamics_docs_v2() {
-  local src="$FROM_GIT_DIR/careamics/docs"
+# checkout the latest stable tag in the careamics repo so the source code
+# matches the released version (used for API reference generation).
+# Skipped in --dev mode to stay on main.
+checkout_stable_release() {
+  local repo_dir="$CAREAMICS_REPO_DIR"
 
-  if [[ ! -d "$src" ]]; then
-    echo "Error: $src not found, skipping copy."
+  if [[ ! -d "$repo_dir/.git" ]]; then
+    echo "Error: $repo_dir is not a git repo, skipping checkout."
     return 1
   fi
 
-  echo "Copying careamics docs to $GUIDES_DIR ..."
-  mkdir -p "$GUIDES_DIR"
-  cp -R "$src"/. "$GUIDES_DIR"/
-}
+  local tag
+  tag="$(git -C "$repo_dir" tag --list 'v[0-9]*' --sort=-v:refname | grep -v -E '(rc|alpha|beta|dev)' | head -1 || true)"
 
-copy_careamics_docs_v1() {
-  local src="$FROM_GIT_DIR/careamics/docs/v0.1"
-
-  if [[ ! -d "$src" ]]; then
-    echo "Error: $src not found, skipping copy."
+  if [[ -z "$tag" ]]; then
+    echo "Warning: no stable git tag found in $repo_dir, skipping checkout."
     return 1
   fi
 
-  echo "Copying careamics docs to $GUIDES_DIR ..."
-  mkdir -p "$GUIDES_DIR"
-  cp -R "$src"/. "$GUIDES_DIR"/
+  echo "Checking out $tag in $repo_dir"
+  git -C "$repo_dir" checkout "$tag"
 }
 
-
-# write the careamics version (from its latest git tag) to docs/extras/version.txt
-write_version() {
-  local repo_dir="$FROM_GIT_DIR/careamics"
+# extract the current version from the repo (latest stable tag) and write it
+# to docs/extras/version.txt and docs/extras/version.md
+extract_version() {
+  local repo_dir="$CAREAMICS_REPO_DIR"
   local version_file="$ROOT_DIR/docs/extras/version.txt"
 
   if [[ ! -d "$repo_dir/.git" ]]; then
@@ -84,12 +100,6 @@ write_version() {
     return 1
   fi
 
-  # Checkout the stable tag so the source code matches the version label.
-  # This ensures the API reference is built from the tagged release,
-  # not from main (which may contain pre-release changes).
-  echo "Checking out $tag in $repo_dir"
-  git -C "$repo_dir" checkout "$tag"
-
   echo "Writing version $tag to $version_file"
   mkdir -p "$(dirname "$version_file")"
   echo "$tag" > "$version_file"
@@ -100,18 +110,113 @@ write_version() {
   echo "Writing version link to $version_md"
 }
 
+# copy docs from careamics/docs:
+#   .md  -> docs/content/guides  (preserving relative paths)
+#   .py  -> docs/snippets        (preserving relative paths)
+copy_careamics_docs_v2() {
+  local src="$CAREAMICS_REPO_DIR/docs"
+  local snippets_dir="$ROOT_DIR/docs/snippets"
+
+  if [[ ! -d "$src" ]]; then
+    echo "Error: $src not found, skipping copy."
+    return 1
+  fi
+
+  # Copy .md files to docs/content/guides
+  echo "Copying .md files to $GUIDES_DIR ..."
+  mkdir -p "$GUIDES_DIR"
+  (cd "$src" && find . -name '*.md' -print0 | while IFS= read -r -d '' f; do
+    mkdir -p "$GUIDES_DIR/$(dirname "$f")"
+    cp "$f" "$GUIDES_DIR/$f"
+  done)
+
+  # Copy .py files to docs/snippets
+  echo "Copying .py files to $snippets_dir ..."
+  mkdir -p "$snippets_dir"
+  (cd "$src" && find . -name '*.py' -print0 | while IFS= read -r -d '' f; do
+    mkdir -p "$snippets_dir/$(dirname "$f")"
+    cp "$f" "$snippets_dir/$f"
+  done)
+}
+
+
+# merge navigation entries from nav.toml (in the careamics docs) into
+# zensical.toml, replacing empty list placeholders marked with
+# "# filled by pull_from_repos.sh".
+#
+# nav.toml format: a valid TOML file with a top-level `nav` array whose
+# elements are the same inline-table blocks used in zensical.toml, e.g.:
+#   nav = [
+#     {"Using CAREamics" = ["file.md", ...]},
+#     {"Tutorials"       = [...]},
+#   ]
+merge_nav() {
+  local nav_file="$CAREAMICS_REPO_DIR/docs/nav.toml"
+  local zensical_file="$ROOT_DIR/zensical.toml"
+  local write_flag="$1"
+
+  if [[ ! -f "$nav_file" ]]; then
+    echo "Warning: $nav_file not found, skipping nav merge."
+    return 0
+  fi
+
+  echo "Merging nav entries from $nav_file into zensical.toml ..."
+  local extra_args=()
+  [[ "$write_flag" == true ]] && extra_args+=(--write)
+  python3 "$SCRIPT_DIR/update_nav.py" --nav "$nav_file" --toml "$zensical_file" "${extra_args[@]}"
+}
+
+
 # -- Main
 
 main() {
-  mkdir -p "$FROM_GIT_DIR"
+  local dev_mode=false
+  local local_path=""
+  local write_nav=false
 
-  for url in "${REPOS[@]}"; do
-    clone_or_update_repo "$url"
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --dev) dev_mode=true; shift ;;
+      --write) write_nav=true; shift ;;
+      --local)
+        [[ -n "${2:-}" ]] || { echo "Error: --local requires a path."; exit 1; }
+        local_path="$(cd "$2" && pwd)"
+        shift 2
+        ;;
+      *) echo "Unknown option: $1"; exit 1 ;;
+    esac
   done
 
-  # copy_careamics_docs_v2
+  mkdir -p "$FROM_GIT_DIR"
 
-  write_version
+  if [[ -n "$local_path" ]]; then
+    echo "Using local repo at '$local_path' ..."
+    local symlink="$FROM_GIT_DIR/careamics"
+    # Replace any existing clone or symlink with a symlink to the local repo.
+    [[ -e "$symlink" || -L "$symlink" ]] && rm -rf "$symlink"
+    ln -s "$local_path" "$symlink"
+    echo "Created symlink: $symlink -> $local_path"
+    CAREAMICS_REPO_DIR="$symlink"
+  else
+    for url in "${REPOS[@]}"; do
+      clone_or_update_repo "$url"
+    done
+
+    # in release mode, checkout the stable tag for API reference generation
+    if [[ "$dev_mode" == false ]]; then
+      checkout_stable_release
+    fi
+  fi
+
+  # extract and write the version (always based on the latest stable tag)
+  extract_version
+
+  # copy docs from the same version as the exported one
+  # (otherwise there will be a mismatch between docs and version)
+  copy_careamics_docs_v2
+
+  # merge nav.toml entries into zensical.toml
+  merge_nav "$write_nav"
 }
 
 main "$@"

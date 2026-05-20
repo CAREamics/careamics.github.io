@@ -60,7 +60,7 @@ to cutting-edge methods (MicroSplit).
 
     Examples of CAREamics in action on various datasets.
 
-    [:octicons-arrow-right-24: Applications](https://github.com/CAREamics/careamics-examples/tree/a4e291ffd8f4f5378e951f6a01d99767ecedaed4/applications)
+    [:octicons-arrow-right-24: Applications](https://github.com/CAREamics/careamics-examples/tree/main/applications)
 
 -   :octicons-cpu-24:{ .lg .middle } __Algorithms__
 

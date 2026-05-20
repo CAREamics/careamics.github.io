@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: reset-nav-empty
+        name: Reset build-time nav entries in zensical.toml
+        language: system
+        entry: python3 scripts/check_nav_empty.py
+        files: zensical\.toml
+        pass_filenames: false
