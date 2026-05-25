@@ -9,7 +9,7 @@
 
     Use CAREamics in Python.
 
-    [:octicons-arrow-right-24: Configuration](./current/index.md)
+    [:octicons-arrow-right-24: Using CAREamics](./current/index.md)
 
 -   :lucide-graduation-cap:{ .lg .middle } __Tutorials__
 
