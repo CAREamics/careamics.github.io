@@ -37,13 +37,4 @@
 
     [:octicons-arrow-right-24: FAQ](./faq/index.md)
 
-
--   :octicons-repo-24:{ .lg .middle } __Legacy__
-
-    ---
-
-    Legacy guide for `v0.1` via the compatibility module.
-
-    [:octicons-arrow-right-24: Legacy](./v0.1/index.md)
-
 </div>

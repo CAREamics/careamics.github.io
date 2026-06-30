@@ -26,8 +26,6 @@ nav = [
         {"Tutorials" = []},
         {"CAREamics UI" = ["content/guides/ui/index.md"]}, 
         {"FAQ" = ["content/guides/faq/index.md"]},
-        # Warning: should stay empty, filled by scripts/pull_from_repos.sh
-        {"Legacy (v0.1)" = []},
   ]},
   # Warning: should stay empty, filled by scripts/generate_ref_pages.py
   {"API Reference" = []},
