@@ -1008,6 +1008,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Predicting to disk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-the-write-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change the write type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-a-custom-write-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use a custom write function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -12169,6 +12197,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Predicting to disk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-the-write-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change the write type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-a-custom-write-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use a custom write function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -12257,10 +12313,20 @@
 
 <h1 id="predicting-with-careamics">Predicting with CAREamics</h1>
 <h2 id="returning-predictions">Returning predictions</h2>
-<p>The simplest form of prediction is to call <code>predict</code>, which returns the predictions.</p>
-<div class="language-python highlight"><span class="filename">Prediction</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">predictions</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+<p>The simplest form of prediction is to call <code>predict</code>, which returns the predictions and
+their sources.</p>
+<div class="language-python highlight"><span class="filename">Prediction</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pred_arrays</span><span class="p">,</span> <span class="n">sources</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
+</code></pre></div>
+<p>The <code>predict</code> method returns both a list of arrays corresponding to the predictions and
+a list of their sources. If <code>pred_data</code> was a list of path to files, then <code>sources</code> will
+be a list of path to the file corresponding to each array. If the arrays were
+otherwise passed as <code>numpy</code> arrays, then the source can be ignored, since it is an empty
+list:</p>
+<div class="language-python highlight"><span class="filename">Prediction from arrays</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pred_arrays</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Checkpoint</p>
@@ -12275,10 +12341,10 @@ will use the best checkpoint.</p>
 <p>Checkpoints can be specified by passing a <code>checkpoint</code> argument to the <code>predict</code> method.
 It can be either a path to a checkpoint file or one of the keywords specified by
 PyTorch Lightning (typically <code>"best"</code> or <code>"last"</code>, see <a href="https://lightning.ai/docs/pytorch/stable/common/trainer.html#predict">documentation</a>).</p>
-<div class="language-python highlight"><span class="filename">Prediction with checkpoint</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">predictions</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">checkpoint</span><span class="o">=</span><span class="s2">&quot;last&quot;</span><span class="p">,</span>  <span class="c1"># or &quot;best&quot;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">Prediction with checkpoint</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">pred_arrays</span><span class="p">,</span> <span class="n">sources</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">checkpoint</span><span class="o">=</span><span class="s2">&quot;last&quot;</span><span class="p">,</span>  <span class="c1"># or &quot;best&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Noise2Void and Noise2Noise</p>
@@ -12289,11 +12355,11 @@ specific checkpoint.</p>
 <h3 id="tiling">Tiling</h3>
 <p>For odd-sized or large images, tiling should be used. Tiling is enabled by passing
 a <code>tile_size</code> to the prediction method.</p>
-<div class="language-python highlight"><span class="filename">Prediction</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">predictions</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">tile_size</span><span class="o">=</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">),</span>  <span class="c1"># (1)!</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">tile_overlap</span><span class="o">=</span><span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="mi">48</span><span class="p">),</span>  <span class="c1"># (2)!</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">Prediction</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">pred_arrays</span><span class="p">,</span> <span class="n">sources</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">tile_size</span><span class="o">=</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">),</span>  <span class="c1"># (1)!</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">tile_overlap</span><span class="o">=</span><span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="mi">48</span><span class="p">),</span>  <span class="c1"># (2)!</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span>
 </code></pre></div>
 <ol>
 <li>The <code>tile_size</code> need not be equal to the training patch size.</li>
@@ -12323,11 +12389,11 @@ or 3D).</p>
 <h3 id="changing-dataloading-parameters">Changing dataloading parameters</h3>
 <p>During prediction, you can change the dataloading parameters by passing them to the
 <code>predict</code> method. The parameters <code>batch_size</code> and <code>num_workers</code> can be set through the <code>predict</code> function arguments, while any other parameters have to be changed through the configuration.</p>
-<div class="language-python highlight"><span class="filename">Prediction</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">predictions</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">batch_size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">Prediction</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">pred_arrays</span><span class="p">,</span> <span class="n">sources</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">batch_size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span>
 </code></pre></div>
 <h3 id="data-parameters">Data parameters</h3>
 <p>The data we want to predict on might be different from the training data, in terms of
@@ -12337,12 +12403,12 @@ axes or format. The <code>predict</code> method allows changing these parameters
 trained model on a TIFF file (we have a path <code>pred_data_path</code>) that has multiple
 time-points. We need to set <code>new_axes</code> to <code>SYX</code> to specify the new axes order. We also
 need to specify the new axes and <code>data_type</code>. Finally, we do not want to train in-memory.</p>
-<div class="language-python highlight"><span class="filename">Prediction</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">predictions</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data_path</span><span class="p">,</span>  <span class="c1"># (1)!</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">axes</span><span class="o">=</span><span class="s2">&quot;SYX&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">data_type</span><span class="o">=</span><span class="s2">&quot;tiff&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">in_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">)</span>
+<div class="language-python highlight"><span class="filename">Prediction</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">pred_arrays</span><span class="p">,</span> <span class="n">sources</span> <span class="o">=</span> <span class="n">careamist</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data_path</span><span class="p">,</span>  <span class="c1"># (1)!</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">axes</span><span class="o">=</span><span class="s2">&quot;SYX&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">data_type</span><span class="o">=</span><span class="s2">&quot;tiff&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">in_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">)</span>
 </code></pre></div>
 <ol>
 <li>Now, data is a path.</li>
@@ -12362,7 +12428,27 @@ trained on single-channel data, then <code>channels=[1]</code> can be used to sp
 only the second channel should be used for prediction.</p>
 </div>
 <h2 id="predicting-to-disk">Predicting to disk</h2>
-<p>(soon)</p>
+<p>Prediction can also be saved directly to disk. This is particularly useful for large
+number of files that may not fit in memory.</p>
+<div class="language-python highlight"><span class="filename">Predict directly to the disk</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">careamist</span><span class="o">.</span><span class="n">predict_to_disk</span><span class="p">(</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">prediction_dir</span><span class="o">=</span><span class="n">root</span> <span class="o">/</span> <span class="s2">&quot;my_predictions&quot;</span><span class="p">,</span>  <span class="c1"># (1)!</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Optional, if not provided the predictions will be saved in the working directory,
+   in a folder called <code>predictions</code>.</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Other parameters</p>
+<p><code>predict_to_disk</code> accepts similar parameters as <code>predict</code>, including tiling,
+dataloader parameters or checkpoints. Refer to the previous sections for more
+details.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Default format</p>
+<p>Predictions are currently by default written as TIFF files.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">CZI format</p>
 <p>Prediction directly to disk is not available for CZI data. </p>
@@ -12371,6 +12457,46 @@ only the second channel should be used for prediction.</p>
 <p class="admonition-title">Zarr format</p>
 <p>Prediction directly to disk is with Zarr requires tiling to be enabled.</p>
 </div>
+<h3 id="change-the-write-type">Change the write type</h3>
+<p>You can also select a different write type that the default or from the source data.</p>
+<div class="language-python highlight"><span class="filename">Predict with a different type</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">careamist</span><span class="o">.</span><span class="n">predict_to_disk</span><span class="p">(</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">write_type</span><span class="o">=</span><span class="s2">&quot;tiff&quot;</span><span class="p">,</span>  <span class="c1"># (1)!</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>The write type can be changed. Currently, only <code>tiff</code> and <code>zarr</code> are supported.</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Zarr as write type</p>
+<p>Zarr can be selected as write type only if tiling is enabled.</p>
+</div>
+<h3 id="use-a-custom-write-function">Use a custom write function</h3>
+<p>We support passing a custom write function to save the predictions. The function must
+implement a particular <code>Protocol</code> (<a class="autorefs autorefs-internal" href="../../../../reference/careamics/image_io/write/#careamics.image_io.write.WriteFunc"><code>WriteFunc</code></a>),
+meaning that the function signature must strictly be that of the <code>WriteFunc</code> protocol.
+The function must accept a path, an array and allow passing additional keyword
+arguments. Here is an example of writing to a custom type (<code>.npy</code>):</p>
+<div class="language-python highlight"><span class="filename">Custom write function</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">save_to_np</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">img</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># (1)!</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom write function to save predictions to disk as .npy files.&quot;&quot;&quot;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">careamist</span><span class="o">.</span><span class="n">predict_to_disk</span><span class="p">(</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="n">write_type</span><span class="o">=</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span>  <span class="c1"># (2)!</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="n">write_extension</span><span class="o">=</span><span class="s2">&quot;.npy&quot;</span><span class="p">,</span>  <span class="c1"># (3)!</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="n">write_func</span><span class="o">=</span><span class="n">save_to_np</span><span class="p">,</span>  <span class="c1"># (4)!</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="n">write_func_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;allow_pickle&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>  <span class="c1"># (5)!</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>First define your write function.</li>
+<li>We need to select <code>custom</code> as the write type.</li>
+<li>And specify the extension of the file to write.</li>
+<li>Pass the custom write function to the <code>write_func</code> argument.</li>
+<li>Optional, to pass additional parameters to underlying functions.</li>
+</ol>
 
 
 
