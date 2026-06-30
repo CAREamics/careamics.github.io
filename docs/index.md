@@ -12,8 +12,7 @@ description: Guide and documentation.
 [![Conda Version](https://img.shields.io/conda/vn/conda-forge/careamics)](https://anaconda.org/conda-forge/careamics)
 [![Python Version](https://img.shields.io/pypi/pyversions/careamics.svg?color=green)](https://python.org)
 [![CAREamics CI](https://github.com/CAREamics/careamics/actions/workflows/ci.yml/badge.svg)](https://github.com/CAREamics/careamics/actions/workflows/ci.yml)
-[![Example CI](https://github.com/CAREamics/careamics-examples/actions/workflows/test_guides.yaml/badge.svg)](https://github.com/CAREamics/careamics-examples/actions/workflows/test_guides.yaml)
-[![codecov](https://codecov.io/gh/CAREamics/careamics/branch/main/graph/badge.svg)](https://codecov.io/gh/CAREamics/careamics)
+[![CAREamics Guides](https://github.com/CAREamics/careamics/actions/workflows/ci_guides.yml/badge.svg)](https://github.com/CAREamics/careamics/actions/workflows/ci_guides.yml)
 [![Image.sc](https://img.shields.io/badge/Got%20a%20question%3F-Image.sc-blue)](https://forum.image.sc/)
 ![GitHub Repo stars](https://img.shields.io/github/stars/CAREamics/careamics)
 
