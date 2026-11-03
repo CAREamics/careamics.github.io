@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import numpy as np
-from careamics.config.factories import (
+from careamics.config import (
     create_n2v_config,
     create_care_config,
 )
@@ -62,7 +62,7 @@ careamist = CAREamist(config, enable_progress_bar=False)
 
 # --8<-- [end:careamist_pb]
 
-from pytorch_lightning.callbacks import Callback
+from lightning.pytorch.callbacks import Callback
 
 
 class CustomCallback(Callback):
@@ -72,7 +72,7 @@ class CustomCallback(Callback):
 
 # %%
 # --8<-- [start:callbacks]
-from careamics.config.factories import create_advanced_care_config
+from careamics.config import create_advanced_care_config
 
 config = create_advanced_care_config(
     experiment_name="care",

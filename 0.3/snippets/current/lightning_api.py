@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # %%
 # --8<-- [start:lightning_api]
-from pytorch_lightning import Trainer
-from pytorch_lightning.callbacks import ModelCheckpoint
+from lightning.pytorch import Trainer
+from lightning.pytorch.callbacks import ModelCheckpoint
 import pooch
 
-from careamics.config.factories import create_advanced_n2v_config
+from careamics.config import create_advanced_n2v_config
 from careamics.lightning import (
     CareamicsDataModule,
     ConfigSaverCallback,
@@ -50,7 +50,10 @@ callbacks = [
         **config.training_config.checkpoint_params,
     ),
     ConfigSaverCallback(
-        config.version, config.experiment_name, config.training_config
+        config.version,
+        config.experiment_name,
+        config.training_config,
+        config.data_config,
     ),  # (6)!
 ]
 
@@ -100,7 +103,12 @@ callbacks = [
         filename=f"{config.experiment_name}_{{epoch:02d}}_step_{{step}}",
         **config.training_config.checkpoint_params,
     ),
-    ConfigSaverCallback(config.version, config.experiment_name, config.training_config),
+    ConfigSaverCallback(
+        config.version,
+        config.experiment_name,
+        config.training_config,
+        config.data_config,
+    ),
     pred_writer,  # (2)!
 ]
 

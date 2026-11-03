@@ -40,6 +40,9 @@
         <loc>https://careamics.github.io/0.3/content/guides/current/careamist_predicting/</loc>
       </url>
       <url>
+        <loc>https://careamics.github.io/0.3/content/guides/current/saving_models/</loc>
+      </url>
+      <url>
         <loc>https://careamics.github.io/0.3/content/guides/current/lightning_api/</loc>
       </url>
       <url>
@@ -53,6 +56,9 @@
       </url>
       <url>
         <loc>https://careamics.github.io/0.3/content/guides/tutorials/patch_filtering/</loc>
+      </url>
+      <url>
+        <loc>https://careamics.github.io/0.3/content/guides/tutorials/export_to_bmz/</loc>
       </url>
       <url>
         <loc>https://careamics.github.io/0.3/content/guides/tutorials/logging_wandb_tensorboard/</loc>
@@ -200,6 +206,9 @@
       </url>
       <url>
         <loc>https://careamics.github.io/0.3/reference/careamics/config/factories/data_factory/</loc>
+      </url>
+      <url>
+        <loc>https://careamics.github.io/0.3/reference/careamics/config/factories/factory_utils/</loc>
       </url>
       <url>
         <loc>https://careamics.github.io/0.3/reference/careamics/config/factories/n2v_factory/</loc>
@@ -784,6 +793,24 @@
         <loc>https://careamics.github.io/0.3/reference/careamics/models/unet/unet/</loc>
       </url>
       <url>
+        <loc>https://careamics.github.io/0.3/reference/careamics/plotting/</loc>
+      </url>
+      <url>
+        <loc>https://careamics.github.io/0.3/reference/careamics/plotting/autocorrelation/</loc>
+      </url>
+      <url>
+        <loc>https://careamics.github.io/0.3/reference/careamics/plotting/loss/</loc>
+      </url>
+      <url>
+        <loc>https://careamics.github.io/0.3/reference/careamics/plotting/noise_model/</loc>
+      </url>
+      <url>
+        <loc>https://careamics.github.io/0.3/reference/careamics/plotting/noise_residual/</loc>
+      </url>
+      <url>
+        <loc>https://careamics.github.io/0.3/reference/careamics/plotting/utils/</loc>
+      </url>
+      <url>
         <loc>https://careamics.github.io/0.3/reference/careamics/references/</loc>
       </url>
       <url>
@@ -842,9 +869,6 @@
       </url>
       <url>
         <loc>https://careamics.github.io/0.3/reference/careamics/utils/logging/</loc>
-      </url>
-      <url>
-        <loc>https://careamics.github.io/0.3/reference/careamics/utils/plotting/</loc>
       </url>
       <url>
         <loc>https://careamics.github.io/0.3/reference/careamics/utils/ram/</loc>
