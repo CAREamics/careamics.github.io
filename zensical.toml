@@ -24,7 +24,9 @@ nav = [
         {"Using CAREamics" = []},
         # Warning: should stay empty, filled by scripts/pull_from_repos.sh
         {"Tutorials" = []},
-        {"CAREamics UI" = ["content/guides/ui/index.md"]}, 
+        {"CAREamics UI" = [
+    "content/guides/current/careamics_ui.md",
+]},
         {"FAQ" = ["content/guides/faq/index.md"]},
   ]},
   # Warning: should stay empty, filled by scripts/generate_ref_pages.py
@@ -135,10 +137,20 @@ filters = ["!^_(?!_)"]
 # extensions
 [project.markdown_extensions.admonition] # necessary for admonitions
 [project.markdown_extensions.pymdownx.superfences]  # necessary for admonitions
+custom_fences = [
+    { name = "python", class = "highlight", format = "careamics_syntax_highlighting.fence.format_python" },
+    { name = "py", class = "highlight", format = "careamics_syntax_highlighting.fence.format_python" },
+]
 [project.markdown_extensions.pymdownx.details] # necessary for admonitions
 [project.markdown_extensions.pymdownx.highlight]
 anchor_linenums = true
+line_spans = "__span"
 pygments_lang_class = true
+extend_pygments_lang = [
+    { name = "python", lang = "python", options = { filters = ["careamics_semantic"] } },
+    { name = "py", lang = "python", options = { filters = ["careamics_semantic"] } },
+]
+[project.markdown_extensions.pymdownx.inlinehilite]
 [project.markdown_extensions.pymdownx.snippets]
 base_path=[
     "docs/snippets",

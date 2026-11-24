@@ -5,11 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "careamics-syntax-highlighting",
     "mkdocstrings-python>=2.0.3",
     "mike",
-    "zensical>=0.0.32",
+    "zensical>=0.1.0",
     "pre-commit",
 ]
 
 [tool.uv.sources]
+careamics-syntax-highlighting = { git = "https://github.com/CAREamics/careamics-syntax-highlighting.git" }
 mike = { git = "https://github.com/squidfunk/mike.git" }
